@@ -1,0 +1,15 @@
+development:
+  adapter: postgresql
+  template: template_postgis
+  encoding: unicode
+  database: geoportal_development
+  username: postgres
+  password:
+
+test:
+  adapter: postgresql
+  template: template_postgis
+  encoding: unicode
+  database: geoportal_test
+  username: postgres
+  password:
