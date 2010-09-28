@@ -2,7 +2,7 @@ development:
   adapter: postgresql
   template: template_postgis
   encoding: unicode
-  database: geoportal_development
+  database: methanehydrates_development
   username: postgres
   password:
 
@@ -10,6 +10,6 @@ test:
   adapter: postgresql
   template: template_postgis
   encoding: unicode
-  database: geoportal_test
+  database: methanehydrates_test
   username: postgres
   password:
