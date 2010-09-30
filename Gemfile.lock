@@ -17,6 +17,12 @@ GIT
     ppe-postgis-adapter (0.7.8)
 
 GIT
+  remote: git://github.com/indirect/rails-footnotes.git
+  revision: 5fd43b5842bac2a41c271e3d3713d5f721ae4e62
+  specs:
+    rails-footnotes (3.6.7)
+
+GIT
   remote: git://github.com/resolve/refinerycms-blog.git
   revision: 55741d816462b6ec2fee90d456e6dc32f470b6e3
   specs:
@@ -159,6 +165,7 @@ DEPENDENCIES
   pg (= 0.9.0)
   ppe-postgis-adapter!
   rails (= 3.0.0)
+  rails-footnotes!
   refinerycms (= 0.9.8.5)
   refinerycms-blog (= 1.0.rc12)!
   refinerycms-events (= 0.1)!
