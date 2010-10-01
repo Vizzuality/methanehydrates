@@ -6,6 +6,7 @@ Refinery::Application.routes.draw do
 
   root :to => 'pages#home'
 
+
   scope(:path => 'refinery', :as => 'admin', :module => 'admin') do
     root :to => 'dashboard#index'
   end

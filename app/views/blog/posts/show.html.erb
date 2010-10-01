@@ -1,71 +1,59 @@
-<% content_for :body_content_title, @blog_post.title %>
 
-<% content_for :body_content_left do %>
-  <p class='posted_at'>
-    <%= t('blog.shared.posts.created_at', :when => @blog_post.created_at.strftime('%d %B %Y')) %>.
-    
-    <% if (categories = @blog_post.categories).any? %>
-      <span class='filed_in'>
-        <%= t('.filed_in') %>
-        <% categories.each_with_index do |category, index| %>
-            <%= link_to category.title, blog_category_url(category) -%><%= ',' if index < ((categories.length) - 1) %>
-        <% end %>
-      </span>
-    <% end %>
-  </p>
-  <%= @blog_post.body %>
-  
-  <% if BlogPost.comments_allowed? %>
-    <h2><%= t('.comments.title') %></h2>
-  
-    <% if (comments = @blog_post.comments.approved).any? %>
-      <%= render :partial => "comment", :collection => comments %>
-    <% else %>
-      <p>
-        <%= t('blog.shared.comments.none') %>.
-      </p>
-    <% end %>
-  
-    <% flash.each do |key, value| %>
-      <div id='flash' class="flash flash_<%= key %>">
-        <%= value %>
+
+
+  <% content_for :body_content_left do %>
+    <div class="post_content">
+      <div class="head_post">
+        <div class="top"></div>
+        <div class="middle">
+          <p class="back"><a href="#">View latest post</a></p>
+          <h1><%= @blog_post.title %></h1>
+          <p class='posted_at'><%= t('blog.shared.posts.created_at', :when => @blog_post.created_at.strftime('%d %B %Y')) %></p>
+          <span class="line"></span>
+        </div>
       </div>
-    <% end %>
-  
-    <h2><%= t('.comments.add') %></h2>
-    <% form_for [:blog_post, @blog_comment] do |f| %>
-      <% if Rails.version < '3.0.0'%>
-        <%= f.error_messages %>
-      <% else %>
-        <%= render :partial => "/shared/admin/error_messages",
-                   :locals => {
-                     :object => f.object,
-                     :include_object_name => true
-                   } %>
-      <% end %>
-      <div class='field'>
-        <%= f.label :name %>
-        <%= f.text_field :name %>
+      <div class="middle_white">
+        <%= @blog_post.body %>
       </div>
-      <div class='field'>
-        <%= f.label :email %>
-        <%= f.text_field :email %>
+      <div class="bottom_white">
+        <a href="#">Back to posts</a>
       </div>
-      <div class='field message_field'>
-        <%= f.label :message %>
-        <%= f.text_area :message, :rows => 6 %>
-      </div>
-      <div class='field form-actions'>
-        <%= f.submit t('.submit') %>
-      </div>
-    <% end %>
+    </div>
   <% end %>
-<% end %>
 
-<% content_for :body_content_right do %>
-  <%= render :partial => "/blog/shared/categories" %>
-  <%= render :partial => "/blog/shared/posts" %>
-<% end %>
+  <% content_for :body_content_right do %>
+    <div class="news">
+      <div class="top"></div>
+      <div class="middle">
+        <div class="head">
+          <h4>More news</h4>
+          <p>News in other related blogs</p>
+          <span class="line"></span>
+        </div>
+        <ul>
+          <li>
+            <h5><a href="#">10th International Conference on Gas in Marine Sediments</a></h5>
+            <p>from protectedplanet.net</p>
+          </li>
+          <li>
+            <h5><a href="#">10th International Conference on Gas in Marine Sediments</a></h5>
+            <p>from protectedplanet.net</p>
+          </li>
+          <li>
+            <h5><a href="#">10th International Conference on Gas in Marine Sediments</a></h5>
+            <p>from protectedplanet.net</p>
+          </li>
+          <li class="last">
+            <h5><a href="#">10th International Conference on Gas in Marine Sediments</a></h5>
+            <p>from protectedplanet.net</p>
+          </li>
+        </ul>
+      </div>
+      <div class="bottom">
+        <p class="feed"><a href>subscribe to our news feed</a></p>
+      </div>
+    </div>
+  <% end %>
 
-<%= render :partial => "/shared/content_page" %>
-<% content_for :head, stylesheet_link_tag('refinerycms-blog') %>
+  <%= render :partial => "/shared/content_page" %>
+  <% content_for :head, stylesheet_link_tag('refinerycms-blog') %>
