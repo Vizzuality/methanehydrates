@@ -1,16 +1,186 @@
-<% content_for :body_content_left do %>
-  <%= @page[Page.default_parts.first.to_sym] %>
 
-  <ul id="blog_posts">
-    <%= render :partial => "/blog/shared/post", :collection => @blog_posts %>
-  </ul>
-<% end %>
+  <% content_for :title do %>
+    <h1>Frozen Heat news and articles</h1>
+    <p>Aggregating events related with methane gas. If you know another event, please contact us</p>
+  <% end %>
+
+
+
+
+  <% content_for :body_content_left do %>
+    <div class="post_content">
+      <div class="top_posts"></div>
+        <div class="middle_posts">
+            <div class="head_posts">
+              <div class="left">
+                <h1>Latest news</h1>
+                <p>Subtitle</p>
+              </div>
+              <div class="right">
+                <p class="feed"><a href>subscribe to our blog</a></p>
+              </div>
+              <span class="line"></span>
+            </div>
+            
+            <%= @page[Page.default_parts.first.to_sym] %>
+
+            <ul id="blog_posts">
+              <%= render :partial => "/blog/shared/post", :collection => @blog_posts %>
+            </ul>
+        </div>
+      <div class="bottom_posts">
+        <a href="#">Previous posts</a>
+      </div>
+    </div>
+  <% end %>
+
+
 
 <% content_for :body_content_right do %>
   <%= @page[Page.default_parts.second.to_sym] %>
-
-  <%= render :partial => "/blog/shared/categories" %>
+  
+  <div class="twitter">
+    <div class="top"></div>
+    <div class="middle">
+      <div class="head">
+        <h3>Latest on twitter</h3>
+        <p>Subtitle</p>
+        <span class="line"></span>
+      </div>
+      <ul>
+        <li>
+          <div class="image">
+            <%=image_tag 'avatars/jatorre.jpg' %>
+          </div>
+          <div class="text">
+            <p>Going to a wedding in Copenhagen full of biodiversity informatics good friend freaks :)</p>
+          </div>
+        </li>
+        <li>
+          <div class="image">
+            <%=image_tag 'avatars/jatorre.jpg' %>
+          </div>
+          <div class="text">
+            <p>Going to a wedding in Copenhagen full of biodiversity informatics good friend freaks :)</p>
+          </div>
+        </li>
+        <li>
+          <div class="image">
+            <%=image_tag 'avatars/jatorre.jpg' %>
+          </div>
+          <div class="text">
+            <p>Going to a wedding in Copenhagen full of biodiversity informatics good friend freaks :)</p>
+          </div>
+        </li>
+        <li>
+          <div class="image">
+            <%=image_tag 'avatars/jatorre.jpg' %>
+          </div>
+          <div class="text">
+            <p>Going to a wedding in Copenhagen full of biodiversity informatics good friend freaks :)</p>
+          </div>
+        </li>
+        <li>
+          <div class="image">
+            <%=image_tag 'avatars/jatorre.jpg' %>
+          </div>
+          <div class="text">
+            <p>Going to a wedding in Copenhagen full of biodiversity informatics good friend freaks :)</p>
+          </div>
+        </li>
+        <li>
+          <div class="image">
+            <%=image_tag 'avatars/jatorre.jpg' %>
+          </div>
+          <div class="text">
+            <p>Going to a wedding in Copenhagen full of biodiversity informatics good friend freaks :)</p>
+          </div>
+        </li>
+        <li>
+          <div class="image">
+            <%=image_tag 'avatars/jatorre.jpg' %>
+          </div>
+          <div class="text">
+            <p>Going to a wedding in Copenhagen full of biodiversity informatics good friend freaks :)</p>
+          </div>
+        </li>
+        <li class="last">
+          <div class="image">
+            <%=image_tag 'avatars/jatorre.jpg' %>
+          </div>
+          <div class="text">
+            <p>Going to a wedding in Copenhagen full of biodiversity informatics good friend freaks :)</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="bottom">
+      <a href="#">Follow us on twitter</a>
+    </div>
+  </div>
+  
+  <div class="news">
+    <div class="top"></div>
+    <div class="middle">
+      <div class="head">
+        <h4>More news</h4>
+        <p>News in other related blogs</p>
+        <span class="line"></span>
+      </div>
+      <ul>
+        <li>
+          <h5><a href="#">10th International Conference on Gas in Marine Sediments</a></h5>
+          <p>from protectedplanet.net</p>
+        </li>
+        <li>
+          <h5><a href="#">10th International Conference on Gas in Marine Sediments</a></h5>
+          <p>from protectedplanet.net</p>
+        </li>
+        <li>
+          <h5><a href="#">10th International Conference on Gas in Marine Sediments</a></h5>
+          <p>from protectedplanet.net</p>
+        </li>
+        <li class="last">
+          <h5><a href="#">10th International Conference on Gas in Marine Sediments</a></h5>
+          <p>from protectedplanet.net</p>
+        </li>
+      </ul>
+    </div>
+    <div class="bottom">
+      <p class="feed"><a href>subscribe to our blog</a></p>
+    </div>
+  </div>
+  
+  
+  <div class="sites">
+    <div class="top"></div>
+    <div class="middle">
+      <div class="head">
+        <h5>Browse our sites</h5>
+        <p><a href="#">Explore</a> methane gas sites around</p>
+        <span class="line"></span>
+      </div>
+      <ul>
+        <li>
+          <h6><a href="#">Middle America Trench - Guatem...</a></h6>
+          <span><p class="first">EUROPE</p><p>SPAIN</p></span>
+        </li>
+        <li>
+          <h6><a href="#">Middle America Trench - Guatem...</a></h6>
+          <span><p class="first">EUROPE</p><p>SPAIN</p></span>
+        </li>
+      </ul>
+    </div>
+    <div class="bottom"></div>
+  </div>
+  
+  
 <% end %>
 
 <%= render :partial => "/shared/content_page" %>
+
+
+
+
+
 <% content_for :head, stylesheet_link_tag('refinerycms-blog') %>
