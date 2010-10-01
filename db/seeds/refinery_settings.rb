@@ -1,5 +1,5 @@
 [
-  {:name => "site_name", :value => "Company Name"},
+  {:name => "site_name", :value => "Geoportal"},
   {:name => "new_page_parts", :value => false},
   {:name => "activity_show_limit", :value => 7},
   {:name => "preferred_image_view", :value => :grid},

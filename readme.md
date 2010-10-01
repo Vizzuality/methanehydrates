@@ -1,24 +1,17 @@
-# Geoportal
+# Methane Gas Hydrates
 
-Geoportal is a template for creating CMS-based projects with geospatial information.
+A project based on [Geoportal](http://github.com/vizzuality/geoportal)
 
-## Dependencies
-
-  - Ruby 1.8.7
-  - Rails 3
-  - PostgreSQL
-  - PostGIS extensions
-
-## How to create a new project based on geoportal
-
-
-
-## Developing and extending geoportal
-
-Create a gemset:
+## Start using it
 
     rvm use 1.8.7
-    rvm gemset create geoportal
-    rvm use 1.8.7@geoportal
+    rvm gemset create methanehydrates
+    rvm use 1.8.7@methanehydrates
+    gem install bundler
+    git clone git@github.com:Vizzuality/methanehydrates.git
+    cd methanehydrates
+    bundle install
+    rake db:setup
+    rails s
 
-Download the project, fork it and make a **pull request**.
+Visit `http://localhost:3000/admin` in your browser (by default it creates an administrator user with login `admin` and password `admin`).
