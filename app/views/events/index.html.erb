@@ -1,11 +1,59 @@
-<% content_for :body_content_left do %>
-  <ul id="events">
-    <% @events.each do |event| %>
-      <li>
-        <%= link_to event.title, event_url(event) %>
-      </li>
-    <% end %>
-  </ul>
-<% end %>
+
+  <% content_for :title do %>
+    <h1>Upcoming related events</h1>
+    <p>Aggregating events related with methane gas. If you know another event, please contact us</p>
+  <% end %>
+
+
+
+
+  <% content_for :body_content_left do %>
+    <div class="post_content">
+      <div class="top_posts"></div>
+        <div class="middle_posts">
+            <div class="head_posts">
+              <div class="left">
+                <h1>Upcoming events</h1>
+                <p>12 events</p>
+              </div>
+              <span class="line"></span>
+            </div>
+            <ul id="events">
+              <% @events.each do |event| %>
+                <li class="last">
+                  <div class="left">
+                    <p class="day">04</p>
+                    <p class="month">OCTO</p>
+                  </div>
+                  <div class="right">
+                    <h2><%= link_to event.title, event_url(event) %></h2>
+                    <p class="location"><%= event.location %> | 06 sept &#8594; 12 sept</p>
+                    <%= truncate(event.description, :length => RefinerySetting.find_or_set(:blog_post_teaser_length, 500), :preserve_html_tags => true) %>
+                  </div>
+                </li>
+              <% end %>
+            </ul>
+        </div>
+      <div class="bottom_posts">
+        <a href="#">Previous events</a>
+      </div>
+    </div>
+  <% end %>
+
+  <% content_for :body_content_right do %>
+    <%= @page[Page.default_parts.second.to_sym] %>
+    <div class="opaque">
+      <div class="top"></div>
+      <div class="middle">
+        <div class="head">
+          <h3>Calendar view</h3>
+          <p>Browse events by month</p>
+          <span class="line"></span>
+        </div>
+      </div>
+      <div class="bottom"></div>
+    </div>
+  <%- end %>  
+  
 
 <%= render :partial => "/shared/content_page" %>

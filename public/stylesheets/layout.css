@@ -34,7 +34,7 @@ div#content {margin:0 auto; width:948px;}
 div.title {float:left; width:100%;}
 div.title div.inner_title {width:870px; margin:0 auto;}
 div.title div.inner_title h1 {float:left; padding:90px 0 0 0; width:100%; font:bold 55px Arial; color:white; letter-spacing:-3px; text-shadow:2px 2px #B1A0AB;}
-div.title div.inner_title p {float:left; padding:0 0 80px 0; width:100%; font:bold 25px Arial; color:white; letter-spacing:0; text-shadow:1px 1px #B1A0AB;}
+div.title div.inner_title p {float:left; padding:10px 0 80px 0; width:100%; font:bold 25px Arial; color:white; letter-spacing:0; text-shadow:1px 1px #B1A0AB;}
 div.title div.inner_title div.left {float:left; width:600px;}
 div.title div.inner_title div.right {float:right; width:231px; margin:100px 0 0 0;}
 div.title div.inner_title div.right ul {float:right; width:231px;}
@@ -92,7 +92,7 @@ div#body_content_right div.twitter div.middle ul li div.text p {font:normal 13px
 div#body_content_right div.twitter div.middle ul li div.text p a {color:white;}
 div#body_content_right div.twitter div.middle ul li div.text p a:hover {color:#CCCCCC;}
 div#body_content_right div.twitter div.middle ul li.last {border-bottom:none;}
-div#body_content_right div.twitter div.bottom {float:left; width:304px; height:84px; background:url(../images/round/bottom_grey_opaque_short.png) no-repeat center 0;}
+div#body_content_right div.twitter div.bottom {float:left; width:304px; height:84px; background:url(../images/round/bottom_twitter_short.png) no-repeat center 0;}
 div#body_content_right div.twitter div.bottom a {float:left; width:228px; height:16px; padding:9px 0; text-align:center; background:url(../images/posts/follow_button.png) no-repeat 0 0; font:bold 15px Arial; color:#666666; text-decoration:none; margin:26px 0 0 38px;}
 div#body_content_right div.twitter div.bottom a:hover {background-position:0 -34px; color:#333333;}
 
@@ -220,6 +220,117 @@ div.main_media div.middle div.bottom_content div.block.last {margin:0;}
 div.main_media div.bottom {float:left; width:100%; height:71px; margin:0; padding:0; background:url(../images/round/bottom_grey_long.png) no-repeat 0 0;}
 div.main_media div.bottom a {float:right; margin:16px 40px 0 0; width:122px; height:14px; font:bold 13px Arial; color:#666666; text-shadow:0 1px #FFFFFF; padding:7px 0; text-align:center; background:url(../images/media/view_button.png) no-repeat 0 0; text-decoration:none;}
 div.main_media div.bottom a:hover {background-position:0 -28px;}
+
+
+
+
+/* EVENTS */
+
+div#body_content_left div ul#events {float:left; width:100%;}
+div#body_content_left div ul#events li {float:left; width:100%; padding:33px 0 33px 0; border-bottom:1px solid #E5E5E5;}
+div#body_content_left div ul#events li.last {border-bottom:1px solid #E5E5E5;}
+div#body_content_left div ul#events li div.left {float:left; width:64px; height:51px; padding:5px 0 10px; background:url(../images/events/date_bkg.png) no-repeat 0 0; margin:0 11px 0 0;}
+div#body_content_left div ul#events li div.left p.day {float:left; width:100%; text-align:center; font:bold 37px Arial; color:white; text-shadow:0 1px #AF4418; letter-spacing:-2px;}
+div#body_content_left div ul#events li div.left p.month {float:left; width:100%; text-align:center; font:bold 13px Arial; color:white; text-shadow:0 1px #AF4418; line-height:10px; letter-spacing:0px;}
+div#body_content_left div ul#events li div.right {float:left; width:478px;}
+div#body_content_left div ul#events li div.right h2 {float:left; width:100%;}
+div#body_content_left div ul#events li div.right h2 a {font:bold 17px Arial; color:#FF6600; text-decoration:none;}
+div#body_content_left div ul#events li div.right h2 a:hover {text-decoration:underline;}
+div#body_content_left div ul#events li div.right p.location {float:left; width:100%; font:normal 13px Arial; color:#999999; padding:0 0 13px 0;}
+div#body_content_left div ul#events li div.right p span {float:left; width:100%; font:normal 13px Arial; color:#333333;}
+
+div#body_content_right {float:right; width:304px; padding:6px 0 50px 0;}
+div#body_content_right div.opaque {float:right; width:304px;}
+div#body_content_right div.opaque div.top {float:left; width:304px; height:15px; background:url(../images/round/top_grey_opaque_short.png) no-repeat center 0;}
+div#body_content_right div.opaque div.middle {float:left; width:234px; padding:0 35px; height:auto; background:url(../images/round/middle_grey_opaque_short.png) repeat-y center 0;}
+div#body_content_right div.opaque div.middle div.head {position:relative; float:left; width:100%; padding:0; height:86px;}
+div#body_content_right div.opaque div.middle div.head h3 {font:bold 23px Arial; color:white; letter-spacing:-1px; width:100%; padding:12px 0 0 0;}
+div#body_content_right div.opaque div.middle div.head p {font:normal 15px Arial; color:#9B9FA7; padding:4px 0 0 0;}
+div#body_content_right div.opaque div.middle div.head span.line {position:absolute; height:1px; width:286px; bottom:0; left:-26px; background:black; opacity:0.35; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=35);}
+div#body_content_right div.opaque div.middle ul {float:left; width:100%;}
+div#body_content_right div.opaque div.middle ul li {float:left; width:100%; padding:20px 0; border-bottom:1px solid #4b4f59;}
+div#body_content_right div.opaque div.middle ul li div.image {float:left; width:48px; padding:2px; margin:0 9px 0 0; background:url(../images/posts/avatar_border.png) no-repeat 0 0;}
+div#body_content_right div.opaque div.middle ul li div.text {float:left; width:173px;}
+div#body_content_right div.opaque div.middle ul li div.text p {font:normal 13px Arial; color:white;}
+div#body_content_right div.opaque div.middle ul li div.text p a {color:white;}
+div#body_content_right div.opaque div.middle ul li div.text p a:hover {color:#CCCCCC;}
+div#body_content_right div.opaque div.middle ul li.last {border-bottom:none;}
+div#body_content_right div.opaque div.bottom {float:left; width:304px; height:84px; background:url(../images/round/bottom_grey_opaque_short.png) no-repeat center 0;}
+div#body_content_right div.opaque div.bottom a {float:left; width:228px; height:16px; padding:9px 0; text-align:center; background:url(../images/posts/follow_button.png) no-repeat 0 0; font:bold 15px Arial; color:#666666; text-decoration:none; margin:26px 0 0 38px;}
+div#body_content_right div.opaque div.bottom a:hover {background-position:0 -34px; color:#333333;}
+
+
+
+/* EVENT */
+
+div.head_event div.top {float:left; width:100%; height:15px; background:url(../images/round/top_orange.png) no-repeat 0 0; margin:35px 0 0 0;}
+div.head_event div.middle {position:relative; float:left; width:553px; padding:20px 40px 30px 40px; height:auto; background:url(../images/round/middle_orange.png) repeat-y 0 0;}
+div.head_event div.middle p.back {float:left; width:600px; padding:0 0 0 9px; background:url(../images/icons/white_left_arrow.png) no-repeat 0 4px; text-shadow:none;}
+div.head_event div.middle p.back a {font:normal 13px Arial; color:white;}
+div.head_event div.middle p.back a:hover {color:#F7F7F7;}
+div.head_event div.middle div.left {float:left; width:64px; height:51px; padding:5px 0 10px; background:url(../images/events/date_bkg_grey.png) no-repeat 0 0; margin:15px 11px 0 0;}
+div.head_event div.middle div.left p.day {float:left; width:100%; text-align:center; font:bold 37px Arial; color:#FF6428; text-shadow:0 -1px #614E42; letter-spacing:-2px; padding:0; margin:0;}
+div.head_event div.middle div.left p.month {float:left; width:100%; text-align:center; font:bold 13px Arial; color:#FF6428; text-shadow:0 -1px #614E42; line-height:10px; letter-spacing:0px; padding:0; margin:0;}
+div.head_event div.middle div.right {float:left; width:478px;}
+div.head_event div.middle h1 {float:left; font:bold 21px Arial; color:white; padding:15px 0 0 0; letter-spacing:-1px; text-shadow:0px 1px #B24B1D;}
+div.head_event div.middle p {float:left; padding:5px 0 0 0; font:normal 13px Arial; color:white; text-shadow:0 -1px #B24B1D;}
+div.head_event div.middle span.line {position:absolute; height:1px; width:615px; bottom:0; left:9px; background:#BF4C00;}
+div.middle_white {float:left; width:553px; padding:20px 40px 30px 40px; height:auto; background:url(../images/round/middle_white.png) repeat-y 0 0; font:normal 15px Arial; color:#666666;}
+div.middle_white.resume {position:relative;}
+div.middle_white.resume a.visit {float:left; width:144px; height:16px; margin:20px 0 0 0; padding:6px 0; text-align:center; font:bold 13px Arial; color:#666666; text-shadow:0 1px white; background:url(../images/events/visit_official.png) no-repeat 0 0; text-decoration:none;}
+div.middle_white.resume a.visit:hover {background-position:0 -28px;}
+div.middle_white.resume span.line {position:absolute; height:1px; width:615px; bottom:0; left:9px; background:#E5E5E5;}
+div.middle_white h6 {float:left; margin:15px 0 0 0; width:100%; font:bold 17px Arial; color:#666666;}
+div.middle_white ul {float:left; width:100%; margin:30px 0 0 0; padding:0;}
+div.middle_white ul li {float:left; width:265px; padding:0;}
+div.middle_white ul li div.left {float:left; width:64px; height:51px; padding:5px 0 10px; background:url(../images/events/date_bkg.png) no-repeat 0 0; margin:0 11px 0 0;}
+div.middle_white ul li div.left p.day {float:left; width:100%; text-align:center; font:bold 37px Arial; color:white; text-shadow:0 1px #AF4418; letter-spacing:-2px;}
+div.middle_white ul li div.left p.month {float:left; width:100%; text-align:center; font:bold 13px Arial; color:white; text-shadow:0 1px #AF4418; line-height:10px; letter-spacing:0px;}
+div.middle_white ul li div.right {float:left; width:190px;}
+div.middle_white ul li div.right h6 {float:left; width:100%; margin:0; padding:0; line-height:16px;}
+div.middle_white ul li div.right h6 a {font:bold 15px Arial; color:#FF6600; text-decoration:none;}
+div.middle_white ul li div.right h6 a:hover {text-decoration:underline;}
+div.middle_white ul li div.right p.location {float:left; width:100%; font:normal 13px Arial; color:#999999; padding:4px 0 0 0;}
+div.middle_white p {float:left; width:100%; font:normal 15px Arial; color:#666666; line-height:19px;}
+div.bottom_white {float:left; width:633px; height:25px; background:url(../images/round/bottom_white.png) no-repeat 0 0;}
+
+
+
+
+
+/*SITE*/
+
+div.head_site div.top {float:left; width:100%; height:15px; background:url(../images/round/top_orange.png) no-repeat 0 0; margin:35px 0 0 0;}
+div.head_site div.middle {position:relative; float:left; width:553px; padding:20px 40px 30px 40px; height:auto; background:url(../images/round/middle_orange.png) repeat-y 0 0;}
+div.head_site div.middle h1 {float:left; float:left; width:100%; font:bold 29px Arial; color:white; padding:0; letter-spacing:-1px; text-shadow:0px 1px #B24B1D;}
+div.head_site div.middle span {float:left; width:100%;}
+div.head_site div.middle p {float:left; width:auto; padding:0 0 0 8px; font:normal 15px Arial; color:white; text-shadow:0 -1px #B24B1D;}
+div.head_site div.middle p.first {background:url(../images/icons/orange_tiny_arrow.jpg) no-repeat right 7px; padding:0 12px 0 0;}
+div.head_site div.middle span.line {position:absolute; height:1px; width:615px; bottom:0; left:9px; background:#BF4C00;}
+div.middle_white {float:left; width:553px; padding:20px 40px 30px 40px; height:auto; background:url(../images/round/middle_white.png) repeat-y 0 0; font:normal 15px Arial; color:#666666;}
+div.middle.image {float:left; width:615px; padding:0 9px 10px 9px; height:auto; background:url(../images/round/middle_white.png) repeat-y 0 0; font:normal 15px Arial; color:#666666;}
+div.middle_white.site h3 {float:left; width:100%; font:bold 21px Arial; color:#333333; letter-spacing:-1px; padding:0 0 10px 0;}
+div.middle_white.site p {float:left; width:100%; font:normal 13px Arial; color:#666666; line-height:17px;}
+div.middle_white.site p a {font:normal 13px Arial; color:#FF6600; text-decoration:none;}
+div.middle_white.site p a:hover {text-decoration:underline;}
+div.middle_white p {float:left; width:100%; font:normal 15px Arial; color:#666666; line-height:19px;}
+div.bottom.site {float:left; width:633px; height:85px; background:url(../images/round/bottom_grey.png) no-repeat 0 0;}
+div.bottom.site p {float:left; width:auto; font:normal 13px Arial; color:#666666; text-shadow:0 1px white; margin:28px 0 0 30px;}
+div.bottom.site a {float:right; margin:20px 30px 0 0; font:bold 15px Arial; color:#666666; text-shadow:0 1px white; padding:9px 0 8px 45px; width:152px; height:17px; text-align:left; background:url(../images/site/edit_button.png) no-repeat 0 0; text-decoration:none;}
+div.bottom.site a:hover {background-position:0 -34px; color:#555555;}
+
+div.opaque div.middle_map {float:left; width:244px; padding:0 30px; height:auto; background:url(../images/round/middle_grey_opaque_short.png) repeat-y center 0;}
+div.opaque div.middle_map div.outer_map {float:left; width:228px; height:174px; padding:7px; background:url(../images/site/map_shadow.png) no-repeat 0 0;}
+div.opaque div.middle_map div#map {float:left; width:100%; height:100%; background:red;}
+div.opaque div.middle_site {float:left; width:234px; padding:0 35px 20px 35px; height:auto; background:url(../images/round/middle_grey_opaque_short.png) repeat-y center 0;}
+div.opaque div.middle_site h6 {float:left; width:100%; padding:15px 0 0 0; font:bold 11px Arial; color:#ABB3B4;}
+div.opaque div.middle_site p {float:left; width:100%; font:normal 15px Arial; color:white; padding:2px 0 0 0;}
+div.opaque div.middle_site p a {border-bottom:1px dotted white; color:white; text-decoration:none;}
+div.opaque div.middle_site p a:hover {border-bottom:1px solid white;}
+div.opaque div.bottom_site {float:left; width:304px; height:50px; background:url(../images/round/bottom_grey_opaque_short_2.png) no-repeat center 0;}
+div.opaque div.bottom_site p {float:left; width:auto; margin:17px 0 0 35px; text-align:left; font:normal 13px Arial; color:white; text-decoration:none;}
+div.opaque div.bottom_site p a {color:#FF6600; text-decoration:none;}
+div.opaque div.bottom_site p a:hover {text-decoration:underline;}
 
 
 
