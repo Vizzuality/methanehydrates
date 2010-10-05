@@ -23,3 +23,19 @@ u.reload
 end
 
 u.roles << r
+
+# Default image sizes
+puts "Loading default image sizes"
+RefinerySetting.set(:user_image_sizes, {
+  :small => '110x110>',
+  :medium => '225x255>',
+  :large => '550x370>'
+})
+
+
+# Load sample data
+env_seed_file = File.join(Rails.root, 'db', 'env_seeds', "#{Rails.env}.rb")
+if File.exist?(env_seed_file)
+  puts "Loading seeds from #{Rails.env}"
+  load(env_seed_file)
+end
