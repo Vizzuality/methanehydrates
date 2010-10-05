@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/Vizzuality/refinerycms-events.git
-  revision: 8c687e98761ac42c09bb058d71300c06cb5a7985
+  revision: e076f646d5b8a671d03bd0ab6895694c62eb9030
   specs:
     refinerycms-events (0.1)
 

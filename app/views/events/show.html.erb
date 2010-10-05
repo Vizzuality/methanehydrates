@@ -4,27 +4,27 @@
         <div class="head_event">
           <div class="top"></div>
           <div class="middle">
-            <p class="back"><a href="#">View events list</a></p>
+            <p class="back"><a href="<%= events_path %>">View events list</a></p>
             <div class="left">
               <p class="day"><%=@event.from.strftime("%d")%></p>
               <p class="month"><%=@event.from.strftime("%b").upcase %></p>
             </div>
             <div class="right">
               <h1><%= @event.title %></h1>
-              <p class="location"><%= @event.location %> | <%=@event.from.strftime("#{to_ordinal(@event.from.day)} %b")%> &#8594; <%=@event.to.strftime("#{to_ordinal(@event.to.day)} %b")%></p>
+              <p class="location"><%= @event.location %> | <%=@event.from.strftime("#{to_ordinal(@event.from.day)} %b")%> <%= "&#8594; #{@event.to.strftime("#{to_ordinal(@event.to.day)} %b")}" unless @event.one_day_event? %></p>
             </div>
             <span class="line"></span>
           </div>
         </div>
         <div class="middle_white resume">
           <%= raw @event.description %>
-          <a class="visit" href="#">Visit official website</a>
+          <a class="visit" href="<%= @event.url %>" rel="nofollow">Visit official website</a>
           <span class="line"></span>
         </div>
         <div class="middle_white">
           <h6>Events in similar dates</h6>
           <ul>
-            <% @events.each do |event| %>
+            <% @event.similar(:limit => 3).each do |event| %>
               <li>
                 <div class="left">
                   <p class="day"><%=event.from.strftime("%d")%></p>
