@@ -32,6 +32,8 @@ RefinerySetting.set(:user_image_sizes, {
   :large => '550x370>'
 })
 
+puts "Setting site name"
+RefinerySetting.set(:site_name, 'Frozen Heat')
 
 # Load sample data
 env_seed_file = File.join(Rails.root, 'db', 'env_seeds', "#{Rails.env}.rb")
