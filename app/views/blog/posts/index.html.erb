@@ -26,9 +26,16 @@
               <%= render :partial => "/blog/shared/post", :collection => @blog_posts %>
             </ul>
         </div>
-      <div class="bottom_posts">
-        <a href="#">Previous posts</a>
-      </div>
+        <% if @blog_posts.total_pages > 1 %>
+        <div class="bottom_posts">
+          <% if @blog_posts.current_page < @blog_posts.total_pages %>
+          <a href="<%= blog_root_path(:page => @blog_posts.next_page) %>">Previous posts</a>
+          <% end -%>
+          <% if @blog_posts.current_page > 1 %>
+          <a href="<%= blog_root_path(:page => @blog_posts.previous_page) %>">Next posts</a>
+          <% end -%>
+        </div>
+        <% end -%>
     </div>
   <% end %>
 

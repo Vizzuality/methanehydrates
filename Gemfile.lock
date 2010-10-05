@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/Vizzuality/refinerycms-blog.git
+  revision: 52f741bbc4b96e1229246ca6f9b18862ed713090
+  specs:
+    refinerycms-blog (1.0.rc13)
+      filters_spam (~> 0.2)
+      refinerycms (>= 0.9.7.13)
+
+GIT
   remote: git://github.com/Vizzuality/refinerycms-events.git
   revision: e076f646d5b8a671d03bd0ab6895694c62eb9030
   specs:
@@ -27,14 +35,6 @@ GIT
   revision: 5fd43b5842bac2a41c271e3d3713d5f721ae4e62
   specs:
     rails-footnotes (3.6.7)
-
-GIT
-  remote: git://github.com/resolve/refinerycms-blog.git
-  revision: 8e783484211384fdcb1e6b24a76535f013aa4598
-  specs:
-    refinerycms-blog (1.0.rc13)
-      filters_spam (~> 0.2)
-      refinerycms (>= 0.9.7.13)
 
 GEM
   remote: http://rubygems.org/
