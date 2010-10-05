@@ -10,18 +10,18 @@
           <div class="middle">
             <p class="back"><a href="#">View events list</a></p>
             <div class="left">
-              <p class="day">04</p>
-              <p class="month">OCTO</p>
+              <p class="day"><%=@event.from.strftime("%d")%></p>
+              <p class="month"><%=@event.from.strftime("%b").upcase %></p>
             </div>
             <div class="right">
               <h1><%= @event.title %></h1>
-              <p class="location"><%= @event.location %> | 06 sept &#8594; 12 sept</p>
+              <p class="location"><%= @event.location %> | <%=@event.from.strftime("#{to_ordinal(@event.from.day)} %b")%> &#8594; <%=@event.to.strftime("#{to_ordinal(@event.to.day)} %b")%></p>
             </div>
             <span class="line"></span>
           </div>
         </div>
         <div class="middle_white resume">
-          <%= truncate(@event.description, :length => @event.description.size, :preserve_html_tags => true) %>
+          <%= raw @event.description %>
           <a class="visit" href="#">Visit official website</a>
           <span class="line"></span>
         </div>
@@ -31,12 +31,12 @@
             <% @events.each do |event| %>
               <li>
                 <div class="left">
-                  <p class="day">04</p>
-                  <p class="month">OCTO</p>
+                  <p class="day"><%=event.from.strftime("%d")%></p>
+                  <p class="month"><%=event.from.strftime("%b").upcase%></p>
                 </div>
                 <div class="right">
                   <h6><%= link_to event.title, event_url(event) %></h6>
-                  <p class="location">Listvyanka, Lake Baikal, Russia</p>
+                  <p class="location"><%= event.location %></p>
                 </div>
               </li>
             <% end %>

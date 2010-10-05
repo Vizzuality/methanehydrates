@@ -1,9 +1,9 @@
 <li>
   <h2><%= link_to post.title, blog_post_url(post) %></h2>
   <p class='posted_at'>
-    <%= t('blog.shared.posts.created_at', :when => post.created_at.strftime('%d %B %Y')) %>
+    <%= post.created_at.strftime("#{to_ordinal(post.created_at.day)} of %B, %Y") %>
   </p>
   <div class='clearfix'>
-    <%= truncate(post.body, :length => RefinerySetting.find_or_set(:blog_post_teaser_length, 250), :preserve_html_tags => true) %> <%= link_to t('blog.shared.posts.read_more'), blog_post_url(post) %>
+    <%= truncate(post.body, :length => RefinerySetting.find_or_set(:blog_post_teaser_length, 20), :preserve_html_tags => true, :omission=> raw(link_to "Read more", blog_post_url(post))) %> 
   </div>
 </li>

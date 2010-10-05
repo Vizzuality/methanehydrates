@@ -149,9 +149,9 @@ div.head_post div.middle p {float:left; padding:5px 0 0 0; font:normal 13px Aria
 div.head_post div.middle span.line {position:absolute; height:1px; width:615px; bottom:0; left:9px; background:#BF4C00;}
 div.middle_white {float:left; width:553px; padding:20px 40px 30px 40px; height:auto; background:url(../images/round/middle_white.png) repeat-y 0 0; font:normal 15px Arial; color:#666666;}
 div.middle_white p {float:left; width:100%; font:normal 15px Arial; color:#666666; line-height:19px;}
-div.bottom_white {float:left; width:633px; height:85px; background:url(../images/round/bottom_grey.png) no-repeat 0 0;}
-div.bottom_white a {float:left; margin:29px 0 0 40px; font:bold 15px Arial; color:#FF6600; padding:0 0 0 17px; background:url(../images/icons/orange_left_arrow.png) no-repeat 0 3px; text-decoration:none;}
-div.bottom_white a:hover {color:#FF3300; background-position:0 -13px;}
+div.bottom_grey {float:left; width:633px; height:85px; background:url(../images/round/bottom_grey.png) no-repeat 0 0;}
+div.bottom_grey a {float:left; margin:29px 0 0 40px; font:bold 15px Arial; color:#FF6600; padding:0 0 0 17px; background:url(../images/icons/orange_left_arrow.png) no-repeat 0 3px; text-decoration:none;}
+div.bottom_grey a:hover {color:#FF3300; background-position:0 -13px;}
 
 
 
@@ -237,7 +237,7 @@ div#body_content_left div ul#events li div.right h2 {float:left; width:100%;}
 div#body_content_left div ul#events li div.right h2 a {font:bold 17px Arial; color:#FF6600; text-decoration:none;}
 div#body_content_left div ul#events li div.right h2 a:hover {text-decoration:underline;}
 div#body_content_left div ul#events li div.right p.location {float:left; width:100%; font:normal 13px Arial; color:#999999; padding:0 0 13px 0;}
-div#body_content_left div ul#events li div.right p span {float:left; width:100%; font:normal 13px Arial; color:#333333;}
+div#body_content_left div ul#events li div.right p {float:left; width:100%; font:normal 13px Arial; color:#444444;}
 
 div#body_content_right {float:right; width:304px; padding:6px 0 50px 0;}
 div#body_content_right div.opaque {float:right; width:304px;}
@@ -272,8 +272,8 @@ div.head_event div.middle div.left {float:left; width:64px; height:51px; padding
 div.head_event div.middle div.left p.day {float:left; width:100%; text-align:center; font:bold 37px Arial; color:#FF6428; text-shadow:0 -1px #614E42; letter-spacing:-2px; padding:0; margin:0;}
 div.head_event div.middle div.left p.month {float:left; width:100%; text-align:center; font:bold 13px Arial; color:#FF6428; text-shadow:0 -1px #614E42; line-height:10px; letter-spacing:0px; padding:0; margin:0;}
 div.head_event div.middle div.right {float:left; width:478px;}
-div.head_event div.middle h1 {float:left; font:bold 21px Arial; color:white; padding:15px 0 0 0; letter-spacing:-1px; text-shadow:0px 1px #B24B1D;}
-div.head_event div.middle p {float:left; padding:5px 0 0 0; font:normal 13px Arial; color:white; text-shadow:0 -1px #B24B1D;}
+div.head_event div.middle h1 {float:left; width:100%; font:bold 21px Arial; color:white; padding:15px 0 0 0; letter-spacing:-1px; text-shadow:0px 1px #B24B1D;}
+div.head_event div.middle p {float:left; width:100%; padding:5px 0 0 0; font:normal 13px Arial; color:white; text-shadow:0 -1px #B24B1D;}
 div.head_event div.middle span.line {position:absolute; height:1px; width:615px; bottom:0; left:9px; background:#BF4C00;}
 div.middle_white {float:left; width:553px; padding:20px 40px 30px 40px; height:auto; background:url(../images/round/middle_white.png) repeat-y 0 0; font:normal 15px Arial; color:#666666;}
 div.middle_white.resume {position:relative;}

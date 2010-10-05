@@ -8,14 +8,14 @@
         <div class="middle">
           <p class="back"><a href="#">View latest post</a></p>
           <h1><%= @blog_post.title %></h1>
-          <p class='posted_at'><%= t('blog.shared.posts.created_at', :when => @blog_post.created_at.strftime('%d %B %Y')) %></p>
+          <p class='posted_at'><%= @blog_post.created_at.strftime("#{to_ordinal(@blog_post.created_at.day)} of %B, %Y") %></p>
           <span class="line"></span>
         </div>
       </div>
       <div class="middle_white">
-        <%= @blog_post.body %>
+        <%= raw @blog_post.body %>
       </div>
-      <div class="bottom_white">
+      <div class="bottom_grey">
         <a href="#">Back to posts</a>
       </div>
     </div>
