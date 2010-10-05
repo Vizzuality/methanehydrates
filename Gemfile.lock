@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/Vizzuality/refinerycms-events.git
-  revision: 86db3386eb1a404a95d9cd0d61f449aa554b4f02
+  revision: 8c687e98761ac42c09bb058d71300c06cb5a7985
   specs:
     refinerycms-events (0.1)
 
@@ -30,9 +30,9 @@ GIT
 
 GIT
   remote: git://github.com/resolve/refinerycms-blog.git
-  revision: 55741d816462b6ec2fee90d456e6dc32f470b6e3
+  revision: 8e783484211384fdcb1e6b24a76535f013aa4598
   specs:
-    refinerycms-blog (1.0.rc12)
+    refinerycms-blog (1.0.rc13)
       filters_spam (~> 0.2)
       refinerycms (>= 0.9.7.13)
 
@@ -154,7 +154,7 @@ GEM
       ruby-debug-base (~> 0.10.3.0)
     ruby-debug-base (0.10.3)
       linecache (>= 0.3)
-    thor (0.14.2)
+    thor (0.14.3)
     treetop (1.4.8)
       polyglot (>= 0.3.1)
     truncate_html (0.4.0)
@@ -173,7 +173,7 @@ DEPENDENCIES
   rails (= 3.0.0)
   rails-footnotes!
   refinerycms (= 0.9.8.5)
-  refinerycms-blog (= 1.0.rc12)!
+  refinerycms-blog (~> 1.0.rc12)!
   refinerycms-events (= 0.1)!
   refinerycms-features (= 0.1)!
   refinerycms-galleries (= 0.3)!
