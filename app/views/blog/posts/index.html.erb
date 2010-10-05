@@ -1,13 +1,7 @@
-
-  <!-- <% content_for :body_content_title, "" %> -->
-
-
   <% content_for :title do %>
     <h1>Frozen Heat news and articles</h1>
     <p>Aggregating events related with methane gas. If you know another event, please contact us</p>
   <% end %>
-
-
 
 
   <% content_for :body_content_left do %>
@@ -24,7 +18,7 @@
               </div>
               <span class="line"></span>
             </div>
-            
+
             <%= @page[Page.default_parts.first.to_sym] %>
 
             <ul id="blog_posts">
@@ -41,7 +35,7 @@
 
 <% content_for :body_content_right do %>
   <%= @page[Page.default_parts.second.to_sym] %>
-  
+
   <div class="twitter">
     <div class="top"></div>
     <div class="middle">
@@ -121,7 +115,7 @@
       <a href="#">Follow us on twitter</a>
     </div>
   </div>
-  
+
   <div class="news">
     <div class="top"></div>
     <div class="middle">
@@ -153,8 +147,8 @@
       <p class="feed"><a href>subscribe to our news feed</a></p>
     </div>
   </div>
-  
-  
+
+
   <div class="sites">
     <div class="top"></div>
     <div class="middle">
@@ -176,13 +170,11 @@
     </div>
     <div class="bottom"></div>
   </div>
-  
-  
+
+
 <% end %>
 
 <%= render :partial => "/shared/content_page" %>
-
-
 
 
 
