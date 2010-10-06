@@ -18,20 +18,25 @@
 	
 	<div class="layout">
 	  
-    <div id="header">
-      <div class="inner_header">
-        <div class="logo">
-          <a href="#"><%= image_tag 'common/logo.jpg' %></a>
+      
+      <% if (action_name == 'home') %>
+        
+      <% else %>
+        <div id="header">
+          <div class="inner_header">
+            <div class="logo">
+              <a href="#"><%= image_tag 'common/logo.jpg' %></a>
+            </div>
+            <ul>
+              <li class="last current"><a href="#">BLOG</a></li>
+              <li><a href="#">LEARN MORE</a></li>
+              <li><a href="#">UPCOMING EVENTS</a></li>
+              <li><a href="#">MEDIA RESOURCES</a></li>
+              <li><a href="#">EXPLORE THE SITES</a></li>
+            </ul>
+          </div>
         </div>
-        <ul>
-          <li class="last current"><a href="#">BLOG</a></li>
-          <li><a href="#">LEARN MORE</a></li>
-          <li><a href="#">UPCOMING EVENTS</a></li>
-          <li><a href="#">MEDIA RESOURCES</a></li>
-          <li><a href="#">EXPLORE THE SITES</a></li>
-        </ul>
-      </div>
-    </div>
+      <%- end %>
     
     <div class="title">
       <div class="inner_title">
