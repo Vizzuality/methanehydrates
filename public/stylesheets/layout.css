@@ -152,7 +152,7 @@ div#body_content_right div.twitter div.middle ul {float:left; width:100%;}
 div#body_content_right div.twitter div.middle ul li {float:left; width:100%; padding:20px 0; border-bottom:1px solid #4b4f59;}
 div#body_content_right div.twitter div.middle ul li div.image {float:left; width:48px; padding:2px; margin:0 9px 0 0; background:url(../images/posts/avatar_border.png) no-repeat 0 0;}
 div#body_content_right div.twitter div.middle ul li div.text {float:left; width:173px;}
-div#body_content_right div.twitter div.middle ul li div.text p {font:normal 13px Arial; color:white;}
+div#body_content_right div.twitter div.middle ul li div.text p {float:left; width:173px; font:normal 13px Arial; color:white; overflow-x:hidden;}
 div#body_content_right div.twitter div.middle ul li div.text p a {color:white;}
 div#body_content_right div.twitter div.middle ul li div.text p a:hover {color:#CCCCCC;}
 div#body_content_right div.twitter div.middle ul li.last {border-bottom:none;}
