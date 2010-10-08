@@ -1,36 +1,140 @@
-<% content_for :body_content_left do %>
 
-  <div>
-    <h3>Name</h3>
-    <%= @gallery.name %>
-  </div>
 
-  <div>
-    <h3>Body</h3>
-    <%= raw @gallery.body %>
-  </div>
+        <div id="content">
+          <div class="main_media">
+            <div class="head_post">
+              <div class="top"></div>
+              <div class="middle">
+                <div class="left">
+                  <p class="back"><a href="#">Back to galleries</a></p>
+                  <h1>Hydrate samples and field activities in the Arctic.</h1>
+                </div>
+                <div class="right">
+                  <ul>
+                    <li class="last"><p class="videos">2 videos</p></li>
+                    <li><p class="photos">21 photos</p></li>
+                  </ul>
+                </div>
+                <span class="line"></span>
+              </div>
+            </div>
+            <div class="middle">
+              <img src="../images/media/example.jpg" />
+              <div class="bottom_content">
+                <div class="block map">
+                </div>
+                <div class="block">
+                  <p>Research on methane gas hydrates has been progressing for decades. Subjects of interestet include global distribution, geohazards linked to human activities, ecosystems associated to near surface occurrences, technology issues linked to possible production and future scenarios about methane gas hydrates in the</p>
+                </div>
+                <div class="block last">
+                  <p>global energy mix.
+                    <br/><br/>
+                  The following gallery places methane gas hydrates in the context of current human activties such as exploration and production research and scientific field and laboratory studies.</p>
+                </div>
+              </div>
+            </div>
+            <div class="bottom">
+              <a href="#">View site details</a>
+            </div>
+          </div>
 
-  <div>
-    <h3>Entries (<%= @gallery.gallery_entries.count %>)</h3>
-    <ul>
-    <% @gallery.gallery_entries.each do |gallery_entry| %>
-      <li><%= image_fu gallery_entry.image, :medium %>
-      <%= link_to(gallery_entry.name, gallery_gallery_entry_url(@gallery, gallery_entry)) %></li>
-    <% end -%>
-    </ul>
-  </div>
 
-<% end %>
+          <div class="galleries_by_region">
+            <div class="top"></div>
+            <div class="middle">
+              <h3>Other sites Galleries by Region</h3>
+              <ul>
+                <li>
+                  <div class="image">
+                    <img src="../images/avatars/null.jpg" />
+                  </div>
+                  <div class="text">
+                    <p>Hydrate samples and field activities from Lake Baikal.</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="image">
+                    <img src="../images/avatars/null.jpg" />
+                  </div>
+                  <div class="text">
+                    <p>Hydrate samples and field activities from Lake Baikal.</p>
+                  </div>
+                </li>
+                <li class="last">
+                  <div class="image">
+                    <img src="../images/avatars/null.jpg" />
+                  </div>
+                  <div class="text">
+                    <p>Hydrate samples and field activities from Lake Baikal.</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="image">
+                    <img src="../images/avatars/null.jpg" />
+                  </div>
+                  <div class="text">
+                    <p>Hydrate samples and field activities from Lake Baikal.</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="image">
+                    <img src="../images/avatars/null.jpg" />
+                  </div>
+                  <div class="text">
+                    <p>Hydrate samples and field activities from Lake Baikal.</p>
+                  </div>
+                </li>
+                <li class="last">
+                  <div class="image">
+                    <img src="../images/avatars/null.jpg" />
+                  </div>
+                  <div class="text">
+                    <p>Hydrate samples and field activities from Lake Baikal.</p>
+                  </div>
+                </li>            
+              </ul>
+            </div>
+            <div class="bottom"></div>
+          </div>
 
-<% content_for :body_content_right do %>
-  <h2><%= t('.other') %></h2>
-  <ul id="galleries">
-    <% @galleries.each do |gallery| %>
-      <li>
-        <%= link_to gallery.name, gallery_url(gallery) %>
-      </li>
-    <% end %>
-  </ul>
-<% end %>
+        </div>
+
+
+
+
+      <!-- <% content_for :body_content_left do %>
+
+        <div>
+          <h3>Name</h3>
+          <%= @gallery.name %>
+        </div>
+
+        <div>
+          <h3>Body</h3>
+          <%= raw @gallery.body %>
+        </div>
+
+        <div>
+          <h3>Entries (<%= @gallery.gallery_entries.count %>)</h3>
+          <ul>
+          <% @gallery.gallery_entries.each do |gallery_entry| %>
+            <li><%= image_fu gallery_entry.image, :medium %>
+            <%= link_to(gallery_entry.name, gallery_gallery_entry_url(@gallery, gallery_entry)) %></li>
+          <% end -%>
+          </ul>
+        </div>
+
+      <% end %>
+
+      <% content_for :body_content_right do %>
+        <h2><%= t('.other') %></h2>
+        <ul id="galleries">
+          <% @galleries.each do |gallery| %>
+            <li>
+              <%= link_to gallery.name, gallery_url(gallery) %>
+            </li>
+          <% end %>
+        </ul>
+      <% end %> -->
 
 <%= render :partial => "/shared/content_page" %>

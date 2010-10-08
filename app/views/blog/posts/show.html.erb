@@ -1,59 +1,44 @@
 
 
+  <div id="content">
+    <div class="space40"></div>
+    <% content_for :body_content_left do %>
+      <div class="post_content">
+        <div class="head_post">
+          <div class="top"></div>
+          <div class="middle">
+            <p class="back"><a href="#">View latest post</a></p>
+            <h1><%= @blog_post.title %></h1>
+            <p class='posted_at'><%= @blog_post.created_at.strftime("#{to_ordinal(@blog_post.created_at.day)} of %B, %Y") %></p>
+            <span class="line"></span>
+          </div>
+        </div>
+        <div class="middle_white">
+          <%= raw @blog_post.body %>
+        </div>
+        <div class="bottom_grey">
+          <a href="#">Back to posts</a>
+        </div>
+      </div>
+    <% end %>
 
-  <% content_for :body_content_left do %>
-    <div class="post_content">
-      <div class="head_post">
+    <% content_for :body_content_right do %>
+      <div class="news">
         <div class="top"></div>
         <div class="middle">
-          <p class="back"><a href="#">View latest post</a></p>
-          <h1><%= @blog_post.title %></h1>
-          <p class='posted_at'><%= @blog_post.created_at.strftime("#{to_ordinal(@blog_post.created_at.day)} of %B, %Y") %></p>
-          <span class="line"></span>
+          <div class="head">
+            <h4>More news</h4>
+            <p>News in other related blogs</p>
+            <span class="line"></span>
+          </div>
+          <ul id="news_list"></ul>
+        </div>
+        <div class="bottom">
+          <p class="feed"><a href>subscribe to our news feed</a></p>
         </div>
       </div>
-      <div class="middle_white">
-        <%= raw @blog_post.body %>
-      </div>
-      <div class="bottom_grey">
-        <a href="#">Back to posts</a>
-      </div>
-    </div>
-  <% end %>
+    <% end %>
 
-  <% content_for :body_content_right do %>
-    <div class="news">
-      <div class="top"></div>
-      <div class="middle">
-        <div class="head">
-          <h4>More news</h4>
-          <p>News in other related blogs</p>
-          <span class="line"></span>
-        </div>
-        <ul>
-          <li>
-            <h5><a href="#">10th International Conference on Gas in Marine Sediments</a></h5>
-            <p>from protectedplanet.net</p>
-          </li>
-          <li>
-            <h5><a href="#">10th International Conference on Gas in Marine Sediments</a></h5>
-            <p>from protectedplanet.net</p>
-          </li>
-          <li>
-            <h5><a href="#">10th International Conference on Gas in Marine Sediments</a></h5>
-            <p>from protectedplanet.net</p>
-          </li>
-          <li class="last">
-            <h5><a href="#">10th International Conference on Gas in Marine Sediments</a></h5>
-            <p>from protectedplanet.net</p>
-          </li>
-        </ul>
-      </div>
-      <div class="bottom">
-        <p class="feed"><a href>subscribe to our news feed</a></p>
-      </div>
-    </div>
-  <% end %>
-
-  <%= render :partial => "/shared/content_page" %>
-  <% content_for :head, stylesheet_link_tag('refinerycms-blog') %>
+    <%= render :partial => "/shared/content_page" %>
+    <% content_for :head, stylesheet_link_tag('refinerycms-blog') %>
+  </div>

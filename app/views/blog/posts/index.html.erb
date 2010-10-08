@@ -1,103 +1,107 @@
-<% content_for :title do %>
-  <h1>Frozen Heat news and articles</h1>
-  <p>Aggregating events related with methane gas. If you know another event, please contact us</p>
-<% end %>
 
-<% content_for :body_content_left do %>
-  <div class="post_content">
-    <div class="top_posts"></div>
-      <div class="middle_posts">
-          <div class="head_posts">
-            <div class="left">
-              <h1>Latest news</h1>
-              <p>Subtitle</p>
-            </div>
-            <div class="right">
-              <p class="feed"><a href="<%= blog_rss_feed_url %>">subscribe to our blog</a></p>
-            </div>
+
+  <div class="title">
+    <div class="inner_title">
+        <h1>Frozen Heat news and articles</h1>
+        <p>Aggregating events related with methane gas. If you know another event, please contact us</p>
+    </div>
+  </div>
+
+
+  <div id="content">
+    <% content_for :body_content_left do %>
+      <div class="post_content">
+        <div class="top_posts"></div>
+          <div class="middle_posts">
+              <div class="head_posts">
+                <div class="left">
+                  <h1>Latest news</h1>
+                  <p>Subtitle</p>
+                </div>
+                <div class="right">
+                  <p class="feed"><a href="<%= blog_rss_feed_url %>">subscribe to our blog</a></p>
+                </div>
+                <span class="line"></span>
+              </div>
+
+              <%= @page[Page.default_parts.first.to_sym] %>
+
+              <ul id="blog_posts">
+                <%= render :partial => "/blog/shared/post", :collection => @blog_posts %>
+              </ul>
+          </div>
+          <div class="bottom_posts">              
+            <% if @blog_posts.total_pages > 1 %>
+              <% if @blog_posts.current_page < @blog_posts.total_pages %>
+                <a href="<%= blog_root_path(:page => @blog_posts.next_page) %>">Previous posts</a>
+              <% end -%>
+              <% if @blog_posts.current_page > 1 %>
+                <a href="<%= blog_root_path(:page => @blog_posts.previous_page) %>" class="next">Next posts</a>
+              <% end -%>
+            <% end -%>
+          </div>
+      </div>
+    <% end %>
+
+    <% content_for :body_content_right do %>
+
+      <%= @page[Page.default_parts.second.to_sym] %>
+
+      <div class="twitter">
+        <div class="top"></div>
+        <div class="middle">
+          <div class="head">
+            <h3>Latest on twitter</h3>
+            <p>Subtitle</p>
             <span class="line"></span>
           </div>
+          <ul id="tweets_list"></ul>
+        </div>
+        <div class="bottom">
+          <a href="http://twitter.com/vizzuality" target="_blank">Follow us on twitter</a>
+        </div>
+      </div>
 
-          <%= @page[Page.default_parts.first.to_sym] %>
+      <div class="news">
+        <div class="top"></div>
+        <div class="middle">
+          <div class="head">
+            <h4>More news</h4>
+            <p>News in other related blogs</p>
+            <span class="line"></span>
+          </div>
+          <ul id="news_list"></ul>
+        </div>
+        <div class="bottom">
+          <p class="feed"><a href>subscribe to our news feed</a></p>
+        </div>
+      </div>
 
-          <ul id="blog_posts">
-            <%= render :partial => "/blog/shared/post", :collection => @blog_posts %>
+      <div class="sites">
+        <div class="top"></div>
+        <div class="middle">
+          <div class="head">
+            <h5>Browse our sites</h5>
+            <p><a href="#">Explore</a> methane gas sites around</p>
+            <span class="line"></span>
+          </div>
+          <ul>
+            <li>
+              <h6><a href="#">Middle America Trench - Guatem...</a></h6>
+              <span><p class="first">EUROPE</p><p>SPAIN</p></span>
+            </li>
+            <li>
+              <h6><a href="#">Middle America Trench - Guatem...</a></h6>
+              <span><p class="first">EUROPE</p><p>SPAIN</p></span>
+            </li>
           </ul>
+        </div>
+        <div class="bottom"></div>
       </div>
-      <div class="bottom_posts">
-        <% if @blog_posts.total_pages > 1 %>
-          <% if @blog_posts.current_page < @blog_posts.total_pages %>
-            <a href="<%= blog_root_path(:page => @blog_posts.next_page) %>">Previous posts</a>
-          <% end -%>
-          <% if @blog_posts.current_page > 1 %>
-            <a href="<%= blog_root_path(:page => @blog_posts.previous_page) %>">Next posts</a>
-          <% end -%>
-        <% end -%>
-      </div>
+
+
+    <% end %>
+
+    <%= render :partial => "/shared/content_page" %>
+    <% content_for :head, stylesheet_link_tag('refinerycms-blog') %>
   </div>
-<% end %>
-
-<% content_for :body_content_right do %>
-
-  <%= @page[Page.default_parts.second.to_sym] %>
-
-  <div class="twitter">
-    <div class="top"></div>
-    <div class="middle">
-      <div class="head">
-        <h3>Latest on twitter</h3>
-        <p>Subtitle</p>
-        <span class="line"></span>
-      </div>
-      <ul id="tweets_list"></ul>
-    </div>
-    <div class="bottom">
-      <a href="#">Follow us on twitter</a>
-    </div>
-  </div>
-
-  <div class="news">
-    <div class="top"></div>
-    <div class="middle">
-      <div class="head">
-        <h4>More news</h4>
-        <p>News in other related blogs</p>
-        <span class="line"></span>
-      </div>
-      <ul id="news_list"></ul>
-    </div>
-    <div class="bottom">
-      <p class="feed"><a href>subscribe to our news feed</a></p>
-    </div>
-  </div>
-
-  <div class="sites">
-    <div class="top"></div>
-    <div class="middle">
-      <div class="head">
-        <h5>Browse our sites</h5>
-        <p><a href="#">Explore</a> methane gas sites around</p>
-        <span class="line"></span>
-      </div>
-      <ul>
-        <li>
-          <h6><a href="#">Middle America Trench - Guatem...</a></h6>
-          <span><p class="first">EUROPE</p><p>SPAIN</p></span>
-        </li>
-        <li>
-          <h6><a href="#">Middle America Trench - Guatem...</a></h6>
-          <span><p class="first">EUROPE</p><p>SPAIN</p></span>
-        </li>
-      </ul>
-    </div>
-    <div class="bottom"></div>
-  </div>
-
-
-<% end %>
-
-<%= render :partial => "/shared/content_page" %>
-
-
-
-<% content_for :head, stylesheet_link_tag('refinerycms-blog') %>
