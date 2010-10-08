@@ -13,7 +13,7 @@ gem 'rmagick',                  '~> 2.12.0',  :require => false
 group :development do
   gem 'capistrano'
   gem 'capistrano-ext'
-  gem 'rails-footnotes',                                                     :git => 'git://github.com/indirect/rails-footnotes.git'
+  gem 'rails-footnotes',                                                     :git => 'git://github.com/Vizzuality/rails-footnotes.git'
 end
 
 # REFINERY CMS ================================================================
