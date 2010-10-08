@@ -1,45 +1,41 @@
+<% content_for :title do %>
+  <h1>Frozen Heat news and articles</h1>
+  <p>Aggregating events related with methane gas. If you know another event, please contact us</p>
+<% end %>
 
-  <% content_for :title do %>
-    <h1>Frozen Heat news and articles</h1>
-    <p>Aggregating events related with methane gas. If you know another event, please contact us</p>
-  <% end %>
-
-
-  <% content_for :body_content_left do %>
-    <div class="post_content">
-      <div class="top_posts"></div>
-        <div class="middle_posts">
-            <div class="head_posts">
-              <div class="left">
-                <h1>Latest news</h1>
-                <p>Subtitle</p>
-              </div>
-              <div class="right">
-                <p class="feed"><a href="#">subscribe to our blog</a></p>
-              </div>
-              <span class="line"></span>
+<% content_for :body_content_left do %>
+  <div class="post_content">
+    <div class="top_posts"></div>
+      <div class="middle_posts">
+          <div class="head_posts">
+            <div class="left">
+              <h1>Latest news</h1>
+              <p>Subtitle</p>
             </div>
+            <div class="right">
+              <p class="feed"><a href="<%= blog_rss_feed_url %>">subscribe to our blog</a></p>
+            </div>
+            <span class="line"></span>
+          </div>
 
-            <%= @page[Page.default_parts.first.to_sym] %>
+          <%= @page[Page.default_parts.first.to_sym] %>
 
-            <ul id="blog_posts">
-              <%= render :partial => "/blog/shared/post", :collection => @blog_posts %>
-            </ul>
-        </div>
-        <div class="bottom_posts">
-          <% if @blog_posts.total_pages > 1 %>
-            <% if @blog_posts.current_page < @blog_posts.total_pages %>
-              <a href="<%= blog_root_path(:page => @blog_posts.next_page) %>">Previous posts</a>
-            <% end -%>
-            <% if @blog_posts.current_page > 1 %>
-              <a href="<%= blog_root_path(:page => @blog_posts.previous_page) %>">Next posts</a>
-            <% end -%>
+          <ul id="blog_posts">
+            <%= render :partial => "/blog/shared/post", :collection => @blog_posts %>
+          </ul>
+      </div>
+      <div class="bottom_posts">
+        <% if @blog_posts.total_pages > 1 %>
+          <% if @blog_posts.current_page < @blog_posts.total_pages %>
+            <a href="<%= blog_root_path(:page => @blog_posts.next_page) %>">Previous posts</a>
           <% end -%>
-        </div>
-    </div>
-  <% end %>
-
-
+          <% if @blog_posts.current_page > 1 %>
+            <a href="<%= blog_root_path(:page => @blog_posts.previous_page) %>">Next posts</a>
+          <% end -%>
+        <% end -%>
+      </div>
+  </div>
+<% end %>
 
 <% content_for :body_content_right do %>
 
@@ -74,7 +70,6 @@
       <p class="feed"><a href>subscribe to our news feed</a></p>
     </div>
   </div>
-
 
   <div class="sites">
     <div class="top"></div>
