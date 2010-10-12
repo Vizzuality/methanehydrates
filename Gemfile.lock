@@ -20,13 +20,13 @@ GIT
 
 GIT
   remote: git://github.com/Vizzuality/refinerycms-features.git
-  revision: 4e17c60c42aadc6042d6da6eba24dab3e320654e
+  revision: f6c2af49897272ae88cd41993c8038befdfb7b77
   specs:
-    refinerycms-features (0.1)
+    refinerycms-features (0.2)
 
 GIT
   remote: git://github.com/Vizzuality/refinerycms-galleries.git
-  revision: 0bd4c572f4d2a30173c6e246a2531419a01331a1
+  revision: aa05ac4e0faa4dee57a7787cefd91dfdfd4458e8
   specs:
     refinerycms-galleries (0.3)
 
@@ -175,7 +175,7 @@ DEPENDENCIES
   refinerycms (= 0.9.8.5)
   refinerycms-blog (~> 1.0.rc12)!
   refinerycms-events (= 0.1)!
-  refinerycms-features (= 0.1)!
+  refinerycms-features (= 0.2)!
   refinerycms-galleries (= 0.3)!
   refinerycms-i18n (= 0.9.8.7)
   refinerycms-inquiries (= 0.9.8.4)
