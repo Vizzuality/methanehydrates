@@ -22,6 +22,8 @@ set :user,  'ubuntu'
 
 set :deploy_to, "/home/ubuntu/www/#{application}"
 
+set :bundle_flags,       ""
+
 after  "deploy:update_code", :run_migrations, :symlinks
 
 desc "Restart Application"
