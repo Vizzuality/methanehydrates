@@ -7,7 +7,7 @@ input:focus{outline:none;}
 ul {list-style:none;}
 div.space80 {float:left; width:100%; height:80px;}
 div.space40 {float:left; width:100%; height:40px;}
-
+.hidden {display:none;}
 
 #supersized {position:fixed; float:left;}
 #supersized img {height:100%; width:100%; position:absolute; z-index: 1;}
@@ -48,6 +48,9 @@ div.title div.inner_title div.right ul li.last {border-bottom:none;}
 div.title div.inner_title div.right ul li.last span.line {display:none;}
 div.title div.inner_title div.right ul li a {float:right; width:100%; font:bold 15px Arial; color:white; text-decoration:none; text-shadow:0 1px #39485E;}
 div.title div.inner_title div.right ul li a:hover {text-decoration:underline;}
+
+
+
 
 
 
@@ -378,6 +381,24 @@ div.head_site div.middle p.first {background:url(../images/icons/orange_tiny_arr
 div.head_site div.middle span.line {position:absolute; height:1px; width:615px; bottom:0; left:9px; background:#BF4C00;}
 div.middle_white {float:left; width:553px; padding:20px 40px 30px 40px; height:auto; background:url(../images/round/middle_white.png) repeat-y 0 0; font:normal 15px Arial; color:#666666;}
 div.middle.image {float:left; width:615px; padding:0 9px 10px 9px; height:auto; background:url(../images/round/middle_white.png) repeat-y 0 0; font:normal 15px Arial; color:#666666;}
+
+div.middle.image .slider {position:relative; width:615px; height:400px; overflow:hidden;}
+div.middle.image .slider img {position:absolute; top:0px; left:0px; width:615px;}
+div.middle.image .slider a.nivo-imageLink {position:absolute; top:0px; left:0px; width:100%; height:100%; border:0; padding:0; margin:0; z-index:60; display:none;}
+div.middle.image .nivo-slice {display:block; position:absolute; z-index:50;	height:100%;}
+div.middle.image .nivo-caption {position:absolute; left:0px; bottom:0px; background:#000; color:#fff; opacity:0.8; width:100%; z-index:89;}
+div.middle.image .nivo-caption p {padding:5px; margin:0;}
+div.middle.image .nivo-caption a {display:inline !important;}
+div.middle.image .nivo-html-caption {display:none;}
+div.middle.image .nivo-directionNav a {position:absolute; top:45%; z-index:99; cursor:pointer;}
+div.middle.image .nivo-prevNav {left:0px;}
+div.middle.image .nivo-nextNav {right:0px;}
+div.middle.image .nivo-controlNav {position:absolute; bottom:29px; left:28px; height:21px; background:url(../images/common/left_nav_bkg.png) no-repeat 0 0; width:auto; padding:0 0 0 4px; z-index:1000000;}
+div.middle.image .nivo-controlNav span {float:left; height:21px; background:url(../images/common/right_nav_bkg.png) no-repeat right 0; width:auto; padding:0 3px 0 0;}
+div.middle.image .nivo-controlNav a {display:block; width:6px; height:6px; background:url(../images/icons/circle_nav.png) no-repeat; text-indent:-9999px; border:0; margin:8px 3px 0 2px; float:left;}
+div.middle.image .nivo-controlNav a.active {background-position:0 -6px; color:white;}
+div.middle.image .nivo-controlNav a:hover {background-position:0 -6px; color:white; cursor:pointer;}
+
 div.middle_white.site h3 {float:left; width:100%; font:bold 21px Arial; color:#333333; letter-spacing:-1px; padding:0 0 10px 0;}
 div.middle_white.site p {float:left; width:100%; font:normal 13px Arial; color:#666666; line-height:17px;}
 div.middle_white.site p a {font:normal 13px Arial; color:#FF6600; text-decoration:none;}
@@ -401,7 +422,6 @@ div.opaque div.bottom_site {float:left; width:304px; height:50px; background:url
 div.opaque div.bottom_site p {float:left; width:auto; margin:17px 0 0 35px; text-align:left; font:normal 13px Arial; color:white; text-decoration:none;}
 div.opaque div.bottom_site p a {color:#FF6600; text-decoration:none;}
 div.opaque div.bottom_site p a:hover {text-decoration:underline;}
-
 
 
 

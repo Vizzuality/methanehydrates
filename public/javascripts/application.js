@@ -24,6 +24,7 @@
 		      });
 		    }
 
+
 				//If there is news block
 		    if ($('div.news')[0]) {
 		      var url = "http://pipes.yahoo.com/pipes/pipe.run?_id=67556470dc3cb5b71dc57020634ce192&_render=json&_callback=?";
@@ -35,6 +36,7 @@
 		        });
 		      });
 		    }
+		
 		
 				//If there is a map
 		    if ($('div#map')[0]) {
@@ -53,7 +55,14 @@
 					var marker = new google.maps.Marker({position: latlng,map: map,icon: image});
 		    }				
 
-
+				
+				
+				//Gallery NivoSlider
+				$('.slider').nivoSlider({controlNav:true});
+				
+				
+				
+				//Background resize image
 		    $(function(){
 		        $.fn.supersized.options = {
 		          startwidth: 1021,

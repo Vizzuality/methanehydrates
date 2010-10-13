@@ -1,39 +1,96 @@
-<% content_for :body_content_title do %>
+<div class="title"> 
+  <div class="inner_title">
+  </div> 
+</div> 
 
-  <%= @feature.title %>
 
-<% end %>
-
-<% content_for :body_content_left do %>
-
-  <div>
-    <h3>Title</h3>
-    <%=raw @feature.title %>
+<div id="content">
+  <div class="space40"></div>
+  <div id="body_content_left">
+    <div class="head_site">
+      <div class="top"></div>
+      <div class="middle">
+        <h1><%=raw @feature.title %> - <%=raw @feature.country %></h1>
+        <span><p class="first">Central America</p><p><%=raw @feature.country %></p></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <div class="middle image">
+      <div class="slider">
+        <img src="/images/site/fake.jpg" />
+        <img src="/images/media/example.jpg" />
+      </div>
+    </div>
+    <div class="middle_white site">
+      <%=raw @feature.description %>
+    </div>
+    <div class="bottom site">
+      <p>This information was updated on <%= @feature.created_at.strftime("%d/%m/%G") %></p>
+      <% if logged_in? %>
+        <a href="/refinery/features/<%= @feature.id %>/edit">Edit this information</a>
+      <%- end %>
+    </div>
   </div>
-
-  <div>
-    <h3>Description</h3>
-    <%=raw @feature.description %>
+  
+  <div id="body_content_right">
+    <div class="opaque site">
+      <div class="top"></div>
+      <div class="middle">
+        <div class="head">
+          <h3>Recorded Datafields</h3>
+          <p>Subtitle</p>
+        </div>
+      </div>
+      <div class="middle_map">
+        <div class="outer_map">
+          <div id="map"></div>
+        </div>
+      </div>
+      <div class="middle_site">
+        <h6>PRIMARY INSTITUTION</h6>
+        <p><a href="#">Deep Sea Drilling Project</a></p>
+        <h6>EXPEDITION</h6>
+        <p>Leg 66</p>
+        <h6>WATER DEPTH</h6>
+        <p>857m</p>
+        <h6>HYDRATE DEPTH(mbsf)</h6>
+        <p>140, 146, 167, 364</p>
+        <h6>DESCRIPTION</h6>
+        <p>Cement and Inclusions</p>
+      </div>
+      <div class="bottom_site">
+        <p>Data provided by <a href="#">Booth, J.S. Rows...</a></p>
+      </div>
+    </div>
+    
+    <div class="sites">
+      <div class="top"></div>
+      <div class="middle">
+        <div class="head">
+          <h5>Browse our sites</h5>
+          <p><a href="/">Explore</a> methane gas sites around</p>
+          <span class="line"></span>
+        </div>
+        <ul>
+          <li>
+            <h6><a href="#">Middle America Trench - Guatem...</a></h6>
+            <span><p class="first">EUROPE</p><p>SPAIN</p></span>
+          </li>
+          <li>
+            <h6><a href="#">Middle America Trench - Guatem...</a></h6>
+            <span><p class="first">EUROPE</p><p>SPAIN</p></span>
+          </li>
+        </ul>
+      </div>
+      <div class="bottom"></div>
+    </div>
   </div>
+  
+  
+</div>
 
-  <div>
-    <h3>Gallery</h3>
-    <%=raw @feature.gallery_id %>
-  </div>
 
-  <!-- The Geom -->
 
-<% end %>
+<span id="latitude" class="hidden"><%= @feature.the_geom.lat %></span>
+<span id="longitude" class="hidden"><%= @feature.the_geom.lon %></span>
 
-<% content_for :body_content_right do %>
-  <h2><%= t('.other') %></h2>
-  <ul id="features">
-    <% @features.each do |feature| %>
-      <li>
-        <%= link_to feature.title, feature_url(feature) %>
-      </li>
-    <% end %>
-  </ul>
-<% end %>
-
-<%= render :partial => "/shared/content_page" %>
