@@ -41,3 +41,7 @@ if File.exist?(env_seed_file)
   puts "Loading seeds from #{Rails.env}"
   load(env_seed_file)
 end
+
+# Load methane hydrates pages
+puts 'Loading content in default pages'
+load(Rails.root.join('db', 'methane_static_pages.rb').to_s)
