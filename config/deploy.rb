@@ -22,9 +22,7 @@ set :user,  'ubuntu'
 
 set :deploy_to, "/home/ubuntu/www/#{application}"
 
-# set :bundle_flags,       "--deployment --quiet"
-
-after  "deploy:update_code", :run_migrations#, :symlinks
+after  "deploy:update_code", :run_migrations, :symlinks
 
 desc "Restart Application"
 deploy.task :restart, :roles => [:app] do
@@ -42,6 +40,5 @@ end
 
 task :symlinks, :roles => [:app] do
   run <<-CMD
-    ln -s #{shared_path}/system #{release_path}/public/system;
   CMD
 end
