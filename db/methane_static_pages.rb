@@ -219,6 +219,9 @@ page = Page.find_by_title 'About'
 part = page.parts.find_by_title 'Body'
 part.body = html
 part.save
+part = page.parts.find_by_title 'Side Body'
+part.body = ''
+part.save
 
 html = <<-HTML
 <div class="title">
