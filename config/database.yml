@@ -13,3 +13,11 @@ test:
   database: methanehydrates_test
   username: postgres
   password:
+
+production:
+  adapter: postgresql
+  template: template_postgis
+  encoding: unicode
+  database: methanehydrates_production
+  username: postgres
+  password:
