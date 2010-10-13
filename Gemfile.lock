@@ -20,13 +20,13 @@ GIT
 
 GIT
   remote: git://github.com/Vizzuality/refinerycms-features.git
-  revision: fc1ca585a39d8701f672633bcefdfccd0acaf1b7
+  revision: 6a52d158694f2f21e86ebe7ae9a72ec0b99f81a1
   specs:
     refinerycms-features (0.2)
 
 GIT
   remote: git://github.com/Vizzuality/refinerycms-galleries.git
-  revision: aa05ac4e0faa4dee57a7787cefd91dfdfd4458e8
+  revision: a931190d34a121bc9fec7ae2dadca472f2f4892d
   specs:
     refinerycms-galleries (0.3)
 
