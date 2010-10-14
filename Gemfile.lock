@@ -20,7 +20,7 @@ GIT
 
 GIT
   remote: git://github.com/Vizzuality/refinerycms-features.git
-  revision: 6a52d158694f2f21e86ebe7ae9a72ec0b99f81a1
+  revision: aa30da5e152a4cc00f50b1e20748fb9cfb03b97a
   specs:
     refinerycms-features (0.2)
 
