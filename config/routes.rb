@@ -6,6 +6,7 @@ Refinery::Application.routes.draw do
 
   # Features are mapped in /explore
   resources :features, :path => 'explore'
+  match 'features/random', :to => 'features#random'
 
   scope(:path => 'refinery', :as => 'admin', :module => 'admin') do
     root :to => 'dashboard#index'
