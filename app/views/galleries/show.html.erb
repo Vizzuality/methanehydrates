@@ -1,4 +1,5 @@
-
+        <span id="latitude" class="hidden">40</span>
+        <span id="longitude" class="hidden">8</span>
 
         <div id="content">
           <div class="main_media">
@@ -7,7 +8,7 @@
               <div class="middle">
                 <div class="left">
                   <p class="back"><a href="#">Back to galleries</a></p>
-                  <h1>Hydrate samples and field activities in the Arctic.</h1>
+                  <h1><%= @gallery.name %>.</h1>
                 </div>
                 <div class="right">
                   <ul>
@@ -19,18 +20,20 @@
               </div>
             </div>
             <div class="middle">
-              <img src="../images/media/example.jpg" />
+              <div class="slider">
+                <img src="/images/fake/big.jpg" alt="asdfas df asf asfa sd fdsaf" title="asdfas df asf asfa sd fdsaf" />
+                <img src="/images/fake/example.jpg" alt="asdfas df asf asfa sd fdsaf" title="asdfas df asf asfa sd fdsaf" />
+                <!-- <% @gallery.gallery_entries.each do |gallery_entry| %>
+                   <%= image_fu gallery_entry.image, :large %>
+                <% end -%> -->
+              </div>
               <div class="bottom_content">
-                <div class="block map">
+                <div class="block map" id="map">
                 </div>
                 <div class="block">
-                  <p>Research on methane gas hydrates has been progressing for decades. Subjects of interestet include global distribution, geohazards linked to human activities, ecosystems associated to near surface occurrences, technology issues linked to possible production and future scenarios about methane gas hydrates in the</p>
+                  <%= raw @gallery.body %>
                 </div>
-                <div class="block last">
-                  <p>global energy mix.
-                    <br/><br/>
-                  The following gallery places methane gas hydrates in the context of current human activties such as exploration and production research and scientific field and laboratory studies.</p>
-                </div>
+                <div class="block last"></div>
               </div>
             </div>
             <div class="bottom">
@@ -96,45 +99,5 @@
             </div>
             <div class="bottom"></div>
           </div>
-
         </div>
-
-
-
-
-      <!-- <% content_for :body_content_left do %>
-
-        <div>
-          <h3>Name</h3>
-          <%= @gallery.name %>
-        </div>
-
-        <div>
-          <h3>Body</h3>
-          <%= raw @gallery.body %>
-        </div>
-
-        <div>
-          <h3>Entries (<%= @gallery.gallery_entries.count %>)</h3>
-          <ul>
-          <% @gallery.gallery_entries.each do |gallery_entry| %>
-            <li><%= image_fu gallery_entry.image, :medium %>
-            <%= link_to(gallery_entry.name, gallery_gallery_entry_url(@gallery, gallery_entry)) %></li>
-          <% end -%>
-          </ul>
-        </div>
-
-      <% end %>
-
-      <% content_for :body_content_right do %>
-        <h2><%= t('.other') %></h2>
-        <ul id="galleries">
-          <% @galleries.each do |gallery| %>
-            <li>
-              <%= link_to gallery.name, gallery_url(gallery) %>
-            </li>
-          <% end %>
-        </ul>
-      <% end %> -->
-
-<%= render :partial => "/shared/content_page" %>
+        

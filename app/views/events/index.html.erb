@@ -10,57 +10,63 @@
 
   <div id="content">
     <% content_for :body_content_left do %>
-      <div class="post_content">
-        <div class="top_posts"></div>
-          <div class="middle_posts">
-              <div class="head_posts">
-                <div class="left">
-                  <h1>Upcoming events</h1>
-                  <p><%= pluralize(@events.total_entries, "event","events") %></p>
+      <div class="body_content_left">
+        <div class="post_content">
+          <div class="top_posts"></div>
+            <div class="middle_posts">
+                <div class="head_posts">
+                  <div class="left">
+                    <h1>Upcoming events</h1>
+                    <p><%= pluralize(@events.total_entries, "event","events") %></p>
+                  </div>
+                  <span class="line"></span>
                 </div>
-                <span class="line"></span>
-              </div>
-              <ul id="events">
-                <% @events.each do |event| %>
-                  <li class="last">
-                    <div class="left">
-                      <p class="day"><%=event.from.strftime("%d")%></p>
-                      <p class="month"><%=event.from.strftime("%b").upcase%></p>
-                    </div>
-                    <div class="right">
-                      <h2><%= link_to event.title, event_url(event) %></h2>
-                      <p class="location"><%= event.location %> | <%=event.from.strftime("#{to_ordinal(event.from.day)} %b")%><%=raw "&#8594; #{event.to.strftime("#{to_ordinal(event.to.day)} %b")}" unless event.one_day_event? %></p>
-                      <%= raw event.description %>
-                    </div>
-                  </li>
-                <% end %>
-              </ul>
-          </div>
-          <div class="bottom_posts">
-            <% if @events.total_pages > 1 %>
-              <% if @events.current_page < @events.total_pages %>
-                <a href="<%= events_path(:page => @events.next_page) %>">Previous events</a>
+                <ul id="events">
+                  <% @events.each do |event| %>
+                    <li class="last">
+                      <div class="left">
+                        <p class="day"><%=event.from.strftime("%d")%></p>
+                        <p class="month"><%=event.from.strftime("%b").upcase%></p>
+                      </div>
+                      <div class="right">
+                        <h2><%= link_to event.title, event_url(event) %></h2>
+                        <p class="location"><%= event.location %> | <%=event.from.strftime("#{to_ordinal(event.from.day)} %b")%><%=raw "&#8594; #{event.to.strftime("#{to_ordinal(event.to.day)} %b")}" unless event.one_day_event? %></p>
+                        <%= raw event.description %>
+                      </div>
+                    </li>
+                  <% end %>
+                </ul>
+            </div>
+            <div class="bottom_posts">
+              <% if @events.total_pages > 1 %>
+                <% if @events.current_page < @events.total_pages %>
+                  <a href="<%= events_path(:page => @events.next_page) %>">Previous events</a>
+                <% end -%>
+                <% if @events.current_page > 1 %>
+                  <a href="<%= events_path(:page => @events.previous_page) %>" class="next">Upcoming events</a>
+                <% end -%>
               <% end -%>
-              <% if @events.current_page > 1 %>
-                <a href="<%= events_path(:page => @events.previous_page) %>" class="next">Upcoming events</a>
-              <% end -%>
-            <% end -%>
-          </div>
-      </div>
-    <% end %>
-
-    <% content_for :body_content_right do %>
-      <%= @page[Page.default_parts.second.to_sym] %>
-      <div class="opaque">
-        <div class="top"></div>
-        <div class="middle">
-          <div class="head">
-            <h3>Calendar view</h3>
-            <p>Browse events by month</p>
-            <span class="line"></span>
-          </div>
+            </div>
         </div>
-        <div class="bottom"></div>
+      </div>  
+    <% end %>
+    
+    
+    <% content_for :body_content_right do %>
+      <div class="body_content_right">
+        <%= @page[Page.default_parts.second.to_sym] %>
+        <div class="opaque">
+          <div class="top"></div>
+          <div class="middle">
+            <div class="head">
+              <h3>Calendar view</h3>
+              <p>Browse events by month</p>
+              <span class="line"></span>
+            </div>
+            <div class="calendar"></div>
+          </div>
+          <div class="bottom"></div>
+        </div>
       </div>
     <%- end %>
 

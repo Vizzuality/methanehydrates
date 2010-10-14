@@ -62,6 +62,11 @@
 				
 				
 				
+				//Datepicker calendar
+				$('.calendar').datepicker();
+				$('.calendar').append('<div class="bottom-navigator ui-corner-bottom"><a onclick="javascript:void $(\'a.ui-datepicker-prev\').trigger(\'click\');" class="prev"></a><a onclick="javascript:void $(\'a.ui-datepicker-next\').trigger(\'click\');" class="next"></a></div>');
+				
+				
 				//Background resize image
 		    $(function(){
 		        $.fn.supersized.options = {

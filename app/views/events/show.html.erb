@@ -1,78 +1,82 @@
 
     <div id="content">
       <% content_for :body_content_left do %>
-        <div class="event_content">
-          <div class="head_event">
-            <div class="top"></div>
-            <div class="middle">
-              <p class="back"><a href="<%= events_path %>">View events list</a></p>
-              <div class="left">
-                <p class="day"><%=@event.from.strftime("%d")%></p>
-                <p class="month"><%=@event.from.strftime("%b").upcase %></p>
+        <div class="body_content_left">
+          <div class="event_content">
+            <div class="head_event">
+              <div class="top"></div>
+              <div class="middle">
+                <p class="back"><a href="<%= events_path %>">View events list</a></p>
+                <div class="left">
+                  <p class="day"><%=@event.from.strftime("%d")%></p>
+                  <p class="month"><%=@event.from.strftime("%b").upcase %></p>
+                </div>
+                <div class="right">
+                  <h1><%= @event.title %></h1>
+                  <p class="location"><%= @event.location %> | <%=@event.from.strftime("#{to_ordinal(@event.from.day)} %b")%> <%= "&#8594; #{@event.to.strftime("#{to_ordinal(@event.to.day)} %b")}" unless @event.one_day_event? %></p>
+                </div>
+                <span class="line"></span>
               </div>
-              <div class="right">
-                <h1><%= @event.title %></h1>
-                <p class="location"><%= @event.location %> | <%=@event.from.strftime("#{to_ordinal(@event.from.day)} %b")%> <%= "&#8594; #{@event.to.strftime("#{to_ordinal(@event.to.day)} %b")}" unless @event.one_day_event? %></p>
-              </div>
+            </div>
+            <div class="middle_white resume">
+              <%= raw @event.description %>
+              <a class="visit" href="<%= @event.url %>" rel="nofollow">Visit official website</a>
               <span class="line"></span>
             </div>
+            <div class="middle_white">
+              <h6>Events in similar dates</h6>
+              <ul>
+                <% @event.similar(:limit => 3).each do |event| %>
+                  <li>
+                    <div class="left">
+                      <p class="day"><%=event.from.strftime("%d")%></p>
+                      <p class="month"><%=event.from.strftime("%b").upcase%></p>
+                    </div>
+                    <div class="right">
+                      <h6><%= link_to event.title, event_url(event) %></h6>
+                      <p class="location"><%= event.location %></p>
+                    </div>
+                  </li>
+                <% end %>
+                  <li></li>
+              </ul>
+            </div>
+            <div class="bottom_white"></div>
           </div>
-          <div class="middle_white resume">
-            <%= raw @event.description %>
-            <a class="visit" href="<%= @event.url %>" rel="nofollow">Visit official website</a>
-            <span class="line"></span>
-          </div>
-          <div class="middle_white">
-            <h6>Events in similar dates</h6>
-            <ul>
-              <% @event.similar(:limit => 3).each do |event| %>
-                <li>
-                  <div class="left">
-                    <p class="day"><%=event.from.strftime("%d")%></p>
-                    <p class="month"><%=event.from.strftime("%b").upcase%></p>
-                  </div>
-                  <div class="right">
-                    <h6><%= link_to event.title, event_url(event) %></h6>
-                    <p class="location"><%= event.location %></p>
-                  </div>
-                </li>
-              <% end %>
-                <li></li>
-            </ul>
-          </div>
-          <div class="bottom_white"></div>
         </div>
       <% end %>
 
-
       <% content_for :body_content_right do %>
-        <%= @page[Page.default_parts.second.to_sym] %>
-        <div class="opaque">
-          <div class="top"></div>
-          <div class="middle">
-            <div class="head">
-              <h3>Essential data</h3>
-              <p><a href="#">add it to your calendar</a></p>
-              <span class="line"></span>
+        <div class="body_content_right">
+          <%= @page[Page.default_parts.second.to_sym] %>
+          <div class="opaque">
+            <div class="top"></div>
+            <div class="middle">
+              <div class="head">
+                <h3>Essential data</h3>
+                <p><a href="#">add it to your calendar</a></p>
+                <span class="line"></span>
+              </div>
+              <div id="map"></div>
+              <h4>LOCATION</h4>
+              <p>Listvyanka, Lake Baikal, Russia</p>
+              <h4>DATE</h4>
+              <p>September, 6th to 12th</p>
             </div>
-            <div id="map"></div>
-            <h4>LOCATION</h4>
-            <p>Listvyanka, Lake Baikal, Russia</p>
-            <h4>DATE</h4>
-            <p>September, 6th to 12th</p>
+            <div class="bottom"></div>
           </div>
-          <div class="bottom"></div>
-        </div>
-        <div class="opaque">
-          <div class="top"></div>
-          <div class="middle">
-            <div class="head">
-              <h3>Calendar view</h3>
-              <p>Browse events by month</p>
-              <span class="line"></span>
+          <div class="opaque">
+            <div class="top"></div>
+            <div class="middle">
+              <div class="head">
+                <h3>Calendar view</h3>
+                <p>Browse events by month</p>
+                <span class="line"></span>
+              </div>
+              <div class="calendar"></div>
             </div>
+            <div class="bottom"></div>
           </div>
-          <div class="bottom"></div>
         </div>
       <% end %>
 
