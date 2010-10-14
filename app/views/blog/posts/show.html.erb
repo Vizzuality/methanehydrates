@@ -8,7 +8,7 @@
           <div class="head_post">
             <div class="top"></div>
             <div class="middle">
-              <p class="back"><a href="#">View latest post</a></p>
+              <p class="back"><a href="<%= blog_post_url(BlogPost.live.first) %>">View latest post</a></p>
               <h1><%= @blog_post.title %></h1>
               <p class='posted_at'><%= @blog_post.created_at.strftime("#{to_ordinal(@blog_post.created_at.day)} of %B, %Y") %></p>
               <span class="line"></span>
@@ -18,7 +18,7 @@
             <%= raw @blog_post.body %>
           </div>
           <div class="bottom_grey">
-            <a href="#">Back to posts</a>
+            <a href="<%= blog_root_url %>">Back to posts</a>
           </div>
         </div>
       </div>
@@ -37,7 +37,7 @@
             <ul id="news_list"></ul>
           </div>
           <div class="bottom">
-            <p class="feed"><a href>subscribe to our news feed</a></p>
+            <p class="feed"><a href="#">subscribe to our news feed</a></p>
           </div>
         </div>
       </div>

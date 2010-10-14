@@ -1,112 +1,110 @@
+<div class="title">
+  <div class="inner_title">
+   <div class="left">
+        <h1>A global outlook on <br/>
+        methane gas hydrates</h1>
+        <p class="subtitle">Undertaking an assessment of the state of the knowledge of methane gas hydrates</p>
+    </div>
+    <div class="right">
+      <ul>
+        <li><a href="/explore">EXPLORE THE SITES</a><span class="line"></span></li>
+        <li><a href="/galleries">MEDIA RESOURCES</a><span class="line"></span></li>
+        <li><a href="/events">UPCOMING EVENTS</a><span class="line"></span></li>
+        <li><a href="#">LEARN MORE</a><span class="line"></span></li>
+        <li class="last"><a href="/blog">BLOG</a><span class="line"></span></li>
+      </ul>
+    </div>
+  </div>
+</div>
 
-    <div class="title"> 
-      <div class="inner_title">
-       <div class="left">
-            <h1>A global outlook on <br/>
-            methane gas hydrates</h1>
-            <p class="subtitle">Undertaking an assessment of the state of the knowledge of methane gas hydrates</p>
-        </div>
-        <div class="right">
-          <ul>
-            <li><a href="#">EXPLORE THE SITES</a><span class="line"></span></li>
-            <li><a href="#">MEDIA RESOURCES</a><span class="line"></span></li>
-            <li><a href="/events">UPCOMING EVENTS</a><span class="line"></span></li>
-            <li><a href="#">LEARN MORE</a><span class="line"></span></li>
-            <li class="last"><a href="/blog">BLOG</a><span class="line"></span></li>
-          </ul>
-        </div>
+
+<div id="content">
+  <div class="search">
+    <div class="top"></div>
+    <div class="middle">
+      <div class="left">
+        <h2>Methane gas hydrates sediments around the world</h2>
+        <form>
+          <h4>Search for your desired location</h4>
+          <input type="text" value="Location, Country, Sea..." />
+          <input type="submit" value="Search" />
+        </form>
+        <ul>
+          <% Feature.order("created_at DESC").limit(8).each do |feature| %>
+          <li><%= link_to(feature.title, feature_url(feature)) %></li>
+          <% end -%>
+          <% if Feature.count > 0 %>
+          <li><a href="/explore" class="all">view all...</a></li>
+          <% end -%>
+        </ul>
+      </div>
+      <div class="right">
+        <h2>Explore the world</h2>
+        <p>Explore the whole world in<br/>
+        the Methane gas hydrates places map</p>
+        <a href="/explore" class="explore"></a>
+        <p class="random">or <a href="/features/random">go to a random place</a></p>
       </div>
     </div>
+    <div class="bottom"></div>
+  </div>
 
 
-    <div id="content">
-      <div class="search">
-        <div class="top"></div>
-        <div class="middle">
-          <div class="left">
-            <h2>Methane gas hydrates sediments around the world</h2>
-            <form>
-              <h4>Search for your desired location</h4>
-              <input type="text" value="Location, Country, Sea..." />
-              <input type="submit" value="Search" />
-            </form>
-            <ul>
-              <li><a href="#">Barkley Canyon</a></li>
-              <li><a href="#">Middle America Trench-Mexico</a></li>
-              <li><a href="#">Middle America Trench-Guatemala</a></li>
-              <li><a href="#">Orca Basin</a></li>
-              <li><a href="#">Peru/Chile Trench-Peru</a></li>
-              <li><a href="#">Japan Sea</a></li>
-              <li><a href="#">Pacific-Japan</a></li>
-              <li><a href="#" class="all">view all...</a></li>
-            </ul>
-          </div>
-          <div class="right">
-            <h2>Explore the world</h2>
-            <p>Explore the whole world in<br/>
-            the Methane gas hydrates places map</p>
-            <a href="/explore" class="explore"></a>
-            <p class="random">or <a href="#">go to a random place</a></p>
-          </div>
-        </div>
-        <div class="bottom"></div>
+  <div class="meaning">
+    <div class="top"></div>
+    <div class="middle">
+      <div class="left">
+        <h3>What does methane gas hydrates mean?</h3>
+        <p class="hand">"Basically is Frozen Heat. Is Ice that can be burned. A very interesting source of energy"</p>
+        <p>Frozen Heat or Methane Hydrates are a solid clathrate compound (more specifically, a clathrate hydrate) in which a large amount of methane is trapped within a crystal structure of water, forming a solid similar to ice.
+          <br/><br/>
+          Originally thought to occur only in the outer regions of the Solar System where temperatures are low and water ice is common, significant deposits of methane clathrate have been found under sediments on the ocean floors of Earth.
+        </p>
+        <ul>
+          <li><a href="#">Learn more about Frozen heat</a></li>
+          <li><a href="/blog">Read more in our blog</a></li>
+          <li><a href="http://en.wikipedia.org/wiki/Methane_hydrate" rel="nofollow">Read more at wikipedia</a></li>
+          <li><a href="/events">Meet us in an upcoming event</a></li>
+        </ul>
       </div>
-
-
-      <div class="meaning">
-        <div class="top"></div>
-        <div class="middle">
-          <div class="left">
-            <h3>What does methane gas hydrates mean?</h3>
-            <p class="hand">"Basically is Frozen Heat. Is Ice that can be burned. A very interesting source of energy"</p>
-            <p>Frozen Heat or Methane Hydrates are a solid clathrate compound (more specifically, a clathrate hydrate) in which a large amount of methane is trapped within a crystal structure of water, forming a solid similar to ice.
-              <br/><br/>
-              Originally thought to occur only in the outer regions of the Solar System where temperatures are low and water ice is common, significant deposits of methane clathrate have been found under sediments on the ocean floors of Earth.
-            </p>
-            <ul>
-              <li><a href="#">Learn more about Frozen heat</a></li>
-              <li><a href="#">Read more in our blog</a></li>
-              <li><a href="#">Read more at wikipedia</a></li>
-              <li><a href="#">Meet us in an upcoming event</a></li>
-            </ul>
-          </div>
-          <div class="right">
-            <h5>PHOTOS AND VIDEOS</h5>
-            <a href="#">View more</a>
-            <img src="#" title="" alt="" />
-            <img src="#" title="" alt="" />
-          </div>
-        </div>
-        <div class="bottom"></div>
-      </div>
-
-
-      <div class="blog_last">
-        <div class="top"></div>
-        <div class="middle">
-          <p class="feed"><a href="#">Subscribe to our blog</a></p>
-          <h3>Last in the blog</h3>
-          <ul>
-            <li>
-              <p class="date">20/12/1985</p>
-              <h4><a href="#">First meeting of the UNEP Global Outlook on Methane Gas...</a></h4>
-              <p>On March 4 and 5, 2010, 24 delegates from Norway, the United States, Canada, Germany, Japan, Korea and India, representing government, academia, industry and the NGO community gathered at the offices... <a href="#">Read more</a></p>
-            </li>
-            <li>
-              <p class="date">20/12/1985</p>
-              <h4><a href="#">First meeting of the UNEP Global Outlook on Methane Gas...</a></h4>
-              <p>On March 4 and 5, 2010, 24 delegates from Norway, the United States, Canada, Germany, Japan, Korea and India, representing government, academia, industry and the NGO community gathered at the offices... <a href="#">Read more</a></p>
-            </li>
-            <li class="last">
-              <p class="date">20/12/1985</p>
-              <h4><a href="#">First meeting of the UNEP Global Outlook on Methane Gas...</a></h4>
-              <p>On March 4 and 5, 2010, 24 delegates from Norway, the United States, Canada, Germany, Japan, Korea and India, representing government, academia, industry and the NGO community gathered at the offices... <a href="#">Read more</a></p>
-            </li>
-          </ul>
-        </div>
-        <div class="bottom"></div>
+      <div class="right">
+        <h5>PHOTOS AND VIDEOS</h5>
+        <% if GalleryEntry.count > 0 %>
+          <a href="/galleries">View more</a>
+          <% entries = GalleryEntry.limit(4) %>
+          <% unless entries.empty? %>
+            <% entries.each do |entry| %>
+              <%= link_to(image_fu(entry.image, :small), gallery_url(entry.gallery)) %>
+            <% end -%>
+          <% end -%>
+        <% end -%>
       </div>
     </div>
+    <div class="bottom"></div>
+  </div>
 
 
-
+  <div class="blog_last">
+    <div class="top"></div>
+    <div class="middle">
+      <p class="feed"><a href="<%= blog_rss_feed_url %>">Subscribe to our blog</a></p>
+      <% posts = BlogPost.live.limit(3) %>
+      <h3>Last in the blog</h3>
+      <% unless posts.empty? %>
+      <ul>
+        <% posts.each do |post| %>
+        <li class="<%= cycle('','','last') %>">
+          <p class="date"><%= post.published_at.strftime("%d/%m/%Y") %></p>
+          <h4><%= link_to post.title, blog_post_url(post) %></h4>
+          <p><%= truncate(strip_tags(post.body),
+                            :omission => raw("... <a href=\"#{blog_post_url(post)}\">Read more</a>"),
+                            :length => 100,
+                            :preserve_html_tags => true) %></p>
+        </li>
+        <% end -%>
+      </ul>
+      <% end -%>
+    </div>
+    <div class="bottom"></div>
+  </div>
+</div>

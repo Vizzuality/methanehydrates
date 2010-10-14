@@ -31,7 +31,7 @@
                   <%= render :partial => "/blog/shared/post", :collection => @blog_posts %>
                 </ul>
             </div>
-            <div class="bottom_posts">              
+            <div class="bottom_posts">
               <% if @blog_posts.total_pages > 1 %>
                 <% if @blog_posts.current_page < @blog_posts.total_pages %>
                   <a href="<%= blog_root_path(:page => @blog_posts.next_page) %>">Previous posts</a>
@@ -75,31 +75,38 @@
             <ul id="news_list"></ul>
           </div>
           <div class="bottom">
-            <p class="feed"><a href>subscribe to our news feed</a></p>
+            <p class="feed"><a href="#">subscribe to our news feed</a></p>
           </div>
         </div>
 
+        <% if Feature.count > 0 %>
         <div class="sites">
           <div class="top"></div>
           <div class="middle">
             <div class="head">
               <h5>Browse our sites</h5>
-              <p><a href="#">Explore</a> methane gas sites around</p>
+              <p><a href="/explore">Explore</a> methane gas sites around</p>
               <span class="line"></span>
             </div>
             <ul>
+              <% Feature.order('created_at DESC').limit(3).each do |feature| %>
               <li>
-                <h6><a href="#">Middle America Trench - Guatem...</a></h6>
-                <span><p class="first">EUROPE</p><p>SPAIN</p></span>
+                <h6><a href="<%= feature_url(feature) %>"><%= feature.title %></a></h6>
+                <span>
+                  <% unless feature.region.blank? %>
+                  <p class="first"><%= feature.region %></p>
+                  <% end -%>
+                  <% unless feature.country.blank? %>
+                  <p><%= feature.country %></p>
+                  <% end -%>
+                </span>
               </li>
-              <li>
-                <h6><a href="#">Middle America Trench - Guatem...</a></h6>
-                <span><p class="first">EUROPE</p><p>SPAIN</p></span>
-              </li>
+              <% end -%>
             </ul>
           </div>
           <div class="bottom"></div>
         </div>
+        <% end -%>
       </div>
 
     <% end %>

@@ -17,6 +17,12 @@ class FeaturesController < ApplicationController
     present(@page)
   end
 
+  # Return a random feature and redirect to it
+  def random
+    feature = Feature.find(:first, :offset => rand(Feature.count))
+    redirect_to feature_url(feature) and return
+  end
+
 protected
 
   def find_all_features

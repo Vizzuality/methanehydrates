@@ -13,16 +13,19 @@
                 </div>
                 <div class="right">
                   <h1><%= @event.title %></h1>
-                  <p class="location"><%= @event.location %> | <%=@event.from.strftime("#{to_ordinal(@event.from.day)} %b")%> <%= "&#8594; #{@event.to.strftime("#{to_ordinal(@event.to.day)} %b")}" unless @event.one_day_event? %></p>
+                  <p class="location"><%= @event.location %> | <%=@event.from.strftime("#{to_ordinal(@event.from.day)} %b")%> <%= raw("&#8594; #{@event.to.strftime("#{to_ordinal(@event.to.day)} %b")}") unless @event.one_day_event? %></p>
                 </div>
                 <span class="line"></span>
               </div>
             </div>
             <div class="middle_white resume">
               <%= raw @event.description %>
+              <% if @event.url? %>
               <a class="visit" href="<%= @event.url %>" rel="nofollow">Visit official website</a>
+              <% end -%>
               <span class="line"></span>
             </div>
+            <% unless @event.similar(:limit => 3).empty? %>
             <div class="middle_white">
               <h6>Events in similar dates</h6>
               <ul>
@@ -41,6 +44,7 @@
                   <li></li>
               </ul>
             </div>
+            <% end -%>
             <div class="bottom_white"></div>
           </div>
         </div>
