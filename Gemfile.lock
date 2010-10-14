@@ -26,9 +26,9 @@ GIT
 
 GIT
   remote: git://github.com/Vizzuality/refinerycms-galleries.git
-  revision: a931190d34a121bc9fec7ae2dadca472f2f4892d
+  revision: ba04f6c6eb841173a4b0a5b1c5f3d695846f4c5a
   specs:
-    refinerycms-galleries (0.3)
+    refinerycms-galleries (0.4)
 
 GIT
   remote: git://github.com/ferblape/postgis_adapter.git
@@ -176,7 +176,7 @@ DEPENDENCIES
   refinerycms-blog (~> 1.0.rc12)!
   refinerycms-events (= 0.1)!
   refinerycms-features (= 0.2)!
-  refinerycms-galleries (= 0.3)!
+  refinerycms-galleries (= 0.4)!
   refinerycms-i18n (= 0.9.8.7)
   refinerycms-inquiries (= 0.9.8.4)
   rmagick (~> 2.12.0)
