@@ -33,6 +33,13 @@ RefinerySetting.set(:user_image_sizes, {
   :big =>    '615x400>',
   :huge =>   '930x615>',
 })
+RefinerySetting.set(:image_thumbnails, {
+  :small =>  '100x75>',
+  :medium => '235x150>',
+  :large =>  '550x370>',
+  :big =>    '615x400>',
+  :huge =>   '930x615>',
+})
 
 puts "Setting site name"
 RefinerySetting.set(:site_name, 'Frozen Heat')
