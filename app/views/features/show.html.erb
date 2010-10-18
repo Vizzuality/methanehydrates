@@ -1,8 +1,7 @@
-<div class="title"> 
+<div class="title">
   <div class="inner_title">
-  </div> 
-</div> 
-
+  </div>
+</div>
 
 <div id="content">
   <div class="space40"></div>
@@ -11,14 +10,17 @@
       <div class="top"></div>
       <div class="middle">
         <h1><%=raw @feature.title %> - <%=raw @feature.country %></h1>
-        <span><p class="first">Central America</p><p><%=raw @feature.country %></p></span>
+        <span><p class="first"><%= @feature.region %></p><p><%=raw @feature.country %></p></span>
         <span class="line"></span>
       </div>
     </div>
     <div class="middle image">
       <div class="slider">
-        <img src="/images/fake/fake.jpg" />
-        <img src="/images/fake/example.jpg" />
+        <% if @feature.gallery %>
+          <% @feature.gallery.gallery_entries.each do |entry| %>
+          <%= image_fu entry.image, :big %>
+          <% end -%>
+        <% end -%>
       </div>
     </div>
     <div class="middle_white site">
@@ -31,14 +33,16 @@
       <%- end %>
     </div>
   </div>
-  
+
   <div id="body_content_right">
     <div class="opaque site">
       <div class="top"></div>
       <div class="middle">
         <div class="head">
+          <% unless @feature.recorded_datafields_text.blank? %>
           <h3>Recorded Datafields</h3>
-          <p>Subtitle</p>
+          <%= simple_format(@feature.recorded_datafields_text) %>
+          <% end -%>
         </div>
       </div>
       <div class="middle_map">
@@ -47,50 +51,59 @@
         </div>
       </div>
       <div class="middle_site">
+        <% unless @feature.primary_institution_name.blank? || @feature.primary_institution_url.blank? %>
         <h6>PRIMARY INSTITUTION</h6>
-        <p><a href="#">Deep Sea Drilling Project</a></p>
+        <p><a href="<%= @feature.primary_institution_url %>" rel="nofollow"><%= @feature.primary_institution_name %></a></p>
+        <% end -%>
+        <% unless @feature.expedition.blank? %>
         <h6>EXPEDITION</h6>
-        <p>Leg 66</p>
+        <p><%= @feature.expedition %></p>
+        <% end -%>
+        <% unless @feature.water_depth.blank? %>
         <h6>WATER DEPTH</h6>
-        <p>857m</p>
+        <p><%= @feature.water_depth %></p>
+        <% end -%>
+        <% unless @feature.hydrate_depth.blank? %>
         <h6>HYDRATE DEPTH(mbsf)</h6>
-        <p>140, 146, 167, 364</p>
+        <p><%= @feature.hydrate_depth %></p>
+        <% end -%>
+        <% unless @feature.hydrate_description.blank? %>
         <h6>DESCRIPTION</h6>
-        <p>Cement and Inclusions</p>
+        <p><%= @feature.hydrate_description %></p>
+        <% end -%>
       </div>
+      <% unless @feature.data_provided_by_name.blank? || @feature.data_provided_by_url.blank?%>
       <div class="bottom_site">
-        <p>Data provided by <a href="#">Booth, J.S. Rows...</a></p>
+        <p>Data provided by <a href="<%= @feature.data_provided_by_url %>" rel="nofollow"><%= @feature.data_provided_by_name %></a></p>
       </div>
+      <% end -%>
     </div>
-    
+
     <div class="sites">
       <div class="top"></div>
       <div class="middle">
         <div class="head">
           <h5>Browse our sites</h5>
-          <p><a href="/">Explore</a> methane gas sites around</p>
+          <p><a href="/explore">Explore</a> methane gas sites around</p>
           <span class="line"></span>
         </div>
+        <% features = Feature.limit(2).where("id != #{@feature.id}") %>
+        <% unless features.empty? %>
         <ul>
+          <% features.each do |feature| %>
           <li>
-            <h6><a href="#">Middle America Trench - Guatem...</a></h6>
-            <span><p class="first">EUROPE</p><p>SPAIN</p></span>
+            <h6><a href="<%= feature_url(feature) %>"><%= feature.title %> - <%= feature.country %></h6>
+            <span><p class="first"><%= feature.region %></p><p><%= feature.country %></p></span>
           </li>
-          <li>
-            <h6><a href="#">Middle America Trench - Guatem...</a></h6>
-            <span><p class="first">EUROPE</p><p>SPAIN</p></span>
-          </li>
+          <% end -%>
         </ul>
+        <% end -%>
       </div>
       <div class="bottom"></div>
     </div>
   </div>
-  
-  
+
 </div>
-
-
 
 <span id="latitude" class="hidden"><%= @feature.the_geom.lat %></span>
 <span id="longitude" class="hidden"><%= @feature.the_geom.lon %></span>
-
