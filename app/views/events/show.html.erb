@@ -75,7 +75,7 @@
               <h6>LOCATION</h6>
               <p><%= @event.location %></p>
               <h6>DATE</h6>
-              <p><%=@event.from.strftime("%B")%>, <%=@event.from.strftime("#{to_ordinal(@event.from.day)}")%> <%= raw("&#8594; #{@event.to.strftime("#{to_ordinal(@event.to.day)} %b")}") unless @event.one_day_event? %></p>
+              <p><%=@event.from.strftime("%B")%>, <%=@event.from.strftime("#{to_ordinal(@event.from.day)}")%> <%= raw("to #{@event.to.strftime("#{to_ordinal(@event.to.day)}")}") unless @event.one_day_event? %></p>
             </div>
             <div class="bottom"></div>
           </div>
@@ -88,6 +88,9 @@
                 <span class="line"></span>
               </div>
               <div class="calendar"></div>
+              <div class="loader">
+                <img src="/images/common/activity indicator.gif" />
+              </div>
             </div>
             <div class="bottom"></div>
           </div>
