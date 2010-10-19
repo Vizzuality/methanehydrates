@@ -1,3 +1,14 @@
+<div id="header_home">
+	<div class="inner_header">
+		<div class="left">
+			<a href="#"><%= image_tag "home/frozen_heat_logo.png", :title => "Frozen Heat Logo", :alt => "Frozen Heat Logo"%></a>
+		</div>
+		<div class="right">
+			<a href="http://www.grida.no/" target="_blank"><%= image_tag "home/GA_logo.png", :title => "GA Logo", :alt => "GA Logo",  :class => "grid_arendal_logo" %></a>
+			<a href="http://www.unep-wcmc.org/" target="_blank"><%= image_tag "home/unep_logo.png", :title => "Unep Logo", :alt => "Unep Logo",  :class => "unep_logo" %></a>
+		</div>
+	</div>
+</div>
 <div class="title">
   <div class="inner_title">
    <div class="left">
@@ -49,13 +60,12 @@
     <div class="bottom"></div>
   </div>
 
-
   <div class="meaning">
     <div class="top"></div>
     <div class="middle">
       <div class="left">
         <h3>What does methane gas hydrates mean?</h3>
-        <p class="hand">"Basically is Frozen Heat. Is Ice that can be burned. A very interesting source of energy"</p>
+        <p class="hand cufon_handofsean"><span class="quotes open">"</span>Basically is Frozen Heat. Is Ice that can be burned. A very interesting source of energy<span class="quotes close">"</span></p>
         <p>Frozen Heat or Methane Hydrates are a solid clathrate compound (more specifically, a clathrate hydrate) in which a large amount of methane is trapped within a crystal structure of water, forming a solid similar to ice.
           <br/><br/>
           Originally thought to occur only in the outer regions of the Solar System where temperatures are low and water ice is common, significant deposits of methane clathrate have been found under sediments on the ocean floors of Earth.
@@ -68,7 +78,7 @@
         </ul>
       </div>
       <div class="right">
-        <h5>PHOTOS AND VIDEOS</h5>
+        <h5>PHOTOS AND VIDEOS <a href="#">View more</a></h5>
         <% if GalleryEntry.count > 0 %>
           <a href="/galleries">View more</a>
           <% entries = GalleryEntry.limit(4) %>

@@ -27,13 +27,39 @@ u.roles << r
 # Default image sizes
 puts "Loading default image sizes"
 RefinerySetting.set(:user_image_sizes, {
-  :small => '110x110>',
-  :medium => '225x255>',
-  :large => '550x370>'
+  :small =>  '100x75>',
+  :medium => '235x150>',
+  :large =>  '550x370>',
+  :big =>    '615x400>',
+  :huge =>   '930x615>',
+})
+RefinerySetting.set(:image_thumbnails, {
+  :small =>  '100x75>',
+  :medium => '235x150>',
+  :large =>  '550x370>',
+  :big =>    '615x400>',
+  :huge =>   '930x615>',
 })
 
 puts "Setting site name"
 RefinerySetting.set(:site_name, 'Frozen Heat')
+
+# Feature attributes
+attributes = <<-ATTRIBUTES
+region:string
+country:string
+recorded_datafields_text:text
+primary_institution_name:string
+primary_institution_url:string
+expedition:string
+water_depth:string
+hydrate_depth:string
+hydrate_description:text
+data_provided_by_name:string
+data_provided_by_url:string
+ATTRIBUTES
+
+RefinerySetting.set(:feature_attributes, attributes)
 
 # Load sample data
 env_seed_file = File.join(Rails.root, 'db', 'env_seeds', "#{Rails.env}.rb")
