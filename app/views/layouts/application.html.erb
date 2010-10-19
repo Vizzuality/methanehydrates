@@ -16,28 +16,25 @@
 
   <div class="layout">
 
-    <% if (action_name == 'home') %>
+    <% if (action_name != 'home') %>
 		
-    <% else %>
       <div id="header">
         <div class="inner_header">
           <div class="logo">
             <a href="/"><%= image_tag 'common/logo.jpg' %></a>
           </div>
           <ul>
-            <li class="last current"><a href="/blog">BLOG</a></li>
-            <li><a href="#">LEARN MORE</a></li>
-            <li><a href="/events">UPCOMING EVENTS</a></li>
-            <li><a href="#">MEDIA RESOURCES</a></li>
-            <li><a href="#">EXPLORE THE SITES</a></li>
+            <li <% if (controller_name=='posts')%> <%="class='last current'"%><%else%><%="class='last'"%><%-end%>><a href="/blog">BLOG</a></li>
+            <li <% if (controller_name=='about')%> <%="class='current'"%><%-end%>><a href="/about">LEARN MORE</a></li>
+            <li <% if (controller_name=='events')%> <%="class='current'"%><%-end%>><a href="/events">UPCOMING EVENTS</a></li>
+            <li <% if (controller_name=='galleries')%> <%="class='current'"%><%-end%>><a href="/galleries">MEDIA RESOURCES</a></li>
+            <li <% if (controller_name=='features')%> <%="class='current'"%><%-end%>><a href="/features">EXPLORE THE SITES</a></li>
           </ul>
         </div>
       </div>
     <%- end %>
-
-
+    
     <%= yield %>
-
 
     <div id="footer">
       <div class="inner_footer">

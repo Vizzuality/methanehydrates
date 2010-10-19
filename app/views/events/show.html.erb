@@ -1,3 +1,7 @@
+  
+  <span id="latitude" class="hidden">40</span>
+  <span id="longitude" class="hidden">-3</span>
+
 
     <div id="content">
       <% content_for :body_content_left do %>
@@ -53,7 +57,7 @@
       <% content_for :body_content_right do %>
         <div class="body_content_right">
           <%= @page[Page.default_parts.second.to_sym] %>
-          <div class="opaque">
+          <div class="opaque margin35top">
             <div class="top"></div>
             <div class="middle">
               <div class="head">
@@ -61,15 +65,21 @@
                 <p><a href="#">add it to your calendar</a></p>
                 <span class="line"></span>
               </div>
-              <div id="map"></div>
-              <h4>LOCATION</h4>
-              <p>Listvyanka, Lake Baikal, Russia</p>
-              <h4>DATE</h4>
-              <p>September, 6th to 12th</p>
+            </div>
+            <div class="middle_map">
+              <div class="outer_map margin20top">
+                <div id="map"></div>
+              </div>
+            </div>
+            <div class="middle_site">
+              <h6>LOCATION</h6>
+              <p><%= @event.location %></p>
+              <h6>DATE</h6>
+              <p><%=@event.from.strftime("%B")%>, <%=@event.from.strftime("#{to_ordinal(@event.from.day)}")%> <%= raw("&#8594; #{@event.to.strftime("#{to_ordinal(@event.to.day)} %b")}") unless @event.one_day_event? %></p>
             </div>
             <div class="bottom"></div>
           </div>
-          <div class="opaque">
+          <div class="opaque margin35top">
             <div class="top"></div>
             <div class="middle">
               <div class="head">
@@ -83,6 +93,7 @@
           </div>
         </div>
       <% end %>
+      
 
       <%= render :partial => "/shared/content_page" %>
     </div>
