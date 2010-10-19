@@ -40,7 +40,7 @@
 		
 				//If there is a map
 		    if ($('div#map')[0]) {
-					var latlng = new google.maps.LatLng($('#latitude').text(),$('#longitude').text());
+					var latlng = new google.maps.LatLng(parseInt($('#latitude').text()),parseInt($('#longitude').text()));
 					
 					var myOptions = {
 			      zoom: 6,
