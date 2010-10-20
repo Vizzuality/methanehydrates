@@ -7,13 +7,15 @@ input:focus{outline:none;}
 ul {list-style:none;}
 div.space80 {float:left; width:100%; height:80px;}
 div.space40 {float:left; width:100%; height:40px;}
+.margin35top {margin:35px 0 0;}
+.margin20top {margin:20px 0 0;}
 .hidden {display:none;}
 
 #supersized {position:fixed; float:left;}
 #supersized img {height:100%; width:100%; position:absolute; z-index: 1;}
 
 .layout {position:absolute; top:0; left:0; width:100%; background:none; z-index:10;}
-div#content {margin:0 auto; width:948px;}
+div#content {margin:0 auto; width:948px; min-height:850px;}
 
 /*HEADER*/
 
@@ -358,7 +360,7 @@ div.body_content_left div ul#events li div.right p.location {float:left; width:1
 div.body_content_left div ul#events li div.right p {float:left; width:100%; font:normal 13px Arial; color:#444444;}
    
 div.body_content_right {float:right; width:304px; padding:6px 0 50px 0;}
-div.body_content_right div.opaque {float:right; width:304px; margin:35px 0 0;}
+div.body_content_right div.opaque {position:relative; float:right; width:304px;}
 div.body_content_right div.opaque div.top {float:left; width:304px; height:15px; background:url(../images/round/top_grey_opaque_short.png) no-repeat center 0;}
 div.body_content_right div.opaque div.middle {float:left; width:234px; padding:0 35px; height:auto; background:url(../images/round/middle_grey_opaque_short.png) repeat-y center 0;}
 div.body_content_right div.opaque div.middle div.head {position:relative; float:left; width:100%; padding:0; height:86px;}
@@ -367,7 +369,8 @@ div.body_content_right div.opaque div.middle div.head p {font:normal 15px Arial;
 div.body_content_right div.opaque div.middle div.head span.line {position:absolute; height:1px; width:286px; bottom:0; left:-26px; background:black; opacity:0.35; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=35);}
 div.body_content_right div.opaque div.middle div.calendar {float:left; margin:30px 0 0 0; width:100%; height:261px;}
 div.body_content_right div.opaque div.bottom {float:left; width:304px; height:15px; background:url(../images/round/bottom_grey_opaque_short_2.png) no-repeat center bottom; margin:0;}
-
+div.body_content_right div.opaque div.loader {display:none; position:absolute; height:234px; width:234px; padding:0; margin:0; background:none;}
+div.body_content_right div.opaque div.loader img {position:absolute; height:16px; width:16px; left:50%; top:50%; margin:-8px 0 0 -8px;}
 
 
 
@@ -404,6 +407,8 @@ div.middle_white ul li div.right p.location {float:left; width:100%; font:normal
 div.middle_white p {float:left; width:100%; font:normal 15px Arial; color:#666666; line-height:19px;}
 div.bottom_white {float:left; width:633px; height:25px; background:url(../images/round/bottom_white.png) no-repeat 0 0;}
 
+div.body_content_right div.opaque div.middle div.head p a {font:normal 15px Arial; color:white;}
+div.body_content_right div.opaque div.middle div.head p a:hover {text-decoration:none;}
 
 
 
