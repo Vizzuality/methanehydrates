@@ -1,174 +1,98 @@
+<div class="title">
+  <div class="inner_title">
+    <div class="left">
+        <h1>Media resources for scientifics and citizens</h1>
+    </div>
+    <div class="right">
+      <ul>
+        <li><a href="#gallery-<%= @human_activities_gallery.id %>">HUMAN ACTIVITIES GALLERY</a><span class="line"></span></li>
+        <li><a href="#gallery-<%= @natural_system_gallery.id %>">NATURAL SYSTEM GALLERY</a><span class="line"></span></li>
+        <li class="last"><a href="#galleries_by_region">SITES BY REGION</a><span class="line"></span></li>
+      </ul>
+    </div>
+  </div>
+</div>
 
+<div id="content">
 
-    <div class="title"> 
-      <div class="inner_title">
+  <div class="media" id="gallery-<%= @human_activities_gallery.id %>">
+    <div class="head_post">
+      <div class="top"></div>
+      <div class="middle">
         <div class="left">
-            <h1>Media resources for scientifics and citizens</h1> 
+          <h1><%= link_to(@human_activities_gallery.name, gallery_url(@human_activities_gallery)) %></h1>
         </div>
         <div class="right">
           <ul>
-            <li><a href="#">HUMAN ACTIVITIES GALLERY</a><span class="line"></span></li>
-            <li><a href="#">NATURAL SYSTEM GALLERY</a><span class="line"></span></li>
-            <li class="last"><a href="#">SITES BY REGION</a><span class="line"></span></li>
+            <li class="last"><p class="videos"><%= pluralize(@human_activities_gallery.gallery_entries.video.count, 'video', 'videos') %></p></li>
+            <li><p class="photos"><%= pluralize(@human_activities_gallery.gallery_entries.image.count, 'photo', 'photos') %></p></li>
           </ul>
         </div>
-      </div> 
-    </div> 
- 
- 
- 
-    <div id="content">
-      <div class="media">
-        <div class="head_post">
-          <div class="top"></div>
-          <div class="middle">
-            <div class="left">
-              <h1>Hydrate samples and field activities in the Arctic.</h1>
-            </div>
-            <div class="right">
-              <ul>
-                <li class="last"><p class="videos">2 videos</p></li>
-                <li><p class="photos">21 photos</p></li>
-              </ul>
-            </div>
-            <span class="line"></span>
-          </div>
-        </div>
-        <div class="middle">
-          <div class="slider">
-            <img src="/images/fake/big.jpg" alt="asdfas df asf asfa sd fdsaf" title="asdfas df asf asfa sd fdsaf" />
-            <img src="/images/fake/example.jpg" alt="asdfas df asf asfa sd fdsaf" title="asdfas df asf asfa sd fdsaf" />
-          </div>
-          <div class="bottom_content">
-            <div class="block">
-              Research on methane gas hydrates has been progressing for decades. Subjects of interested include global distribution, geohazards linked to human activities, ecosystems associated to near surface occurrences, technology issues linked to possible production and future scenarios about methane gas hydrates in the
-            </div>
-            <div class="block">
-              <p>Research on methane gas hydrates has been progressing for decades. Subjects of interested include global distribution, geohazards linked to human activities, ecosystems associated to near surface occurrences, technology issues linked to possible production and future scenarios about methane gas hydrates in the</p>
-            </div>
-            <div class="block last">
-              <p>global energy mix.
-                <br/><br/>
-              The following gallery places methane gas hydrates in the context of current human activities such as exploration and production research and scientific field and laboratory studies.</p>
-            </div>
-          </div>
-        </div>
-        <div class="bottom"></div>
-      </div>
-      
-      
-      <div class="media">
-        <div class="head_post">
-          <div class="top"></div>
-          <div class="middle">
-            <div class="left">
-              <h1>Hydrate samples and field activities in the Arctic.</h1>
-            </div>
-            <div class="right">
-              <ul>
-                <li class="last"><p class="videos">2 videos</p></li>
-                <li><p class="photos">21 photos</p></li>
-              </ul>
-            </div>
-            <span class="line"></span>
-          </div>
-        </div>
-        <div class="middle">
-          <div class="slider">
-            <img src="/images/fake/big.jpg" alt="asdfas df asf asfa sd fdsaf" title="asdfas df asf asfa sd fdsaf" />
-            <img src="/images/fake/example.jpg" alt="asdfas df asf asfa sd fdsaf" title="asdfas df asf asfa sd fdsaf" />
-          </div>
-          <div class="bottom_content">
-            <div class="block">
-              Research on methane gas hydrates has been progressing for decades. Subjects of interestet include global distribution, geohazards linked to human activities, ecosystems associated to near surface occurrences, technology issues linked to possible production and future scenarios about methane gas hydrates in the
-            </div>
-            <div class="block">
-              <p>Research on methane gas hydrates has been progressing for decades. Subjects of interestet include global distribution, geohazards linked to human activities, ecosystems associated to near surface occurrences, technology issues linked to possible production and future scenarios about methane gas hydrates in the</p>
-            </div>
-            <div class="block last">
-              <p>global energy mix.
-                <br/><br/>
-              The following gallery places methane gas hydrates in the context of current human activties such as exploration and production research and scientific field and laboratory studies.</p>
-            </div>
-          </div>
-        </div>
-        <div class="bottom"></div>
-      </div>
-      
-      <div class="galleries_by_region">
-        <div class="top"></div>
-        <div class="middle">
-          <h3>Other sites Galleries by Region</h3>
-          <ul>
-            <li>
-              <div class="image">
-                <img src="../images/avatars/null.jpg" />
-              </div>
-              <div class="text">
-                <p>Hydrate samples and field activities from Lake Baikal.</p>
-              </div>
-            </li>
-            <li>
-              <div class="image">
-                <img src="../images/avatars/null.jpg" />
-              </div>
-              <div class="text">
-                <p>Hydrate samples and field activities from Lake Baikal.</p>
-              </div>
-            </li>
-            <li class="last">
-              <div class="image">
-                <img src="../images/avatars/null.jpg" />
-              </div>
-              <div class="text">
-                <p>Hydrate samples and field activities from Lake Baikal.</p>
-              </div>
-            </li>
-            <li>
-              <div class="image">
-                <img src="../images/avatars/null.jpg" />
-              </div>
-              <div class="text">
-                <p>Hydrate samples and field activities from Lake Baikal.</p>
-              </div>
-            </li>
-            <li>
-              <div class="image">
-                <img src="../images/avatars/null.jpg" />
-              </div>
-              <div class="text">
-                <p>Hydrate samples and field activities from Lake Baikal.</p>
-              </div>
-            </li>
-            <li class="last">
-              <div class="image">
-                <img src="../images/avatars/null.jpg" />
-              </div>
-              <div class="text">
-                <p>Hydrate samples and field activities from Lake Baikal.</p>
-              </div>
-            </li>            
-          </ul>
-        </div>
-        <div class="bottom"></div>
+        <span class="line"></span>
       </div>
     </div>
+    <div class="middle">
+      <div class="slider">
+        <% @human_activities_gallery.gallery_entries.each do |entry| %>
+          <%= image_fu entry.image, :huge, :alt => entry.name, :title => entry.name %>
+        <% end -%>
+      </div>
+      <div class="bottom_content">
+        <%=raw three_column_text(@human_activities_gallery.body) %>
+      </div>
+    </div>
+    <div class="bottom"></div>
+  </div>
 
+  <div class="media" id="gallery-<%= @natural_system_gallery.id %>">
+    <div class="head_post">
+      <div class="top"></div>
+      <div class="middle">
+        <div class="left">
+          <h1><%= link_to(@natural_system_gallery.name, gallery_url(@natural_system_gallery)) %></h1>
+        </div>
+        <div class="right">
+          <ul>
+            <li class="last"><p class="videos"><%= pluralize(@natural_system_gallery.gallery_entries.video.count, 'video', 'videos') %></p></li>
+            <li><p class="photos"><%= pluralize(@natural_system_gallery.gallery_entries.image.count, 'photo', 'photos') %></p></li>
+          </ul>
+        </div>
+        <span class="line"></span>
+      </div>
+    </div>
+    <div class="middle">
+      <div class="slider">
+        <% @natural_system_gallery.gallery_entries.each do |entry| %>
+          <%= image_fu entry.image, :huge, :alt => entry.name, :title => entry.name %>
+        <% end -%>
+      </div>
+      <div class="bottom_content">
+        <%=raw three_column_text(@natural_system_gallery.body) %>
+      </div>
+    </div>
+    <div class="bottom"></div>
+  </div>
 
-
-
-
-
-
-
-    <!-- <% content_for :body_content_left do %>
-      <ul id="galleries">
-        <% @galleries.each do |gallery| %>
-          <li>
-            <%= link_to gallery.name, gallery_url(gallery) %>
-          </li>
-        <% end %>
+  <div class="galleries_by_region" id="galleries_by_region">
+    <div class="top"></div>
+    <div class="middle">
+      <% galleries = Feature.limit(6).order('created_at DESC').map(&:gallery) %>
+      <h3>Other sites Galleries by Region</h3>
+      <ul>
+        <% galleries.each do |gallery| %>
+        <li <%=raw cycle('', '', 'class="last"') %>>
+          <div class="image">
+            <%= link_to(image_fu(gallery.gallery_entries.first.image, :small), gallery_url(gallery)) %>
+          </div>
+          <div class="text">
+            <%= simple_format(truncate(gallery.body, :length => 80)) %>
+          </div>
+        </li>
+        <% end -%>
       </ul>
-    <% end %> -->
+    </div>
+    <div class="bottom"></div>
+  </div>
+</div>
 
-    <!-- <%= render :partial => "/shared/content_page" %> -->
+<%= render :partial => "/shared/content_page" %>

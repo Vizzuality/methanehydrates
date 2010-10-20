@@ -1,13 +1,13 @@
 <div id="header_home">
-	<div class="inner_header">
-		<div class="left">
-			<a href="#"><%= image_tag "home/frozen_heat_logo.png", :title => "Frozen Heat Logo", :alt => "Frozen Heat Logo"%></a>
-		</div>
-		<div class="right">
-			<a href="http://www.grida.no/" target="_blank"><%= image_tag "home/GA_logo.png", :title => "GA Logo", :alt => "GA Logo",  :class => "grid_arendal_logo" %></a>
-			<a href="http://www.unep-wcmc.org/" target="_blank"><%= image_tag "home/unep_logo.png", :title => "Unep Logo", :alt => "Unep Logo",  :class => "unep_logo" %></a>
-		</div>
-	</div>
+  <div class="inner_header">
+    <div class="left">
+      <a href="/"><%= image_tag "home/frozen_heat_logo.png", :title => "Frozen Heat Logo", :alt => "Frozen Heat Logo"%></a>
+    </div>
+    <div class="right">
+      <a href="http://www.grida.no/" target="_blank"><%= image_tag "home/GA_logo.png", :title => "GA Logo", :alt => "GA Logo",  :class => "grid_arendal_logo" %></a>
+      <a href="http://www.unep-wcmc.org/" target="_blank"><%= image_tag "home/unep_logo.png", :title => "Unep Logo", :alt => "Unep Logo",  :class => "unep_logo" %></a>
+    </div>
+  </div>
 </div>
 <div class="title">
   <div class="inner_title">
@@ -40,11 +40,12 @@
           <input type="text" value="Location, Country, Sea..." />
           <input type="submit" value="Search" />
         </form>
+        <% features = Feature.order("created_at DESC").limit(8) %>
         <ul>
-          <% Feature.order("created_at DESC").limit(8).each do |feature| %>
+          <% features.each do |feature| %>
           <li><%= link_to(feature.title, feature_url(feature)) %></li>
           <% end -%>
-          <% if Feature.count > 0 %>
+          <% if !features.empty? %>
           <li><a href="/explore" class="all">view all...</a></li>
           <% end -%>
         </ul>
@@ -71,7 +72,7 @@
           Originally thought to occur only in the outer regions of the Solar System where temperatures are low and water ice is common, significant deposits of methane clathrate have been found under sediments on the ocean floors of Earth.
         </p>
         <ul>
-          <li><a href="#">Learn more about Frozen heat</a></li>
+          <li><a href="/about">Learn more about Frozen heat</a></li>
           <li><a href="/blog">Read more in our blog</a></li>
           <li><a href="http://en.wikipedia.org/wiki/Methane_hydrate" rel="nofollow">Read more at wikipedia</a></li>
           <li><a href="/events">Meet us in an upcoming event</a></li>

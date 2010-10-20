@@ -33,6 +33,6 @@ f.hydrate_depth = '150,156,230,123'
 f.hydrate_description = 'Cement and Inclusions'
 f.data_provided_by_name = 'Booth, J.S Rows,...'
 f.data_provided_by_url = 'http://boothjsrows.com'
-f.gallery_id = 1
+f.gallery_id = g.id
 f.the_geom = 'POINT(-96.67968749614 16.972465151173)'
 f.save

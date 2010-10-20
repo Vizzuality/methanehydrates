@@ -61,6 +61,11 @@ ATTRIBUTES
 
 RefinerySetting.set(:feature_attributes, attributes)
 
+# Load default two galleries
+g1 = Gallery.create :name => 'Methane gas hydrates and human activities', :body => "Research on methane gas hydrates has been progressin for decades. Subjects of interest include global distribution, geohazards linked to human activities, ecosystems associated to near surface occurrences, technology issues linkted to possible production and future scenarios about methane gas hydrates in the global energy mix.\nThe following gallery places methane gas hydrates in the context of current human activities such as exploration and production research and scientific field and laboratory studies."
+g2 = Gallery.create :name => 'Methane gas hydrates in the natural system', :body => "Methane gas hydrates occur in a number of locations around the world.\nGeologically, methane gas hydrates are found both in oceanic/lacustrine and permafrost environments.\nThis gallery presents a glimpse of methane gas hydrates in their natural environment."
+
+
 # Load sample data
 env_seed_file = File.join(Rails.root, 'db', 'env_seeds', "#{Rails.env}.rb")
 if File.exist?(env_seed_file)
