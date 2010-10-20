@@ -1,5 +1,7 @@
 class FeaturesController < ApplicationController
 
+  layout false, :only => 'index'
+
   before_filter :find_all_features
   before_filter :find_page
 

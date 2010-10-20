@@ -61,7 +61,7 @@ html = <<-HTML
             </div>
           </div>
            <div class="middle image">
-              <img src="../images/avatars/scott.jpg" alt="Scott" title="Scott" />
+              <img src="/images/avatars/scott.jpg" alt="Scott" title="Scott" />
               <span class="line"></span>
             </div>
           <div class="middle">
@@ -82,7 +82,7 @@ html = <<-HTML
             </div>
           </div>
           <div class="middle image">
-            <img src="../images/avatars/scott.jpg" alt="Scott" title="Scott" />
+            <img src="/images/avatars/scott.jpg" alt="Scott" title="Scott" />
             <span class="line"></span>
           </div>
           <div class="middle">
@@ -103,7 +103,7 @@ html = <<-HTML
             </div>
           </div>
           <div class="middle image">
-            <img src="../images/avatars/scott.jpg" alt="Scott" title="Scott" />
+            <img src="/images/avatars/scott.jpg" alt="Scott" title="Scott" />
             <span class="line"></span>
           </div>
           <div class="middle">
@@ -124,7 +124,7 @@ html = <<-HTML
             </div>
           </div>
           <div class="middle image">
-            <img src="../images/avatars/scott.jpg" alt="Scott" title="Scott" />
+            <img src="/images/avatars/scott.jpg" alt="Scott" title="Scott" />
             <span class="line"></span>
           </div>
           <div class="middle">
@@ -145,7 +145,7 @@ html = <<-HTML
             </div>
           </div>
           <div class="middle image">
-            <img src="../images/avatars/scott.jpg" alt="Scott" title="Scott" />
+            <img src="/images/avatars/scott.jpg" alt="Scott" title="Scott" />
             <span class="line"></span>
           </div>
           <div class="middle">
@@ -166,7 +166,7 @@ html = <<-HTML
             </div>
           </div>
           <div class="middle image">
-            <img src="../images/avatars/scott.jpg" alt="Scott" title="Scott" />
+            <img src="/images/avatars/scott.jpg" alt="Scott" title="Scott" />
             <span class="line"></span>
           </div>
           <div class="middle">
@@ -510,7 +510,7 @@ html = <<-HTML
     <div class="top"></div>
     <div class="middle">
       <div class="left">
-        <img src="../images/partners/1.jpg" alt="Geological Survey of Canada" title="Geological Survey of Canada"/>
+        <img src="/images/partners/1.jpg" alt="Geological Survey of Canada" title="Geological Survey of Canada"/>
       </div>
       <div class="right">
         <h2>Geological Survey of Canada</h2>
@@ -526,7 +526,7 @@ html = <<-HTML
     <div class="top"></div>
     <div class="middle">
       <div class="left">
-        <img src="../images/partners/2.jpg" alt="Canadian Polar Commission" title="Canadian Polar Commission"/>
+        <img src="/images/partners/2.jpg" alt="Canadian Polar Commission" title="Canadian Polar Commission"/>
       </div>
       <div class="right">
         <h2>Canadian Polar Commission</h2>
@@ -542,8 +542,8 @@ html = <<-HTML
     <div class="top"></div>
     <div class="middle">
       <div class="left">
-        <img src="../images/partners/3a.jpg" alt="Gas Hydrates on the Norway-Barents Sea-Svalbard margin" title="Gas Hydrates on the Norway-Barents Sea-Svalbard margin"/>
-        <img src="../images/partners/3b.jpg" alt="Gas Hydrates on the Norway-Barents Sea-Svalbard margin" title="Gas Hydrates on the Norway-Barents Sea-Svalbard margin"/>
+        <img src="/images/partners/3a.jpg" alt="Gas Hydrates on the Norway-Barents Sea-Svalbard margin" title="Gas Hydrates on the Norway-Barents Sea-Svalbard margin"/>
+        <img src="/images/partners/3b.jpg" alt="Gas Hydrates on the Norway-Barents Sea-Svalbard margin" title="Gas Hydrates on the Norway-Barents Sea-Svalbard margin"/>
       </div>
       <div class="right">
         <h2>Gas Hydrates on the Norway-Barents Sea-Svalbard margin</h2>
@@ -566,8 +566,8 @@ html = <<-HTML
     <div class="top"></div>
     <div class="middle">
       <div class="left">
-        <img src="../images/partners/4a.jpg" alt="GFZ German Research Centre for Geosciences" title="GFZ German Research Centre for Geosciences"/>
-        <img src="../images/partners/4b.jpg" alt="GFZ German Research Centre for Geosciences" title="GFZ German Research Centre for Geosciences"/>
+        <img src="/images/partners/4a.jpg" alt="GFZ German Research Centre for Geosciences" title="GFZ German Research Centre for Geosciences"/>
+        <img src="/images/partners/4b.jpg" alt="GFZ German Research Centre for Geosciences" title="GFZ German Research Centre for Geosciences"/>
       </div>
       <div class="right">
         <h2>GFZ German Research Centre for Geosciences</h2>
@@ -584,7 +584,7 @@ html = <<-HTML
     <div class="top"></div>
     <div class="middle">
       <div class="left">
-        <img src="../images/partners/5.jpg" alt="IFM-GEOMAR" title="IFM-GEOMAR"/>
+        <img src="/images/partners/5.jpg" alt="IFM-GEOMAR" title="IFM-GEOMAR"/>
       </div>
       <div class="right">
         <h2>IFM-GEOMAR</h2>
@@ -601,7 +601,7 @@ html = <<-HTML
     <div class="top"></div>
     <div class="middle">
       <div class="left">
-        <img src="../images/partners/6.jpg" alt="JOGMEC" title="JOGMEC"/>
+        <img src="/images/partners/6.jpg" alt="JOGMEC" title="JOGMEC"/>
       </div>
       <div class="right">
         <h2>JOGMEC</h2>
@@ -617,7 +617,7 @@ html = <<-HTML
     <div class="top"></div>
     <div class="middle">
       <div class="left">
-        <img src="../images/partners/7.jpg" alt="KIGAM" title="KIGAM"/>
+        <img src="/images/partners/7.jpg" alt="KIGAM" title="KIGAM"/>
       </div>
       <div class="right">
         <h2>KIGAM</h2>
@@ -634,7 +634,7 @@ html = <<-HTML
     <div class="top"></div>
     <div class="middle">
       <div class="left">
-        <img src="../images/partners/8.jpg" alt="NETL" title="NETL"/>
+        <img src="/images/partners/8.jpg" alt="NETL" title="NETL"/>
       </div>
       <div class="right">
         <h2>NETL</h2>
@@ -650,7 +650,7 @@ html = <<-HTML
     <div class="top"></div>
     <div class="middle">
       <div class="left">
-        <img src="../images/partners/9.jpg" alt="Schlumberger" title="Schlumberger"/>
+        <img src="/images/partners/9.jpg" alt="Schlumberger" title="Schlumberger"/>
       </div>
       <div class="right">
         <h2>Schlumberger</h2>
@@ -666,7 +666,7 @@ html = <<-HTML
     <div class="top"></div>
     <div class="middle">
       <div class="left">
-        <img src="../images/partners/10.jpg" alt="Statoil" title="Statoil"/>
+        <img src="/images/partners/10.jpg" alt="Statoil" title="Statoil"/>
       </div>
       <div class="right">
         <h2>Statoil</h2>
@@ -683,7 +683,7 @@ html = <<-HTML
     <div class="top"></div>
     <div class="middle">
       <div class="left">
-        <img src="../images/partners/11.jpg" alt="USGS" title="USGS"/>
+        <img src="/images/partners/11.jpg" alt="USGS" title="USGS"/>
       </div>
       <div class="right">
         <h2>USGS</h2>
@@ -695,13 +695,11 @@ html = <<-HTML
     <div class="bottom"></div>
   </div>
 
-
-
   <div class="partners">
     <div class="top"></div>
     <div class="middle">
       <div class="left">
-        <img src="../images/partners/12.jpg" alt="Directorate General of Hydrocarbons, India" title="Directorate General of Hydrocarbons, India"/>
+        <img src="/images/partners/12.jpg" alt="Directorate General of Hydrocarbons, India" title="Directorate General of Hydrocarbons, India"/>
       </div>
       <div class="right">
         <h2>Directorate General of Hydrocarbons, India</h2>

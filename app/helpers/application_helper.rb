@@ -15,9 +15,9 @@ module ApplicationHelper
   end
 
   def three_column_text(text)
-    if text.size < 300
+    if text.size < 200
       "<div class=\"block\">#{text}</div>"
-    elsif text.size > 300 && text.size < 600
+    elsif text.size > 200 && text.size < 400
       text_list = text.split(' ')
       text1 = text_list[0...text_list.size / 2].join(' ')
       text2 = text_list[text_list.size/2..-1].join(' ')
