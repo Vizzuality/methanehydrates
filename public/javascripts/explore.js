@@ -3,6 +3,8 @@
 
 	$(document).ready(function() {
 		
+		$('select').sSelect();
+		
 		//get height and hack footer
 		placeFooter();
 		window.onresize = function(event) {

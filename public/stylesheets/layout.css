@@ -173,6 +173,33 @@ div.opaque_explore {float:right; width:304px;}
 div.opaque_explore div.top {float:left; width:304px; height:15px; background:url(../images/round/top_grey_opaque_short.png) no-repeat center 0;}
 div.opaque_explore div.middle {float:left; width:234px; padding:0 35px; height:auto; background:url(../images/round/middle_grey_opaque_short.png) repeat-y center 0;}
 div.opaque_explore div.middle h3 {font:bold 23px Arial; color:white; letter-spacing:-1px; width:100%; padding:12px 0 0 0;}
+div.opaque_explore div.middle form {float:left; width:100%;}
+div.opaque_explore div.middle form label {float:left; width:100%; margin:20px 0 0 0; padding:0 0 3px 0; font:bold 11px Arial; color:#CCCCCC;}
+div.opaque_explore div.middle form div {position:relative; float:left; width:100%;}
+div.opaque_explore div.middle form input[type="text"] {float:left; width:202px; height:12px; padding:6px 36px 6px 5px; border:none; background:url(../images/explore/text_input_bkg.png) no-repeat 0 0; font:bold 11px Arial; color:#999999;}
+div.opaque_explore div.middle form input[type="submit"] {position:absolute; right:5px; top:5px; width:16px; height:16px; background:url(../images/explore/submit_input_bkg.png) no-repeat 0 0; border:none;}
+div.opaque_explore div.middle form input[type="submit"]:hover {background-position:0 -24px; cursor:pointer;}
+
+div.opaque_explore div.middle form ul.newList * {margin:0; padding:0;}
+div.opaque_explore div.middle form ul.newList a {color: #666; text-decoration:none; display:block;}
+div.opaque_explore div.middle form ul.newList {margin:0; padding:0; list-style:none; color:#666; width:82px; background:#fff; position:absolute; border:1px solid #ccc; top:22px; left:0; overflow:auto; z-index:10000;}
+div.opaque_explore div.middle form .newListSelected {position:relative; width:84px; color:#666; margin:3px 0 0 0; height:35px; padding:0; float:left; background:url(../images/register/title.jpg) no-repeat 0 0;}
+div.opaque_explore div.middle form li.error .selectedTxt {background-position:0 -35px;}
+div.opaque_explore div.middle form .newListSelected span {width:83px; display:block;}
+div.opaque_explore div.middle form ul.newList li {list-style-type:none; display:block; margin:0; padding:0; height:auto; cursor:pointer; width:82px; font-size:13px; border:none;}
+div.opaque_explore div.middle form ul.newList li a {padding:3px 8px; display: block;}
+div.opaque_explore div.middle form ul.newList li a:focus {-moz-outline-style: none;}
+div.opaque_explore div.middle form .selectedTxt {position:relative; width:74px; overflow:hidden; height:25px; padding:10px 0 0 10px; font:normal 14px Arial; color:#666666; background:url(../images/register/title.jpg) no-repeat 0 0;}
+div.opaque_explore div.middle form .hiLite {background:#CDD8E3!important; color:#676767!important;}
+div.opaque_explore div.middle form .hiLite a {background:#CDD8E3!important; color:#676767!important;}
+div.opaque_explore div.middle form .newListHover {background:#CDD8E4!important; color:#676767!important; cursor:pointer;}
+div.opaque_explore div.middle form .newListSelHover {cursor:pointer;}
+div.opaque_explore div.middle form .newListOptionTitle {font-weight:bold;}
+div.opaque_explore div.middle form .newListOptionTitle ul {margin:3px 0 0;}
+div.opaque_explore div.middle form .newListOptionTitle li {font-weight:normal; border-left:1px solid #ccc;}
+
+
+
 div.opaque_explore div.bottom {float:left; width:304px; height:15px; background:url(../images/round/bottom_twitter_short.png) no-repeat center bottom;}
 
 
