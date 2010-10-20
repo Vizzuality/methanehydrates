@@ -16,28 +16,25 @@
 
   <div class="layout">
 
-    <% if (action_name == 'home') %>
-
-    <% else %>
+    <% if (action_name != 'home') %>
+		
       <div id="header">
         <div class="inner_header">
           <div class="logo">
             <a href="/"><%= image_tag 'common/logo.jpg' %></a>
           </div>
           <ul>
-            <li class="last current"><a href="/blog">BLOG</a></li>
-            <li><a href="#">LEARN MORE</a></li>
-            <li><a href="/events">UPCOMING EVENTS</a></li>
-            <li><a href="#">MEDIA RESOURCES</a></li>
-            <li><a href="#">EXPLORE THE SITES</a></li>
+            <li <% if (controller_name=='posts')%> <%="class='last current'"%><%else%><%="class='last'"%><%-end%>><a href="/blog">BLOG</a></li>
+            <li <% if (controller_name=='about')%> <%="class='current'"%><%-end%>><a href="/about">LEARN MORE</a></li>
+            <li <% if (controller_name=='events')%> <%="class='current'"%><%-end%>><a href="/events">UPCOMING EVENTS</a></li>
+            <li <% if (controller_name=='galleries')%> <%="class='current'"%><%-end%>><a href="/galleries">MEDIA RESOURCES</a></li>
+            <li <% if (controller_name=='features')%> <%="class='current'"%><%-end%>><a href="/features">EXPLORE THE SITES</a></li>
           </ul>
         </div>
       </div>
     <%- end %>
-
-
+    
     <%= yield %>
-
 
     <div id="footer">
       <div class="inner_footer">
@@ -51,7 +48,7 @@
           <ul>
             <li class="last"><a href="#">CONTACT</a></li>
             <li><a href="/blog">BLOG</a></li>
-            <li><a href="#">LEARN MORE</a></li>
+            <li><a href="/about">LEARN MORE</a></li>
             <li><a href="/events">UPCOMING EVENTS</a>
               <div>
                 <p><a href="/events">Events calendar</a></p>
@@ -78,8 +75,14 @@
 
   <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript" charset="utf-8"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/javascripts/jquery.livequery.js" type="text/javascript" charset="utf-8"></script>
+  
+  
+  <script src="/javascripts/fonts/cufon-yui.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/javascripts/fonts/Hand_Of_Sean_400.font.js" type="text/javascript" charset="utf-8"></script>
   <script src="/javascripts/jquery-ui-1.8.5.custom.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="/javascripts/jquery.nivo.slider.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/javascripts/fonts/supersized.2.0.js" type="text/javascript" charset="utf-8"></script>
   <script src="/javascripts/supersized.2.0.js" type="text/javascript" charset="utf-8"></script>
   <script src="/javascripts/jquery.url.js" type="text/javascript" charset="utf-8"></script>
   <script src="/javascripts/application.js" type="text/javascript" charset="utf-8"></script>

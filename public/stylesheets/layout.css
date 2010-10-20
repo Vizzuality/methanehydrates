@@ -7,15 +7,15 @@ input:focus{outline:none;}
 ul {list-style:none;}
 div.space80 {float:left; width:100%; height:80px;}
 div.space40 {float:left; width:100%; height:40px;}
+.margin35top {margin:35px 0 0;}
+.margin20top {margin:20px 0 0;}
 .hidden {display:none;}
 
 #supersized {position:fixed; float:left;}
 #supersized img {height:100%; width:100%; position:absolute; z-index: 1;}
 
 .layout {position:absolute; top:0; left:0; width:100%; background:none; z-index:10;}
-div#content {margin:0 auto; width:948px;}
-
-
+div#content {margin:0 auto; width:948px; min-height:850px;}
 
 /*HEADER*/
 
@@ -32,6 +32,14 @@ div#content {margin:0 auto; width:948px;}
 #header div.inner_header ul li.current.last {background-position:-432px 0;}
 
 
+/* HEADER - HOME */
+#header_home {float:left; width:100%; height:55px; margin:35px 0 0 0;}
+#header_home div.inner_header {position:relative; width:930px; margin:0 auto;}
+#header_home div.inner_header div.left {float:left;}
+#header_home div.inner_header div.left img {width:140px; height:16px; float:left; margin:20px 0 0 29px;}
+#header_home div.inner_header div.right {float:right;}
+#header_home div.inner_header div.right img.grid_arendal_logo {float:left; width:154px; height:55px; margin:0 25px 0 0;}
+#header_home div.inner_header div.right img.unep_logo {float:left; width:48px; height:55px; margin:0 32px 0 0;}
 
 /* TITLE */
 
@@ -55,7 +63,7 @@ div.title div.inner_title div.right ul li a:hover {text-decoration:underline;}
 
 div.search {float:left; width:100%;}
 div.search div.top {float:left; width:100%; height:15px; margin:0; padding:0; background:url(../images/round/top_white_long.png) no-repeat center 0;}
-div.search div.middle {position:relative; float:left; width:868px; padding:15px 40px 17px 40px; height:auto; background:url(../images/round/middle_white_long.png) repeat-y center 0;}
+div.search div.middle {position:relative; float:left; width:868px; padding:15px 40px 17px 40px; height:auto; background:url(../images/round/middle_white_long.png) repeat-y center 0; min-height:245px;}
 div.search div.middle div.left {float:left; width:570px;}
 div.search div.middle div.left h2 {float:left; font:bold 23px Arial; color:#333333; letter-spacing:-1px; padding:0 0 18px 0;}
 div.search div.middle div.left form {float:left; width:554px; height:63px; padding:8px; background:url(../images/home/pink_bkg.png) no-repeat 0 0;}
@@ -69,7 +77,7 @@ div.search div.middle div.left ul li a {font:normal 15px Arial; color:#FF6600; t
 div.search div.middle div.left ul li a.all {text-decoration:underline;}
 div.search div.middle div.left ul li a:hover {text-decoration:underline; color:#FF3300;}
 div.search div.middle div.right {position:absolute; right:-20px; top:-27px; width:290px; height:289px; padding:45px 0 0 40px; background:url(../images/home/right_bkg.png) no-repeat 0 0;}
-div.search div.middle div.right h2 {float:left; width:100%; font:bold 23px Arial; color:#FF6600; text-shadow:0 1px white; padding:0 0 25px;}
+div.search div.middle div.right h2 {float:left; width:100%; font:bold 23px Arial; color:#FF6600; text-shadow:0 1px white; padding:0 0 25px; }
 div.search div.middle div.right p {float:left; width:232px; font:bold 17px Arial; color:#666666; text-shadow:0 1px white; line-height:19px;}
 div.search div.middle div.right a.explore {float:left; width:245px; height:65px; padding:0; margin:30px 0 0 0; background:url(../images/home/explorer_button.png) no-repeat 0 0;}
 div.search div.middle div.right a.explore:hover {background-position:0 -71px;}
@@ -83,13 +91,20 @@ div.meaning div.top {float:left; width:100%; height:15px; background:url(../imag
 div.meaning div.middle {position:relative; float:left; width:868px; padding:15px 40px 17px 40px; height:auto; background:url(../images/round/middle_opaque_long.png) repeat-y center 0;}
 div.meaning div.middle div.left {float:left; width:565px;}
 div.meaning div.middle div.left h3 {float:left; width:100%; font:bold 25px Arial; color:white; padding:0; margin:0;}
-div.meaning div.middle div.left p {float:left; width:100%; font:normal 15px Arial; color:white;}
-div.meaning div.middle div.left p.hand {margin:20px 0;}
+div.meaning div.middle div.left p {float:left; width:100%; font:normal 15px Arial; color:white; margin:10px 0 0 0;}
+div.meaning div.middle div.left p.hand {margin:25px 0 20px 38px; font:normal 21px Arial; color:white; position:relative; width:500px;}
+div.meaning div.middle div.left span.quotes {font:normal 45px Geneva; color:white; position:absolute; top:0; left:0;}
+div.meaning div.middle div.left span.quotes.open {top:-16px; left:-20px;}
+div.meaning div.middle div.left span.quotes.close {top:42px; left:338px;}
 div.meaning div.middle div.left ul {float:left; width:100%; margin:20px 0 0 0; padding:0;}
 div.meaning div.middle div.left ul li {float:left; width:267px; padding:5px 0 5px 13px; background:url(../images/icons/circle.png) no-repeat 2px 10px; color:white;}
 div.meaning div.middle div.left ul li a {font:normal 15px Arial; color:white;}
 div.meaning div.middle div.left ul li a:hover {color:#F5F5F5;}
 div.meaning div.middle div.right {float:right; width:245px;}
+div.meaning div.middle div.right h5 {font:bold 13px Arial; color:white;}
+div.meaning div.middle div.right h5 a {font:normal 13px Arial; color:#FF6600; text-decoration:none; margin:0 0 0 30px;}
+div.meaning div.middle div.right h5 a:hover {text-decoration:underline;}
+
 div.meaning div.bottom {float:left; width:100%; height:71px; margin:0; padding:0; background:url(../images/round/bottom_opaque_long.png) no-repeat center 0;}
 
 div.blog_last {float:left; width:100%;}
@@ -345,7 +360,7 @@ div.body_content_left div ul#events li div.right p.location {float:left; width:1
 div.body_content_left div ul#events li div.right p {float:left; width:100%; font:normal 13px Arial; color:#444444;}
    
 div.body_content_right {float:right; width:304px; padding:6px 0 50px 0;}
-div.body_content_right div.opaque {float:right; width:304px; margin:35px 0 0;}
+div.body_content_right div.opaque {position:relative; float:right; width:304px;}
 div.body_content_right div.opaque div.top {float:left; width:304px; height:15px; background:url(../images/round/top_grey_opaque_short.png) no-repeat center 0;}
 div.body_content_right div.opaque div.middle {float:left; width:234px; padding:0 35px; height:auto; background:url(../images/round/middle_grey_opaque_short.png) repeat-y center 0;}
 div.body_content_right div.opaque div.middle div.head {position:relative; float:left; width:100%; padding:0; height:86px;}
@@ -354,7 +369,8 @@ div.body_content_right div.opaque div.middle div.head p {font:normal 15px Arial;
 div.body_content_right div.opaque div.middle div.head span.line {position:absolute; height:1px; width:286px; bottom:0; left:-26px; background:black; opacity:0.35; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=35);}
 div.body_content_right div.opaque div.middle div.calendar {float:left; margin:30px 0 0 0; width:100%; height:261px;}
 div.body_content_right div.opaque div.bottom {float:left; width:304px; height:15px; background:url(../images/round/bottom_grey_opaque_short_2.png) no-repeat center bottom; margin:0;}
-
+div.body_content_right div.opaque div.loader {display:none; position:absolute; height:234px; width:234px; padding:0; margin:0; background:none;}
+div.body_content_right div.opaque div.loader img {position:absolute; height:16px; width:16px; left:50%; top:50%; margin:-8px 0 0 -8px;}
 
 
 
@@ -391,6 +407,8 @@ div.middle_white ul li div.right p.location {float:left; width:100%; font:normal
 div.middle_white p {float:left; width:100%; font:normal 15px Arial; color:#666666; line-height:19px;}
 div.bottom_white {float:left; width:633px; height:25px; background:url(../images/round/bottom_white.png) no-repeat 0 0;}
 
+div.body_content_right div.opaque div.middle div.head p a {font:normal 15px Arial; color:white;}
+div.body_content_right div.opaque div.middle div.head p a:hover {text-decoration:none;}
 
 
 

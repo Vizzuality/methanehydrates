@@ -1,9 +1,11 @@
 		
 		var map;
-		
+		var days;
 
 		$(document).ready(function() {
 
+			Cufon.replace('.cufon_handofsean');
+			
 		    //Cover ul space with blue opaque background (header)
 		    var li_size = 0;
 		    $('div.inner_header ul li').each(function(index,element){
@@ -40,8 +42,7 @@
 		
 				//If there is a map
 		    if ($('div#map')[0]) {
-					var latlng = new google.maps.LatLng($('#latitude').text(),$('#longitude').text());
-					
+					var latlng = new google.maps.LatLng(parseInt($('#latitude').text()),parseInt($('#longitude').text()));
 					var myOptions = {
 			      zoom: 6,
 			      center: latlng,
@@ -63,8 +64,38 @@
 				
 				
 				//Datepicker calendar
-				$('.calendar').datepicker();
+				$('.calendar').datepicker({
+					onChangeMonthYear: function(year, month,inst){
+						showLoader();
+						setTimeout(function(ev){
+							$("td a").removeClass('ui-state-active');
+							$("td a").removeClass('ui-state-highlight');
+							$('td').removeAttr('onclick');
+							
+							$("td a:contains('30')").addClass('ui-state-active');
+							$("td a:contains('30')").attr('href','http://www.vizzuality.com');
+							hideLoader();
+						},1000);
+					}
+				});
+				
+				//Custom calendar
 				$('.calendar').append('<div class="bottom-navigator ui-corner-bottom"><a onclick="javascript:void $(\'a.ui-datepicker-prev\').trigger(\'click\');" class="prev"></a><a onclick="javascript:void $(\'a.ui-datepicker-next\').trigger(\'click\');" class="next"></a></div>');
+				$("td a").removeClass('ui-state-active');
+				$("td a").removeClass('ui-state-highlight');
+				$('td').removeAttr('onclick');
+				
+				
+			
+				$('td a').livequery('click',function(ev){
+					if ($(this).attr('href')=="#"){
+						ev.stopPropagation();
+						ev.preventDefault();
+						return false;
+					}
+				});
+				
+				
 				
 				
 				//Background resize image
@@ -84,3 +115,24 @@
 		  var exp = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
 		  return text.replace(exp,"<a href='$1' target='_blank'>$1</a>");
 		}
+		
+		
+		function showLoader() {
+			var height_calendar = $('div.calendar').height();
+			var position_calendar = $('div.calendar').position();
+			$('div.loader').height(height_calendar);
+			$('div.loader').css('top',position_calendar.top+'px');
+			$('div.calendar').css('opacity','0.2');
+			$('div.loader').show();
+			
+		}
+		
+		
+		function hideLoader() {
+			$('div.calendar').css('opacity','1');
+			$('div.loader').hide();
+		}
+		
+		
+		
+		
