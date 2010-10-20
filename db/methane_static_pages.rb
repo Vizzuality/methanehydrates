@@ -13,7 +13,7 @@ html = <<-HTML
             <li><a href="/faq">FAQ</a>
 <span class="line"></span>
 </li>
-            <li class="last"><a href="#">PARTNERS</a>
+            <li class="last"><a href="/partners">PARTNERS</a>
 <span class="line"></span>
 </li>
           </ul>
@@ -34,26 +34,26 @@ html = <<-HTML
             </div>
           </div>
           <div class="middle">
-            <h3>What are gas hydrates and why should I care?</h3>
+            <h3 id="what_gas_care">What are gas hydrates and why should I care?</h3>
             <p>Gas hydrates are natural substances that form when methane gas and water are brought together in sufficient quantities under certain conditions of pressure and temperature.   Gas hydrates are important because they represent a major share of the Earths mobile organic carbon and their participation within natural process, including long-term carbon cycling and shorter-term responses to environmental (climate) change remain poorly-understood.  In addition, gas hydrate houses large quantities of methane, a clean-burning fuel that many feel can ease the transition between todays energy sources and the sustainable energy supplies of the future.</p>
-            <h3>Are there a lot of hydrates?</h3>
+            <h3 id="lot_hydrates">Are there a lot of hydrates?</h3>
             <p>It appears so.  Gas hydrates appear to be a very common constituent filling the spaces between grains and within cracks and fissures in shallow sediments on deepwater continental shelves.  In some specific locations, gas hydrate is very abundant and concentrated within certain sediments however, in the vast majority of oceanic sediments, gas hydrate occurs at relatively low concentration, filling perhaps 5% or less of this available space.  Still, a little gas hydrate over very large areas equates to very large total volumes.  At present, the estimates of this volume continue to range over several orders of magnitude (See Book 1, Ch. 2), but at this time, a total volume estimate of 100,000 trillion cubic feet of methane (at surface T and P) may be housed within marine gas hydrates is reasonable.  Gas hydrates are also common on land, buried 150 meters beneath some areas of permafrost.</p>
 
-            <h3>When or how were hydrates first discovered?</h3>
+            <h3 id="first_discovered">When or how were hydrates first discovered?</h3>
             <p>Hydrates were first made in the lab, early in the 1800s.  In the 1930s, natural gas pipelines being laid in cold regions were found to be failing, and the cause was the formation of gas hydrate plugs within them.  Gas hydrate in nature was first hypothesized by Dr. Yuri Makogon and his Russian colleagues in the early 1960s based on theoretical considerations and some intriguing data being collected in Siberian gas fields.  Gas hydrates were not seen in nature until solid samples were dredged off the bottom of the black sea in the late 1960s.  It was found in Alaska in the early 1970s, and in the late 1970s and earlys, a series of expeditions of the Deep Sea Drilling Program began to routinely encounter gas hydrates and compelling geochemical evidence of gas hydrate in recovered sediment cores in the deep oceans around the world.</p>
 
-            <h3>How can life live off hydrates?</h3>
+            <h3 id="can_live_hydrates">How can life live off hydrates?</h3>
             <p>Life requires energy.  Most life generates this energy directly from the sun (via photosynthesis) or the consumption of other life that is ultimately supported by photosynthesis.  However some life (chemosynthetic life) can get energy by consuming certain chemicals and using the energy stored in those chemical bonds.  Gas hydrate and other methane (and hydrocarbon) sources can support such life through the direction consumption of these organic compounds.  However, even in this case, this methane, ultimately is derived from the alteration of organic matter that represents an original photosynthetic-based source .</p>
 
-            <h3>Are the hydrates on other planets or moons?</h3>
+            <h3 id="planets_or_moons">Are the hydrates on other planets or moons?</h3>
             <p>Yes, there are theories that hydrate may be present in large quantities in the Martian subsurface, and exist on Pluto, Charon, and possibly even on the larger gas giants.  Gas hydrate is thought to exist on our own moon, as well as on Europa and Titan.  Comets are also thought to contain hydrates, and hydrates may be a major constituent of some of sauternes rings.</p>
 
-            <h3>Why do hydrates fizz?</h3>
+            <h3 id="why_hydrates_fizz">Why do hydrates fizz?</h3>
             <p>When removed from its pressure-temperature stability conditions, gas hydrate will dissociate into gas and liquid water.  The reaction is not spontaneous or explosive.  Most commonly, a recovered, piece of gas hydrate laid on a ships deck will slowly tìmeltî away over tens of minutes in a manner very similar to an ice cube removed from a freezer.  While this dissociation occurs, the released gas can result in a fizzing sound and bubbling as it passes through any surrounding water.</p>
 
           </div>
           <div class="bottom">
-            <a href="javascript:void $.scrollTo('div#header',400)" id="back_to_top">Back to top</a>
+            <a onclick="javascript:void $.scrollTo('div#header',400)" id="back_to_top">Back to top</a>
           </div>
         </div>
 </div>
@@ -68,63 +68,63 @@ html = <<-HTML
             </div>
             <h4>Background</h4>
             <ul>
-              <li><a id="gas_hydrates_care">What are gas hydrates and why should I care?</a>
+              <li><a onclick="javascript:void $.scrollTo('h3#what_gas_care',400)">What are gas hydrates and why should I care?</a>
 </li>
-              <li><a id="lot_hydrates">Are there a lot of hydrates?</a>
+              <li><a onclick="javascript:void $.scrollTo('h3#lot_hydrates',400)">Are there a lot of hydrates?</a>
 </li>
-              <li><a id="first_discover">When or how were hydrates first discovered?</a>
+              <li><a onclick="javascript:void $.scrollTo('h3#first_discovered',400)">When or how were hydrates first discovered?</a>
 </li>
-              <li><a id="life_hydrates">How can life live off hydrates?</a>
+              <li><a onclick="javascript:void $.scrollTo('h3#can_live_hydrates',400)">How can life live off hydrates?</a>
 </li>
-              <li><a id="planets_moons">Are the hydrates on other planets or moons?</a>
+              <li><a onclick="javascript:void $.scrollTo('h3#planets_or_moons',400)">Are the hydrates on other planets or moons?</a>
 </li>
-              <li><a id="hydrates_fizz">Why the hydrates fizz?</a>
+              <li><a onclick="javascript:void $.scrollTo('h3#why_hydrates_fizz',400)">Why the hydrates fizz?</a>
 </li>
             </ul>
             <h4>Methane gas hydrates as potential sources of energy</h4>
             <ul>
-              <li><a id="natural_gas">How do we produce natural gas from hydrates?</a>
+              <li><a onclick="javascript:void $.scrollTo('h3#natural_gas_hydrates',400)">How do we produce natural gas from hydrates?</a>
 </li>
-              <li><a id="hydrates_dangerous">Aren't hydrates very dangerous?</a>
+              <li><a onclick="javascript:void $.scrollTo('h3#hydrates_dangerous',400)">Aren't hydrates very dangerous?</a>
 </li>
-              <li><a id="fossil_fuel">Why should we develop another fossil fuel?</a>
+              <li><a onclick="javascript:void $.scrollTo('h3#develop_another_fossil',400)">Why should we develop another fossil fuel?</a>
 </li>
-              <li><a id="energy_production">Why do you want to use methane for energy production?</a>
+              <li><a onclick="javascript:void $.scrollTo('h3#methane_energy_production',400)">Why do you want to use methane for energy production?</a>
 </li>
             </ul>
             <h4>Explotation &amp; commercialization</h4>
             <ul>
-              <li><a id="where_hydrates_found">Where are gas hydrates found?</a>
+              <li><a onclick="javascript:void $.scrollTo('h3#how_hydrates_found',400)">How are gas hydrates found?</a>
 </li>
-              <li><a id="commercial_production">When will commercial production occur?</a>
+              <li><a onclick="javascript:void $.scrollTo('h3#where_hydrates_found',400)">Where are gas hydrates found?</a>
 </li>
-              <li><a id="research_hydrates">Why does government subsidize research for hydrates?</a>
+              <li><a onclick="javascript:void $.scrollTo('h3#commercial_production_occur',400)">When will commercial production occur?</a>
 </li>
-              <li><a id="lead_commercialization">How will R&amp;D lead to commercialization?</a>
+              <li><a onclick="javascript:void $.scrollTo('h3#government_subsidize',400)">Why does government subsidize research for hydrates?</a>
 </li>
-              <li><a id="industry_gas_hydrates">Why does industry ignore naturally-occurring gas hydrates?</a>
+              <li><a onclick="javascript:void $.scrollTo('h3#how_lead_commercialization',400)">How will R&amp;D lead to commercialization?</a>
+</li>
+              <li><a onclick="javascript:void $.scrollTo('h3#industry_ignore_naturally',400)">Why does industry ignore naturally-occurring gas hydrates?</a>
 </li>
             </ul>
             <h4>Environmental issues</h4>
             <ul>
-              <li><a id="impact_ecosystems">Will development of hydrates have an impact on ecosystems?</a>
+              <li><a onclick="javascript:void $.scrollTo('h3#development_hydrates_impact',400)">Will development of hydrates have an impact on ecosystems?</a>
 </li>
-              <li><a id="climate_change">Could hydrates be responsible for runaway climate change?/a&gt;</a>
+              <li><a onclick="javascript:void $.scrollTo('h3#hydrates_responsible',400)">Could hydrates be responsible for runaway climate change?/a&gt;</a>
 </li>
-<a href="#">
-              </a>
-<li><a href="#">Can hydrate development cause tsunamis?</a>
+<li><a onclick="javascript:void $.scrollTo('h3#can_hydrate_development',400)">Can hydrate development cause tsunamis?</a>
 </li>
-              <li><a id="hydrates_poisonous">Are hydrates poisonous?</a>
+              <li><a onclick="javascript:void $.scrollTo('h3#are_hydrates_poisonous',400)">Are hydrates poisonous?</a>
 </li>
-              <li><a id="easily_destabilized">Are hydrates easily destabilized?</a>
+              <li><a onclick="javascript:void $.scrollTo('h3#hydrates_easily_destabilized',400)">Are hydrates easily destabilized?</a>
 </li>
-              <li><a id="swarm_real">Is The Swarm real?</a>
+              <li><a onclick="javascript:void $.scrollTo('h3#swarm_real',400)">Is The Swarm real?</a>
 </li>
             </ul>
             <h4>Research &amp; education</h4>
             <ul>
-              <li><a id="career_develop_industry">Can I make a career in the hydrates development industry?</a>
+              <li><a onclick="javascript:void $.scrollTo('h3#make_career_hydrates',400)">Can I make a career in the hydrates development industry?</a>
 </li>
             </ul>
           </div>
@@ -140,20 +140,20 @@ html = <<-HTML
             </div>
           </div>
           <div class="middle">
-            <h3>How do we produce natural gas from hydrates?</h3>
+            <h3 id="natural_gas_hydrates">How do we produce natural gas from hydrates?</h3>
             <p>There are five main methods that have been proposed.  The first, mining the seafloor and separating the gas from the sediment at the surface, has been dismissed by all the leading national R&amp;D efforts as too environmentally invasive and not remotely commercially feasible on a large scale.  The other four methods involve the drilling of wells into relatively rich deposits, and using the well to change local conditions to provoke the dissociation reaction within the sediments, allowing the gas to be produced up the well as in conventional oil and gas production.  The leading method is depressurization, in which the fluids are pumped up and out of the wellbore, creating a pressure gradient that draws fluids from the sediment into the well.  This drops pressure near the well, initiating hydrate dissociation.  This method has been successfully tested in the Arctic (see Book 2, Ch 3) and is considered the most promising basis for hydrate production.  A third method is the injection of CO2 or other compounds that create a chemical drive for the release of the methane from the hydrate cages (and the potential sequestration of the CO2).  This method has shown some promise at the laboratory scale, but has not yet been field tested.  A fourth method injects hot fluids or heat energy into the formation.  A fifth method includes the injection of methanol or other chemical inhibitors that promote dissociation.  Both thermal and chemical stimulation have difficulty effecting large areas, and are currently considered to be too costly, and too technically inefficient, to form the basis of production technologies, but may be useful short-term, periodic compliments to depressurization based techniques.</p>
 
-            <h3>Aren't hydrates very dangerous?</h3>
+            <h3 id="hydrates_dangerous">Aren't hydrates very dangerous?</h3>
             <p>The methane housed in gas hydrates is no different from the methane that makes up the vast majority of the natural gas that is currently in widespread use in homes and businesses around the world.   Methane gas, like all hydrocarbons, is combustible (this is what makes hydrates of interest as an energy source).  Furthermore, methane is a powerful greenhouse gas, roughly 20x times more effective at trapping solar radiation than CO2.   So the risks associated with gas hydrates are real, but generally of the same nature as those risks that are currently managed in natural gas production, transportation, and use.  Gas hydrates, like shallow free gas, also poses hazards for oil and gas exploration and production, however recent scientific programs indicate that such risks can be effectively managed.</p>
 
-            <h3>Why should we develop another fossil fuel?</h3>
+            <h3 id="develop_another_fossil">Why should we develop another fossil fuel?</h3>
             <p>It is not yet known that we need to.  However, the Earth's population continues to grow, and that growth is largely centered on those parts of the world where energy supply options are perhaps the most limited.  Therefore, we clearly need to conduct the science and technology that allow us to evaluate all the options for providing the energy that is needed to improve global standards of living.  As these options become better understood, in both economic and environmental impact, global societies can make more informed decisions about resource development.</p>
 
-            <h3>Why do you want to use methane for energy production?</h3>
+            <h3 id="methane_energy_production">Why do you want to use methane for energy production?</h3>
             <p>Methane, being the most refined form of hydrocarbon, is by far the cleanest burning among fossil fuels.   providing the most energy, and the least CO2 and other emission, per carbon molecule of all the hydrocarbons.  It is also by far the most abundant hydrocarbon.  This makes it an attractive option for energy supply, and a means to transition between todays energy sources and the sustainable energy supplies of the future.</p>
           </div>
           <div class="bottom">
-            <a href="javascript:void $.scrollTo('div#header',400)" id="back_to_top">Back to top</a>
+            <a onclick="javascript:void $.scrollTo('div#header',400)" id="back_to_top">Back to top</a>
           </div>
         </div>
 
@@ -166,26 +166,26 @@ html = <<-HTML
             </div>
           </div>
           <div class="middle">
-            <h3>How are hydrates found?</h3>
+            <h3 id="how_hydrates_found">How are gas hydrates found?</h3>
             <p>Gas hydrates, where present, increase the solid mass of the sediments as they displace fluids and gases.  This makes the sediment significantly stiffer, and this change in sediment character can be observed through geophysical seismic surveys, which measure the changes speeds at which sound waves move through the Earth.  Units of anomalously fast sediments that occur in the regions where gas hydrate are thought to be stable are very good candidates for gas hydrate.  Also by virtue of displacing electrically conductive brines with electrically resistive solid hydrate, gas hydrate can be detected through electromagnetic surveys.  There are also numerous sea-floor features, such vents and hardgrounds that indicate areas of relatively greater gas migration, that can assist in the search of gas hydrate. (See book 2, chapter 2 for more details).</p>
 
-            <h3>Where are gas hydrates found?</h3>
+            <h3 id="where_hydrates_found">Where are gas hydrates found?</h3>
             <p>Gas hydrates are found wherever gas and water are brought together under the proper temperature (relatively low) and temperature (relatively high) conditions.  High pressure and low temperature is a somewhat unique combination, as both tend to increase with depth of burial below ground, so hydrates are restricted to those areas where large, cold masses exist that allow increased pressure while suppressing temperature.  One area where this occurs is beneath relatively thick frozen soils (permafrost's primarily found in the Arctic but also recently discovered in Tibet).  In the oceans, gas hydrates generally exist on the continental shelves and slopes, within the upper 200 to 1000 m of sediment where water depths exceed about 500 m (less at higher latitudes).</p>
 
-            <h3>When will commercial production occur?</h3>
+            <h3 id="commercial_production_occur">When will commercial production occur?</h3>
             <p>This will be based on a number of factors, including local, regional, and global energy demands, the findings of ongoing efforts to determine just how much hydrate resides in various locations and its general resource quality (generally meaning both the concentration of the gas hydrate and nature of the enclosing strata); and the results of planned tests of gas hydrate productivity.  Many nations are operating under the assumption that initial gas hydrate production (on a test scale) could occur by 2015.  However, it is unlikely that gas hydrate would be a meaningful contributor to energy supplies before 2030 or later.</p>
 
-            <h3>Why does government subsidize research for hydrates?</h3>
+            <h3 id="government_subsidize">Why does government subsidize research for hydrates?</h3>
             <p>Because the issues related to gas hydrates are broad, and the understanding of gas hydrate energy potential and environmental impacts can better inform decisions ranging from resource development to ocean policy, to climate change response.</p>
 
-            <h3>How will R&amp;D lead to commercialization?</h3>
+            <h3 id="how_lead_commercialization">How will R&amp;D lead to commercialization?</h3>
             <p>The goal of R&amp;D is typically scientific understanding, leading to concept development, followed by demonstration.  Governmental-sponsored programs support basic science and technology development to show what is possible and what is required to make the possible, profitable.  At some point, demonstrated potential leads to private investment, and commercialization can occur.  In some case, where governments have determined that an activity has net positive public benefits, commercialization can be further accelerated by use of policy and regulation that encourages development.</p>
 
-            <h3>Why does industry ignore naturally-occurring gas hydrates?</h3>
+            <h3 id="industry_ignore_naturally">Why does industry ignore naturally-occurring gas hydrates?</h3>
             <p>Industry does not ignore hydrates.  Industry invests heavily in research into the impacts of gas hydrate on their drilling and production operations, funding work both internally and in collaboration with major Universities such as the Colorado School of Mines and Heriot-Watt University.   Industry is also a partner in many federal scientific research programs designed to help better understand the occurrence and behavior of gas hydrate in nature.  However, industry has not yet begun to actively exploits gas hydrates as an energy resource because the science and technology to develop gas hydrates have not yet been fully demonstrated and they have numerous other, and better understood energy resources to pursue.  Given the competitive nature of the energy supply business and the need to demonstrate profitability to shareholders, the wide-spread belief that gas hydrate will not contribute to company revenues within the next 5 -10 years makes hydrates a subject of interest to companies, but gas hydrate is not yet a viable exploration target.</p>
           </div>
           <div class="bottom">
-            <a href="javascript:void $.scrollTo('div#header',400)" id="back_to_top">Back to top</a>
+            <a onclick="javascript:void $.scrollTo('div#header',400)" id="back_to_top">Back to top</a>
           </div>
         </div>
 
@@ -198,26 +198,26 @@ html = <<-HTML
             </div>
           </div>
           <div class="middle">
-            <h3>Will development of hydrates have an impact on ecosystems?</h3>
+            <h3 id="development_hydrates_impact">Will development of hydrates have an impact on ecosystems?</h3>
             <p>All development has an impact on ecosystems.  And while gas hydrate development is not thought to have any unique impacts that are not currently managed in conventional gas production, the scale and nature of those impacts can not be well understood until initial field tests are conducted.  Therefore, the leading programs addressing gas hydrates are incorporating full environmental monitoring into their field programs.</p>
 
-            <h3>Could hydrates be responsible for runaway climate change?</h3>
+            <h3 id="hydrates_responsible">Could hydrates be responsible for runaway climate change?</h3>
             <p>The most recent research suggests that under certain global climatic conditions, gas hydrate dissociation can occur on a large enough scale to provide a significant positive feedback to ongoing climate warming.  The most likely such event was recorded 55 million years ago at the Paleocene-Eocene Thermal Maxima.  At that time, ongoing climate warming due to other factors (most likely accelerated volcanism that released massive amounts of CO2 to the air) altered global water temperature and circulation patterns to the extent that gas hydrates likely dissociated at a large scale in the marine environment, adding an incremental input of greenhouse gas that further exacerbated the ongoing climate change.  Therefore, it does appear that such events would take place over periods of 1000s of years and are likely limited to only the largest climate events.  For example, the Earth clearly has experienced major cooling and warming periods in the last 400,000 years or so (the Ice Ages).  Recent studies of ice cores from both poles have clearly indicated that these climate changes did not mobilize significant volumes of methane from gas hydrate, instead, the noted increases in methane that correlate to the end of each Ice Age have been attributed to the expansion of wetlands (and the generation of methane is wamp gas).  Such wetlands form when the formation of ice lowers sea-levels, exposing large regions of the continental shelves for the formation of swamps and marshes.</p>
 
-            <h3>Can hydrate development cause tsunamis?</h3>
+            <h3 id="can_hydrate_development">Can hydrate development cause tsunamis?</h3>
             <p>No.  Although it may be the case that past global events have impacted gas hydrates in such a way that they have contributed to sub-marine landslides that produced tsunamis, such events reflect environmental pressures that are global, pervasive and in effect over many thousands of years.  Hydrate development, which would impart very local and very short-lived impacts, are extremely unlikely to cause such events.  Furthermore, most large submarine slides that were once thought to be related to gas hydrate dissociation are now considered to be caused by other geologic factors.</p>
 
-            <h3>Are hydrates poisonous?</h3>
+            <h3 id="are_hydrates_poisonous">Are hydrates poisonous?</h3>
             <p>Hydrates consist of pure water (not poisonous!) and methane gas. The gas can be burned, and if the gas is collected and allowed to concentrate, can be an explosive hazard.  Natural hydrates are not meant to be eaten, though patents have been filed for creating ice creams and other frozen products containing CO2 hydrate.</p>
 
-            <h3>Are hydrates easily destabilized?</h3>
+            <h3 id="hydrates_easily_destabilized">Are hydrates easily destabilized?</h3>
             <p>This depends on the existing state of the hydrate.  Those well within the conditions for gas hydrate stability require large temperature or pressure changes to destabilize them.  However, areas at the  fringe of gas hydrate stability (the landward edge of marine gas hydrate occurrence, for example) exist right at stability conditions, and will be destabilized with very small changes.  One factor in hydrate destabilization is that the chemical reaction that converts solid gas hydrate to liquid water and free methane gas is ìendothermicî ñ which means it consumes heat from the surrounding environment.  As such, the reaction is somewhat self-regulating.  In fact, although the danger of an uncontrollable ìchain reactionî is occasionally mentioned with respect to gas hydrate, a major technical hurdle in gas hydrate production concepts is actually the need to continually input energy to keep the destabilization reaction going (countering the re-stabilizing endothermic effect).</p>
 
-            <h3>Is The Swarm real?</h3>
+            <h3 id="swarm_real">Is The Swarm real?</h3>
             <p>Gas hydrates are periodically used as fodder for very entertaining works of fiction such as ìthe Swarmî.  However, such phenomena as depicted in these books are not supported by scientific data.</p>
           </div>
           <div class="bottom">
-            <a href="javascript:void $.scrollTo('div#header',400)" id="back_to_top">Back to top</a>
+            <a onclick="javascript:void $.scrollTo('div#header',400)" id="back_to_top">Back to top</a>
           </div>
         </div>
 
@@ -230,20 +230,17 @@ html = <<-HTML
             </div>
           </div>
           <div class="middle">
-            <h3>Can I make a career in the hydrates development industry?</h3>
+            <h3 id="make_career_hydrates">Can I make a career in the hydrates development industry?</h3>
             <p>Absolutely.  Because the study of gas hydrates encompasses essentially all the natural sciences, as well as engineering and computer science, there are research questions suited for a broad spectrum of disciplines.  If you are still a student, there are numerous academic institutions with robust gas hydrate research programs around the world, so regardless of your primary research interests, there is likely to be a program suited to your background.  The career possibilities are similarly diverse.  Much of the world’s gas hydrate research is pursued by academic researchers, but there are an increasing number of government research positions in many countries, and the number of industry positions are also increasing.  For an introductory overview of the types of research currently being undertaken around the world, one could follow the links on this site to the member institutions participating in the steering committee for the UNEP Gas Hydrates review.</p>
           </div>
           <div class="bottom">
-            <a href="javascript:void $.scrollTo('div#header',400)" id="back_to_top">Back to top</a>
+            <a onclick="javascript:void $.scrollTo('div#header',400)" id="back_to_top">Back to top</a>
           </div>
         </div>
 
       </div>
 
       <div class="space80"></div>
-
-    
-
 
 HTML
 puts " - about"

@@ -14,12 +14,12 @@ div.space40 {float:left; width:100%; height:40px;}
 #supersized {position:fixed; float:left;}
 #supersized img {height:100%; width:100%; position:absolute; z-index: 1;}
 
-.layout {position:absolute; top:0; left:0; width:100%; background:none; z-index:10;}
+.layout {position:absolute; top:0; left:0; width:100%; background:transparent; z-index:10;}
 div#content {margin:0 auto; width:948px; min-height:850px;}
 
 /*HEADER*/
 
-#header {float:left; width:100%; height:55px; background:url(../images/common/header_bkg.png) no-repeat center 0;}
+#header {position:relative; float:left; width:100%; height:55px; background:url(../images/common/header_bkg.png) no-repeat center 0;}
 #header div.inner_header {position:relative; width:930px; margin:0 auto;}
 #header div.inner_header div.logo {position:absolute; left:-47px; top:0; width:273px; height:65px; background:url(../images/common/logo_bkg.jpg) no-repeat 0 0;}
 #header div.inner_header div.logo img {float:left; margin:0 0 0 48px;}
@@ -41,6 +41,7 @@ div#content {margin:0 auto; width:948px; min-height:850px;}
 #header_home div.inner_header div.right img.grid_arendal_logo {float:left; width:154px; height:55px; margin:0 25px 0 0;}
 #header_home div.inner_header div.right img.unep_logo {float:left; width:48px; height:55px; margin:0 32px 0 0;}
 
+
 /* TITLE */
 
 div.title {float:left; width:100%;}
@@ -56,7 +57,6 @@ div.title div.inner_title div.right ul li.last {border-bottom:none;}
 div.title div.inner_title div.right ul li.last span.line {display:none;}
 div.title div.inner_title div.right ul li a {float:right; width:100%; font:bold 15px Arial; color:white; text-decoration:none; text-shadow:0 1px #39485E;}
 div.title div.inner_title div.right ul li a:hover {text-decoration:underline;}
-
 
 
 /*HOME*/
@@ -104,9 +104,7 @@ div.meaning div.middle div.right {float:right; width:245px;}
 div.meaning div.middle div.right h5 {font:bold 13px Arial; color:white;}
 div.meaning div.middle div.right h5 a {font:normal 13px Arial; color:#FF6600; text-decoration:none; margin:0 0 0 30px;}
 div.meaning div.middle div.right h5 a:hover {text-decoration:underline;}
-
 div.meaning div.bottom {float:left; width:100%; height:71px; margin:0; padding:0; background:url(../images/round/bottom_opaque_long.png) no-repeat center 0;}
-
 div.blog_last {float:left; width:100%;}
 div.blog_last div.top {float:left; width:100%; height:15px; background:url(../images/round/top_white_long.png) no-repeat 0 0; margin:35px 0 0 0;}
 div.blog_last div.middle {position:relative; float:left; width:868px; padding:20px 40px 30px 40px; height:auto; background:url(../images/round/middle_white_long.png) repeat-y 0 0;}
@@ -124,7 +122,58 @@ div.blog_last div.middle ul li h4 a:hover {text-decoration:underline;}
 div.blog_last div.middle ul li p {font:normal 15px Arial; color:#666666; padding:10px 0 0 0;}
 div.blog_last div.middle ul li p a {color:#FF6600; text-decoration:none;}
 div.blog_last div.middle ul li p a:hover {text-decoration:underline;}
-div.blog_last div.bottom {float:left; width:100%; height:71px; margin:0; padding:0; background:url(../images/round/bottom_white_long.png) no-repeat 0 0;}
+div.blog_last div.bottom {float:left; width:100%; height:71px; margin:0; padding:0; background:url(/images/round/bottom_white_long.png) no-repeat 0 0;}
+
+
+
+/*EXPLORE*/
+
+div#explore_content {position:absolute; top:415px; left:50%; margin:0 0 0 -474px; width:948px; z-index:10;}
+div#explore_map {position:absolute; z-index:1; width:100%; height:100%; top:0; left:0;}
+div#blue_bkg {position:absolute; z-index:5; left:0; width:100%; height:210px; background:url(../images/explore/blue_bkg.png) repeat-x 0 0;}
+/*<div id="blue_bkg"></div>*/
+div.top_explore {float:left; width:100%; height:15px; background:url(/images/round/top_white.png) no-repeat 0 0;}
+div.middle_explore {float:left; width:553px; padding:20px 40px 0 40px; height:auto; background:url(/images/round/middle_white.png) repeat-y 0 0;}
+div.middle_explore div.head_explore {position:relative; float:left; height:72px; padding:0; width:100%}
+div.middle_explore div.head_explore div.left {float:left; width:450px;}
+div.middle_explore div.head_explore div.left h1 {float:left; font:bold 29px Arial; color:#333333; letter-spacing:-1px; width:100%;}
+div.middle_explore div.head_explore div.left p {float:left; font:normal 15px Arial; color:#666666; width:100%;}
+div.middle_explore div.head_explore div.right {float:right; width:auto; width:100px;}
+div.middle_explore div.head_explore div.right p {float:right; margin:5px 0 0 0;}
+div.middle_explore div.head_explore div.right p a {text-decoration:underline; color:#FF6600; font:normal 13px Arial;}
+div.middle_explore div.head_explore div.right p a:hover {color:#FF3300;}
+div.middle_explore div.head_explore span.line {position:absolute; height:1px; width:615px; bottom:0; left:-31px; background:#E5E5E5;}
+div.middle_explore ul#site_list {float:left; width:100%; padding:0; margin:0;}
+div.middle_explore ul#site_list li {float:left; width:100%; border-bottom:1px solid #CCCCCC; padding:27px 0 19px;}
+div.middle_explore ul#site_list li.last {border:none;}
+div.middle_explore ul#site_list li div.head {float:left; width:100%;}
+div.middle_explore ul#site_list li div.head div.image {float:left; width:30px; height:28px; padding:6px 0 0 0; background:url(../images/explore/marker.png) no-repeat -2px 0; margin:0 5px 0 0;}
+div.middle_explore ul#site_list li div.head div.image p {float:left; width:100%; font:bold 18px Arial; text-align:center; color:black; text-shadow:#FF8340 0 1px;}
+div.middle_explore ul#site_list li div.head div.info {float:left; width:515px;}
+div.middle_explore ul#site_list li div.head div.info h2 {float:left; width:100%;}
+div.middle_explore ul#site_list li div.head div.info h2 a {font:bold 21px Arial; color:#FF6600; text-decoration:none; letter-spacing:-1px;}
+div.middle_explore ul#site_list li div.head div.info h2 a:hover {color:#FF3300; text-decoration:underline;}
+div.middle_explore ul#site_list li div.head div.info p {float:left; width:100%; margin:3px 0 0;}
+div.middle_explore ul#site_list li div.head div.info p span {float:left; width:auto; font:bold 11px Arial; color:#999999;}
+div.middle_explore ul#site_list li div.head div.info p span.first {background:url(../images/icons/tiny_grey_arrow.jpg) no-repeat right 4px; padding:0 10px 0 0; margin:0 7px 0 0;}
+div.middle_explore ul#site_list li p.des {float:left; width:100%; margin:15px 0 0 0; font:normal 15px Arial; color:#666666;}
+div.middle_explore ul#site_list li p.des a {color:#FF6600; text-decoration:underline;}
+div.middle_explore ul#site_list li p a:hover {color:#FF3300;}
+div.middle_explore ul#site_list li div.grey {float:left; width:100%; background:url(../images/explore/grey_bkg.png) repeat-y 0 0; margin:20px 0 0 0;}
+div.middle_explore ul#site_list li div.grey div.block {float:left; width:160px; padding:12px;}
+div.middle_explore ul#site_list li div.grey div.block h4 {float:left; width:100%; font:bold 11px Arial; color:#A9A9A9;}
+div.middle_explore ul#site_list li div.grey div.block p {float:left; width:100%; padding:5px 0 0 0; font:normal 13px Arial; color:#666666;}
+div.bottom_explore {float:left; width:633px; height:85px; background:url(../images/round/bottom_grey.png) no-repeat 0 0;}
+div.bottom_explore a {float:left; margin:29px 0 0 40px; font:bold 15px Arial; color:#FF6600; padding:0 0 0 17px; background:url(../images/icons/orange_left_arrow.png) no-repeat 0 3px; text-decoration:none;}
+div.bottom_explore a.next {float:right; margin:29px 40px 0 0; padding:0 17px 0 0; background:url(../images/icons/orange_right_arrow.png) no-repeat right 4px;}
+div.bottom_explore a:hover {color:#FF3300; background-position:0 -13px;}
+div.bottom_explore a.next:hover {color:#FF3300; background-position:right -12px;}
+
+div.opaque_explore {float:right; width:304px;}
+div.opaque_explore div.top {float:left; width:304px; height:15px; background:url(../images/round/top_grey_opaque_short.png) no-repeat center 0;}
+div.opaque_explore div.middle {float:left; width:234px; padding:0 35px; height:auto; background:url(../images/round/middle_grey_opaque_short.png) repeat-y center 0;}
+div.opaque_explore div.middle h3 {font:bold 23px Arial; color:white; letter-spacing:-1px; width:100%; padding:12px 0 0 0;}
+div.opaque_explore div.bottom {float:left; width:304px; height:15px; background:url(../images/round/bottom_twitter_short.png) no-repeat center bottom;}
 
 
 
@@ -574,7 +623,8 @@ div.about_right div.bottom {float:right; width:304px; height:15px; background:ur
 
 /*FOOTER*/
 
-#footer {float:left; width:100%; height:197px; padding:55px 0 0 0; border-top:1px solid #929AA2; background:#161E27;}
+#footer {float:left; width:100%; height:197px; padding:55px 0 0 0; border-top:1px solid #929AA2; background:#161E27; z-index:10;}
+#footer.explore {position:absolute; bottom:0; left:0; width:100%; height:197px; padding:55px 0 0 0; border-top:1px solid #929AA2; background:#161E27; z-index:10;}
 #footer div.inner_footer {width:930px; margin:0 auto;}
 #footer div.inner_footer div.left {float:left; width:110px;}
 #footer div.inner_footer div.left h4 {font:bold 11px Arial; color:#5c6267; padding:0 0 8px 0;}

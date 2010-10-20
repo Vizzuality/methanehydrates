@@ -64,7 +64,8 @@
 				
 				
 				
-				//Datepicker calendar
+				//---- CALENDAR
+				
 				$('.calendar').datepicker({
 					onChangeMonthYear: function(year, month,inst){
 						showLoader();
@@ -72,22 +73,23 @@
 							$("td a").removeClass('ui-state-active');
 							$("td a").removeClass('ui-state-highlight');
 							$('td').removeAttr('onclick');
-							
-							$("td a:contains('30')").addClass('ui-state-active');
-							$("td a:contains('30')").attr('href','http://www.vizzuality.com');
+						},0);
+						$.getJSON('http://localhost:3000/events.json?year='+year+'&month='+month,function(result){
+							for (var i=0; i<result.length; i++) {
+								$("td a:contains('"+result[i].day+"')").addClass('ui-state-active');
+								$("td a:contains('"+result[i].day+"')").attr('href',result[i].url);
+							}
 							hideLoader();
-						},1000);
+						});
+
 					}
 				});
 				
-				//Custom calendar
 				$('.calendar').append('<div class="bottom-navigator ui-corner-bottom"><a onclick="javascript:void $(\'a.ui-datepicker-prev\').trigger(\'click\');" class="prev"></a><a onclick="javascript:void $(\'a.ui-datepicker-next\').trigger(\'click\');" class="next"></a></div>');
 				$("td a").removeClass('ui-state-active');
 				$("td a").removeClass('ui-state-highlight');
 				$('td').removeAttr('onclick');
-				
-				
-			
+
 				$('td a').livequery('click',function(ev){
 					if ($(this).attr('href')=="#"){
 						ev.stopPropagation();
@@ -96,6 +98,15 @@
 					}
 				});
 				
+				var date = new Date();
+				$.getJSON('http://localhost:3000/events.json?year='+date.getFullYear()+'&month='+(date.getMonth()+1),function(result){
+					for (var i=0; i<result.length; i++) {
+						$("td a:contains('"+result[i].day+"')").addClass('ui-state-active');
+						$("td a:contains('"+result[i].day+"')").attr('href',result[i].url);
+					}
+				});
+				
+				// ---- END CALENDAR
 				
 				
 				

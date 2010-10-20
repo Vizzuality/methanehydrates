@@ -4,6 +4,7 @@ class FeaturesController < ApplicationController
 
   before_filter :find_all_features
   before_filter :find_page
+  layout false, :only => 'index'
 
   def index
     present(@page)
