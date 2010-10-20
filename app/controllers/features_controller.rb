@@ -2,6 +2,7 @@ class FeaturesController < ApplicationController
 
   before_filter :find_all_features
   before_filter :find_page
+  layout false, :only => 'index'
 
   def index
     # you can use meta fields from your model instead (e.g. browser_title)
