@@ -16,8 +16,16 @@
             <div class="middle_posts">
                 <div class="head_posts">
                   <div class="left">
-                    <h1>Upcoming events</h1>
-                    <p><%= pluralize(@events.total_entries, "event","events") %></p>
+                    <h1>Upcoming events
+                    <% if params[:date] %>
+                    on <%= params[:date] %>
+                    <% end -%>
+                    </h1>
+                    <% if @events.respond_to?(:total_entries) %>
+                      <p><%= pluralize(@events.total_entries, "event","events") %></p>
+                    <% else %>
+                      <p><%= pluralize(@events.size, "event","events") %></p>
+                    <% end -%>
                   </div>
                   <span class="line"></span>
                 </div>
@@ -37,6 +45,7 @@
                   <% end %>
                 </ul>
             </div>
+            <% if @events.respond_to?(:total_entries) %>
             <div class="bottom_posts">
               <% if @events.total_pages > 1 %>
                 <% if @events.current_page < @events.total_pages %>
@@ -47,11 +56,12 @@
                 <% end -%>
               <% end -%>
             </div>
+            <% end -%>
         </div>
-      </div>  
+      </div>
     <% end %>
-    
-    
+
+
     <% content_for :body_content_right do %>
       <div class="body_content_right">
         <%= @page[Page.default_parts.second.to_sym] %>
