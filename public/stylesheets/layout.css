@@ -515,7 +515,7 @@ div.faq_right div.middle h4 {float:left; width:100%; font:bold 15px Arial; color
 div.faq_right div.middle ul {float:left; width:100%;}
 div.faq_right div.middle ul li {float:left; width:220px; margin:12px 0 0 0; padding:0 0 0 13px; background:url(../images/icons/grey_circle.jpg) no-repeat 2px 4px;}
 div.faq_right div.middle ul li a {font:normal 13px Arial; color:#FF6600; text-decoration:none;}
-div.faq_right div.middle ul li a:hover {text-decoration:underline;}
+div.faq_right div.middle ul li a:hover {text-decoration:underline; cursor:pointer;}
 div.faq_right div.bottom {float:right; width:304px; height:15px; background:url(../images/round/bottom_white_short.png) no-repeat center 0;}
 
 

@@ -7,10 +7,10 @@ html = <<-HTML
         </div>
         <div class="right">
           <ul>
-            <li><a href="#">ABOUT THE PROJECT</a>
+            <li><a href="/about">ABOUT THE PROJECT</a>
 <span class="line"></span>
 </li>
-            <li><a href="#">FAQ</a>
+            <li><a href="/faq">FAQ</a>
 <span class="line"></span>
 </li>
             <li class="last"><a href="#">PARTNERS</a>
@@ -53,7 +53,7 @@ html = <<-HTML
 
           </div>
           <div class="bottom">
-            <a id="back_to_top">Back to top</a>
+            <a href="javascript:void $.scrollTo('div#header',400)" id="back_to_top">Back to top</a>
           </div>
         </div>
 </div>
@@ -68,63 +68,63 @@ html = <<-HTML
             </div>
             <h4>Background</h4>
             <ul>
-              <li><a href="#">What are gas hydrates and why should I care?</a>
+              <li><a id="gas_hydrates_care">What are gas hydrates and why should I care?</a>
 </li>
-              <li><a href="#">Are there a lot of hydrates?</a>
+              <li><a id="lot_hydrates">Are there a lot of hydrates?</a>
 </li>
-              <li><a href="#">When or how were hydrates first discovered?</a>
+              <li><a id="first_discover">When or how were hydrates first discovered?</a>
 </li>
-              <li><a href="#">How can life live off hydrates?</a>
+              <li><a id="life_hydrates">How can life live off hydrates?</a>
 </li>
-              <li><a href="#">Are the hydrates on other planets or moons?</a>
+              <li><a id="planets_moons">Are the hydrates on other planets or moons?</a>
 </li>
-              <li><a href="#">Why the hydrates fizz?</a>
+              <li><a id="hydrates_fizz">Why the hydrates fizz?</a>
 </li>
             </ul>
             <h4>Methane gas hydrates as potential sources of energy</h4>
             <ul>
-              <li><a href="#">How do we produce natural gas from hydrates?</a>
+              <li><a id="natural_gas">How do we produce natural gas from hydrates?</a>
 </li>
-              <li><a href="#">Aren't hydrates very dangerous?</a>
+              <li><a id="hydrates_dangerous">Aren't hydrates very dangerous?</a>
 </li>
-              <li><a href="#">Why should we develop another fossil fuel?</a>
+              <li><a id="fossil_fuel">Why should we develop another fossil fuel?</a>
 </li>
-              <li><a href="#">Why do you want to use methane for energy production?</a>
+              <li><a id="energy_production">Why do you want to use methane for energy production?</a>
 </li>
             </ul>
             <h4>Explotation &amp; commercialization</h4>
             <ul>
-              <li><a href="#">Where are gas hydrates found?</a>
+              <li><a id="where_hydrates_found">Where are gas hydrates found?</a>
 </li>
-              <li><a href="#">When will commercial production occur?</a>
+              <li><a id="commercial_production">When will commercial production occur?</a>
 </li>
-              <li><a href="#">Why does government subsidize research for hydrates?</a>
+              <li><a id="research_hydrates">Why does government subsidize research for hydrates?</a>
 </li>
-              <li><a href="#">How will R&amp;D lead to commercialization?</a>
+              <li><a id="lead_commercialization">How will R&amp;D lead to commercialization?</a>
 </li>
-              <li><a href="#">Why does industry ignore naturally-occurring gas hydrates?</a>
+              <li><a id="industry_gas_hydrates">Why does industry ignore naturally-occurring gas hydrates?</a>
 </li>
             </ul>
             <h4>Environmental issues</h4>
             <ul>
-              <li><a href="#">Will development of hydrates have an impact on ecosystems?</a>
+              <li><a id="impact_ecosystems">Will development of hydrates have an impact on ecosystems?</a>
 </li>
-              <li><a href="#">Could hydrates be responsible for runaway climate change?/a&gt;</a>
+              <li><a id="climate_change">Could hydrates be responsible for runaway climate change?/a&gt;</a>
 </li>
 <a href="#">
               </a>
 <li><a href="#">Can hydrate development cause tsunamis?</a>
 </li>
-              <li><a href="#">Are hydrates poisonous?</a>
+              <li><a id="hydrates_poisonous">Are hydrates poisonous?</a>
 </li>
-              <li><a href="#">Are hydrates easily destabilized?</a>
+              <li><a id="easily_destabilized">Are hydrates easily destabilized?</a>
 </li>
-              <li><a href="#">Is The Swarm real?</a>
+              <li><a id="swarm_real">Is The Swarm real?</a>
 </li>
             </ul>
             <h4>Research &amp; education</h4>
             <ul>
-              <li><a href="#">Can I make a career in the hydrates development industry?</a>
+              <li><a id="career_develop_industry">Can I make a career in the hydrates development industry?</a>
 </li>
             </ul>
           </div>
@@ -153,7 +153,7 @@ html = <<-HTML
             <p>Methane, being the most refined form of hydrocarbon, is by far the cleanest burning among fossil fuels.   providing the most energy, and the least CO2 and other emission, per carbon molecule of all the hydrocarbons.  It is also by far the most abundant hydrocarbon.  This makes it an attractive option for energy supply, and a means to transition between todays energy sources and the sustainable energy supplies of the future.</p>
           </div>
           <div class="bottom">
-            <a id="back_to_top">Back to top</a>
+            <a href="javascript:void $.scrollTo('div#header',400)" id="back_to_top">Back to top</a>
           </div>
         </div>
 
@@ -185,7 +185,7 @@ html = <<-HTML
             <p>Industry does not ignore hydrates.  Industry invests heavily in research into the impacts of gas hydrate on their drilling and production operations, funding work both internally and in collaboration with major Universities such as the Colorado School of Mines and Heriot-Watt University.   Industry is also a partner in many federal scientific research programs designed to help better understand the occurrence and behavior of gas hydrate in nature.  However, industry has not yet begun to actively exploits gas hydrates as an energy resource because the science and technology to develop gas hydrates have not yet been fully demonstrated and they have numerous other, and better understood energy resources to pursue.  Given the competitive nature of the energy supply business and the need to demonstrate profitability to shareholders, the wide-spread belief that gas hydrate will not contribute to company revenues within the next 5 -10 years makes hydrates a subject of interest to companies, but gas hydrate is not yet a viable exploration target.</p>
           </div>
           <div class="bottom">
-            <a id="back_to_top">Back to top</a>
+            <a href="javascript:void $.scrollTo('div#header',400)" id="back_to_top">Back to top</a>
           </div>
         </div>
 
@@ -217,7 +217,7 @@ html = <<-HTML
             <p>Gas hydrates are periodically used as fodder for very entertaining works of fiction such as ìthe Swarmî.  However, such phenomena as depicted in these books are not supported by scientific data.</p>
           </div>
           <div class="bottom">
-            <a id="back_to_top">Back to top</a>
+            <a href="javascript:void $.scrollTo('div#header',400)" id="back_to_top">Back to top</a>
           </div>
         </div>
 
@@ -234,13 +234,16 @@ html = <<-HTML
             <p>Absolutely.  Because the study of gas hydrates encompasses essentially all the natural sciences, as well as engineering and computer science, there are research questions suited for a broad spectrum of disciplines.  If you are still a student, there are numerous academic institutions with robust gas hydrate research programs around the world, so regardless of your primary research interests, there is likely to be a program suited to your background.  The career possibilities are similarly diverse.  Much of the world’s gas hydrate research is pursued by academic researchers, but there are an increasing number of government research positions in many countries, and the number of industry positions are also increasing.  For an introductory overview of the types of research currently being undertaken around the world, one could follow the links on this site to the member institutions participating in the steering committee for the UNEP Gas Hydrates review.</p>
           </div>
           <div class="bottom">
-            <a id="back_to_top">Back to top</a>
+            <a href="javascript:void $.scrollTo('div#header',400)" id="back_to_top">Back to top</a>
           </div>
         </div>
 
       </div>
 
       <div class="space80"></div>
+
+    
+
 
 HTML
 puts " - about"

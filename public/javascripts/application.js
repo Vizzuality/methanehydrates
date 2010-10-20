@@ -4,8 +4,9 @@
 
 		$(document).ready(function() {
 
+			// HOME
 			Cufon.replace('.cufon_handofsean');
-			
+						
 		    //Cover ul space with blue opaque background (header)
 		    var li_size = 0;
 		    $('div.inner_header ul li').each(function(index,element){
