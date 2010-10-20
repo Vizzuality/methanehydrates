@@ -8,13 +8,13 @@ html = <<-HTML
         </div>
         <div class="right">
           <ul>
-            <li><a href="#">ABOUT THE PROJECT</a>
+            <li><a href="/about">ABOUT THE PROJECT</a>
 <span class="line"></span>
 </li>
-            <li><a href="#">FAQ</a>
+            <li><a href="/faq">FAQ</a>
 <span class="line"></span>
 </li>
-            <li class="last"><a href="#">PARTNERS</a>
+            <li class="last"><a href="/partners">PARTNERS</a>
 <span class="line"></span>
 </li>
           </ul>
@@ -231,13 +231,13 @@ html = <<-HTML
         </div>
         <div class="right">
           <ul>
-            <li><a href="#">ABOUT THE PROJECT</a>
+            <li><a href="/about">ABOUT THE PROJECT</a>
 <span class="line"></span>
 </li>
-            <li><a href="#">FAQ</a>
+            <li><a href="/faq">FAQ</a>
 <span class="line"></span>
 </li>
-            <li class="last"><a href="#">PARTNERS</a>
+            <li class="last"><a href="/partners">PARTNERS</a>
 <span class="line"></span>
 </li>
           </ul>
