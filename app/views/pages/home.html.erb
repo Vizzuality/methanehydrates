@@ -29,11 +29,12 @@
           <input type="text" value="Location, Country, Sea..." />
           <input type="submit" value="Search" />
         </form>
+        <% features = Feature.order("created_at DESC").limit(8) %>
         <ul>
-          <% Feature.order("created_at DESC").limit(8).each do |feature| %>
+          <% features.each do |feature| %>
           <li><%= link_to(feature.title, feature_url(feature)) %></li>
           <% end -%>
-          <% if Feature.count > 0 %>
+          <% if !features.empty? %>
           <li><a href="/explore" class="all">view all...</a></li>
           <% end -%>
         </ul>
@@ -48,7 +49,6 @@
     </div>
     <div class="bottom"></div>
   </div>
-
 
   <div class="meaning">
     <div class="top"></div>
