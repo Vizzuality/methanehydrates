@@ -5,9 +5,9 @@
     </div>
     <div class="right">
       <ul>
-        <li><a href="#">HUMAN ACTIVITIES GALLERY</a><span class="line"></span></li>
-        <li><a href="#">NATURAL SYSTEM GALLERY</a><span class="line"></span></li>
-        <li class="last"><a href="#">SITES BY REGION</a><span class="line"></span></li>
+        <li><a href="#gallery-<%= @human_activities_gallery.id %>">HUMAN ACTIVITIES GALLERY</a><span class="line"></span></li>
+        <li><a href="#gallery-<%= @natural_system_gallery.id %>">NATURAL SYSTEM GALLERY</a><span class="line"></span></li>
+        <li class="last"><a href="#galleries_by_region">SITES BY REGION</a><span class="line"></span></li>
       </ul>
     </div>
   </div>
@@ -15,18 +15,17 @@
 
 <div id="content">
 
-  <% @galleries.each do |gallery| %>
-  <div class="media">
+  <div class="media" id="gallery-<%= @human_activities_gallery.id %>">
     <div class="head_post">
       <div class="top"></div>
       <div class="middle">
         <div class="left">
-          <h1><%= link_to(gallery.name, gallery_url(gallery)) %></h1>
+          <h1><%= link_to(@human_activities_gallery.name, gallery_url(@human_activities_gallery)) %></h1>
         </div>
         <div class="right">
           <ul>
-            <li class="last"><p class="videos"><%= pluralize(gallery.gallery_entries.video.count, 'video', 'videos') %></p></li>
-            <li><p class="photos"><%= pluralize(gallery.gallery_entries.image.count, 'photo', 'photos') %></p></li>
+            <li class="last"><p class="videos"><%= pluralize(@human_activities_gallery.gallery_entries.video.count, 'video', 'videos') %></p></li>
+            <li><p class="photos"><%= pluralize(@human_activities_gallery.gallery_entries.image.count, 'photo', 'photos') %></p></li>
           </ul>
         </div>
         <span class="line"></span>
@@ -34,19 +33,47 @@
     </div>
     <div class="middle">
       <div class="slider">
-        <% gallery.gallery_entries.each do |entry| %>
+        <% @human_activities_gallery.gallery_entries.each do |entry| %>
           <%= image_fu entry.image, :huge, :alt => entry.name, :title => entry.name %>
         <% end -%>
       </div>
       <div class="bottom_content">
-        <%=raw three_column_text(gallery.body) %>
+        <%=raw three_column_text(@human_activities_gallery.body) %>
       </div>
     </div>
     <div class="bottom"></div>
   </div>
-  <% end -%>
 
-  <div class="galleries_by_region">
+  <div class="media" id="gallery-<%= @natural_system_gallery.id %>">
+    <div class="head_post">
+      <div class="top"></div>
+      <div class="middle">
+        <div class="left">
+          <h1><%= link_to(@natural_system_gallery.name, gallery_url(@natural_system_gallery)) %></h1>
+        </div>
+        <div class="right">
+          <ul>
+            <li class="last"><p class="videos"><%= pluralize(@natural_system_gallery.gallery_entries.video.count, 'video', 'videos') %></p></li>
+            <li><p class="photos"><%= pluralize(@natural_system_gallery.gallery_entries.image.count, 'photo', 'photos') %></p></li>
+          </ul>
+        </div>
+        <span class="line"></span>
+      </div>
+    </div>
+    <div class="middle">
+      <div class="slider">
+        <% @natural_system_gallery.gallery_entries.each do |entry| %>
+          <%= image_fu entry.image, :huge, :alt => entry.name, :title => entry.name %>
+        <% end -%>
+      </div>
+      <div class="bottom_content">
+        <%=raw three_column_text(@natural_system_gallery.body) %>
+      </div>
+    </div>
+    <div class="bottom"></div>
+  </div>
+
+  <div class="galleries_by_region" id="galleries_by_region">
     <div class="top"></div>
     <div class="middle">
       <% galleries = Feature.limit(6).order('created_at DESC').map(&:gallery) %>

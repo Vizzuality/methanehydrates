@@ -17,7 +17,7 @@
   <div class="layout">
 
     <% if (action_name != 'home') %>
-		
+
       <div id="header">
         <div class="inner_header">
           <div class="logo">
@@ -33,7 +33,7 @@
         </div>
       </div>
     <%- end %>
-    
+
     <%= yield %>
 
     <div id="footer">
@@ -42,11 +42,11 @@
           <h4>A PROJECT BY</h4>
           <a href="/" class="logo"><%= image_tag 'common/footer_logo.jpg' %></a>
           <p>UNEP-GRID Arendal.<br/>All rights reserved.</p>
-          <p class="list"><a href="#">Sitemap</a> / <a href="#">Contact</a></p>
+          <p class="list"><a href="#">Sitemap</a> / <a href="/about">Contact</a></p>
         </div>
         <div class="right">
           <ul>
-            <li class="last"><a href="#">CONTACT</a></li>
+            <li class="last"><a href="/about">CONTACT</a></li>
             <li><a href="/blog">BLOG</a></li>
             <li><a href="/about">LEARN MORE</a></li>
             <li><a href="/events">UPCOMING EVENTS</a>
@@ -54,14 +54,13 @@
                 <p><a href="/events">Events calendar</a></p>
               </div>
             </li>
-            <li><a href="#">MEDIA RESOURCES</a>
+            <li><a href="/galleries">MEDIA RESOURCES</a>
               <div>
-                <p><a href="#">Photo Galleries</a></p>
-                <p><a href="#">Video Gallery</a></p>
+                <p><a href="/galleries">Galleries</a></p>
                 <p><a href="#">Vimeo page</a></p>
               </div>
             </li>
-            <li><a href="#">EXPLORE THE SITES</a>
+            <li><a href="/explore">EXPLORE THE SITES</a>
               <div>
                 <p><a href="#">View list</a></p>
                 <p><a href="#">View world map</a></p>
@@ -76,8 +75,7 @@
   <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript" charset="utf-8"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js" type="text/javascript" charset="utf-8"></script>
   <script src="/javascripts/jquery.livequery.js" type="text/javascript" charset="utf-8"></script>
-  
-  
+
   <script src="/javascripts/fonts/cufon-yui.js" type="text/javascript" charset="utf-8"></script>
   <script src="/javascripts/fonts/Hand_Of_Sean_400.font.js" type="text/javascript" charset="utf-8"></script>
   <script src="/javascripts/jquery-ui-1.8.5.custom.min.js" type="text/javascript" charset="utf-8"></script>
