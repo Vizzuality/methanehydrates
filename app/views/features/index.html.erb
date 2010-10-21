@@ -14,7 +14,7 @@
   <div id="explore_map"></div>
   <div id="blue_bkg"></div>
 
-  <div id="header">
+  <div id="header" class="explore">
     <div class="inner_header">
       <div class="logo">
         <a href="/"><%= image_tag 'common/logo.jpg' %></a>
@@ -26,6 +26,8 @@
         <li <% if (controller_name=='galleries')%> <%="class='current'"%><%-end%>><a href="/galleries">MEDIA RESOURCES</a></li>
         <li <% if (controller_name=='features')%> <%="class='current'"%><%-end%>><a href="/features">EXPLORE THE SITES</a></li>
       </ul>
+      <a onclick="zoomIn()" id="zoomIn"></a>
+      <a onclick="zoomOut()" id="zoomOut"></a>
     </div>
   </div>
 
@@ -37,7 +39,7 @@
           <div class="middle_explore">
             <div class="head_explore">
               <div class="left">
-                <h1>Viewing 21 Sites</h1>
+                <h1>Viewing <%= pluralize(@features.size, "Site","Sites") %></h1>
                 <p>Geographical points with methane gas hydrates explotations</p>
               </div>
               <div class="right">
@@ -46,58 +48,36 @@
               <span class="line"></span>
             </div>
             <ul id="site_list">
+              
+              <% @features.each_with_index do |feature,i| %>
+              <!-- class="last" en la ultima fila -->
               <li>
                 <div class="head">
                   <div class="image">
-                    <p>2</p>
+                    <p><%= i %></p>
                   </div>
                   <div class="info">
-                    <h2><a href="#">The big America Trench - El Salvador</a></h2>
-                    <p><span class="first">CENTRAL AMERICA</span><span>MEXICO</span></p>
+                    <h2><a href="#"><%= feature.title %> - <%= feature.country %></a></h2>
+                    <p><span class="first"><%= feature.region %></span><span><%= feature.country %></span></p>
                   </div>
                 </div>
-                <p class="des">Methane is a chemical compound with the chemical formula CH4. It is the simplest alkane, and the principal component of natural gas. Methane’s bond angles are 109.5 degrees... <a href="#">Read more</a></p>
+                <p class="des"><%= feature.description %>... <a href="#">Read more</a></p>
                 <div class="grey">
                   <div class="block">
                     <h4>PRIMARY INSTITUTION</h4>
-                    <p>Deep Sea Drilling Project</p>
+                    <p><%= feature.primary_institution_name %></p>
                   </div>
                   <div class="block">
                     <h4>WATER DEPTH</h4>
-                    <p>857m</p>
+                    <p><%= feature.water_depth %></p>
                   </div>
                   <div class="block">
                     <h4>HYDRATE DEPTH(mbsf)</h4>
-                    <p>140, 146, 176, 181</p>
+                    <p><%= feature.hydrate_depth %></p>
                   </div>
                 </div>
               </li>
-              <li class="last">
-                <div class="head">
-                  <div class="image">
-                    <p>2</p>
-                  </div>
-                  <div class="info">
-                    <h2><a href="#">The big America Trench - El Salvador</a></h2>
-                    <p><span class="first">CENTRAL AMERICA</span><span>MEXICO</span></p>
-                  </div>
-                </div>
-                <p class="des">Methane is a chemical compound with the chemical formula CH4. It is the simplest alkane, and the principal component of natural gas. Methane’s bond angles are 109.5 degrees... <a href="#">Read more</a></p>
-                <div class="grey">
-                  <div class="block">
-                    <h4>PRIMARY INSTITUTION</h4>
-                    <p>Deep Sea Drilling Project</p>
-                  </div>
-                  <div class="block">
-                    <h4>WATER DEPTH</h4>
-                    <p>857m</p>
-                  </div>
-                  <div class="block">
-                    <h4>HYDRATE DEPTH(mbsf)</h4>
-                    <p>140, 146, 176, 181</p>
-                  </div>
-                </div>
-              </li>
+              <%- end %>
             </ul>
           </div>
           <div class="bottom_posts">
@@ -168,7 +148,10 @@
     </div>
   </div>
 
-  <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript" charset="utf-8"></script>
+
+	<script type="text/javascript" src="/javascripts/OpenLayers.js"></script>
+	<script type="text/javascript" src="/javascripts/cloudmade.js"></script>
+	<script type="text/javascript" src="/javascripts/SiteMarker.js"></script> 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js" type="text/javascript" charset="utf-8"></script>
   <script src="/javascripts/jquery.stylish-select.js" type="text/javascript" charset="utf-8"></script>
   <script src="/javascripts/jquery-ui-1.8.5.custom.min.js" type="text/javascript" charset="utf-8"></script>

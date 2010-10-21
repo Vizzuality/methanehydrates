@@ -174,7 +174,8 @@ Dual licensed under the MIT and GPL licenses.
 	                    $input.onTop = true;
 	                } else {
 	                    $newUl.css({
-	                        top: containerHeight+'px',
+	                        top: containerHeight-11+'px',
+													left: '2px',
 	                        height: newUlHeight
 	                    });
 	                    $input.onTop = false;
