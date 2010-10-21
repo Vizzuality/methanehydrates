@@ -128,6 +128,7 @@ div.blog_last div.bottom {float:left; width:100%; height:71px; margin:0; padding
 
 
 /*EXPLORE*/
+img.loader {position:absolute; display:none; top:80px; left:64px;}
 a#zoomIn {position:absolute; top:80px; left:0; width:26px; height:26px; background:url(/images/explore/zoom_in.png) no-repeat 0 0;}
 a#zoomIn:hover {background-position:0 -26px; cursor:pointer;}
 a#zoomOut {position:absolute; top:80px; left:32px; width:26px; height:26px; background:url(/images/explore/zoom_out.png) no-repeat 0 0;}
@@ -159,6 +160,8 @@ div.middle_explore ul#site_list li div.head div.info h2 a:hover {color:#FF3300; 
 div.middle_explore ul#site_list li div.head div.info p {float:left; width:100%; margin:3px 0 0;}
 div.middle_explore ul#site_list li div.head div.info p span {float:left; width:auto; font:bold 11px Arial; color:#999999;}
 div.middle_explore ul#site_list li div.head div.info p span.first {background:url(/images/icons/tiny_grey_arrow.jpg) no-repeat right 4px; padding:0 10px 0 0; margin:0 7px 0 0;}
+div.middle_explore ul#site_list li p.no_results {float:left; width:100%; text-align:center; font:normal 15px Arial; color:#666666; padding:0 0 14px 0;}
+div.middle_explore ul#site_list li p.no_results a {color:#FF6600; cursor:pointer;}
 div.middle_explore ul#site_list li p.des {float:left; width:100%; margin:15px 0 0 0; font:normal 15px Arial; color:#666666;}
 div.middle_explore ul#site_list li p.des a {color:#FF6600; text-decoration:underline;}
 div.middle_explore ul#site_list li p a:hover {color:#FF3300;}
@@ -174,7 +177,7 @@ div.bottom_explore a.next:hover {color:#FF3300; background-position:right -12px;
 
 div.opaque_explore {float:right; width:304px;}
 div.opaque_explore div.top {float:left; width:304px; height:15px; background:url(/images/round/top_grey_opaque_short.png) no-repeat center 0;}
-div.opaque_explore div.middle {float:left; width:234px; padding:0 35px; height:auto; background:url(/images/round/middle_grey_opaque_short.png) repeat-y center 0;}
+div.opaque_explore div.middle {float:left; width:234px; padding:0 35px 10px; height:auto; background:url(/images/round/middle_grey_opaque_short.png) repeat-y center 0;}
 div.opaque_explore div.middle h3 {font:bold 23px Arial; color:white; letter-spacing:-1px; width:100%; padding:12px 0 0 0;}
 div.opaque_explore div.middle form {float:left; width:100%;}
 div.opaque_explore div.middle form label {float:left; width:100%; margin:20px 0 0 0; padding:0 0 3px 0; font:bold 11px Arial; color:#CCCCCC;}

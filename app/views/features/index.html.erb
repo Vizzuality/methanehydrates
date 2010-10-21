@@ -28,6 +28,7 @@
       </ul>
       <a onclick="zoomIn()" id="zoomIn"></a>
       <a onclick="zoomOut()" id="zoomOut"></a>
+      <img class="loader" src="/images/explore/loading.png" title="loading" alt="loading"/>
     </div>
   </div>
 
@@ -57,11 +58,11 @@
                     <p><%= i %></p>
                   </div>
                   <div class="info">
-                    <h2><a href="#"><%= feature.title %> - <%= feature.country %></a></h2>
+                    <h2><a href="/features/<%= feature.id %>"><%= feature.title %> - <%= feature.country %></a></h2>
                     <p><span class="first"><%= feature.region %></span><span><%= feature.country %></span></p>
                   </div>
                 </div>
-                <p class="des"><%= feature.description %>... <a href="#">Read more</a></p>
+                <p class="des"><%= feature.description %>... <a href="/features/<%= feature.id %>">Read more</a></p>
                 <div class="grey">
                   <div class="block">
                     <h4>PRIMARY INSTITUTION</h4>
@@ -81,8 +82,8 @@
             </ul>
           </div>
           <div class="bottom_posts">
-            <a href="">Previous sites</a>
-            <a href="" class="next">More sites</a>
+            <a href="#">Previous sites</a>
+            <a href="#" class="next">More sites</a>
           </div>
       </div>
     </div>
@@ -100,10 +101,12 @@
             </div>
             <label>PRIMARY INSTITUTION</label>
             <select>
-              <option>California</option>
-              <option>Colorado</option>
-              <option selected="yes">All institutions</option>
+              <option selected="yes">Deep Sea Drilling Project</option>
             </select>
+            <label>WATER DEPTH</label>
+            <div class="water"></div>
+            <label>HYDRATE DEPTH</label>
+            <div class="hydrate"></div>
           </form>
         </div>
         <div class="bottom"></div>
