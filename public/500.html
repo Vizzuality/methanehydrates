@@ -1,26 +1,112 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>We're sorry, but something went wrong (500)</title>
-  <style type="text/css">
-    body { background-color: #fff; color: #666; text-align: center; font-family: arial, sans-serif; }
-    div.dialog {
-      width: 25em;
-      padding: 0 4em;
-      margin: 4em auto 0 auto;
-      border: 1px solid #ccc;
-      border-right-color: #999;
-      border-bottom-color: #999;
-    }
-    h1 { font-size: 100%; color: #f00; line-height: 1.5em; }
-  </style>
+  <title>Has been an error</title>
+  <link rel="shortcut icon" href="images/favicon.ico"/>
+  <link href="stylesheets/layout.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="stylesheets/jquery-ui-1.8.5.custom.css" type="text/css" media="screen" rel="stylesheet" charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 
 <body>
-  <!-- This file lives in public/500.html -->
-  <div class="dialog">
-    <h1>We're sorry, but something went wrong.</h1>
-    <p>We've been notified about this issue and we'll take a look at it shortly.</p>
+
+  <div id="supersize">
+    <img alt="Background" src="images/backgrounds/500.jpg" />
   </div>
+
+  <div class="layout">
+      <div id="header">
+        <div class="inner_header">
+          <div class="logo">
+            <a href="/"><img alt="Logo" src="images/common/logo_bkg.jpg" /></a>
+          </div>
+          <ul>
+            <li class='last'><a href="/blog">BLOG</a></li>
+            <li ><a href="/about">LEARN MORE</a></li>
+            <li ><a href="/events">UPCOMING EVENTS</a></li>
+
+            <li ><a href="/galleries">MEDIA RESOURCES</a></li>
+
+            <li ><a href="/features">EXPLORE THE SITES</a></li>
+          </ul>
+        </div>
+      </div>
+
+    <div id='body_content' class=''>
+    <div id='no_css_body_content_left'>
+	<div class="error_title">
+
+      <div class="inner_title">
+
+        <div class="left">
+			<h1>Sorry, we are experiencing some technical difficulties.</h1>
+			<h3> Please, try again later.</h3>
+      </div>
+    </div>
+
+
+    <div id="footer">
+      <div class="inner_footer">
+        <div class="left">
+          <h4>A PROJECT BY</h4>
+
+          <a href="/" class="logo"><img alt="Footer_logo" src="images/common/footer_logo.jpg" /></a>
+          <p>UNEP-GRID Arendal.<br/>All rights reserved.</p>
+          <p class="list"><a href="#">Sitemap</a> / <a href="/about">Contact</a></p>
+
+        </div>
+        <div class="right">
+          <ul>
+
+            <li class="last"><a href="/about">CONTACT</a></li>
+            <li><a href="/blog">BLOG</a></li>
+            <li><a href="/about">LEARN MORE</a></li>
+            <li><a href="/events">UPCOMING EVENTS</a>
+
+              <div>
+                <p><a href="/events">Events calendar</a></p>
+
+              </div>
+            </li>
+            <li><a href="/galleries">MEDIA RESOURCES</a>
+              <div>
+                <p><a href="/galleries">Galleries</a></p>
+
+                <p><a href="#">Vimeo page</a></p>
+              </div>
+
+            </li>
+            <li><a href="/explore">EXPLORE THE SITES</a>
+              <div>
+                <p><a href="#">View list</a></p>
+                <p><a href="#">View world map</a></p>
+
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="javascripts/supersized.2.0.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		$(document).ready(function() {
+			//Background resize image
+		    $(function(){
+		        $.fn.supersized.options = {
+		          startwidth: 1021,
+		          startheight: 712,
+		          vertical_center: 1,
+		          slideshow: 0
+		        };
+		        $('#supersized').supersized();
+		    });
+		});	
+	</script>
+	
+
 </body>
 </html>
