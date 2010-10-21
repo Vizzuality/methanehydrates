@@ -93,7 +93,7 @@
         <div class="top"></div>
         <div class="middle">
           <h3>Filter sites</h3>
-          <form>
+          <form action="javascript:void getSites()">
             <label>SEARCH BY NAME / COUNTRY</label>
             <div class="first_value">
               <input type="text" value="All institutions"/>
@@ -103,9 +103,15 @@
             <select>
               <option selected="yes">Deep Sea Drilling Project</option>
             </select>
-            <label>WATER DEPTH</label>
+            <div class="long">
+              <label>WATER DEPTH</label>
+              <p class="water">< 1500</p>
+            </div>
             <div class="water"></div>
-            <label>HYDRATE DEPTH</label>
+            <div class="long">
+              <label>HYDRATE DEPTH</label>
+              <p class="hydrate">< 1500</p>
+            </div>
             <div class="hydrate"></div>
           </form>
         </div>

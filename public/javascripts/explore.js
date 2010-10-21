@@ -10,6 +10,14 @@
 
 	$(document).ready(function() {
 		
+		//Cover ul space with blue opaque background (header)
+    var li_size = 0;
+    $('div.inner_header ul li').each(function(index,element){
+      li_size = li_size + $(element).width();
+    });
+    $('div.inner_header ul').css('background-position',(704-li_size-667) + 'px 0px');
+		
+		
 		$('select').sSelect();
 		$('body').css('background-color','#99B3CC');
 		
@@ -29,6 +37,7 @@
 		$("div.water").slider({range: "min",value: 1500,min: 1,max: 1500,
 			change: function(event, ui) {
 				slider_water = ui.value;
+				$('p.water').text('< '+slider_water);
 				if (reset) {
 					reset = false;
 				} else {
@@ -40,6 +49,7 @@
 		$("div.hydrate").slider({range: "min", value: 1500, min: 1, max: 1500,
 			change: function(event, ui) {
 				slider_hydrate = ui.value;
+				$('p.hydrate').text('< '+slider_hydrate);
 				getSites();
 			}
 		});		
@@ -51,7 +61,7 @@
 		
 		
 		$.getJSON('/features.json',function(result){
-			map = new OpenLayers.Map("explore_map",{ controls: [] });
+			map = new OpenLayers.Map("explore_map",{ controls: [], panDuration:0, panMethod:null });
 			map.addControl(new OpenLayers.Control.Navigation({zoomWheelEnabled : false}));
 			var cloudmade = new OpenLayers.Layer.CloudMade("CloudMade", {key: 'b1d79c55fe5a4ea1ab2095a5a583d926',styleId: 1});
 			map.addLayer(cloudmade);

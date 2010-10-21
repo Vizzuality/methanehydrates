@@ -1,6 +1,8 @@
 		
 		var map;
 		var days;
+		var markers;
+		var epsg4326;
 
 		$(document).ready(function() {
 
@@ -12,7 +14,7 @@
 		    $('div.inner_header ul li').each(function(index,element){
 		      li_size = li_size + $(element).width();
 		    });
-		    $('div.inner_header ul').css('background-position',(704-li_size-528-135) + 'px 0px');
+		    $('div.inner_header ul').css('background-position',(704-li_size-667) + 'px 0px');
 
 
 
@@ -43,18 +45,20 @@
 		
 				//If there is a map
 		    if ($('div#map')[0]) {
-					var latlng = new google.maps.LatLng(parseInt($('#latitude').text()),parseInt($('#longitude').text()));
-					var myOptions = {
-			      zoom: 6,
-			      center: latlng,
-			      disableDefaultUI: true,
-			      mapTypeId: google.maps.MapTypeId.TERRAIN,
-						streetViewControl: false,
-						backgroundColor: 'white'
-			    }
-			    map = new google.maps.Map(document.getElementById("map"),myOptions);
-					var image = new google.maps.MarkerImage('../images/common/marker.png',new google.maps.Size(28, 32),new google.maps.Point(0,0),new google.maps.Point(14, 32));
-					var marker = new google.maps.Marker({position: latlng,map: map,icon: image});
+					map = new OpenLayers.Map("map",{ controls: [] });
+					map.addControl(new OpenLayers.Control.Navigation({zoomWheelEnabled : false}));
+					var cloudmade = new OpenLayers.Layer.CloudMade("CloudMade", {key: 'b1d79c55fe5a4ea1ab2095a5a583d926',styleId: 1});
+					map.addLayer(cloudmade);
+					epsg4326 = new OpenLayers.Projection("EPSG:4326");
+					var center = new OpenLayers.LonLat(parseInt($('#longitude').text()),parseInt($('#latitude').text())).transform(epsg4326, map.getProjectionObject());
+					map.setCenter(center, 5);
+					markers = new OpenLayers.Layer.Markers( "Markers" );
+					map.addLayer(markers);
+					
+					var size = new OpenLayers.Size(28,32);
+					var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
+					var icon = new OpenLayers.Icon('/images/common/marker.png', size, offset);
+					markers.addMarker(new OpenLayers.Marker(center,icon));
 		    }				
 
 				

@@ -32,11 +32,13 @@
       </div>
     </div>
     <div class="middle">
-      <div class="slider">
-        <% @human_activities_gallery.gallery_entries.each do |entry| %>
-          <%= image_fu entry.image, :huge, :alt => entry.name, :title => entry.name %>
-        <% end -%>
-      </div>
+      <% if @human_activities_gallery.gallery_entries.size!=0 %>
+        <div class="slider">
+          <% @human_activities_gallery.gallery_entries.each do |entry| %>
+            <%= image_fu entry.image, :huge, :alt => entry.name, :title => entry.name %>
+          <% end -%>
+        </div>
+      <%-end%>
       <div class="bottom_content">
         <%=raw three_column_text(@human_activities_gallery.body) %>
       </div>
@@ -61,11 +63,13 @@
       </div>
     </div>
     <div class="middle">
-      <div class="slider">
-        <% @natural_system_gallery.gallery_entries.each do |entry| %>
-          <%= image_fu entry.image, :huge, :alt => entry.name, :title => entry.name %>
-        <% end -%>
-      </div>
+      <% if @human_activities_gallery.gallery_entries.size!=0 %>
+        <div class="slider">
+          <% @natural_system_gallery.gallery_entries.each do |entry| %>
+            <%= image_fu entry.image, :huge, :alt => entry.name, :title => entry.name %>
+          <% end -%>
+        </div>
+      <%-end%>
       <div class="bottom_content">
         <%=raw three_column_text(@natural_system_gallery.body) %>
       </div>

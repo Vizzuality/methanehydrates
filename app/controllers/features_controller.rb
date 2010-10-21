@@ -1,12 +1,11 @@
 class FeaturesController < ApplicationController
 
-  layout false, :only => 'index'
-
   before_filter :find_all_features
   before_filter :find_page
-  layout false, :only => 'index'
+  layout 'application', :except => 'index'
 
   def index
+    
     present(@page)
 
     respond_to do |format|
