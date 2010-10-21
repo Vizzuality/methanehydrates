@@ -126,11 +126,11 @@
 		
 		//Changing count sites
 		if (result.length==0) {
-			$('h1').text('Viewing 0 Sites');
+			$('div.left h1').text('Viewing 0 Sites');
 		} else if (result.length==1) {
-			$('h1').text('Viewing 1 Site');
+			$('div.left h1').text('Viewing 1 Site');
 		} else {
-			$('h1').text('Viewing '+result.length+' Sites');
+			$('div.left h1').text('Viewing '+result.length+' Sites');
 		}
 		
 		if (result.length>0) {
