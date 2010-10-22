@@ -97,7 +97,6 @@
       map.zoomToExtent(bounds);
       if (map.getZoom()>9) {
         map.zoomTo(8);
-alert('jamon');
       } else {
 				map.zoomOut();
 			}
