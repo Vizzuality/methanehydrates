@@ -131,6 +131,8 @@ div.meaning div.middle div.right {float:right; width:245px;}
 div.meaning div.middle div.right h5 {font:bold 13px Arial; color:white;}
 div.meaning div.middle div.right h5 a {font:normal 13px Arial; color:#FF6600; text-decoration:none; margin:0 0 0 30px;}
 div.meaning div.middle div.right h5 a:hover {text-decoration:underline;}
+div.meaning div.middle div.right img {width:236px; height:148px; margin:15px 0 0 0; float:left;}
+
 div.meaning div.bottom {float:left; width:100%; height:71px; margin:0; padding:0; background:url(/images/round/bottom_opaque_long.png) no-repeat center 0;}
 div.blog_last {float:left; width:100%;}
 div.blog_last div.top {float:left; width:100%; height:15px; background:url(/images/round/top_white_long.png) no-repeat 0 0; margin:35px 0 0 0;}

@@ -18,7 +18,7 @@
       <div id="header">
         <div class="inner_header">
           <div class="logo">
-            <a href="/"><img alt="Logo" src="images/common/logo_bkg.jpg" /></a>
+            <a href="/"><img alt="Logo" src="images/common/logo_bkg.png" /></a>
           </div>
           <ul>
             <li class='last'><a href="/blog">BLOG</a></li>
@@ -106,7 +106,8 @@
 		        $('#supersized').supersized();
 		    });
 		
-		    var li_size = 0;
+	        //Cover ul space with blue opaque background (header)
+	        var li_size = 0;
 	        $('div.inner_header ul li').each(function(index,element){
 	          li_size = li_size + $(element).width();
 	        });
