@@ -18,8 +18,14 @@ class FeaturesController < ApplicationController
 
       format.json do
 
+        base_json = {
+          :prev_page_url => nil,
+          :next_page_url => nil,
+          :features => []
+        }
+
         if params[:all]
-          render :json => Feature.all.map{ |f| f.to_json_attributes.merge(:url => feature_url(f), :id => f.id) }.to_json and return
+          render :json => base_json.merge(:features => Feature.all.map{ |f| f.to_json_attributes.merge(:url => feature_url(f), :id => f.id) }).to_json and return
         end
 
         pagination_attributes = {:page => params[:page], :per_page => 4, :order => 'created_at ASC'}
@@ -48,7 +54,19 @@ class FeaturesController < ApplicationController
         all_features = WillPaginate::Collection.create(page, 4, all_features.size) do |pager|
           pager.replace(all_features.slice(pager.per_page * (pager.current_page-1), pager.per_page) || [])
         end
-        render :json => all_features.empty? ? [].to_json : all_features.map{ |f| f.to_json_attributes.merge(:url => feature_url(f), :id => f.id) }.to_json and return
+        if all_features.empty?
+          json = base_json
+        else
+          json = base_json.merge(:features => all_features.map{ |f| f.to_json_attributes.merge(:url => feature_url(f), :id => f.id) })
+          filter_params = {:institution => params[:institution], :hydrate_depth => params[:hydrate_depth], :name_or_country => params[:name_or_country], :water_depth => params[:water_depth]}
+          if all_features.current_page > 1
+            json[:prev_page_url] = features_url(filter_params.merge(:page => all_features.previous_page))
+          end
+          if all_features.current_page < all_features.total_pages
+            json[:next_page_url] = features_url(filter_params.merge(:page => all_features.next_page))
+          end
+        end
+        render :json => json.to_json and return
       end
     end
 
