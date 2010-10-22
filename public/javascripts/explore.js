@@ -4,6 +4,7 @@
   var markers;
   var epsg4326;
   var reset = false;
+	var global_index = 1000;
 
   var slider_water = 1500;
   var slider_hydrate = 1500;
@@ -89,7 +90,6 @@
         var marker_lonlat = new OpenLayers.LonLat(result[i].lon,result[i].lat).transform(epsg4326, map.getProjectionObject());
         bounds.extend(marker_lonlat);
         var site_marker_image = new OpenLayers.Icon("/images/explore/marker.png",size,offset);
-        result[i].count = i+1;
         var site_marker = new SiteMarker(marker_lonlat,site_marker_image, result[i]);
         markers.addMarker(site_marker);
       }

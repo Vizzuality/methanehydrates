@@ -22,8 +22,9 @@ div#content {margin:0 auto; width:948px; min-height:850px;}
 #header {position:relative; float:left; width:100%; height:55px; background:url(/images/common/header_bkg.png) no-repeat center 0; z-index:10;}
 #header.explore {position:absolute; z-index:10; top:0; left:0;}
 #header div.inner_header {position:relative; width:930px; margin:0 auto;}
-#header div.inner_header div.logo {position:absolute; left:-47px; top:0; width:273px; height:65px; background:url(/images/common/logo_bkg.jpg) no-repeat 0 0;}
+#header div.inner_header div.logo {position:absolute; left:-47px; top:0; width:273px; height:65px; background:url(/images/common/logo_bkg.png) no-repeat 0 0;}
 #header div.inner_header div.logo img {float:left; margin:0 0 0 48px;}
+#header div.inner_header div.logo a.logo {position:absolute; top:11px; right:0; width:82px; height:30px; z-index:10;}
 #header div.inner_header ul {float:right; width:704px; background:url(/images/common/li_bkg.png) no-repeat -475px 0;}
 #header div.inner_header ul li {float:right; width:auto; padding:20px 15px 20px 16px; background:url(/images/common/li_bkg.png) no-repeat 0 0;}
 #header div.inner_header ul li.last {padding:20px 0 20px 15px;}
@@ -231,8 +232,8 @@ div.opaque_explore div.middle form .newListOptionTitle li {font-weight:normal; b
 div.opaque_explore div.bottom {float:left; width:304px; height:15px; background:url(/images/round/bottom_grey_opaque_short_2.png) no-repeat center bottom;}
 
 /*map infowindow*/
-a.open {position:relative; float:left; width:32px; height:30px; font:bold 18px Arial; text-align:center; color:black; text-shadow:#FF8340 0 1px; text-decoration:none; padding:6px 0 0 0;}
-div.infowindow {position:absolute; display:none; bottom:33px; left:-115px; width:241px; height:209px; padding:10px 11px 14px; background:url(/images/explore/infowindow_bkg.png) no-repeat center 0;}
+a.open {position:relative; float:left; width:32px; height:30px; font:bold 18px Arial; text-align:center; color:black; text-shadow:#FF8340 0 1px; text-decoration:none; padding:6px 0 0 0; z-index:10;}
+div.infowindow {position:absolute; display:none; bottom:33px; left:-115px; width:241px; height:209px; padding:10px 11px 14px; background:url(/images/explore/infowindow_bkg.png) no-repeat center 0; z-index:1000;}
 div.infowindow.tiny {height:55px;bottom:30px; background:url(/images/explore/infowindow_tiny_bkg.png) no-repeat center 2px;}
 div.infowindow a.close {position:absolute; top:0px; right:0px; width:24px; height:24px; background:url(/images/explore/close_button.png) no-repeat 0 0; z-index:100;}
 div.infowindow a.close:hover {background-position:0 -24px;}
