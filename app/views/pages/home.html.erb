@@ -79,13 +79,12 @@
         </ul>
       </div>
       <div class="right">
-        <h5>PHOTOS AND VIDEOS <a href="#">View more</a></h5>
+        <h5>PHOTOS AND VIDEOS <% if GalleryEntry.count > 0 %><a href="/galleries">View more</a><%end %></h5>
         <% if GalleryEntry.count > 0 %>
-          <a href="/galleries">View more</a>
-          <% entries = GalleryEntry.limit(4) %>
+          <% entries = GalleryEntry.limit(2) %>
           <% unless entries.empty? %>
             <% entries.each do |entry| %>
-              <%= link_to(image_fu(entry.image, :small), gallery_url(entry.gallery)) %>
+              <%= link_to(image_fu(entry.image, :medium), gallery_url(entry.gallery)) %>
             <% end -%>
           <% end -%>
         <% end -%>
