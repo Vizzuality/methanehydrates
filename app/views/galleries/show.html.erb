@@ -26,7 +26,6 @@
       <div class="slider">
         <% @gallery.gallery_entries.each do |entry| %>
           <%= image_fu entry.image, :huge, :alt => entry.name, :title => entry.name %>
-          <%= image_fu entry.image, :huge, :alt => entry.name, :title => entry.name, :video=>"http://www.vimeo.com/1234" %>
         <% end -%>
       </div>
       <div class="bottom_content">
