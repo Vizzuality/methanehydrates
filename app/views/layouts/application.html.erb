@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>FROZEN HEAT</title>
+  <title><%= controller_name %></title>
   <link rel="shortcut icon" href="/images/favicon.ico"/>
   <link href="/stylesheets/layout.css" media="screen" rel="stylesheet" type="text/css" />
   <link href="/stylesheets/jquery-ui-1.8.5.custom.css" type="text/css" media="screen" rel="stylesheet" charset="utf-8">
@@ -27,7 +27,7 @@
           </div>
           <ul>
             <li <% if (controller_name=='posts')%> <%="class='last current'"%><%else%><%="class='last'"%><%-end%>><a href="/blog">BLOG</a></li>
-            <li <% if (controller_name=='about')%> <%="class='current'"%><%-end%>><a href="/about">LEARN MORE</a></li>
+            <li <% if @page.cached_slug == 'about'%> <%="class='current'"%><%-end%>><a href="/about">LEARN MORE</a></li>
             <li <% if (controller_name=='events')%> <%="class='current'"%><%-end%>><a href="/events">UPCOMING EVENTS</a></li>
             <li <% if (controller_name=='galleries')%> <%="class='current'"%><%-end%>><a href="/galleries">MEDIA RESOURCES</a></li>
             <li <% if (controller_name=='features')%> <%="class='current'"%><%-end%>><a href="/explore">EXPLORE THE SITES</a></li>
