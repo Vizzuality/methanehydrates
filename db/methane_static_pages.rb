@@ -736,7 +736,7 @@ partners.parts.create({
 
 
 html = <<-HTML
-<div id="no_css_body_content_left">
+<div class="error_content">
 <div class="error_title">
 <div class="inner_title">
 <div class="left">
