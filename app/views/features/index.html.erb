@@ -85,14 +85,19 @@
             </ul>
           </div>
           <% if @features.total_pages > 1 %>
-          <div class="bottom_posts">
-            <% if @features.current_page > 1 %>
-            <a href="<%= features_path(:page => @features.previous_page) %>" id="prev_button">Previous sites</a>
-            <% end %>
-            <% if @features.current_page < @features.total_pages %>
-            <a href="<%= features_path(:page => @features.next_page) %>" class="next" id="next_button">More sites</a>
-            <% end %>
-          </div>
+            <div class="bottom_posts">
+              <% if @features.current_page > 1 %>
+              <a href="<%= features_path(:page => @features.previous_page) %>" id="prev_button">Previous sites</a>
+              <% end %>
+              <% if @features.current_page < @features.total_pages %>
+              <a href="<%= features_path(:page => @features.next_page) %>" class="next" id="next_button">More sites</a>
+              <% end %>
+            </div>
+          <% else %>
+            <div class="bottom_white">
+              <a href="#" id="prev_button">Previous sites</a>
+              <a href="#" class="next" id="next_button">More sites</a>
+            </div>
           <% end %>
       </div>
     </div>
@@ -112,7 +117,7 @@
             <select>
               <option selected="yes">All</option>
               <% Feature.select("id, meta").map{ |f| f.primary_institution_name }.each do |name| %>
-              <option><%= truncate(name, :length => 33) %></option>
+              <option value="<%= name %>"><%= truncate(name, :length => 33) %></option>
               <% end %>
             </select>
             <div class="long">
