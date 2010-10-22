@@ -727,3 +727,19 @@ partners.parts.create({
               :position => 1
 })
 
+
+html = <<-HTML
+<div id="no_css_body_content_left">
+<div class="error_title">
+<div class="inner_title">
+<div class="left">
+<h1>Not found :-(</h1>
+<h3>We can’t find the page you asked for. But you should take a peek at other Frozen Heat sections.</h3>
+<a href="/" class="go_home_bttn">Go to home page</a>
+</div></div></div></div>
+HTML
+puts " - page not found"
+page = Page.find_by_title 'Page not found'
+part = page.parts.find_by_title 'Body'
+part.body = html
+part.save
