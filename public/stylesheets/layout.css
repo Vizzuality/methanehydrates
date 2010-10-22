@@ -25,7 +25,7 @@ div#content {margin:0 auto; width:948px; min-height:850px;}
 #header div.inner_header div.logo {position:absolute; left:-47px; top:0; width:273px; height:65px; background:url(/images/common/logo_bkg.jpg) no-repeat 0 0;}
 #header div.inner_header div.logo img {float:left; margin:0 0 0 48px;}
 #header div.inner_header ul {float:right; width:704px; background:url(/images/common/li_bkg.png) no-repeat -475px 0;}
-#header div.inner_header ul li {float:right; width:auto; padding:20px 15px 20px 16px; background:url(/images/common/li_bkg.png) no-repeat 0 0;}
+#header div.inner_header ul li {float:right; width:auto; padding:20px 15px 20px 15px; background:url(/images/common/li_bkg.png) no-repeat 0 0;}
 #header div.inner_header ul li.last {padding:20px 0 20px 15px;}
 #header div.inner_header ul li a {font:bold 13px Arial; color:white; text-decoration:none;}
 #header div.inner_header ul li.current {background:url(/images/common/li_selected.png) no-repeat center 0;}
@@ -58,6 +58,8 @@ div#content {margin:0 auto; width:948px; min-height:850px;}
 
 
 /* ERROR PAGES */
+
+div.error_content {min-height:800px;}
 div.error_title {float:left; width:100%;}
 div.error_title div.inner_title {width:870px; margin:0 auto;}
 div.error_title div.inner_title h1 {float:left; padding:90px 0 0 0; width:100%; font:bold 55px Arial; color:white; letter-spacing:-3px; text-shadow:2px 2px #B1A0AB; line-height:54px;}
@@ -695,7 +697,7 @@ div.about_right div.bottom {float:right; width:304px; height:15px; background:ur
 
 #footer {float:left; width:100%; height:197px; padding:55px 0 0 0; border-top:1px solid #929AA2; background:#161E27; z-index:10;}
 #footer.site_map {margin:40px 0 0 0;}
-#footer.error_page {margin:280px 0 0 0;}
+#footer.error_page {position:absolute; bottom:5px; left:0;}
 #footer.explore {position:absolute; bottom:0; left:0; width:100%; height:197px; padding:55px 0 0 0; border-top:1px solid #929AA2; background:#161E27; z-index:10;}
 #footer div.inner_footer {width:930px; margin:0 auto;}
 #footer div.inner_footer div.left {float:left; width:110px;}
