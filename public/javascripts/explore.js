@@ -35,10 +35,19 @@
     });
 
 
+		//Select bind change
+		$('select').change(function(ev){
+      getSites();
+    });
+		
+
+
     $("div.water").slider({range: "min",value: 1500,min: 1,max: 1500,
+			slide: function(event,ui) {
+				slider_water = ui.value;
+				$('p.water').text('< '+slider_water);
+			},
       change: function(event, ui) {
-        slider_water = ui.value;
-        $('p.water').text('< '+slider_water);
         if (reset) {
           reset = false;
         } else {
@@ -48,9 +57,11 @@
     });
 
     $("div.hydrate").slider({range: "min", value: 1500, min: 1, max: 1500,
-      change: function(event, ui) {
+			slide: function(event,ui) {
         slider_hydrate = ui.value;
         $('p.hydrate').text('< '+slider_hydrate);
+			},      
+			change: function(event, ui) {
         getSites();
       }
     });
