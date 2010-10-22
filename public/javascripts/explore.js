@@ -59,8 +59,9 @@
       placeBlueBackground();
     }
 
-
-    $.getJSON('/features.json',function(result){
+		var post_params = getUrlVars();
+		var url = "/features.json" + ((post_params.page!=undefined && post_params.page!='')?('?page='+post_params.page):'');
+    $.getJSON(url,function(result){
       map = new OpenLayers.Map("explore_map",{ controls: [], panDuration:0, panMethod:null });
       map.addControl(new OpenLayers.Control.Navigation({zoomWheelEnabled : false}));
       var cloudmade = new OpenLayers.Layer.CloudMade("CloudMade", {key: 'b1d79c55fe5a4ea1ab2095a5a583d926',styleId: 1});
@@ -94,9 +95,11 @@
       }
 
       map.zoomToExtent(bounds);
-      if (map.getZoom()>15) {
-        map.zoomTo(7);
-      }
+      if (map.getZoom()>9) {
+        map.zoomTo(8);
+      } else {
+				map.zoomOut();
+			}
       panToCenter();
     }
   }
@@ -138,7 +141,7 @@
         var li_ = '<li class="'+ ((i==result.length-1)?'last':'') +'">'+
           '<div class="head">'+
             '<div class="image">'+
-              '<p>'+(i+1)+'</p>'+
+              '<p>'+result[i].id+'</p>'+
             '</div>'+
             '<div class="info">'+
               '<h2><a href="'+result[i].url+'">'+result[i].title+' - '+result[i].country+'</a></h2>'+
@@ -221,4 +224,18 @@
     $('div.water').slider( "value" , 1500 );
     $('div.hydrate').slider( "value" , 1500 );
   }
+
+
+
+	function getUrlVars() {
+		var vars = [], hash;
+		var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+		for(var i = 0; i < hashes.length; i++)
+		{
+		    hash = hashes[i].split('=');
+		    vars.push(hash[0]);
+		    vars[hash[0]] = hash[1];
+		}
+		return vars;
+	}
 
