@@ -112,11 +112,9 @@
         }
 
         // ---- END CALENDAR
-
-		
-		if ($('#supersized') != 'undefined'){
-			//Background resize image
-	        $(function(){
+			
+		if ($('#supersized').hasClass('sitemap')){
+			$(function(){
 	            $.fn.supersized.options = {
 	              startwidth: 1021,
 	              startheight: 901,
@@ -124,9 +122,22 @@
 	              slideshow: 0
 	            };
 	            $('#supersized').supersized();
-	        });	        
+	        });	        	        
+		}
+		else {
+			$(function(){
+	            $.fn.supersized.options = {
+	              startwidth: 1021,
+	              startheight: 401,
+	              vertical_center: 1,
+	              slideshow: 0
+	            };
+	            $('#supersized').supersized();
+	        });	        	        
 		}
 
+		
+		
     });
 
 

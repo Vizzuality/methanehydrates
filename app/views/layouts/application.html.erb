@@ -9,12 +9,15 @@
 </head>
 
 <body>
-
-  <% if (action_name!='sitemap')%>	
-	  <div id="supersize">
-	    <img alt="Background" src="/images/backgrounds/1.jpg" />
-	  </div>
-  <%- end%>
+	<% if (action_name != 'sitemap') %>
+		<div id="supersize">
+			<img alt="Background" src="/images/backgrounds/1.jpg" />
+		 </div>
+<%else%>
+		<div id="supersize" class="sitemap">
+			<img alt="Background" src="/images/backgrounds/sitemap.jpg" />
+		 </div>
+<%end%>
 
   <div class="layout">
 

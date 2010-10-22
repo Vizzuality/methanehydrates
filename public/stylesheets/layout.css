@@ -34,10 +34,10 @@ div#content {margin:0 auto; width:948px; min-height:850px;}
 
 
 /* SITEMAP */
-#content_sitemap {float:left; width:100%; height:auto; margin:35px 0 0 0;}
+#content_sitemap {float:left; width:100%; height:auto; margin:35px 0 0 0; padding:0 0 40px 0;}
 #content_sitemap div.inner {position:relative; width:930px; margin:0 auto;}
 #content_sitemap div.inner h1{float:left; font:bold 29px Arial; color:white; width:100%; padding:0 0 10px 0; margin:15px 0 0 0;}
-#content_sitemap div.inner a.title {float:left; text-decoration:underline; font:bold 17px Arial; color:white; width:100%; padding:0 0 0 0; margin:25px 0 0 0;}
+#content_sitemap div.inner a.title {float:left; text-decoration:underline; font:bold 17px Arial; color:white; padding:0 0 0 0; margin:25px 0 0 0; width:100%;}
 #content_sitemap div.inner a.title:hover {}
 #content_sitemap div.inner ul {float:left; width:100%;}
 #content_sitemap div.inner ul li {float:left; width:100%; margin:3px 0 0 0; background:url('../images/site/li_style.png') no-repeat 0 6px; padding:0 0 0 10px;}
@@ -696,7 +696,6 @@ div.about_right div.bottom {float:right; width:304px; height:15px; background:ur
 /*FOOTER*/
 
 #footer {float:left; width:100%; height:197px; padding:55px 0 0 0; border-top:1px solid #929AA2; background:#161E27; z-index:10;}
-#footer.site_map {margin:40px 0 0 0;}
 #footer.error_page {position:absolute; bottom:5px; left:0;}
 #footer.explore {position:absolute; bottom:0; left:0; width:100%; height:197px; padding:55px 0 0 0; border-top:1px solid #929AA2; background:#161E27; z-index:10;}
 #footer div.inner_footer {width:930px; margin:0 auto;}
