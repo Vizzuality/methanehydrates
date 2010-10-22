@@ -8,7 +8,7 @@ html = <<-HTML
         </div>
         <div class="right">
           <ul>
-            <li><a href="/about">ABOUT THE PROJECT</a>
+            <li class="selected"><a href="/about">ABOUT THE PROJECT</a>
 <span class="line"></span>
 </li>
             <li><a href="/faq">FAQ</a>
@@ -231,7 +231,7 @@ html = <<-HTML
             <li><a href="/about">ABOUT THE PROJECT</a>
 <span class="line"></span>
 </li>
-            <li><a href="/faq">FAQ</a>
+            <li class="selected"><a href="/faq">FAQ</a>
 <span class="line"></span>
 </li>
             <li class="last"><a href="/partners">PARTNERS</a>
@@ -491,8 +491,8 @@ html = <<-HTML
     </div>
     <div class="right">
       <ul>
-        <li><a href="#">ABOUT THE PROJECT</a><span class="line"></span></li>
-        <li class="last"><a href="#">PARTNERS</a><span class="line"></span></li>
+        <li><a href="/about">ABOUT THE PROJECT</a><span class="line"></span></li>
+        <li class="selected last"><a href="/partners">PARTNERS</a><span class="line"></span></li>
       </ul>
     </div>
   </div>
@@ -508,7 +508,7 @@ html = <<-HTML
         <img src="/images/partners/1.jpg" alt="Geological Survey of Canada" title="Geological Survey of Canada"/>
       </div>
       <div class="right">
-        <h2>Geological Survey of Canada</h2>
+        <h2>Geological Survey of Canada</h2> 
         <p class="subtitle"><a href="http://gsc.nrcan.gc.ca/" target="_blank">http://gsc.nrcan.gc.ca/</a></p>
         <p>The Geological Survey of Canada, a part of the Earth Science Sector of the Ministry of Natural Resources Canada (NRCan) is Canada’s premier agency for geoscientific information and research, with world-class expertise focusing on geoscience surveys, sustainable development of Canada’s resources, environmental protection, and technology innovation.The Gas Hydrates program of the NRCan is working with many national and international partners to quantify the distribution and properties of Canada’s marine and terrestrial gas hydrates. NRCan experts are also contributing to improving gas hydrate exploration techniques and to finding economically viable and environmentally responsible extraction and production methods. The program is also assessing the possible environmental issues posed by gas hydrates and associated geohazards.</p>
       </div>
