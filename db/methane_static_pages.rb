@@ -614,7 +614,6 @@ html = <<-HTML
     <div class="bottom"></div>
   </div>
 
-
   <div class="partners">
     <div class="top"></div>
     <div class="middle">
