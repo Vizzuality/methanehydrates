@@ -9,7 +9,11 @@ class FeaturesController < ApplicationController
 
     respond_to do |format|
       format.html do
-        @features = Feature.paginate :page => params[:page], :per_page => 4, :order => 'created_at DESC'
+        @features = if params[:all]
+          Feature.paginate :page => params[:page], :per_page => Feature.count, :order => 'created_at DESC'
+        else
+          Feature.paginate :page => params[:page], :per_page => 4, :order => 'created_at DESC'
+        end
       end
 
       format.json do

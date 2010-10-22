@@ -20,7 +20,7 @@ class EventsController < ApplicationController
     respond_to do |format|
       format.html
       format.json do
-        render :json => @events.map{ |e| {:date => e.from.to_date.to_s(:db), :day => e.from.day, :url => event_url(e)} }.to_json
+        render :json => @events.map{ |e| {:date => e.from.to_date.to_s(:db), :day => e.from.day, :url => events_url(:date)} }.to_json
       end
     end
   end
