@@ -24,7 +24,7 @@
           </div>
           <ul>
             <li <% if (controller_name=='posts')%> <%="class='last current'"%><%else%><%="class='last'"%><%-end%>><a href="/blog">BLOG</a></li>
-            <li <% if @page && @page.cached_slug == 'about'%> <%="class='current'"%><%-end%>><a href="/about">LEARN MORE</a></li>
+            <li <% if @page && @page.cached_slug == 'about' || @page.cached_slug == 'partners' || @page.cached_slug == 'faq' %> <%="class='current'"%><%-end%>><a href="/about">LEARN MORE</a></li>
             <li <% if (controller_name=='events')%> <%="class='current'"%><%-end%>><a href="/events">UPCOMING EVENTS</a></li>
             <li <% if (controller_name=='galleries')%> <%="class='current'"%><%-end%>><a href="/galleries">MEDIA RESOURCES</a></li>
             <li <% if (controller_name=='features')%> <%="class='current'"%><%-end%>><a href="/explore">EXPLORE THE SITES</a></li>

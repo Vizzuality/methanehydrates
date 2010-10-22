@@ -92,7 +92,7 @@
         <ul>
           <% features.each do |feature| %>
           <li>
-            <h6><a href="<%= feature_url(feature) %>"><%= feature.title %> - <%= feature.country %></h6>
+            <h6><a href="<%= feature_url(feature) %>"><%= feature.title %> - <%= feature.country %></a></h6>
             <span><p class="first"><%= feature.region %></p><p><%= feature.country %></p></span>
           </li>
           <% end -%>
