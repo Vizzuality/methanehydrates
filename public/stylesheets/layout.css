@@ -209,10 +209,10 @@ div.opaque_explore {float:right; width:304px;}
 div.opaque_explore div.top {float:left; width:304px; height:15px; background:url(/images/round/top_grey_opaque_short.png) no-repeat center 0;}
 div.opaque_explore div.middle {float:left; width:234px; padding:0 35px 10px; height:auto; background:url(/images/round/middle_grey_opaque_short.png) repeat-y center 0;}
 div.opaque_explore div.middle h3 {font:bold 23px Arial; color:white; letter-spacing:-1px; width:100%; padding:12px 0 0 0;}
-div.opaque_explore div.middle form {float:left; width:100%;}
-div.opaque_explore div.middle form label {float:left; width:100%; margin:20px 0 0 0; padding:0 0 3px 0; font:bold 11px Arial; color:#CCCCCC;}
-div.opaque_explore div.middle form div {position:relative; float:left; width:100%;}
-div.opaque_explore div.middle form div.long {position:relative; float:left; width:100%; margin:20px 0 0 0;}
+div.opaque_explore div.middle form {position:relative; float:left; width:100%;}
+div.opaque_explore div.middle form label {float:left; width:100%; margin:20px 0 0 0; padding:0 0 3px 0; font:bold 11px Arial; color:#CCCCCC; z-index:1;}
+div.opaque_explore div.middle form div {position:relative; float:left; width:100%; z-index:1;}
+div.opaque_explore div.middle form div.long {float:left; width:100%; margin:20px 0 0 0; z-index:0;}
 div.opaque_explore div.middle form div.long p {float:right; width:auto; font:bold 11px Arial; color:#FFFFFF;}
 div.opaque_explore div.middle form div.long label {float:left; width:auto; margin:0;}
 div.opaque_explore div.middle form input[type="text"] {float:left; width:202px; height:12px; padding:6px 36px 6px 5px; border:none; background:url(/images/explore/text_input_bkg.png) no-repeat 0 0; font:bold 11px Arial; color:#999999;}
@@ -220,7 +220,7 @@ div.opaque_explore div.middle form input[type="submit"] {position:absolute; righ
 div.opaque_explore div.middle form input[type="submit"]:hover {background-position:0 -24px; cursor:pointer;}
 div.opaque_explore div.middle form ul.newList * {margin:0; padding:0;}
 div.opaque_explore div.middle form ul.newList a {color: #666; text-decoration:none; display:block;}
-div.opaque_explore div.middle form ul.newList {margin:0; padding:0; list-style:none; color:#666; width:230px; background:#fff; position:absolute; border:1px solid #ccc; top:0px; left:2px; overflow:auto; z-index:10000;}
+div.opaque_explore div.middle form ul.newList {margin:0; padding:0; list-style:none; color:#666; width:230px; background:#fff; position:absolute; border:1px solid #ccc; top:0px; left:2px; overflow:auto; z-index:100;}
 div.opaque_explore div.middle form .newListSelected {position:relative; width:230px; color:#666; margin:3px 0 0 0; height:35px; padding:0; float:left; /*background:url(/images/register/title.jpg) no-repeat 0 0;*/}
 div.opaque_explore div.middle form li.error .selectedTxt {background-position:0 -35px;}
 div.opaque_explore div.middle form .newListSelected span {width:230px; display:block;}
@@ -238,14 +238,14 @@ div.opaque_explore div.middle form .newListOptionTitle li {font-weight:normal; b
 div.opaque_explore div.bottom {float:left; width:304px; height:15px; background:url(/images/round/bottom_grey_opaque_short_2.png) no-repeat center bottom;}
 
 /*map infowindow*/
-a.open {position:relative; float:left; width:32px; height:30px; font:bold 18px Arial; text-align:center; color:black; text-shadow:#FF8340 0 1px; text-decoration:none; padding:6px 0 0 0; z-index:10;}
+a.open {position:relative; float:left; width:32px; height:28px; font:bold 18px Arial; text-align:center; color:black; text-shadow:#FF8340 0 1px; text-decoration:none; padding:6px 0 0 0; z-index:100;}
 div.infowindow {position:absolute; display:none; bottom:33px; left:-115px; width:241px; height:209px; padding:10px 11px 14px; background:url(/images/explore/infowindow_bkg.png) no-repeat center 0; z-index:1000;}
 div.infowindow.tiny {height:55px;bottom:30px; background:url(/images/explore/infowindow_tiny_bkg.png) no-repeat center 2px;}
 div.infowindow a.close {position:absolute; top:0px; right:0px; width:24px; height:24px; background:url(/images/explore/close_button.png) no-repeat 0 0; z-index:100;}
 div.infowindow a.close:hover {background-position:0 -24px;}
 div.infowindow div {position:relative; float:left; width:241px; height:161px; overflow:hidden; border-bottom:1px solid #1B2E4E;}
 div.infowindow div img {float:left; width:241px; -moz-border-radius-topleft: 3px; -webkit-border-top-left-radius: 3px; border-top-left-radius: 3px; -moz-border-radius-topright: 3px; -webkit-border-top-right-radius: 3px; border-top-right-radius: 3px;}
-div.infowindow h1 {float:left; width:221px; margin:0 0 0 10px;}
+div.infowindow h1 {float:left; width:221px; margin:5px 0 0 10px; line-height:15px;}
 div.infowindow h1 a {font:bold 15px Arial; color:#FF6600; text-decoration:none;}
 div.infowindow h1 a:hover {text-decoration:underline; color:#FF3300;}
 div.infowindow p {float:left; width:221px; margin:1px 0 0 10px; text-transform:uppercase;}
@@ -387,6 +387,9 @@ div.media div.middle .slider {position:relative; width:930px; height:615px; over
 div.media div.middle .slider img {position:absolute; top:0px; left:0px; width:930px;}
 div.media div.middle .slider a.nivo-imageLink {position:absolute; top:0px; left:0px; width:100%; height:100%; border:0; padding:0; margin:0; z-index:60; display:none;}
 div.media div.middle .nivo-slice {display:block; position:absolute; z-index:50;  height:100%;}
+div.media div.middle .nivo-video {position:absolute; left:50%; top:50%; margin:-45px 0 0 -45px; width:90px; height:90px; z-index:89;}
+div.media div.middle .nivo-video a {float:left; width:90px; height:90px; background:url(/images/common/play.png) no-repeat 0 0;}
+div.media div.middle .nivo-video a:hover {background-position:0 -90px;}
 div.media div.middle .nivo-caption {position:absolute; left:109px; bottom:19px; background:url(/images/common/gallery_caption.png) no-repeat 0 0; width:689px; height:64px; padding:17px 0 0 22px; z-index:89;}
 div.media div.middle .nivo-caption p {padding:5px; margin:0; font:normal 15px Arial; color:white;}
 div.media div.middle .nivo-caption a {display:inline !important;}
@@ -445,6 +448,9 @@ div.main_media div.middle .slider {position:relative; width:930px; height:615px;
 div.main_media div.middle .slider img {position:absolute; top:0px; left:0px; width:930px;}
 div.main_media div.middle .slider a.nivo-imageLink {position:absolute; top:0px; left:0px; width:100%; height:100%; border:0; padding:0; margin:0; z-index:60; display:none;}
 div.main_media div.middle .nivo-slice {display:block; position:absolute; z-index:50;  height:100%;}
+div.main_media div.middle .nivo-video {position:absolute; left:50%; top:50%; margin:-45px 0 0 -45px; width:90px; height:90px; z-index:89;}
+div.main_media div.middle .nivo-video a {float:left; width:90px; height:90px; background:url(/images/common/play.png) no-repeat 0 0;}
+div.main_media div.middle .nivo-video a:hover {background-position:0 -90px;}
 div.main_media div.middle .nivo-caption {position:absolute; left:109px; bottom:19px; background:url(/images/common/gallery_caption.png) no-repeat 0 0; width:689px; height:64px; padding:17px 0 0 22px; z-index:89;}
 div.main_media div.middle .nivo-caption p {padding:5px; margin:0; font:normal 15px Arial; color:white;}
 div.main_media div.middle .nivo-caption a {display:inline !important;}
@@ -497,7 +503,7 @@ div.body_content_right div.opaque div.middle div.head p {font:normal 15px Arial;
 div.body_content_right div.opaque div.middle div.head span.line {position:absolute; height:1px; width:286px; bottom:0; left:-26px; background:black; opacity:0.35; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=35);}
 div.body_content_right div.opaque div.middle div.calendar {float:left; margin:30px 0 0 0; width:100%; height:261px;}
 div.body_content_right div.opaque div.bottom {float:left; width:304px; height:15px; background:url(/images/round/bottom_grey_opaque_short_2.png) no-repeat center bottom; margin:0;}
-div.body_content_right div.opaque div.loader {display:none; position:absolute; height:234px; width:234px; padding:0; margin:0; background:none;}
+div.body_content_right div.opaque div.loader {display:none; position:absolute; height:234px; width:234px; padding:0; margin:0; background:none; left:30px;}
 div.body_content_right div.opaque div.loader img {position:absolute; height:16px; width:16px; left:50%; top:50%; margin:-8px 0 0 -8px;}
 
 
@@ -556,6 +562,9 @@ div.middle.image .slider {position:relative; width:615px; height:400px; overflow
 div.middle.image .slider img {position:absolute; top:0px; left:0px; width:615px;}
 div.middle.image .slider a.nivo-imageLink {position:absolute; top:0px; left:0px; width:100%; height:100%; border:0; padding:0; margin:0; z-index:60; display:none;}
 div.middle.image .nivo-slice {display:block; position:absolute; z-index:50;  height:100%;}
+div.middle.image .nivo-video {position:absolute; left:50%; top:50%; margin:-45px 0 0 -45px; width:90px; height:90px; z-index:89;}
+div.middle.image .nivo-video a {float:left; width:90px; height:90px; background:url(/images/common/play.png) no-repeat 0 0; }
+div.middle.image .nivo-video a:hover {background-position:0 -90px;}
 div.middle.image .nivo-caption {position:absolute; left:0px; bottom:0px; background:#000; color:#fff; opacity:0.8; width:100%; z-index:89;}
 div.middle.image .nivo-caption p {padding:5px; margin:0;}
 div.middle.image .nivo-caption a {display:inline !important;}
@@ -698,6 +707,7 @@ div.about_right div.middle ul li a {font:normal 15px Arial; color:#FF6600; text-
 div.about_right div.middle ul li a:hover {text-decoration:underline; cursor:pointer;}
 div.about_right div.bottom {float:right; width:304px; height:15px; background:url(/images/round/bottom_white_short.png) no-repeat center 0;}
 
+
 /*FOOTER*/
 
 #footer {float:left; width:100%; height:197px; padding:55px 0 0 0; border-top:1px solid #929AA2; background:#161E27; z-index:10;}
@@ -714,10 +724,13 @@ div.about_right div.bottom {float:right; width:304px; height:15px; background:ur
 #footer div.inner_footer div.right {float:right; width:820px;}
 #footer div.inner_footer div.right ul {float:right; width:100%;}
 #footer div.inner_footer div.right ul li {float:right; width:auto; padding:0 25px;}
+#footer div.inner_footer div.right ul li.fixed {width:110px;}
 #footer div.inner_footer div.right ul li.last {padding:0 0 0 25px;}
-#footer div.inner_footer div.right ul li a {float:left; font:bold 11px Arial; color:#AEB0B4; text-decoration:none; padding:0 0 10px 0;}
+#footer div.inner_footer div.right ul li a {float:left; width:100%; font:bold 11px Arial; color:#AEB0B4; text-decoration:none; padding:0 0 10px 0;}
 #footer div.inner_footer div.right ul li a:hover {text-decoration:underline;}
-#footer div.inner_footer div.right ul li div a {color:#AE4D0E; text-decoration:none; padding:2px 0; font-weight:normal;}
+#footer div.inner_footer div.right ul li div {float:left; width:100%;}
+#footer div.inner_footer div.right ul li div p {float:left; width:100%;}
+#footer div.inner_footer div.right ul li div p a {float:left; width:100%; color:#AE4D0E; text-decoration:none; padding:2px 0; font-weight:normal;}
 
 
 
