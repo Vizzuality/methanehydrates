@@ -41,7 +41,7 @@ e3 = Event.create :title => "Meeting #3", :description => "<p>Text for the meeti
     'Congo'
   end
   f.recorded_datafields_text = "Recorded datafields #{name}"
-  f.primary_institution_name = "Deep Sea Drilling Project from #{name}"
+  f.primary_institution_name = "#{name} Deep Sea Drilling Project"
   f.primary_institution_url = 'http://deepseadrillingproject.com'
   f.expedition = "Leg #{rand(i)+60}"
   f.water_depth = "#{850+(2*i)}m"

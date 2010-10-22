@@ -109,7 +109,9 @@
             </div>
             <label>PRIMARY INSTITUTION</label>
             <select>
-              <option selected="yes">Deep Sea Drilling Project</option>
+              <% Feature.select("id, meta").map{ |f| f.primary_institution_name }.each_with_index do |name,i| %>
+              <option <%= raw('selected="yes"') if i == 0 %>><%= truncate(name, :length => 33) %></option>
+              <% end %>
             </select>
             <div class="long">
               <label>WATER DEPTH</label>

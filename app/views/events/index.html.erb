@@ -17,14 +17,19 @@
                 <div class="head_posts">
                   <div class="left">
                     <h1>Upcoming events
-                    <% if params[:date] %>
-                    on <%= params[:date] %>
-                    <% end -%>
                     </h1>
                     <% if @events.respond_to?(:total_entries) %>
-                      <p><%= pluralize(@events.total_entries, "event","events") %></p>
+                      <p><%= pluralize(@events.total_entries, "event","events") %>
+                      <% if params[:date] %>
+                      <strong>on <%= Date.parse(params[:date]).strftime("%dth %B, %Y") %></strong>
+                      <% end -%>
+                      </p>
                     <% else %>
-                      <p><%= pluralize(@events.size, "event","events") %></p>
+                      <p><%= pluralize(@events.size, "event","events") %>
+                        <% if params[:date] %>
+                        <strong>on <%= Date.parse(params[:date]).strftime("%dth %B, %Y") %></strong>
+                        <% end -%>
+                        </p>
                     <% end -%>
                   </div>
                   <span class="line"></span>
