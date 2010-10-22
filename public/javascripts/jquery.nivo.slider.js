@@ -107,14 +107,24 @@
 			//Create caption
 			slider.append(
 				$('<div class="nivo-caption"><p></p></div>').css({ display:'none', opacity:settings.captionOpacity })
-			);			
+			);
+			slider.append(
+				$('<div class="nivo-video"><a target="_blank"></a></div>').css({ display:'none', opacity:1 })
+			);
 			//Process initial  caption
 			if(vars.currentImage.attr('title') != ''){
-                var title = vars.currentImage.attr('title');
-                if(title.substr(0,1) == '#') title = $(title).html();
-                $('.nivo-caption p', slider).html(title);					
+        var title = vars.currentImage.attr('title');
+        if(title.substr(0,1) == '#') title = $(title).html();
+        $('.nivo-caption p', slider).html(title);					
 				$('.nivo-caption', slider).fadeIn(settings.animSpeed);
 			}
+			
+			if(vars.currentImage.attr('video') != '' && vars.currentImage.attr('video') != undefined){
+        var url = vars.currentImage.attr('video');
+        $('.nivo-video a', slider).attr('href',url);					
+				$('.nivo-video').fadeIn(settings.animSpeed);
+			}
+			
 			
 			//In the words of Super Mario "let's a go!"
 			var timer = 0;
@@ -302,6 +312,16 @@
 			} else {
 				$('.nivo-caption', slider).fadeOut(settings.animSpeed);
 			}
+			
+			
+			if(vars.currentImage.attr('video') != '' && vars.currentImage.attr('video') != undefined){
+        var url = vars.currentImage.attr('video');
+        $('.nivo-video a', slider).attr('href',url);					
+				$('.nivo-video',slider).fadeIn(settings.animSpeed);
+			} else {
+				$('.nivo-video', slider).fadeOut(settings.animSpeed);
+			}
+			
 			
 			//Set new slice backgrounds
 			var  i = 0;

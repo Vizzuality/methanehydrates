@@ -68,6 +68,8 @@ SiteMarker = OpenLayers.Class({
 					ev.preventDefault();
 					if (!$(me.icon.imageDiv).find('div').is(':visible')) {
 						$('div.infowindow').hide();
+						global_index++;
+						$('div.infowindow').css('z-index',global_index);
 						var position = map.getViewPortPxFromLonLat(me.lonlat);
 						var move_y = 0;
 						var move_x = 0;

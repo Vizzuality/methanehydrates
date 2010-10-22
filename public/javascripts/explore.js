@@ -4,7 +4,7 @@
   var markers;
   var epsg4326;
   var reset = false;
-	var global_index = 1000;
+	var global_index = 100;
 
   var slider_water = 1500;
   var slider_hydrate = 1500;
