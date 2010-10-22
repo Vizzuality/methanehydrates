@@ -9,6 +9,19 @@
       // HOME
       Cufon.replace('.cufon_handofsean');
 
+			//Text Input effects
+	    $('input[type="text"]').click(function(ev){
+	      if ($(this).attr('value')=='Location, Country...') {
+	        $(this).attr('value','');
+	      }
+	    });
+	    $('input[type="text"]').focusout(function(ev){
+	      if ($(this).attr('value')=='') {
+	        $(this).attr('value','Location, Country...');
+	      }
+	    });
+
+
         //Cover ul space with blue opaque background (header)
         var li_size = 0;
         $('div.inner_header ul li').each(function(index,element){
