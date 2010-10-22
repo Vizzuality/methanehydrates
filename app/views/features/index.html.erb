@@ -10,7 +10,6 @@
 
 <body>
 
-
   <div id="explore_map"></div>
   <div id="blue_bkg"></div>
 
@@ -32,7 +31,7 @@
     </div>
   </div>
 
-    
+
   <div id="explore_content">
     <div class="body_content_left">
       <div class="explore_content">
@@ -49,7 +48,7 @@
               <span class="line"></span>
             </div>
             <ul id="site_list">
-              
+
               <% @features.each_with_index do |feature,i| %>
               <!-- class="last" en la ultima fila -->
               <li>
@@ -120,47 +119,11 @@
     </div>
   </div>
 
+  <%= render :partial => 'layouts/footer', :locals => {:extra_class => 'explore' } %>
 
-  <div id="footer" class="explore">
-    <div class="inner_footer">
-      <div class="left">
-        <h4>A PROJECT BY</h4>
-        <a href="/" class="logo"><%= image_tag 'common/footer_logo.jpg' %></a>
-        <p>UNEP-GRID Arendal.<br/>All rights reserved.</p>
-        <p class="list"><a href="#">Sitemap</a> / <a href="#">Contact</a></p>
-      </div>
-      <div class="right">
-        <ul>
-          <li class="last"><a href="#">CONTACT</a></li>
-          <li><a href="/blog">BLOG</a></li>
-          <li><a href="/about">LEARN MORE</a></li>
-          <li><a href="/events">UPCOMING EVENTS</a>
-            <div>
-              <p><a href="/events">Events calendar</a></p>
-            </div>
-          </li>
-          <li><a href="#">MEDIA RESOURCES</a>
-            <div>
-              <p><a href="#">Photo Galleries</a></p>
-              <p><a href="#">Video Gallery</a></p>
-              <p><a href="#">Vimeo page</a></p>
-            </div>
-          </li>
-          <li><a href="#">EXPLORE THE SITES</a>
-            <div>
-              <p><a href="#">View list</a></p>
-              <p><a href="#">View world map</a></p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-
-	<script type="text/javascript" src="/javascripts/OpenLayers.js"></script>
-	<script type="text/javascript" src="/javascripts/cloudmade.js"></script>
-	<script type="text/javascript" src="/javascripts/SiteMarker.js"></script> 
+  <script type="text/javascript" src="/javascripts/OpenLayers.js"></script>
+  <script type="text/javascript" src="/javascripts/cloudmade.js"></script>
+  <script type="text/javascript" src="/javascripts/SiteMarker.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js" type="text/javascript" charset="utf-8"></script>
   <script src="/javascripts/jquery.stylish-select.js" type="text/javascript" charset="utf-8"></script>
   <script src="/javascripts/jquery-ui-1.8.5.custom.min.js" type="text/javascript" charset="utf-8"></script>

@@ -35,41 +35,9 @@
 
     <%= yield %>
 
-    <div id="footer">
-      <div class="inner_footer">
-        <div class="left">
-          <h4>A PROJECT BY</h4>
-          <a href="/" class="logo"><%= image_tag 'common/footer_logo.jpg' %></a>
-          <p>UNEP-GRID Arendal.<br/>All rights reserved.</p>
-          <p class="list"><a href="#">Sitemap</a> / <a href="/about">Contact</a></p>
-        </div>
-        <div class="right">
-          <ul>
-            <li class="last"><a href="/about">CONTACT</a></li>
-            <li><a href="/blog">BLOG</a></li>
-            <li><a href="/about">LEARN MORE</a></li>
-            <li><a href="/events">UPCOMING EVENTS</a>
-              <div>
-                <p><a href="/events">Events calendar</a></p>
-              </div>
-            </li>
-            <li><a href="/galleries">MEDIA RESOURCES</a>
-              <div>
-                <p><a href="/galleries">Galleries</a></p>
-                <p><a href="#">Vimeo page</a></p>
-              </div>
-            </li>
-            <li><a href="/explore">EXPLORE THE SITES</a>
-              <div>
-                <p><a href="#">View list</a></p>
-                <p><a href="#">View world map</a></p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
+    <%= render :partial => 'layouts/footer', :locals => {:extra_class => nil } %>
+
+  </div><!-- .layout -->
 
   <script src="/javascripts/OpenLayers.js" type="text/javascript" charset="utf-8"></script>
   <script type="text/javascript" src="/javascripts/cloudmade.js"></script>
@@ -83,7 +51,6 @@
   <script src="/javascripts/jquery.scrollTo-min.js" type="text/javascript" charset="utf-8"></script>
   <script src="/javascripts/jquery.url.js" type="text/javascript" charset="utf-8"></script>
   <script src="/javascripts/application.js" type="text/javascript" charset="utf-8"></script>
- 
 
 </body>
 </html>

@@ -1,0 +1,26 @@
+<div id="content_sitemap">
+  <div class="inner">
+    <h1>Sitemap</h1>
+    <a href="/explore" class="title">Explore the sites</a>
+    <ul>
+      <% Feature.all.each_with_index do |feature, i| %>
+      <li <%= raw('class="first"') if i==0 %>><a href="<%= feature_path(feature) %>"><%= feature.title %></a></li>
+      <% end -%>
+    </ul>
+    <a href="/galleries" class="title">Media resources</a>
+    <ul>
+      <li class="first"><a href="/galleries#gallery-<%= Gallery.find_by_name('Methane gas hydrates and human activities').id %>">Human activities gallery</a></li>
+      <li><a href="/galleries#<%= Gallery.find_by_name('Methane gas hydrates in the natural system').id %>">Natural system gallery</a></li>
+      <li><a href="/galleries#galleries_by_region">Sites by region</a></li>
+    </ul>
+    <a href="/events" class="title">Upcoming events</a>
+    <a href="/about" class="title">Learn more</a>
+    <ul>
+      <li class="first"><a href="/about">About the project</a></li>
+      <li><a href="/faq">Frequently asked questions</a></li>
+      <li><a href="/partners">Partners</a></li>
+    </ul>
+    <a href="/blog" class="title">Blog</a>
+    <a href="/about" class="title">Contact</a>
+  </div>
+</div>

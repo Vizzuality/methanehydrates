@@ -3,6 +3,7 @@ Refinery::Application.routes.draw do
   filter(:refinery_locales) if defined?(RoutingFilter::RefineryLocales) # optionally use i18n.
 
   root :to => 'pages#home'
+  match 'sitemap', :to => 'pages#sitemap'
 
   # Features are mapped in /explore
   resources :features, :path => 'explore'
