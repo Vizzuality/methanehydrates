@@ -491,8 +491,15 @@ html = <<-HTML
     </div>
     <div class="right">
       <ul>
-        <li><a href="/about">ABOUT THE PROJECT</a><span class="line"></span></li>
-        <li class="selected last"><a href="/partners">PARTNERS</a><span class="line"></span></li>
+        <li class="selected"><a href="/about">ABOUT THE PROJECT</a>
+          <span class="line"></span>
+        </li>
+        <li><a href="/faq">FAQ</a>
+          <span class="line"></span>
+        </li>
+        <li class="last"><a href="/partners">PARTNERS</a>
+           <span class="line"></span>
+        </li>
       </ul>
     </div>
   </div>

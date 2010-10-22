@@ -72,7 +72,9 @@
     }
 
 		var post_params = getUrlVars();
-		var url = "/features.json" + ((post_params.page!=undefined && post_params.page!='')?('?page='+post_params.page):'') + ((post_params.all!=undefined && post_params.all!='')?('?all='+post_params.all):'');
+		var url = "/features.json" + ((post_params.page!=undefined && post_params.page!='')?('?page='+post_params.page):'') + 
+							((post_params.all!=undefined && post_params.all!='')?('?all='+post_params.all):'')+
+							((post_params.name_or_country!=undefined && post_params.name_or_country!='')?('?name_or_country='+post_params.name_or_country):'');
     $.getJSON(url,function(result){
       map = new OpenLayers.Map("explore_map",{ controls: [], panDuration:0, panMethod:null });
       map.addControl(new OpenLayers.Control.Navigation({zoomWheelEnabled : false}));
@@ -183,6 +185,7 @@
       var li_ = '<li class="no_results last"><p class="no_results">There are no results with this filters criterias. <a onclick="resetFilters()">Reset filters</a></p></li>';
       $('#site_list').append(li_);
     }
+		placeFooter();
   }
 
 
