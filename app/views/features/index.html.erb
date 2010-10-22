@@ -31,7 +31,6 @@
     </div>
   </div>
 
-
   <div id="explore_content">
     <div class="body_content_left">
       <div class="explore_content">
@@ -39,29 +38,33 @@
           <div class="middle_explore">
             <div class="head_explore">
               <div class="left">
-                <h1>Viewing <%= pluralize(@features.size, "Site","Sites") %></h1>
+                <h1>Viewing <%= pluralize(@features.total_entries, "Site","Sites") %></h1>
                 <p>Geographical points with methane gas hydrates explotations</p>
               </div>
+              <% if @features.total_pages > 1 %>
               <div class="right">
-                <p><a href="#">view all</a></p>
+                <p><a href="<%= features_path(:all => true) %>">view all</a></p>
               </div>
+              <% end %>
               <span class="line"></span>
             </div>
             <ul id="site_list">
 
               <% @features.each_with_index do |feature,i| %>
-              <!-- class="last" en la ultima fila -->
-              <li>
+              <li <%= raw('class="last"') if feature == @features.last %>>
                 <div class="head">
                   <div class="image">
-                    <p><%= i %></p>
+                    <p><%= i+1 %></p>
                   </div>
                   <div class="info">
                     <h2><a href="/features/<%= feature.id %>"><%= feature.title %> - <%= feature.country %></a></h2>
                     <p><span class="first"><%= feature.region %></span><span><%= feature.country %></span></p>
                   </div>
                 </div>
-                <p class="des"><%= feature.description %>... <a href="/features/<%= feature.id %>">Read more</a></p>
+                <p class="des"><%= truncate(strip_tags(feature.description),
+                                  :omission => raw("... <a href=\"#{feature_url(feature)}\">Read more</a>"),
+                                  :length => 250,
+                                  :preserve_html_tags => true) %></p>
                 <div class="grey">
                   <div class="block">
                     <h4>PRIMARY INSTITUTION</h4>
@@ -80,10 +83,16 @@
               <%- end %>
             </ul>
           </div>
+          <% if @features.total_pages > 1 %>
           <div class="bottom_posts">
-            <a href="#">Previous sites</a>
-            <a href="#" class="next">More sites</a>
+            <% if @features.current_page > 1 %>
+            <a href="<%= features_path(:page => @features.previous_page) %>">Previous sites</a>
+            <% end %>
+            <% if @features.current_page < @features.total_pages %>
+            <a href="<%= features_path(:page => @features.next_page) %>" class="next">More sites</a>
+            <% end %>
           </div>
+          <% end %>
       </div>
     </div>
 

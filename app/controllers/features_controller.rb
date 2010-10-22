@@ -1,15 +1,16 @@
 class FeaturesController < ApplicationController
 
-  before_filter :find_all_features
   before_filter :find_page
   layout 'application', :except => 'index'
 
   def index
-    
+
     present(@page)
 
     respond_to do |format|
-      format.html
+      format.html do
+        @features = Feature.paginate :page => params[:page], :per_page => 4, :order => 'created_at DESC'
+      end
 
       format.json do
 
@@ -73,10 +74,6 @@ class FeaturesController < ApplicationController
   end
 
 protected
-
-  def find_all_features
-    @features = Feature.find(:all, :order => "position ASC")
-  end
 
   def find_page
     @page = Page.find_by_link_url("/features")
