@@ -72,7 +72,7 @@
     }
 
 		var post_params = getUrlVars();
-		var url = "/features.json" + ((post_params.page!=undefined && post_params.page!='')?('?page='+post_params.page):'');
+		var url = "/features.json" + ((post_params.page!=undefined && post_params.page!='')?('?page='+post_params.page):'') + ((post_params.all!=undefined && post_params.all!='')?('?all='+post_params.all):'');
     $.getJSON(url,function(result){
       map = new OpenLayers.Map("explore_map",{ controls: [], panDuration:0, panMethod:null });
       map.addControl(new OpenLayers.Control.Navigation({zoomWheelEnabled : false}));
@@ -187,12 +187,18 @@
 
 
 	function showPaginators(result) {
+		if (result.prev_page_url!=null || result.next_page_url!=null) {
+			$('div.bottom_white').addClass('bottom_explore');
+			$('div.bottom_explore').removeClass('bottom_white');
+		}
+		
 		if (result.prev_page_url!=null) {
 			$('#prev_button').show();
 			$('#prev_button').attr('href',result.prev_page_url);
 		} else {
 			$('#prev_button').hide();
 		}
+		
 		if (result.next_page_url!=null) {
 			$('#next_button').show();
 			$('#next_button').attr('href',result.next_page_url);

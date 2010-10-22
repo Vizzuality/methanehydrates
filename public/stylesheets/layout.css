@@ -196,10 +196,12 @@ div.middle_explore ul#site_list li div.grey div.block {float:left; width:160px; 
 div.middle_explore ul#site_list li div.grey div.block h4 {float:left; width:100%; font:bold 11px Arial; color:#A9A9A9;}
 div.middle_explore ul#site_list li div.grey div.block p {float:left; width:100%; padding:5px 0 0 0; font:normal 13px Arial; color:#666666;}
 div.bottom_explore {float:left; width:633px; height:85px; background:url(/images/round/bottom_grey.png) no-repeat 0 0;}
-div.bottom_explore a {float:left; margin:29px 0 0 40px; font:bold 15px Arial; color:#FF6600; padding:0 0 0 17px; background:url(/images/icons/orange_left_arrow.png) no-repeat 0 3px; text-decoration:none;}
+div.bottom_explore a {display:block; float:left; margin:29px 0 0 40px; font:bold 15px Arial; color:#FF6600; padding:0 0 0 17px; background:url(/images/icons/orange_left_arrow.png) no-repeat 0 3px; text-decoration:none;}
 div.bottom_explore a.next {float:right; margin:29px 40px 0 0; padding:0 17px 0 0; background:url(/images/icons/orange_right_arrow.png) no-repeat right 4px;}
 div.bottom_explore a:hover {color:#FF3300; background-position:0 -13px;}
 div.bottom_explore a.next:hover {color:#FF3300; background-position:right -12px;}
+div.bottom_white a {display:none;}
+
 
 div.opaque_explore {float:right; width:304px;}
 div.opaque_explore div.top {float:left; width:304px; height:15px; background:url(/images/round/top_grey_opaque_short.png) no-repeat center 0;}
