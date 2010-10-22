@@ -12,7 +12,7 @@ e2 = Event.create :title => "Meeting #2", :description => "<p>Text for the meeti
 e3 = Event.create :title => "Meeting #3", :description => "<p>Text for the meeting #3</p><p>Other paragraph</p>", :from => Date.today + 2.days, :to => Date.today + 4.days, :location => 'Hortaleza st, 48, Spain'
 
 
-%W{ North\ Amercia South\ America Asia Europe Africa Oceania }.each_with_index do |name, i|
+%W{ North\ America South\ America Asia Europe Africa Oceania }.each_with_index do |name, i|
 
   # Create 1 gallery
   g = Gallery.create :name => "Middle #{name} Trench", :body => ''
