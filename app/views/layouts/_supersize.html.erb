@@ -1,0 +1,28 @@
+  <div id="supersize">
+	  <% if @page.cached_slug=="partners" || @page.cached_slug=="faq" || @page.cached_slug=="about" || action_name=="home" || controller_name=="features" %>
+	    <img src="/images/backgrounds/3.jpg" />
+	  <%-end%>
+	
+	  <% if controller_name=="posts"  %>
+	    <img src="/images/backgrounds/2.jpg" />
+	  <%-end%>
+	  
+	  
+	  <% if controller_name=="events"  %>
+	    <img src="/images/backgrounds/4.jpg" />
+	  <%-end%>
+	  
+	  
+	  <% if controller_name=="galleries"  %>
+	    <img src="/images/backgrounds/1.jpg" />
+	  <%-end%>
+	  
+	  <% if  @page.cached_slug=="page-not-found"  %>
+	    <img src="/images/backgrounds/404.jpg" />
+	  <%-end%>
+	  
+	  <% if  action_name=="sitemap"  %>
+	    <img src="/images/backgrounds/sitemap.jpg" />
+	  <%-end%>
+	
+	</div>

@@ -726,7 +726,7 @@ div.about_right div.bottom {float:right; width:304px; height:15px; background:ur
 #footer div.inner_footer div.right {float:right; width:820px;}
 #footer div.inner_footer div.right ul {float:right; width:100%;}
 #footer div.inner_footer div.right ul li {float:right; width:auto; padding:0 25px;}
-#footer div.inner_footer div.right ul li.fixed {width:110px;}
+#footer div.inner_footer div.right ul li.fixed {width:115px;}
 #footer div.inner_footer div.right ul li.last {padding:0 0 0 25px;}
 #footer div.inner_footer div.right ul li a {float:left; width:100%; font:bold 11px Arial; color:#AEB0B4; text-decoration:none; padding:0 0 10px 0;}
 #footer div.inner_footer div.right ul li a:hover {text-decoration:underline;}
