@@ -126,29 +126,27 @@
 
         // ---- END CALENDAR
 			
-		// if ($('#supersized').hasClass('sitemap')){
+			var image_height;
+			var image_width;
+			// if ($('img.bkg_fixed').length>0) {
+			// 	image_height = 700;
+			// 	image_width = 790;
+			// } else {
+				image_height = 901;
+				image_width = 1021;
+			//}
+			
+			
 			$(function(){
-	            $.fn.supersized.options = {
-	              startwidth: 1021,
-	              startheight: 901,
-	              vertical_center: 1,
-	              slideshow: 0
-	            };
-	            $('#supersized').supersized();
-	        });	        	        
-		// }
-		// else {
-		// 	$(function(){
-		// 	            $.fn.supersized.options = {
-		// 	              startwidth: 1021,
-		// 	              startheight: 401,
-		// 	              vertical_center: 1,
-		// 	              slideshow: 0
-		// 	            };
-		// 	            $('#supersized').supersized();
-		// 	        });	        	        
-		// }
-		// 
+         $.fn.supersized.options = {
+           startwidth: image_width,
+           startheight: image_height,
+           vertical_center: 1,
+           slideshow: 0
+         };
+         $('#supersized').supersized();
+	     });	        	        
+
 		
 		
     });
