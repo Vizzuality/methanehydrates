@@ -4,6 +4,7 @@
   var markers;
   var epsg4326;
   var reset = false;
+	var global_index = 1000;
 
   var slider_water = 1500;
   var slider_hydrate = 1500;
@@ -34,10 +35,19 @@
     });
 
 
+		//Select bind change
+		$('select').change(function(ev){
+      getSites();
+    });
+		
+
+
     $("div.water").slider({range: "min",value: 1500,min: 1,max: 1500,
+			slide: function(event,ui) {
+				slider_water = ui.value;
+				$('p.water').text('< '+slider_water);
+			},
       change: function(event, ui) {
-        slider_water = ui.value;
-        $('p.water').text('< '+slider_water);
         if (reset) {
           reset = false;
         } else {
@@ -47,9 +57,11 @@
     });
 
     $("div.hydrate").slider({range: "min", value: 1500, min: 1, max: 1500,
-      change: function(event, ui) {
+			slide: function(event,ui) {
         slider_hydrate = ui.value;
         $('p.hydrate').text('< '+slider_hydrate);
+			},      
+			change: function(event, ui) {
         getSites();
       }
     });
@@ -60,7 +72,7 @@
     }
 
 		var post_params = getUrlVars();
-		var url = "/features.json" + ((post_params.page!=undefined && post_params.page!='')?('?page='+post_params.page):'');
+		var url = "/features.json" + ((post_params.page!=undefined && post_params.page!='')?('?page='+post_params.page):'') + ((post_params.all!=undefined && post_params.all!='')?('?all='+post_params.all):'');
     $.getJSON(url,function(result){
       map = new OpenLayers.Map("explore_map",{ controls: [], panDuration:0, panMethod:null });
       map.addControl(new OpenLayers.Control.Navigation({zoomWheelEnabled : false}));
@@ -71,7 +83,8 @@
       map.setCenter(center, 5);
       markers = new OpenLayers.Layer.Markers( "Markers" );
       map.addLayer(markers);
-      showMarkers(result);
+      showMarkers(result.features);
+			showPaginators(result);
     });
     placeBlueBackground();
   });
@@ -89,7 +102,6 @@
         var marker_lonlat = new OpenLayers.LonLat(result[i].lon,result[i].lat).transform(epsg4326, map.getProjectionObject());
         bounds.extend(marker_lonlat);
         var site_marker_image = new OpenLayers.Icon("/images/explore/marker.png",size,offset);
-        result[i].count = i+1;
         var site_marker = new SiteMarker(marker_lonlat,site_marker_image, result[i]);
         markers.addMarker(site_marker);
       }
@@ -116,8 +128,9 @@
     url += (search_value!="All institutions" && search_value!='')?'&name_or_country='+search_value:'';
     $.getJSON(url,function(result){
       markers.clearMarkers();
-      showMarkers(result);
-      createSiteList(result);
+			showPaginators(result);
+      showMarkers(result.features);
+      createSiteList(result.features);
       hideLoader();
     });
   }
@@ -170,9 +183,30 @@
       var li_ = '<li class="no_results last"><p class="no_results">There are no results with this filters criterias. <a onclick="resetFilters()">Reset filters</a></p></li>';
       $('#site_list').append(li_);
     }
-
-
   }
+
+
+	function showPaginators(result) {
+		if (result.prev_page_url!=null || result.next_page_url!=null) {
+			$('div.bottom_white').addClass('bottom_explore');
+			$('div.bottom_explore').removeClass('bottom_white');
+		}
+		
+		if (result.prev_page_url!=null) {
+			$('#prev_button').show();
+			$('#prev_button').attr('href',result.prev_page_url);
+		} else {
+			$('#prev_button').hide();
+		}
+		
+		if (result.next_page_url!=null) {
+			$('#next_button').show();
+			$('#next_button').attr('href',result.next_page_url);
+		} else {
+			$('#next_button').hide();
+		}
+		
+	}
 
 
 

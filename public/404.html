@@ -105,6 +105,13 @@
 		        };
 		        $('#supersized').supersized();
 		    });
+		
+		    var li_size = 0;
+	        $('div.inner_header ul li').each(function(index,element){
+	          li_size = li_size + $(element).width();
+	        });
+	        $('div.inner_header ul').css('background-position',(704-li_size-667) + 'px 0px');
+	    
 		});	
 	</script>
 	

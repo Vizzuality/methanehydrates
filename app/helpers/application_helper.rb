@@ -19,14 +19,14 @@ module ApplicationHelper
       "<div class=\"block\">#{text}</div>"
     elsif text.size > 200 && text.size < 400
       text_list = text.split(' ')
-      text1 = text_list[0...text_list.size / 2].join(' ')
-      text2 = text_list[text_list.size/2..-1].join(' ')
+      text1 = text_list[0...(text_list.size / 2)+3].join(' ')
+      text2 = text_list[(text_list.size/2 + 3)..-1].join(' ')
       "<div class=\"block\">#{text1}</div><div class=\"block\">#{text2}</div>"
     else
       text_list = text.split(' ')
-      text1 = text_list[0...text_list.size / 3].join(' ')
-      text2 = text_list[text_list.size/3...(2*text_list.size)/3].join(' ')
-      text3 = text_list[(2*text_list.size)/3...-1].join(' ')
+      text1 = text_list[0...(text_list.size / 3)+3].join(' ')
+      text2 = text_list[(text_list.size / 3)+3...((2*text_list.size)/3+9)].join(' ')
+      text3 = text_list[((2*text_list.size)/3+9)..-1].join(' ')
       "<div class=\"block\">#{text1}</div><div class=\"block\">#{text2}</div><div class=\"block last\">#{text3}</div>"
     end
   end

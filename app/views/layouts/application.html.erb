@@ -9,6 +9,7 @@
 </head>
 
 <body>
+<<<<<<< HEAD
 	<% if (action_name != 'sitemap') %>
 		<div id="supersize">
 			<img alt="Background" src="/images/backgrounds/1.jpg" />
@@ -18,6 +19,14 @@
 			<img alt="Background" src="/images/backgrounds/sitemap.jpg" />
 		 </div>
 <%end%>
+=======
+
+  <% if (action_name!='sitemap')%>
+    <div id="supersize">
+      <img alt="Background" src="/images/backgrounds/1.jpg" />
+    </div>
+  <%- end%>
+>>>>>>> f9ab6a60f3dc3889a5efff9bf610bb75fa1882fd
 
   <div class="layout">
 
@@ -32,7 +41,7 @@
             <li <% if (controller_name=='about')%> <%="class='current'"%><%-end%>><a href="/about">LEARN MORE</a></li>
             <li <% if (controller_name=='events')%> <%="class='current'"%><%-end%>><a href="/events">UPCOMING EVENTS</a></li>
             <li <% if (controller_name=='galleries')%> <%="class='current'"%><%-end%>><a href="/galleries">MEDIA RESOURCES</a></li>
-            <li <% if (controller_name=='features')%> <%="class='current'"%><%-end%>><a href="/features">EXPLORE THE SITES</a></li>
+            <li <% if (controller_name=='features')%> <%="class='current'"%><%-end%>><a href="/explore">EXPLORE THE SITES</a></li>
           </ul>
         </div>
       </div>
