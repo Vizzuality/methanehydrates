@@ -1,10 +1,4 @@
 GIT
-  remote: git://github.com/Vizzuality/rails-footnotes.git
-  revision: 7dd2a1e02f924615a374485868774a0fa228c9c7
-  specs:
-    rails-footnotes (3.6.7)
-
-GIT
   remote: git://github.com/Vizzuality/refinerycms-blog.git
   revision: 52f741bbc4b96e1229246ca6f9b18862ed713090
   specs:
@@ -171,7 +165,6 @@ DEPENDENCIES
   pg (= 0.9.0)
   ppe-postgis-adapter!
   rails (= 3.0.0)
-  rails-footnotes!
   refinerycms (= 0.9.8.5)
   refinerycms-blog (~> 1.0.rc12)!
   refinerycms-events (= 0.1)!
