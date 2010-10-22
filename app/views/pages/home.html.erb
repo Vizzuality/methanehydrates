@@ -81,7 +81,7 @@
       <div class="right">
         <h5>PHOTOS AND VIDEOS <% if GalleryEntry.count > 0 %><a href="/galleries">View more</a><%end %></h5>
         <% if GalleryEntry.count > 0 %>
-          <% entries = GalleryEntry.limit(4) %>
+          <% entries = GalleryEntry.limit(2) %>
           <% unless entries.empty? %>
             <% entries.each do |entry| %>
               <%= link_to(image_fu(entry.image, :medium), gallery_url(entry.gallery)) %>
