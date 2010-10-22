@@ -17,6 +17,7 @@
     <div class="inner_header">
       <div class="logo">
         <a href="/"><%= image_tag 'common/logo.jpg' %></a>
+        <a href="http://www.grida.no/" target="_blank" class="logo"></a>
       </div>
       <ul>
         <li <% if (controller_name=='posts')%> <%="class='last current'"%><%else%><%="class='last'"%><%-end%>><a href="/blog">BLOG</a></li>
@@ -86,10 +87,10 @@
           <% if @features.total_pages > 1 %>
           <div class="bottom_posts">
             <% if @features.current_page > 1 %>
-            <a href="<%= features_path(:page => @features.previous_page) %>">Previous sites</a>
+            <a href="<%= features_path(:page => @features.previous_page) %>" id="prev_button">Previous sites</a>
             <% end %>
             <% if @features.current_page < @features.total_pages %>
-            <a href="<%= features_path(:page => @features.next_page) %>" class="next">More sites</a>
+            <a href="<%= features_path(:page => @features.next_page) %>" class="next" id="next_button">More sites</a>
             <% end %>
           </div>
           <% end %>

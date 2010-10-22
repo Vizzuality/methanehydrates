@@ -43,9 +43,8 @@ SiteMarker = OpenLayers.Class({
     draw: function(px) {
 				
 				var me = this;
-				
 				$(this.icon.imageDiv).children().hide();
-				$(this.icon.imageDiv).append('<a href="#" class="open" style="background:url('+this.icon.url+') no-repeat center 0;">'+this.info.count+'</a>'+
+				$(this.icon.imageDiv).append('<a href="#" class="open" style="background:url('+this.icon.url+') no-repeat center 0;">'+this.info.id+'</a>'+
 																			'<div class="infowindow">'+
 																				'<a href="#" class="close"></a>'+
 																				'<div class=""><img src="'+this.info.image_url+'" alt="'+this.info.title+'" title="'+this.info.title+'"/></div>'+
@@ -69,23 +68,23 @@ SiteMarker = OpenLayers.Class({
 					ev.preventDefault();
 					if (!$(me.icon.imageDiv).find('div').is(':visible')) {
 						$('div.infowindow').hide();
-						// var position = map.getViewPortPxFromLonLat(me.lonlat);
-						// 						var move_y = 0;
-						// 						var move_x = 0;
-						// 						
-						// 						if (position.y<237) {
-						// 							move_y = -237+ position.y - 65;
-						// 						}
-						// 						
-						// 						if (position.x<125) {
-						// 							move_x = -125+position.x -30;
-						// 						}
-						// 						
-						// 						if (($('div#map').width() - position.x)<125) {
-						// 							move_x = 125 - ($('div#map').width() - position.x) + 30;
-						// 						}
-						// 						
-						// 						map.pan(move_x,move_y);
+						var position = map.getViewPortPxFromLonLat(me.lonlat);
+						var move_y = 0;
+						var move_x = 0;
+						
+						if (position.y<280) {
+							move_y = -280+ position.y - 65;
+						}
+						
+						if (position.x<125) {
+							move_x = -125+position.x -30;
+						}
+						
+						if (($('div#explore_map').width() - position.x)<125) {
+							move_x = 125 - ($('div#explore_map').width() - position.x) + 30;
+						}
+						
+						map.pan(move_x,move_y);
 						$(me.icon.imageDiv).find('div').fadeIn('fast');
 						
 					}
