@@ -19,7 +19,7 @@ class FeaturesController < ApplicationController
       format.json do
 
         if params[:all]
-          render :json => Feature.all.map{ |f| f.to_json_attributes.merge(:url => feature_url(f)), :id => f.id }.to_json and return
+          render :json => Feature.all.map{ |f| f.to_json_attributes.merge(:url => feature_url(f), :id => f.id) }.to_json and return
         end
 
         pagination_attributes = {:page => params[:page], :per_page => 4, :order => 'created_at ASC'}
@@ -48,7 +48,7 @@ class FeaturesController < ApplicationController
         all_features = WillPaginate::Collection.create(page, 4, all_features.size) do |pager|
           pager.replace(all_features.slice(pager.per_page * (pager.current_page-1), pager.per_page) || [])
         end
-        render :json => all_features.empty? ? [].to_json : all_features.map{ |f| f.to_json_attributes.merge(:url => feature_url(f)), :id => f.id }.to_json and return
+        render :json => all_features.empty? ? [].to_json : all_features.map{ |f| f.to_json_attributes.merge(:url => feature_url(f), :id => f.id) }.to_json and return
       end
     end
 
