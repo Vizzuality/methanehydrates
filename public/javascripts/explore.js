@@ -72,7 +72,8 @@
       map.setCenter(center, 5);
       markers = new OpenLayers.Layer.Markers( "Markers" );
       map.addLayer(markers);
-      showMarkers(result);
+      showMarkers(result.features);
+			showPaginators(result);
     });
     placeBlueBackground();
   });
@@ -116,8 +117,9 @@
     url += (search_value!="All institutions" && search_value!='')?'&name_or_country='+search_value:'';
     $.getJSON(url,function(result){
       markers.clearMarkers();
-      showMarkers(result);
-      createSiteList(result);
+			showPaginators(result);
+      showMarkers(result.features);
+      createSiteList(result.features);
       hideLoader();
     });
   }
@@ -170,9 +172,24 @@
       var li_ = '<li class="no_results last"><p class="no_results">There are no results with this filters criterias. <a onclick="resetFilters()">Reset filters</a></p></li>';
       $('#site_list').append(li_);
     }
-
-
   }
+
+
+	function showPaginators(result) {
+		if (result.prev_page_url!=null) {
+			$('#prev_button').show();
+			$('#prev_button').attr('href',result.prev_page_url);
+		} else {
+			$('#prev_button').hide();
+		}
+		if (result.next_page_url!=null) {
+			$('#next_button').show();
+			$('#next_button').attr('href',result.next_page_url);
+		} else {
+			$('#next_button').hide();
+		}
+		
+	}
 
 
 

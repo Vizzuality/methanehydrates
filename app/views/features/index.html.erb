@@ -87,10 +87,10 @@
           <% if @features.total_pages > 1 %>
           <div class="bottom_posts">
             <% if @features.current_page > 1 %>
-            <a href="<%= features_path(:page => @features.previous_page) %>">Previous sites</a>
+            <a href="<%= features_path(:page => @features.previous_page) %>" id="prev_button">Previous sites</a>
             <% end %>
             <% if @features.current_page < @features.total_pages %>
-            <a href="<%= features_path(:page => @features.next_page) %>" class="next">More sites</a>
+            <a href="<%= features_path(:page => @features.next_page) %>" class="next" id="next_button">More sites</a>
             <% end %>
           </div>
           <% end %>
