@@ -37,7 +37,7 @@
         <div class="block last"></div>
       </div>
     </div>
-    <% if feature = Feature.where({:gallery_id => @gallery.id}) %>
+    <% if feature = Feature.where({:gallery_id => @gallery.id}).first %>
     <div class="bottom">
       <a href="<%= feature_url(feature) %>">View site details</a>
     </div>
