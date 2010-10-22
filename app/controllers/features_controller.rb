@@ -15,6 +15,12 @@ class FeaturesController < ApplicationController
       format.html do
         @features = if params[:all]
           Feature.paginate :page => params[:page], :per_page => Feature.count, :order => 'created_at ASC'
+        elsif params[:name_or_country]
+          all_features = Feature.all.select{ |f| f.title == params[:name_or_country] || f.country == params[:name_or_country]}
+          page = params[:page] && params[:page].to_i > 0 ? params[:page].to_i : 1
+          WillPaginate::Collection.create(page, 4, all_features.size) do |pager|
+            pager.replace(all_features.slice(pager.per_page * (pager.current_page-1), pager.per_page) || [])
+          end
         else
           Feature.paginate :page => params[:page], :per_page => 4, :order => 'created_at ASC'
         end

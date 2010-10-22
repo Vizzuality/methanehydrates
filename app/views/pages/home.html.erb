@@ -35,9 +35,9 @@
     <div class="middle">
       <div class="left">
         <h2>Methane gas hydrates sediments around the world</h2>
-        <form>
+        <form action="/explore" method="get">
           <h4>Search for your desired location</h4>
-          <input type="text" value="Location, Country, Sea..." />
+          <input type="text" value="Location, Country..." name="name_or_country"/>
           <input type="submit" value="Search" />
         </form>
         <% features = Feature.order("created_at DESC").limit(8) %>
