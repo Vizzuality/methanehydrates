@@ -10,10 +10,10 @@
 
 <body>
 
-  <% if (action_name!='sitemap')%>	
-	  <div id="supersize">
-	    <img alt="Background" src="/images/backgrounds/1.jpg" />
-	  </div>
+  <% if (action_name!='sitemap')%>
+    <div id="supersize">
+      <img alt="Background" src="/images/backgrounds/1.jpg" />
+    </div>
   <%- end%>
 
   <div class="layout">
@@ -29,7 +29,7 @@
             <li <% if (controller_name=='about')%> <%="class='current'"%><%-end%>><a href="/about">LEARN MORE</a></li>
             <li <% if (controller_name=='events')%> <%="class='current'"%><%-end%>><a href="/events">UPCOMING EVENTS</a></li>
             <li <% if (controller_name=='galleries')%> <%="class='current'"%><%-end%>><a href="/galleries">MEDIA RESOURCES</a></li>
-            <li <% if (controller_name=='features')%> <%="class='current'"%><%-end%>><a href="/features">EXPLORE THE SITES</a></li>
+            <li <% if (controller_name=='features')%> <%="class='current'"%><%-end%>><a href="/explore">EXPLORE THE SITES</a></li>
           </ul>
         </div>
       </div>

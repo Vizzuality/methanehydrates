@@ -3,6 +3,10 @@ class FeaturesController < ApplicationController
   before_filter :find_page
   layout 'application', :except => 'index'
 
+  include ActionView::Helpers::SanitizeHelper
+  include ActionView::Helpers::RawOutputHelper
+  include ActionView::Helpers::TextHelper
+
   def index
 
     present(@page)
@@ -25,12 +29,15 @@ class FeaturesController < ApplicationController
         }
 
         if params[:all]
-          render :json => base_json.merge(:features => Feature.all.map{ |f| f.to_json_attributes.merge(:url => feature_url(f), :id => f.id) }).to_json and return
+          render :json => base_json.merge(:features => Feature.all.map{ |f| f.to_json_attributes.merge(:url => feature_url(f), :id => f.id, :description => truncate(strip_tags(f.description),
+                            :omission => raw("... <a href=\"#{feature_url(f)}\">Read more</a>"),
+                            :length => 250,
+                            :preserve_html_tags => true)) }).to_json and return
         end
 
         pagination_attributes = {:page => params[:page], :per_page => 4, :order => 'created_at ASC'}
         all_features = Feature.all
-        if params[:institution]
+        if params[:institution] && params[:institution] != 'All'
           all_features = all_features.select{ |f| f.primary_institution_name == params[:institution] }
         end
         if params[:water_depth]
@@ -57,7 +64,10 @@ class FeaturesController < ApplicationController
         if all_features.empty?
           json = base_json
         else
-          json = base_json.merge(:features => all_features.map{ |f| f.to_json_attributes.merge(:url => feature_url(f), :id => f.id) })
+          json = base_json.merge(:features => all_features.map{ |f| f.to_json_attributes.merge(:url => feature_url(f), :id => f.id, :description => truncate(strip_tags(f.description),
+                            :omission => raw("... <a href=\"#{feature_url(f)}\">Read more</a>"),
+                            :length => 250,
+                            :preserve_html_tags => true)) })
           filter_params = {:institution => params[:institution], :hydrate_depth => params[:hydrate_depth], :name_or_country => params[:name_or_country], :water_depth => params[:water_depth]}
           if all_features.current_page > 1
             json[:prev_page_url] = features_url(filter_params.merge(:page => all_features.previous_page))
@@ -90,7 +100,7 @@ class FeaturesController < ApplicationController
   def institutions
     respond_to do |format|
       format.json do
-        render :json => Feature.select("id, meta").map{ |f| f.primary_institution_name }.to_json
+        render :json => (['All'] + Feature.select("id, meta").map{ |f| f.primary_institution_name }).to_json
       end
     end
   end

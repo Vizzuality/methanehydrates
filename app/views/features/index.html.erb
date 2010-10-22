@@ -23,7 +23,7 @@
         <li <% if (controller_name=='about')%> <%="class='current'"%><%-end%>><a href="/about">LEARN MORE</a></li>
         <li <% if (controller_name=='events')%> <%="class='current'"%><%-end%>><a href="/events">UPCOMING EVENTS</a></li>
         <li <% if (controller_name=='galleries')%> <%="class='current'"%><%-end%>><a href="/galleries">MEDIA RESOURCES</a></li>
-        <li <% if (controller_name=='features')%> <%="class='current'"%><%-end%>><a href="/features">EXPLORE THE SITES</a></li>
+        <li <% if (controller_name=='features')%> <%="class='current'"%><%-end%>><a href="/explore">EXPLORE THE SITES</a></li>
       </ul>
       <a onclick="zoomIn()" id="zoomIn"></a>
       <a onclick="zoomOut()" id="zoomOut"></a>
@@ -109,8 +109,9 @@
             </div>
             <label>PRIMARY INSTITUTION</label>
             <select>
-              <% Feature.select("id, meta").map{ |f| f.primary_institution_name }.each_with_index do |name,i| %>
-              <option <%= raw('selected="yes"') if i == 0 %>><%= truncate(name, :length => 33) %></option>
+              <option selected="yes">All</option>
+              <% Feature.select("id, meta").map{ |f| f.primary_institution_name }.each do |name| %>
+              <option><%= truncate(name, :length => 33) %></option>
               <% end %>
             </select>
             <div class="long">
