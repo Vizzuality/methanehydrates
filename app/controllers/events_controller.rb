@@ -12,7 +12,7 @@ class EventsController < ApplicationController
     elsif params[:date]
       raise if params[:date] !~ /\d{4}-\d{2}-\d{2}/
       date = Date.parse(params[:date])
-      @events = Event.where(["events.from > ? AND events.from < ?",date.beginning_of_day,date.end_of_day]).order("events.from DESC")
+      @events = Event.where(["events.from >= ? AND events.from < ?",date.beginning_of_day,date.end_of_day]).order("events.from DESC")
     else
       @events = Event.paginate :page => params[:page], :per_page => RefinerySetting.find_or_set(:events_per_page, 10), :order => "position ASC"
     end
