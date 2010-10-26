@@ -65,8 +65,8 @@ div.error_content_other {min-height:1000px;}
 div.error_title {float:left; width:100%;}
 div.error_title.other {min-height:860px;}
 div.error_title div.inner_title {width:870px; margin:0 auto; padding:50px 0 0 0;}
-div.error_title div.inner_title h1 {float:left; padding:90px 0 0 0; width:100%; font:bold 55px Arial; color:white; letter-spacing:-3px; text-shadow:2px 2px #B1A0AB; line-height:54px;}
-div.error_title div.inner_title h3 {float:left; padding:15px 0 40px 0; width:100%; font:bold 25px Arial; color:white; letter-spacing:-1px; text-shadow:1px 1px #B1A0AB;}
+div.error_title div.inner_title h1 {float:left; padding:90px 0 0 0; width:100%; font:bold 55px Arial; color:white; letter-spacing:-3px; text-shadow:2px 2px rgba(0, 11, 36, 0.3); line-height:54px;}
+div.error_title div.inner_title h3 {float:left; padding:15px 0 40px 0; width:100%; font:bold 25px Arial; color:white; letter-spacing:-1px; text-shadow:1px 1px rgba(0, 11, 36, 0.3);}
 div.error_title div.inner_title a.go_home_bttn {float:left; width:183px; height:42px; background:url('../images/error/go_home_bttn.png') no-repeat 0 0; font:bold 17px Arial; color:white; text-shadow:0px -1px #000000; text-decoration:none; text-align:center; padding:14px 0 0 0; line-height:20px;}
 div.error_title div.inner_title a.go_home_bttn:hover {background-position:0 -56px;}
 
@@ -75,8 +75,8 @@ div.error_title div.inner_title a.go_home_bttn:hover {background-position:0 -56p
 
 div.title {float:left; width:100%;}
 div.title div.inner_title {width:870px; margin:0 auto;}
-div.title div.inner_title h1 {float:left; padding:90px 0 0 0; width:100%; font:bold 55px Arial; color:white; letter-spacing:-3px; text-shadow:2px 2px #B1A0AB; line-height:54px;}
-div.title div.inner_title p {float:left; padding:15px 0 80px 0; width:100%; font:bold 25px Arial; color:white; letter-spacing:-1px; text-shadow:1px 1px #B1A0AB;}
+div.title div.inner_title h1 {float:left; padding:90px 0 0 0; width:100%; font:bold 55px Arial; color:white; letter-spacing:-3px; text-shadow:2px 2px rgba(0, 11, 36, 0.3); line-height:54px;}
+div.title div.inner_title p {float:left; padding:15px 0 80px 0; width:100%; font:bold 25px Arial; color:white; letter-spacing:-1px; text-shadow:1px 1px rgba(0, 11, 36, 0.3);}
 div.title div.inner_title div.left {float:left; width:600px;}
 div.title div.inner_title div.right {float:right; width:231px; margin:100px 0 0 0;}
 div.title div.inner_title div.right ul {float:right; width:231px;}
@@ -122,7 +122,7 @@ div.meaning div.middle div.left {float:left; width:565px;}
 div.meaning div.middle div.left h3 {float:left; width:100%; font:bold 25px Arial; color:white; padding:0; margin:0;}
 div.meaning div.middle div.left p {float:left; width:100%; font:normal 15px Arial; color:white; margin:10px 0 0 0;}
 div.meaning div.middle div.left p.hand {margin:25px 0 20px 38px; font:normal 21px Arial; color:white; position:relative; width:500px;}
-div.meaning div.middle div.left span.quotes {font:normal 45px Geneva; color:white; position:absolute; top:0; left:0;}
+div.meaning div.middle div.left span.quotes {font:normal 45px 'Geneva'; color:white; position:absolute; top:0; left:0;}
 div.meaning div.middle div.left span.quotes.open {top:-16px; left:-20px;}
 div.meaning div.middle div.left span.quotes.close {top:42px; left:338px;}
 div.meaning div.middle div.left ul {float:left; width:100%; margin:20px 0 0 0; padding:0;}
@@ -299,7 +299,8 @@ div.body_content_right div.twitter div.middle div.head h3 {font:bold 23px Arial;
 div.body_content_right div.twitter div.middle div.head p {font:normal 15px Arial; color:#9B9FA7; padding:4px 0 0 0;}
 div.body_content_right div.twitter div.middle div.head span.line {position:absolute; height:1px; width:286px; bottom:0; left:-26px; background:black; opacity:0.35; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=35);}
 div.body_content_right div.twitter div.middle ul {float:left; width:100%;}
-div.body_content_right div.twitter div.middle ul li {float:left; width:100%; padding:20px 0; border-bottom:1px solid #4b4f59;}
+div.body_content_right div.twitter div.middle ul li {float:left; width:100%; padding:20px 0; border-bottom:1px solid #020202;}
+div.body_content_right div.twitter div.middle ul li.last {border-bottom:none;}
 div.body_content_right div.twitter div.middle ul li div.image {float:left; width:48px; padding:2px; margin:0 9px 0 0; background:url(/images/posts/avatar_border.png) no-repeat 0 0;}
 div.body_content_right div.twitter div.middle ul li div.text {float:left; width:173px;}
 div.body_content_right div.twitter div.middle ul li div.text p {float:left; width:173px; font:normal 13px Arial; color:white; overflow-x:hidden;}
@@ -363,8 +364,8 @@ div.head_post div.middle p {float:left; width:100%; padding:5px 0 0 0; font:norm
 div.head_post div.middle span.line {position:absolute; height:1px; width:615px; bottom:0; left:9px; background:#BF4C00;}
 div.middle_white {float:left; width:553px; padding:20px 40px 30px 40px; height:auto; background:url(/images/round/middle_white.png) repeat-y 0 0; font:normal 15px Arial; color:#666666;}
 div.middle_white p {float:left; width:100%; font:normal 15px Arial; color:#666666; line-height:19px;}
-div.bottom_grey {float:left; width:633px; height:85px; background:url(/images/round/bottom_grey.png) no-repeat 0 0;}
-div.bottom_grey a {float:left; margin:29px 0 0 40px; font:bold 15px Arial; color:#FF6600; padding:0 0 0 17px; background:url(/images/icons/orange_left_arrow.png) no-repeat 0 3px; text-decoration:none;}
+div.bottom_grey {float:left; width:633px; height:84px; background:url(/images/round/bottom_grey.png) no-repeat 0 0;}
+div.bottom_grey a {float:left; margin:27px 0 0 40px; font:bold 15px Arial; color:#FF6600; padding:0 0 0 17px; background:url(/images/icons/orange_left_arrow.png) no-repeat 0 3px; text-decoration:none;}
 div.bottom_grey a:hover {color:#FF3300; background-position:0 -13px;}
 
 
@@ -488,7 +489,7 @@ div.body_content_left div ul#events {float:left; width:100%;}
 div.body_content_left div ul#events li {float:left; width:100%; padding:33px 0 33px 0; border-bottom:1px solid #E5E5E5;}
 div.body_content_left div ul#events li.last {border-bottom:1px solid #E5E5E5;}
 div.body_content_left div ul#events li div.left {float:left; width:64px; height:51px; padding:5px 0 10px; background:url(/images/events/date_bkg.png) no-repeat 0 0; margin:0 11px 0 0;}
-div.body_content_left div ul#events li div.left p.day {float:left; width:100%; text-align:center; font:bold 37px Arial; color:white; text-shadow:0 1px #AF4418; letter-spacing:-2px;}
+div.body_content_left div ul#events li div.left p.day {float:left; width:100%; text-align:center; font:bold 37px Arial; color:white; text-shadow:0 1px #AF4418; letter-spacing:-2px; line-height:35px; margin:5px 0 0 0;}
 div.body_content_left div ul#events li div.left p.month {float:left; width:100%; text-align:center; font:bold 13px Arial; color:white; text-shadow:0 1px #AF4418; line-height:10px; letter-spacing:0px;}
 div.body_content_left div ul#events li div.right {float:left; width:478px;}
 div.body_content_left div ul#events li div.right h2 {float:left; width:100%;}
@@ -520,7 +521,7 @@ div.head_event div.middle p.back {float:left; width:600px; padding:0 0 0 9px; ba
 div.head_event div.middle p.back a {font:normal 13px Arial; color:white;}
 div.head_event div.middle p.back a:hover {color:#F7F7F7;}
 div.head_event div.middle div.left {float:left; width:64px; height:51px; padding:5px 0 10px; background:url(/images/events/date_bkg_grey.png) no-repeat 0 0; margin:15px 11px 0 0;}
-div.head_event div.middle div.left p.day {float:left; width:100%; text-align:center; font:bold 37px Arial; color:#FF6428; text-shadow:0 -1px #614E42; letter-spacing:-2px; padding:0; margin:0;}
+div.head_event div.middle div.left p.day {float:left; width:100%; text-align:center; font:bold 37px Arial; color:#FF6428; text-shadow:0 -1px #614E42; letter-spacing:-2px; padding:0; margin:5px 0 0 0; line-height:35px;}
 div.head_event div.middle div.left p.month {float:left; width:100%; text-align:center; font:bold 13px Arial; color:#FF6428; text-shadow:0 -1px #614E42; line-height:10px; letter-spacing:0px; padding:0; margin:0;}
 div.head_event div.middle div.right {float:left; width:478px;}
 div.head_event div.middle h1 {float:left; width:100%; font:bold 21px Arial; color:white; padding:15px 0 0 0; letter-spacing:-1px; text-shadow:0px 1px #B24B1D;}
@@ -535,7 +536,7 @@ div.middle_white h6 {float:left; margin:15px 0 0 0; width:100%; font:bold 17px A
 div.middle_white ul {float:left; width:100%; margin:30px 0 0 0; padding:0;}
 div.middle_white ul li {float:left; width:265px; padding:0;}
 div.middle_white ul li div.left {float:left; width:64px; height:51px; padding:5px 0 10px; background:url(/images/events/date_bkg.png) no-repeat 0 0; margin:0 11px 0 0;}
-div.middle_white ul li div.left p.day {float:left; width:100%; text-align:center; font:bold 37px Arial; color:white; text-shadow:0 1px #AF4418; letter-spacing:-2px;}
+div.middle_white ul li div.left p.day {float:left; width:100%; text-align:center; font:bold 37px Arial; color:white; text-shadow:0 1px #AF4418; letter-spacing:-2px; line-height:35px; margin:5px 0 0 0;}
 div.middle_white ul li div.left p.month {float:left; width:100%; text-align:center; font:bold 13px Arial; color:white; text-shadow:0 1px #AF4418; line-height:10px; letter-spacing:0px;}
 div.middle_white ul li div.right {float:left; width:190px;}
 div.middle_white ul li div.right h6 {float:left; width:100%; margin:0; padding:0; line-height:16px;}
@@ -631,12 +632,13 @@ div.partners div.bottom {float:left; width:100%; height:25px; background:url(/im
 /*FAQ*/
 
 div.faq_block {float:left; width:633px;}
-div.faq_block div.head_faq div.top {float:left; width:633px; height:15px; background:url(/images/round/top_orange.png) no-repeat 0 0; margin:35px 0 0 0;}
+div.faq_block div.head_faq div.top {float:left; width:633px; height:15px; background:url(/images/round/top_orange.png) no-repeat 0 0; margin:22px 0 0 0;}
+div.faq_block div.head_faq div.top.first {margin:35px 0 0 0;}
 div.faq_block div.head_faq div.middle {position:relative; float:left; width:553px; padding:15px 40px 20px 40px; height:auto; background:url(/images/round/middle_orange.png) repeat-y 0 0;}
 div.faq_block div.head_faq div.middle h2 {float:left; float:left; width:633px; font:bold 23px Arial; color:white; padding:0; letter-spacing:-1px; text-shadow:0px 1px #B24B1D;}
 div.faq_block div.head_faq div.middle span.line {position:absolute; height:1px; width:615px; bottom:0; left:9px; background:#BF4C00;}
 div.faq_block div.middle {float:left; width:553px; padding:5px 40px 35px 40px; height:auto; background:url(/images/round/middle_white.png) repeat-y 0 0; font:normal 15px Arial; color:#666666;}
-div.faq_block div.middle h3 {float:left; width:100%; font:bold 15px Arial; color:#333333; letter-spacing:0px; padding:30px 0 8px 0;}
+div.faq_block div.middle h3 {float:left; width:100%; font:bold 17px Arial; color:#333333; letter-spacing:0px; padding:30px 0 8px 0;}
 div.faq_block div.middle p {float:left; width:100%; font:normal 15px Arial; color:#666666; line-height:17px;}
 div.faq_block div.middle p a {font:normal 13px Arial; color:#FF6600; text-decoration:none;}
 div.faq_block div.middle p a:hover {text-decoration:underline;}
@@ -660,9 +662,6 @@ div.faq_right div.middle ul li a:hover {text-decoration:underline; cursor:pointe
 div.faq_right div.bottom {float:right; width:304px; height:15px; background:url(/images/round/bottom_white_short.png) no-repeat center 0;}
 
 
-
-
-
 /*ABOUT*/
 
 div.about_opaque {float:left; width:100%;}
@@ -670,7 +669,12 @@ div.about_opaque div.top {float:left; width:100%; height:15px; background:url(/i
 div.about_opaque div.middle {position:relative; float:left; width:868px; padding:15px 40px 5px 40px; height:auto; background:url(/images/round/middle_opaque_long2.png) repeat-y center 0;}
 div.about_opaque div.middle div.left {float:left; width:573px;}
 div.about_opaque div.middle div h2 {float:left; width:100%; font:bold 23px Arial; color:white; letter-spacing:-1px;}
-div.about_opaque div.middle div.left p {float:left; width:513px; padding:35px 30px; margin:10px 0 0 0; background:url(/images/about/commas_bkg.png) no-repeat -20px -90px; font:normal 17px Arial; color:white; line-height:20px;}
+div.about_opaque div.middle div.left p {float:left; width:513px; padding:26px 30px; font:normal 21px Arial; color:white; line-height:20px; position:relative;}
+div.about_opaque div.middle div.left span.quotes {font:normal 45px 'Geneva'; color:white; position:absolute;}
+div.about_opaque div.middle div.left span.quotes.open {top:11px; left:10px;}
+div.about_opaque div.middle div.left span.quotes.close {bottom:-23px; right:200px;}
+
+
 div.about_opaque div.middle div.left div.initiative {float:left; width:100%; padding:0; margin:0;}
 div.about_opaque div.middle div.left div.initiative a {float:left; width:124px; height:49px; background:url(/images/about/grid_logo.png) no-repeat 0 0; padding:0; margin:0;}
 div.about_opaque div.middle div.left div.initiative p {float:left; width:auto; padding:0; margin:25px 0 0 10px; background:none; font:bold 13px Arial; color:#999999;}
@@ -678,17 +682,18 @@ div.about_opaque div.middle div.left div.initiative p a {float:none; width:auto;
 div.about_opaque div.middle div.left div.initiative p a:hover {text-decoration:underline;}
 div.about_opaque div.middle div.right {float:right; width:234px;}
 div.about_opaque div.middle div.right ul {float:left; width:100%; padding:5px 0 0 0;}
-div.about_opaque div.middle div.right ul li {float:left; width:221px; margin:15px 0 0 0; padding:0 0 0 12px; background:url(/images/icons/circle.png) no-repeat 0 5px; font:normal 13px Arial; color:#CCCCCC;}
-div.about_opaque div.bottom {float:left; width:100%; height:71px; margin:0; padding:0; background:url(/images/round/bottom_opaque_long2.png) no-repeat center 0;}
+div.about_opaque div.middle div.right ul li {float:left; width:218px; margin:15px 0 0 0; padding:0 0 0 15px; background:url(/images/icons/circle.png) no-repeat 0 5px; font:normal 13px Arial; color:#CCCCCC;}
+div.about_opaque div.bottom {float:left; width:100%; height:49px; margin:0; padding:0; background:url(/images/round/bottom_opaque_long2.png) no-repeat center 0;}
 
 div.member {float:left; width:633px;}
-div.member div.head div.top {float:left; width:633px; height:15px; background:url(/images/round/top_orange.png) no-repeat 0 0; margin:35px 0 0 0;}
+div.member div.head div.top {float:left; width:633px; height:15px; background:url(/images/round/top_orange.png) no-repeat 0 0; margin:21px 0 0;}
+div.member div.head div.top.first {margin:0;}
 div.member div.head div.middle {position:relative; float:left; width:553px; padding:15px 40px 20px 40px; height:auto; background:url(/images/round/middle_orange.png) repeat-y 0 0;}
 div.member div.head div.middle h2 {float:left; float:left; width:100%; font:bold 23px Arial; color:white; padding:0; letter-spacing:-1px; text-shadow:0px 1px #B24B1D;}
 div.member div.head div.middle span.line {position:absolute; height:1px; width:615px; bottom:0; left:9px; background:#BF4C00;}
-div.member div.middle {float:left; width:553px; padding:20px 40px 20px 40px; height:auto; background:url(/images/round/middle_white.png) repeat-y 0 0; font:normal 15px Arial; color:#666666;}
-div.member div.middle.image {position:relative; width:615px; padding:5px 9px 0 9px;}
-div.member div.middle.image span.line {position:absolute; bottom:0; left:9px; width:615px; height:1px; background:#1B2E4E;}
+div.member div.middle {float:left; width:553px; padding:20px 40px 20px 40px; height:auto; background:url(/images/round/middle_white.png) repeat-y 0 0; font:normal 15px Arial; color:#666666; }
+div.member div.middle.image {position:relative; width:615px; padding:0 9px 0 9px; height:350px;}
+div.member div.middle.image span.line {position:absolute; bottom:0px; left:9px; width:615px; height:1px; background:#1B2E4E;}
 div.member div.middle h3 {float:left; width:100%; font:bold 15px Arial; color:#333333; letter-spacing:0px; padding:30px 0 8px 0;}
 div.member div.middle p {float:left; width:100%; font:normal 15px Arial; color:#666666; line-height:17px;}
 div.member div.middle p a {font:normal 13px Arial; color:#FF6600; text-decoration:none;}
@@ -698,7 +703,7 @@ div.member div.bottom {float:left; width:633px; height:85px; background:url(/ima
 div.member div.bottom a {float:right; margin:29px 40px 0 0; font:bold 15px Arial; color:#FF6600; padding:0 0 0 17px; background:url(/images/icons/orange_up_arrow.png) no-repeat 0 4px; text-decoration:none; }
 div.member div.bottom a:hover {color:#FF3300; background-position:0 -24px; cursor:pointer;}
 
-div.about_right {float:right; width:304px; margin:35px 0 0 0;}
+div.about_right {float:right; width:304px; margin:0;}
 div.about_right div.top {float:right; width:304px; height:15px; background:url(/images/round/top_white_short.png) no-repeat center 0;}
 div.about_right div.middle {float:right; width:234px; padding:0 35px 20px; height:auto; background:url(/images/round/middle_white_short.png) repeat-y center 0;}
 div.about_right div.middle div.head {position:relative; float:left; width:100%; padding:20px 0 22px 0;}

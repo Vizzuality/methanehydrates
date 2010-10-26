@@ -29,7 +29,8 @@ html = <<-HTML
         <div class="middle">
           <div class="left">
             <h2>Global Outlook on Methane Gas Hydrates</h2>
-            <p>Our mission is to bridge the gap between the <strong>science</strong>, <strong>research</strong> and <strong>development</strong> activities related to this potential large scale unconventional source of natural gas and the needs of decision makers and the general public to understand the underlying societal and environmental drivers and impacts.</p>
+            <p class="cufon_handofsean"><span class="quotes open">"</span>Our mission is to bridge the gap between the <strong>science</strong>, <strong>research</strong> and <strong>development</strong> activities related to this potential large scale unconventional source of natural gas and the needs of decision makers and the general public to understand the underlying societal and environmental drivers and impacts.<span class="quotes close">"</span>
+</p>
             <div class="initiative">
               <a href="http://www.grida.no/" target="_blank" class="arendal"></a>
               <p>AN INITIATIVE FROM <a href="http://www.unep-wcmc.org/" target="_blank">UNEP</a> / <a href="http://www.grida.no/" target="_blank">GRID-ARENDAL</a>
@@ -37,7 +38,7 @@ html = <<-HTML
             </div>
           </div>
           <div class="right">
-            <h2>Key Factors</h2>
+            <h2>Key factors</h2>
             <ul>
               <li>Their role in natural systems including the global carbon cycle</li>
               <li>Their sensitivities to climate variations such as global warming</li>
@@ -184,7 +185,6 @@ html = <<-HTML
           </div>
         </div>
 
-
         <div class="member">
           <div class="head">
             <div id="why_did_choose" class="top"></div>
@@ -205,9 +205,7 @@ html = <<-HTML
           </div>
         </div>
       </div>
-
       <div class="space80"></div>
-
     </div>
 
 HTML
@@ -248,7 +246,7 @@ html = <<-HTML
 
         <div class="faq_block">
           <div class="head_faq">
-            <div class="top"></div>
+            <div class="top first"></div>
             <div class="middle">
               <h2>Background</h2>
               <span class="line"></span>
@@ -462,6 +460,8 @@ html = <<-HTML
       </div>
 
       <div class="space80"></div>
+
+
 
 HTML
 

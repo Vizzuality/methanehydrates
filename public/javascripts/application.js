@@ -35,8 +35,12 @@
         if ($('div.twitter')[0]) {
           var url = "http://search.twitter.com/search.json?q=vizzuality&rpp=5&callback=?";
           $.getJSON(url,function(data){
+			var dataSize = parseInt(data.results.length) - 1;
             $.each(data.results, function(i, item) {
               var str = "<li><div class='image'><img src=\""+item.profile_image_url+"\" alt='"+item.from_user+"' title='"+item.from_user+"'/></div><div class='text'><p>"+replaceURLWithHTMLLinks(item.text)+"</p></div></li>";
+			  if (i == dataSize) {
+				var str = "<li class='last'><div class='image'><img src=\""+item.profile_image_url+"\" alt='"+item.from_user+"' title='"+item.from_user+"'/></div><div class='text'><p>"+replaceURLWithHTMLLinks(item.text)+"</p></div></li>";
+			  }
               $("#tweets_list").append(str);
             });
           });

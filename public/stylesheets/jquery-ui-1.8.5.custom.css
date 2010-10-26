@@ -158,7 +158,7 @@
 .ui-datepicker select.ui-datepicker-month-year {width: 100%;}
 .ui-datepicker select.ui-datepicker-month, 
 .ui-datepicker select.ui-datepicker-year { width: 49%;}
-.ui-datepicker table {width: 100%; font-size: .9em; border-collapse: collapse; margin:0; }
+.ui-datepicker table {width: 100%; font-size: .9em; border-collapse: collapse; margin:1px 0 0 0; }
 .ui-datepicker th { padding: .7em .3em; text-align: center; font-weight: bold; border: 0;  }
 .ui-datepicker td { border: 0; padding:1px; }
 .ui-datepicker td span, .ui-datepicker td a { display: block; padding:.6em .2em; text-align: center; text-decoration: none; }
@@ -204,7 +204,7 @@
     height: 200px; /*must have*/
 }
 thead {display:none;}
-.bottom-navigator {margin:0 0 0 2px; float:left; position:relative; background:url(/images/common/bkg_day_calendar.png) repeat 0 0; width:224px; height:30px;}
+.bottom-navigator {margin:1px 0 0 2px; float:left; position:relative; background:url(/images/common/bkg_day_calendar.png) repeat 0 0; width:224px; height:30px;}
 .bottom-navigator a {position:absolute; bottom:0; width:31px; height:31px;}
 .bottom-navigator a.next:hover {background-position:0 -31px; cursor:pointer;}
 .bottom-navigator a.next {right:1px; background:url(/images/common/next_month.png) no-repeat 0px 0;}
