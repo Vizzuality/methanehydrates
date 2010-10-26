@@ -15,6 +15,8 @@ group :development do
   gem 'capistrano-ext'
 end
 
+gem 'fastercsv'
+
 # REFINERY CMS ================================================================
 
 gem 'refinerycms',              '= 0.9.8.5'

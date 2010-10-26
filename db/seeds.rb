@@ -57,6 +57,7 @@ hydrate_depth:string
 hydrate_description:text
 data_provided_by_name:string
 data_provided_by_url:string
+references:text
 ATTRIBUTES
 
 RefinerySetting.set(:feature_attributes, attributes)
@@ -76,3 +77,5 @@ end
 # Load methane hydrates pages
 puts 'Loading content in default pages'
 load(Rails.root.join('db', 'methane_static_pages.rb').to_s)
+
+

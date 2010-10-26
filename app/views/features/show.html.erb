@@ -9,8 +9,8 @@
     <div class="head_site">
       <div class="top"></div>
       <div class="middle">
-        <h1><%=raw @feature.title %> - <%=raw @feature.country %></h1>
-        <span><p class="first"><%= @feature.region %></p><p><%=raw @feature.country %></p></span>
+        <h1><%=raw @feature.title %> <%= "- #{raw(@feature.country)}" unless @feature.country.blank? %></h1>
+        <span><p class="first"><%= @feature.region %></p> <%= "<p>#{raw(@feature.country)}</p>" unless @feature.country.blank? %></span>
         <span class="line"></span>
       </div>
     </div>
@@ -33,16 +33,13 @@
       <%- end %>
     </div>
   </div>
-  
+
   <div class="body_content_right">
     <div class="opaque site">
       <div class="top"></div>
       <div class="middle">
         <div class="head">
-          <% unless @feature.recorded_datafields_text.blank? %>
           <h3>Recorded Datafields</h3>
-          <%= simple_format(@feature.recorded_datafields_text) %>
-          <% end -%>
         </div>
       </div>
       <div class="middle_map">
@@ -51,9 +48,15 @@
         </div>
       </div>
       <div class="middle_site">
-        <% unless @feature.primary_institution_name.blank? || @feature.primary_institution_url.blank? %>
+        <% unless @feature.primary_institution_name.blank? %>
         <h6>PRIMARY INSTITUTION</h6>
-        <p><a href="<%= @feature.primary_institution_url %>" rel="nofollow"><%= @feature.primary_institution_name %></a></p>
+        <p>
+          <% if @feature.primary_institution_url.blank? %>
+            <%= @feature.primary_institution_name %>
+          <% else %>
+            <a href="<%= @feature.primary_institution_url %>" rel="nofollow"><%= @feature.primary_institution_name %></a>
+          <% end -%>
+        </p>
         <% end -%>
         <% unless @feature.expedition.blank? %>
         <h6>EXPEDITION</h6>
@@ -72,9 +75,15 @@
         <p><%= @feature.hydrate_description %></p>
         <% end -%>
       </div>
-      <% unless @feature.data_provided_by_name.blank? || @feature.data_provided_by_url.blank?%>
+      <% unless @feature.data_provided_by_name.blank? %>
       <div class="bottom_site">
-        <p>Data provided by <a href="<%= @feature.data_provided_by_url %>" rel="nofollow"><%= @feature.data_provided_by_name %></a></p>
+        <p>Data provided by
+        <% if @feature.data_provided_by_url.blank? %>
+          <%= @feature.data_provided_by_name %>
+        <% else %>
+          <a href="<%= @feature.data_provided_by_url %>" rel="nofollow"><%= @feature.data_provided_by_name %></a>
+        <% end -%>
+        </p>
       </div>
       <% end -%>
     </div>
@@ -101,7 +110,7 @@
       </div>
       <div class="bottom"></div>
     </div>
-  </div>  
+  </div>
 
 </div>
 

@@ -80,6 +80,7 @@ GEM
       rack
     erubis (2.6.6)
       abstract (>= 1.0.0)
+    fastercsv (1.5.3)
     filters_spam (0.3)
     friendly_id (3.1.7)
       babosa (~> 0.2.0)
@@ -161,6 +162,7 @@ PLATFORMS
 DEPENDENCIES
   capistrano
   capistrano-ext
+  fastercsv
   nofxx-georuby
   pg (= 0.9.0)
   ppe-postgis-adapter!
