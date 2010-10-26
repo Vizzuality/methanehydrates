@@ -16,6 +16,7 @@ group :development do
 end
 
 gem 'fastercsv'
+gem 'nokogiri'
 
 # REFINERY CMS ================================================================
 

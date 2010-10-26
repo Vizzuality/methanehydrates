@@ -102,6 +102,7 @@ GEM
     net-ssh-gateway (1.0.1)
       net-ssh (>= 1.99.1)
     nofxx-georuby (1.7.3)
+    nokogiri (1.4.3.1)
     pg (0.9.0)
     polyglot (0.3.1)
     rack (1.2.1)
@@ -164,6 +165,7 @@ DEPENDENCIES
   capistrano-ext
   fastercsv
   nofxx-georuby
+  nokogiri
   pg (= 0.9.0)
   ppe-postgis-adapter!
   rails (= 3.0.0)
