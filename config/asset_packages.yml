@@ -1,0 +1,20 @@
+---
+javascripts:
+- base:
+  - OpenLayers
+  - cloudmade
+  - jquery
+  - jquery.livequery
+  - fonts/cufon-yui
+  - fonts/Hand_Of_Sean_400.font
+  - jquery-ui-1.8.5.custom.min
+  - jquery.nivo.slider
+  - supersized.2.0
+  - jquery.scrollTo-min
+  - jquery.url
+  - application
+stylesheets:
+- base:
+  - layout
+  - jquery-ui-1.8.5.custom
+
