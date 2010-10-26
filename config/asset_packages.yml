@@ -12,7 +12,7 @@ javascripts:
   - jquery.scrollTo-min
   - jquery.url
   - application
-- openlayer
+- openlayer:
   - OpenLayers
 stylesheets:
 - base:
