@@ -1,7 +1,6 @@
 ---
 javascripts:
 - base:
-  - OpenLayers
   - cloudmade
   - jquery
   - jquery.livequery
@@ -13,6 +12,8 @@ javascripts:
   - jquery.scrollTo-min
   - jquery.url
   - application
+- openlayer
+  - OpenLayers
 stylesheets:
 - base:
   - layout
