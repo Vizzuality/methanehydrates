@@ -167,8 +167,8 @@ div#explore_content {position:absolute; top:415px; left:50%; margin:0 0 0 -474px
 div#explore_map {position:absolute; z-index:1; width:100%; height:100%; top:0; left:0; right:0;}
 div#blue_bkg {position:absolute; z-index:5; left:0; width:100%; height:210px; background:url(/images/explore/blue_bkg.png) repeat-x 0 0;}
 div.top_explore {float:left; width:100%; height:15px; background:url(/images/round/top_white.png) no-repeat 0 0;}
-div.middle_explore {float:left; width:553px; padding:20px 40px 0 40px; height:auto; background:url(/images/round/middle_white.png) repeat-y 0 0;}
-div.middle_explore div.head_explore {position:relative; float:left; height:72px; padding:0; width:100%}
+div.middle_explore {float:left; width:553px; padding:15px 40px; height:auto; background:url(/images/round/middle_white.png) repeat-y 0 0;}
+div.middle_explore div.head_explore {position:relative; float:left; height:72px; padding:0 0 5px; width:100%}
 div.middle_explore div.head_explore div.left {float:left; width:450px;}
 div.middle_explore div.head_explore div.left h1 {float:left; font:bold 29px Arial; color:#333333; letter-spacing:-1px; width:100%;}
 div.middle_explore div.head_explore div.left p {float:left; font:normal 15px Arial; color:#666666; width:100%;}
@@ -178,21 +178,21 @@ div.middle_explore div.head_explore div.right p a {text-decoration:underline; co
 div.middle_explore div.head_explore div.right p a:hover {color:#FF3300;}
 div.middle_explore div.head_explore span.line {position:absolute; height:1px; width:615px; bottom:0; left:-31px; background:#E5E5E5;}
 div.middle_explore ul#site_list {float:left; width:100%; padding:0; margin:0;}
-div.middle_explore ul#site_list li {float:left; width:100%; border-bottom:1px solid #CCCCCC; padding:27px 0 19px;}
+div.middle_explore ul#site_list li {float:left; width:100%; border-bottom:1px solid #E5E5E5; padding:25px 0 19px;}
 div.middle_explore ul#site_list li.last {border:none;}
 div.middle_explore ul#site_list li div.head {float:left; width:100%;}
-div.middle_explore ul#site_list li div.head div.image {float:left; width:30px; height:28px; padding:6px 0 0 0; background:url(/images/explore/marker.png) no-repeat -2px 0; margin:0 5px 0 0;}
+div.middle_explore ul#site_list li div.head div.image {float:left; width:30px; height:28px; padding:6px 0 0 0; background:url(/images/explore/marker.png) no-repeat -2px 0; margin:2px 7px 0 0;}
 div.middle_explore ul#site_list li div.head div.image p {float:left; width:100%; font:bold 18px Arial; text-align:center; color:black; text-shadow:#FF8340 0 1px;}
 div.middle_explore ul#site_list li div.head div.info {float:left; width:515px;}
 div.middle_explore ul#site_list li div.head div.info h2 {float:left; width:100%;}
 div.middle_explore ul#site_list li div.head div.info h2 a {font:bold 21px Arial; color:#FF6600; text-decoration:none; letter-spacing:-1px;}
 div.middle_explore ul#site_list li div.head div.info h2 a:hover {color:#FF3300; text-decoration:underline;}
-div.middle_explore ul#site_list li div.head div.info p {float:left; width:100%; margin:3px 0 0;}
+div.middle_explore ul#site_list li div.head div.info p {float:left; width:100%; margin:1px 0 0; text-transform:uppercase; }
 div.middle_explore ul#site_list li div.head div.info p span {float:left; width:auto; font:bold 11px Arial; color:#999999;}
 div.middle_explore ul#site_list li div.head div.info p span.first {background:url(/images/icons/tiny_grey_arrow.jpg) no-repeat right 4px; padding:0 10px 0 0; margin:0 7px 0 0;}
 div.middle_explore ul#site_list li p.no_results {float:left; width:100%; text-align:center; font:normal 15px Arial; color:#666666; padding:0 0 14px 0;}
 div.middle_explore ul#site_list li p.no_results a {color:#FF6600; cursor:pointer;}
-div.middle_explore ul#site_list li p.des {float:left; width:100%; margin:15px 0 0 0; font:normal 15px Arial; color:#666666;}
+div.middle_explore ul#site_list li p.des {float:left; width:100%; margin:15px 0 0 0; font:normal 15px Arial; color:#999999;}
 div.middle_explore ul#site_list li p.des a {color:#FF6600; text-decoration:underline;}
 div.middle_explore ul#site_list li p a:hover {color:#FF3300;}
 div.middle_explore ul#site_list li div.grey {float:left; width:100%; background:url(/images/explore/grey_bkg.png) repeat-y 0 0; margin:20px 0 0 0;}
@@ -210,11 +210,12 @@ div.bottom_white a {display:none;}
 div.opaque_explore {float:right; width:304px;}
 div.opaque_explore div.top {float:left; width:304px; height:15px; background:url(/images/round/top_grey_opaque_short.png) no-repeat center 0;}
 div.opaque_explore div.middle {float:left; width:234px; padding:0 35px 10px; height:auto; background:url(/images/round/middle_grey_opaque_short.png) repeat-y center 0;}
-div.opaque_explore div.middle h3 {font:bold 23px Arial; color:white; letter-spacing:-1px; width:100%; padding:12px 0 0 0;}
+div.opaque_explore div.middle h3 {font:bold 23px Arial; color:white; letter-spacing:-1px; width:100%; padding:8px 0 0 0;}
 div.opaque_explore div.middle form {position:relative; float:left; width:100%;}
-div.opaque_explore div.middle form label {float:left; width:100%; margin:20px 0 0 0; padding:0 0 3px 0; font:bold 11px Arial; color:#CCCCCC;}
+div.opaque_explore div.middle form label {float:left; width:100%; margin:15px 0 0; padding:0 0 3px 0; font:bold 11px Arial; color:#CCCCCC;}
 div.opaque_explore div.middle form div {position:relative; float:left; width:100%;}
-div.opaque_explore div.middle form div.long {float:left; width:100%; margin:20px 0 0 0;}
+div.opaque_explore div.middle form div.long {float:left; width:100%; margin:15px 0 0;}
+div.opaque_explore div.middle form div.long.first {margin:9px 0 0 0;}
 div.opaque_explore div.middle form div.long p {float:right; width:auto; font:bold 11px Arial; color:#FFFFFF;}
 div.opaque_explore div.middle form div.long label {float:left; width:auto; margin:0;}
 div.opaque_explore div.middle form input[type="text"] {float:left; width:202px; height:12px; padding:6px 36px 6px 5px; border:none; background:url(/images/explore/text_input_bkg.png) no-repeat 0 0; font:bold 11px Arial; color:#999999;}
@@ -223,7 +224,7 @@ div.opaque_explore div.middle form input[type="submit"]:hover {background-positi
 div.opaque_explore div.middle form ul.newList * {margin:0; padding:0;}
 div.opaque_explore div.middle form ul.newList a {color: #666; text-decoration:none; display:block;}
 div.opaque_explore div.middle form ul.newList {margin:0; padding:0; list-style:none; color:#666; width:230px; background:#fff; position:absolute; border:1px solid #ccc; top:0px; left:2px; overflow:auto; z-index:1000000;}
-div.opaque_explore div.middle form .newListSelected {position:relative; width:230px; color:#666; margin:3px 0 0 0; height:35px; padding:0; float:left;}
+div.opaque_explore div.middle form .newListSelected {position:relative; width:230px; color:#666; margin:3px 6px 0 0px; height:35px; padding:0; float:right;}
 div.opaque_explore div.middle form li.error .selectedTxt {background-position:0 -35px;}
 div.opaque_explore div.middle form .newListSelected span {width:230px; display:block;}
 div.opaque_explore div.middle form ul.newList li {list-style-type:none; display:block; margin:0; padding:0; height:auto; cursor:pointer; width:230px; font-size:13px; border:none;}
@@ -362,7 +363,7 @@ div.head_post div.middle p.back a:hover {color:#F7F7F7;}
 div.head_post div.middle h1 {float:left; width:100%; font:bold 21px Arial; color:white; padding:15px 0 0 0; letter-spacing:-1px; text-shadow:0px 1px #B24B1D;}
 div.head_post div.middle p {float:left; width:100%; padding:5px 0 0 0; font:normal 13px Arial; color:white; text-shadow:0 -1px #B24B1D;}
 div.head_post div.middle span.line {position:absolute; height:1px; width:615px; bottom:0; left:9px; background:#BF4C00;}
-div.middle_white {float:left; width:553px; padding:20px 40px 30px 40px; height:auto; background:url(/images/round/middle_white.png) repeat-y 0 0; font:normal 15px Arial; color:#666666;}
+div.middle_white {float:left; width:553px; padding:0 40px 30px 40px; height:auto; background:url(/images/round/middle_white.png) repeat-y 0 0; font:normal 15px Arial; color:#666666;}
 div.middle_white p {float:left; width:100%; font:normal 15px Arial; color:#666666; line-height:19px;}
 div.bottom_grey {float:left; width:633px; height:84px; background:url(/images/round/bottom_grey.png) no-repeat 0 0;}
 div.bottom_grey a {float:left; margin:27px 0 0 40px; font:bold 15px Arial; color:#FF6600; padding:0 0 0 17px; background:url(/images/icons/orange_left_arrow.png) no-repeat 0 3px; text-decoration:none;}
@@ -404,7 +405,7 @@ div.media div.middle .nivo-prevNav {left:29px; text-indent:-9999px; width:69px; 
 div.media div.middle .nivo-prevNav:hover {background-position:0 -61px;}
 div.media div.middle .nivo-nextNav {right:29px; text-indent:-9999px; width:69px; height:61px; background:url(/images/common/next_image_bkg.png) no-repeat 0 0;}
 div.media div.middle .nivo-nextNav:hover {background-position:0 -61px;}
-div.media div.middle .nivo-controlNav {position:absolute; top:29px; left:28px; height:21px; background:url(/images/common/left_nav_bkg.png) no-repeat 0 0; width:auto; padding:0 0 0 4px; z-index:1000000;}
+div.media div.middle .nivo-controlNav {position:absolute; top:29px; left:33px; height:21px; background:url(/images/common/left_nav_bkg.png) no-repeat 0 0; width:auto; padding:0 0 0 4px; z-index:1000000;}
 div.media div.middle .nivo-controlNav span {float:left; height:21px; background:url(/images/common/right_nav_bkg.png) no-repeat right 0; width:auto; padding:0 3px 0 0;}
 div.media div.middle .nivo-controlNav a {display:block; width:6px; height:6px; background:url(/images/icons/circle_nav.png) no-repeat; text-indent:-9999px; border:0; margin:8px 3px 0 2px; float:left;}
 div.media div.middle .nivo-controlNav a.active {background-position:0 -6px; color:white;}
@@ -556,7 +557,6 @@ div.body_content_right div.opaque div.middle div.head p a:hover {text-decoration
 div.head_site div.top {float:left; width:100%; height:15px; background:url(/images/round/top_orange.png) no-repeat 0 0; margin:35px 0 0 0;}
 div.head_site div.middle {position:relative; float:left; width:553px; padding:20px 40px 30px 40px; height:auto; background:url(/images/round/middle_orange.png) repeat-y 0 0;}
 div.head_site div.middle h1 {float:left; float:left; width:100%; font:bold 29px Arial; color:white; padding:0; letter-spacing:-1px; text-shadow:0px 1px #B24B1D;}
-div.head_site div.middle span {float:left; width:100%;}
 div.head_site div.middle p {float:left; width:auto; padding:0 0 0 8px; font:normal 15px Arial; color:white; text-shadow:0 -1px #B24B1D;}
 div.head_site div.middle p.first {background:url(/images/icons/orange_tiny_arrow.jpg) no-repeat right 7px; padding:0 12px 0 0;}
 div.head_site div.middle span.line {position:absolute; height:1px; width:615px; bottom:0; left:9px; background:#BF4C00;}
@@ -575,17 +575,17 @@ div.middle.image .nivo-caption p {padding:5px; margin:0;}
 div.middle.image .nivo-caption a {display:inline !important;}
 div.middle.image .nivo-html-caption {display:none;}
 div.middle.image .nivo-directionNav a {position:absolute; top:45%; z-index:99; cursor:pointer;}
-div.middle.image .nivo-prevNav {left:10px; text-indent:-9999px; width:69px; height:61px; background:url(/images/common/previous_image_bkg.png) no-repeat 0 0;}
+div.middle.image .nivo-prevNav {left:33px; text-indent:-9999px; width:69px; height:61px; background:url(/images/common/previous_image_bkg.png) no-repeat 0 0;}
 div.middle.image .nivo-prevNav:hover {background-position:0 -61px;}
-div.middle.image .nivo-nextNav {right:10px; text-indent:-9999px; width:69px; height:61px; background:url(/images/common/next_image_bkg.png) no-repeat 0 0;}
+div.middle.image .nivo-nextNav {right:33px; text-indent:-9999px; width:69px; height:61px; background:url(/images/common/next_image_bkg.png) no-repeat 0 0;}
 div.middle.image .nivo-nextNav:hover {background-position:0 -61px;}
-div.middle.image .nivo-controlNav {position:absolute; bottom:29px; left:28px; height:21px; background:url(/images/common/left_nav_bkg.png) no-repeat 0 0; width:auto; padding:0 0 0 4px; z-index:1000000;}
+div.middle.image .nivo-controlNav {position:absolute; bottom:29px; left:33px; height:21px; background:url(/images/common/left_nav_bkg.png) no-repeat 0 0; width:auto; padding:0 0 0 4px; z-index:1000000;}
 div.middle.image .nivo-controlNav span {float:left; height:21px; background:url(/images/common/right_nav_bkg.png) no-repeat right 0; width:auto; padding:0 3px 0 0;}
 div.middle.image .nivo-controlNav a {display:block; width:6px; height:6px; background:url(/images/icons/circle_nav.png) no-repeat; text-indent:-9999px; border:0; margin:8px 3px 0 2px; float:left;}
 div.middle.image .nivo-controlNav a.active {background-position:0 -6px; color:white;}
 div.middle.image .nivo-controlNav a:hover {background-position:0 -6px; color:white; cursor:pointer;}
 
-div.middle_white.site h3 {float:left; width:100%; font:bold 21px Arial; color:#333333; letter-spacing:-1px; padding:0 0 10px 0;}
+div.middle_white.site h3 {float:left; width:100%; font:bold 21px Arial; color:#333333; letter-spacing:-1px; padding:0 0 10px 0; margin:20px 0 0 0;}
 div.middle_white.site p {float:left; width:100%; font:normal 13px Arial; color:#666666; line-height:17px;}
 div.middle_white.site p a {font:normal 13px Arial; color:#FF6600; text-decoration:none;}
 div.middle_white.site p a:hover {text-decoration:underline;}

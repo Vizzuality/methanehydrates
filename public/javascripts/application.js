@@ -29,8 +29,6 @@
         });
         $('div.inner_header ul').css('background-position',(704-li_size-667) + 'px 0px');
 
-
-
         //If there is twitter block
         if ($('div.twitter')[0]) {
           var url = "http://search.twitter.com/search.json?q=vizzuality&rpp=5&callback=?";

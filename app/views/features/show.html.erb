@@ -10,7 +10,7 @@
       <div class="top"></div>
       <div class="middle">
         <h1><%=raw @feature.title %> <%= "- #{raw(@feature.country)}" unless @feature.country.blank? %></h1>
-        <span><p class="first"><%= @feature.region %></p> <%= "<p>#{raw(@feature.country)}</p>" unless @feature.country.blank? %></span>
+        <p class="first"><%= @feature.region %></p><p><%= "#{raw(@feature.country)}" unless @feature.country.blank? %></p>
         <span class="line"></span>
       </div>
     </div>
@@ -42,11 +42,14 @@
           <h3>Recorded Datafields</h3>
         </div>
       </div>
+
       <div class="middle_map">
         <div class="outer_map">
           <div id="map"></div>
         </div>
       </div>
+
+
       <div class="middle_site">
         <% unless @feature.primary_institution_name.blank? %>
         <h6>PRIMARY INSTITUTION</h6>
@@ -67,7 +70,7 @@
         <p><%= @feature.water_depth %></p>
         <% end -%>
         <% unless @feature.hydrate_depth.blank? %>
-        <h6>HYDRATE DEPTH(mbsf)</h6>
+        <h6>HYDRATE DEPTH (mbsf)</h6>
         <p><%= @feature.hydrate_depth %></p>
         <% end -%>
         <% unless @feature.hydrate_description.blank? %>
@@ -101,7 +104,7 @@
         <ul>
           <% features.each do |feature| %>
           <li>
-            <h6><a href="<%= feature_url(feature) %>"><%= feature.title %> - <%= feature.country %></h6>
+            <h6><a href="<%= feature_url(feature) %>"><%= feature.title %> - <%= feature.country %></a></h6>
             <span><p class="first"><%= feature.region %></p><p><%= feature.country %></p></span>
           </li>
           <% end -%>
@@ -111,8 +114,7 @@
       <div class="bottom"></div>
     </div>
   </div>
-
 </div>
-
+<%= raw javascript_include_merged :openlayer %>
 <span id="latitude" class="hidden"><%= @feature.the_geom.lat %></span>
 <span id="longitude" class="hidden"><%= @feature.the_geom.lon %></span>

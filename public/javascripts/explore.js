@@ -174,7 +174,7 @@
               '<p>'+result[i].water_depth+'</p>'+
             '</div>'+
             '<div class="block">'+
-              '<h4>HYDRATE DEPTH(mbsf)</h4>'+
+              '<h4>HYDRATE DEPTH (mbsf)</h4>'+
               '<p>'+result[i].hydrate_depth+'</p>'+
             '</div>'+
           '</div>'+
