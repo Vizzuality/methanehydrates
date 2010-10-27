@@ -18,8 +18,8 @@
     });
     $('div.inner_header ul').css('background-position',(704-li_size-667) + 'px 0px');
 
-
-    $('select').sSelect();
+	$('select').sSelect();
+	
     $('body').css('background-color','#99B3CC');
 
     //Text Input effects
@@ -36,7 +36,7 @@
 
 
 		//Select bind change
-		$('select').change(function(ev){
+	$('select').change(function(ev){
       getSites();
     });
 		
@@ -51,6 +51,7 @@
         if (reset) {
           reset = false;
         } else {
+			// alert('cambia water depth');
           getSites();
         }
       }
@@ -62,7 +63,8 @@
         $('p.hydrate').text('< '+slider_hydrate);
 			},      
 			change: function(event, ui) {
-        getSites();
+					// alert('cambia hydrate depth');
+        			getSites();
       }
     });
 
@@ -229,6 +231,7 @@
 
 
   function placeFooter() {
+	console.log($.getDocHeight());
     $('#footer').css('top',$.getDocHeight()+'px');
   }
 
@@ -249,11 +252,14 @@
 
 
   function showLoader() {
-    $('img.loader').fadeIn();
+	$('div.opaque_explore div.middle h3').text('Filtering')
+    $('img#loading').fadeIn();
   }
 
   function hideLoader() {
-    $('img.loader').fadeOut();
+    $('img#loading').fadeOut();
+	$('div.opaque_explore div.middle h3').text('Filter sites')	
+
   }
 
   function resetFilters() {

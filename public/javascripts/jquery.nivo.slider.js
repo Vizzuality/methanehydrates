@@ -16,10 +16,8 @@
 (function($) {
 
 	$.fn.nivoSlider = function(options) {
-
 		//Defaults are below
 		var settings = $.extend({}, $.fn.nivoSlider.defaults, options);
-
 		return this.each(function() {
 			//Useful variables. Play carefully.
 			var vars = {
@@ -114,6 +112,11 @@
 			//Process initial  caption
 			if(vars.currentImage.attr('title') != ''){
         var title = vars.currentImage.attr('title');
+		
+		if (title == undefined) {
+			title = 'Frozen Heat';
+		}
+		
         if(title.substr(0,1) == '#') title = $(title).html();
         $('.nivo-caption p', slider).html(title);					
 				$('.nivo-caption', slider).fadeIn(settings.animSpeed);

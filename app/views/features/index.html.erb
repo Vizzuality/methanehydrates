@@ -105,6 +105,7 @@
       <div class="opaque_explore">
         <div class="top"></div>
         <div class="middle">
+  	      <img id="loading" src="/images/explore/loading.gif" title="loading" alt="loading"/>
           <h3>Filter sites</h3>
           <form action="javascript:void getSites()">
             <label>SEARCH BY NAME / COUNTRY</label>
@@ -139,6 +140,6 @@
   <%= render :partial => 'layouts/footer', :locals => {:extra_class => 'explore' } %>
 
   <%= raw javascript_include_merged :openlayer %>
-
+  <%= raw javascript_include_merged :explore %>
 </body>
 </html>

@@ -18,6 +18,7 @@ javascripts:
   - jquery
   - jquery.stylish-select
   - jquery-ui-1.8.5.custom.min
+- explore:
   - explore
 stylesheets:
 - base:
