@@ -87,7 +87,7 @@
             <% if entry = gallery.gallery_entries.first %>
               <li <%=raw cycle('', '', 'class="last"') %>>
                 <div class="image">
-                  <%= link_to(image_fu(entry.image, :small), gallery_gallery_entry_url(gallery, entry)) %>
+                  <%= link_to(image_fu(entry.image, :small, :title => entry.name), gallery_gallery_entry_url(gallery, entry)) %>
                 </div>
                 <div class="text">
                   <%= simple_format(truncate(gallery.body, :length => 80)) %>
