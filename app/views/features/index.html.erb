@@ -38,7 +38,11 @@
           <div class="middle_explore">
             <div class="head_explore">
               <div class="left">
-                <h1>Viewing <%= pluralize(@features.total_entries, "Site","Sites") %></h1>
+                <% if @features.total_pages > 1 %>
+					<h1>Viewing from <%= @features.size %> of <%= @features.total_entries %> sites</h1>
+				<% else %>
+					<h1>Viewing <%= pluralize(@features.total_entries, "site","sites") %></h1>
+				<% end %>
                 <p>Geographical points with methane gas hydrates explotations</p>
               </div>
               <% if @features.total_pages > 1 %>

@@ -210,10 +210,10 @@ div.bottom_white a {display:none;}
 div.opaque_explore {float:right; width:304px;}
 div.opaque_explore div.top {float:left; width:304px; height:15px; background:url(/images/round/top_grey_opaque_short.png) no-repeat center 0;}
 div.opaque_explore div.middle {float:left; width:234px; padding:0 35px 10px; height:auto; background:url(/images/round/middle_grey_opaque_short.png) repeat-y center 0; position:relative;}
-div.opaque_explore div.middle img#loading {position:absolute; top:10px; right:133px; width:25px; height:25px; display:none;}
+div.opaque_explore div.middle img#loading {position:absolute; top:10px; right:35px; width:25px; height:25px; display:none;}
 div.opaque_explore div.middle h3 {font:bold 23px Arial; color:white; letter-spacing:-1px; width:100%; padding:8px 0 0 0;}
 div.opaque_explore div.middle form {position:relative; float:left; width:100%;}
-div.opaque_explore div.middle form label {float:left; width:100%; margin:15px 0 0; padding:0 0 3px 0; font:bold 11px Arial; color:#CCCCCC;}
+div.opaque_explore div.middle form label {float:left; width:100%; margin:14px 0 0; padding:0 0 3px 0; font:bold 11px Arial; color:#CCCCCC;}
 div.opaque_explore div.middle form div {position:relative; float:left; width:100%;}
 div.opaque_explore div.middle form div.long {float:left; width:100%; margin:15px 0 0;}
 div.opaque_explore div.middle form div.long.first {margin:9px 0 0 0;}
@@ -223,7 +223,7 @@ div.opaque_explore div.middle form input[type="text"] {float:left; width:202px; 
 div.opaque_explore div.middle form input[type="submit"] {position:absolute; right:5px; top:5px; width:16px; height:16px; background:url(/images/explore/submit_input_bkg.png) no-repeat 0 0; border:none;}
 div.opaque_explore div.middle form input[type="submit"]:hover {background-position:0 -24px; cursor:pointer;}
 div.opaque_explore div.middle form ul.newList * {margin:0; padding:0;}
-div.opaque_explore div.middle form ul.newList a {color: #666; text-decoration:none; display:block;}
+div.opaque_explore div.middle form ul.newList a {color: #333333; text-decoration:none; display:block;}
 div.opaque_explore div.middle form ul.newList {margin:0; padding:0; list-style:none; color:#666; width:230px; background:#fff; position:absolute; border:1px solid #ccc; top:0px; left:2px; overflow:auto; z-index:1000000;}
 div.opaque_explore div.middle form .newListSelected {position:relative; width:230px; color:#666; margin:3px 6px 0 0px; height:35px; padding:0; float:right;}
 div.opaque_explore div.middle form li.error .selectedTxt {background-position:0 -35px;}
@@ -231,7 +231,7 @@ div.opaque_explore div.middle form .newListSelected span {width:230px; display:b
 div.opaque_explore div.middle form ul.newList li {list-style-type:none; display:block; margin:0; padding:0; height:auto; cursor:pointer; width:230px; font-size:13px; border:none;}
 div.opaque_explore div.middle form ul.newList li a {padding:3px 8px; display: block;}
 div.opaque_explore div.middle form ul.newList li a:focus {-moz-outline-style: none;}
-div.opaque_explore div.middle form .selectedTxt {position:relative; width:230px; overflow:hidden; height:16px; padding:6px 0 8px 10px; font:bold 11px Arial; color:#999999; background:url(/images/explore/select_bkg.png) no-repeat 0 -2px;}
+div.opaque_explore div.middle form .selectedTxt {position:relative; width:230px; overflow:hidden; height:16px; padding:6px 0 8px 10px; font:normal 11px Arial; color:#666666; background:url(/images/explore/select_bkg.png) no-repeat 0 -2px;}
 div.opaque_explore div.middle form .hiLite {background:#CDD8E3!important; color:#676767!important;}
 div.opaque_explore div.middle form .hiLite a {background:#CDD8E3!important; color:#676767!important;}
 div.opaque_explore div.middle form .newListHover {background:#CDD8E4!important; color:#676767!important; cursor:pointer;}
@@ -561,8 +561,9 @@ div.head_site div.middle h1 {float:left; float:left; width:100%; font:bold 29px 
 div.head_site div.middle p {float:left; width:auto; padding:0 0 0 8px; font:normal 15px Arial; color:white; text-shadow:0 -1px #B24B1D;}
 div.head_site div.middle p.first {background:url(/images/icons/orange_tiny_arrow.jpg) no-repeat right 7px; padding:0 12px 0 0;}
 div.head_site div.middle span.line {position:absolute; height:1px; width:615px; bottom:0; left:9px; background:#BF4C00;}
-div.middle_white {float:left; width:553px; padding:20px 40px 30px 40px; height:auto; background:url(/images/round/middle_white.png) repeat-y 0 0; font:normal 15px Arial; color:#666666;}
-div.middle.image {float:left; width:615px; padding:0 9px 10px 9px; height:auto; background:url(/images/round/middle_white.png) repeat-y 0 0; font:normal 15px Arial; color:#666666;}
+div.middle_white {float:left; width:553px; padding:30px 40px 30px 40px; height:auto; background:url(/images/round/middle_white.png) repeat-y 0 0; font:normal 15px Arial; color:#666666;}
+div.middle.image {float:left; width:615px; padding:0 9px 0 9px; height:auto; background:url(/images/round/middle_white.png) repeat-y 0 0; font:normal 15px Arial; color:#666666; position:relative;}
+div.middle.image div.line {width:617px; position:absolute; bottom:-1px; left:7px; height:1px; background:url('../images/common/line_bottom.png') no-repeat 0 0;}
 
 div.middle.image .slider {position:relative; width:615px; height:400px; overflow:hidden;}
 div.middle.image .slider img {position:absolute; top:0px; left:0px; width:615px;}

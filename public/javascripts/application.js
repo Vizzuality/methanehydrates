@@ -79,7 +79,7 @@
 
 
         //Gallery NivoSlider
-        $('.slider').nivoSlider({controlNav:true, effect:'fade'});
+        $('.slider').nivoSlider({controlNav:true, effect:'fade',pauseTime:7000});
 
 
 

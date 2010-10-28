@@ -231,8 +231,10 @@
 
 
   function placeFooter() {
-	console.log($.getDocHeight());
-    $('#footer').css('top',$.getDocHeight()+'px');
+	
+	// 481 is the min distance necessary
+	var footerPos = parseInt($('div.body_content_left').height()) + 481;
+	$('#footer').css('top',footerPos+'px');
   }
 
   function placeBlueBackground() {
@@ -252,7 +254,7 @@
 
 
   function showLoader() {
-	$('div.opaque_explore div.middle h3').text('Filtering')
+	$('div.opaque_explore div.middle h3').text('Filtering...')
     $('img#loading').fadeIn();
   }
 

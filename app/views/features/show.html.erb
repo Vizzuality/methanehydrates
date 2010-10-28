@@ -22,10 +22,14 @@
           <% end -%>
         <% end -%>
       </div>
+     <div class="line"></div>
     </div>
-    <div class="middle_white site">
-      <%=raw @feature.description %>
-    </div>
+
+	<% unless @feature.description.blank? %>
+	    <div class="middle_white site">
+	      <%=raw @feature.description %>
+	    </div>
+	<% end %>
     <div class="bottom site">
       <p>This information was updated on <%= @feature.created_at.strftime("%d/%m/%G") %></p>
       <% if logged_in? %>
