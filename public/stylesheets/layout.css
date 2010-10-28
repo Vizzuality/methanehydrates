@@ -618,20 +618,21 @@ div.opaque div.bottom_site_empty {float:left; background:url('../images/round/bo
 
 /*PARTNERS*/
 
-div.partners {float:left; width:100%; margin:39px 0 0;}
-div.partners.first {margin:0;}
-div.partners div.top {float:left; width:100%; height:15px; background:url(/images/round/top_white_long.png) no-repeat 0 0; margin:0;}
-div.partners div.middle {position:relative; float:left; width:868px; padding:20px 40px 15px 40px; height:auto; background:url(/images/round/middle_white_long.png) repeat-y 0 0;}
-div.partners div.middle h2 {font:bold 23px Arial; color:#333333; letter-spacing:-1px;}
-div.partners div.middle p {padding:15px 0 0 0; font:normal 15px Arial; color:#666666; line-height:18px;}
-div.partners div.middle p.subtitle {padding:2px 0 0 0;}
-div.partners div.middle p a {color:#FF6600;}
-div.partners div.middle p a:hover {color:#FF3300;}
-div.partners div.middle ul {float:left; width:860px; margin:10px 0 0 8px;}
-div.partners div.middle ul li {float:left; width:850px; padding:5px 0 5px 10px; background:url(/images/icons/grey_circle.jpg) no-repeat 0 11px; font:normal 15px Arial; color:#666666;}
-div.partners div.middle div.left {float:left; width:103px;}
-div.partners div.middle div.right {float:right; width:755px;}
-div.partners div.bottom {float:left; width:100%; height:25px; background:url(/images/round/bottom_white_long.png) no-repeat 0 0; margin:0;}
+ul.partners {float:left; width:100%; margin:0;}
+ul.partners li {float:left; margin:39px 0 0;}
+ul.partners li.first {margin:0;}
+ul.partners li div.top {float:left; width:100%; height:15px; background:url(/images/round/top_white_long.png) no-repeat 0 0; margin:0;}
+ul.partners li div.middle {position:relative; float:left; width:868px; padding:20px 40px 15px 40px; height:auto; background:url(/images/round/middle_white_long.png) repeat-y 0 0;}
+ul.partners li div.middle h2 {font:bold 23px Arial; color:#333333; letter-spacing:-1px;}
+ul.partners li div.middle p {padding:15px 0 0 0; font:normal 15px Arial; color:#666666; line-height:18px;}
+ul.partners li div.middle p.subtitle {padding:2px 0 0 0;}
+ul.partners li div.middle p a {color:#FF6600;}
+ul.partners li div.middle p a:hover {color:#FF3300;}
+ul.partners li div.middle ul {float:left; width:860px; margin:10px 0 0 8px;}
+ul.partners li div.middle ul li {float:left; width:726px; padding:5px 0 5px 10px; background:url(/images/icons/grey_circle.jpg) no-repeat 0 11px; font:normal 15px Arial; color:#666666; margin:0;}
+ul.partners li div.middle div.left {float:left; width:103px;}
+ul.partners li div.middle div.right {float:right; width:755px;}
+ul.partners li div.bottom {float:left; width:100%; height:25px; background:url(/images/round/bottom_white_long.png) no-repeat 0 0; margin:0;}
 
 
 /*FAQ*/

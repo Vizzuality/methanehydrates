@@ -3,9 +3,8 @@
     var days;
     var markers;
     var epsg4326;
-
+	
     $(document).ready(function() {
-
       // HOME
       Cufon.replace('.cufon_handofsean');
 
@@ -136,8 +135,14 @@
          $('#supersized').supersized();
 	     });	        	        
 
-		
-		
+		// To create partners list randomized
+		if ($('ul#partners_list')[0]) {			
+			// Deleting first class
+			$('ul#partners_list li').first().removeClass('first');
+			$('ul#partners_list').shuffle();
+			// adding first class to the new element of list
+			$('ul#partners_list li').first().addClass('first');
+		}
     });
 
 
@@ -163,9 +168,19 @@
       $('div.loader').hide();
     }
 
-	function randomizePartners(){
-		
-	}
+	// Creating a new component randomized
+	(function($){
 
+		$.fn.shuffle = function() {
+			return this.each(function(){
+				var items = $(this).children().clone(true);
+				return (items.length) ? $(this).html($.shuffle(items)) : this;
+			});
+		}
 
+		$.shuffle = function(arr) {
+			for(var j, x, i = arr.length; i; j = parseInt(Math.random() * i), x = arr[--i], arr[i] = arr[j], arr[j] = x);
+			return arr;
+		}
 
+	})(jQuery);
