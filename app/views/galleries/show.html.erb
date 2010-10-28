@@ -1,4 +1,4 @@
-<% if feature = Feature.where({:gallery_id => @gallery.id}).limit(1).first %>
+<% if feature = Feature.find_by_gallery_id %>
   <span id="latitude" class="hidden"><%= feature.the_geom.lat %></span>
   <span id="longitude" class="hidden"><%= feature.the_geom.lon %></span>
 <% end -%>
@@ -28,8 +28,10 @@
         <% end -%>
       </div>
       <div class="bottom_content">
+        <% if feature = Feature.find_by_gallery_id(@gallery.id) %>
         <div class="block map" id="map">
         </div>
+        <% end -%>
         <div class="block">
           <%=raw @gallery.body %>
         </div>
