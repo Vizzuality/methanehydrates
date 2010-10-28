@@ -18,7 +18,7 @@
       <div class="slider">
         <% if @feature.gallery %>
           <% @feature.gallery.gallery_entries.each do |entry| %>
-            <%= image_fu entry.image, :huge %>
+            <%= image_fu entry.image, :huge, :title => entry.name %>
           <% end -%>
         <% end -%>
       </div>
