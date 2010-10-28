@@ -50,8 +50,6 @@ Gallery.all.each do |gallery|
   gallery.gallery_entries.create :name => "Image for gallery #{gallery.name} #{i+1}", :image_id => images[i+1].id
 end
 
-
-
 #
 # %W{ North\ America South\ America Asia Europe Africa Oceania }.each_with_index do |name, i|
 #
