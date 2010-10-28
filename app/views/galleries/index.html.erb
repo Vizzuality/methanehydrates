@@ -90,7 +90,7 @@
                   <%= link_to(image_fu(entry.image, :small), gallery_gallery_entry_url(gallery, entry)) %>
                 </div>
                 <div class="text">
-                  <%= simple_format(truncate(entry.body, :length => 80)) %>
+                  <%= simple_format(truncate(gallery.body, :length => 80)) %>
                 </div>
               </li>
             <% end -%>
