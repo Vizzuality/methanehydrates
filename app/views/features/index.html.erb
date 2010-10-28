@@ -62,7 +62,7 @@
                   </div>
                   <div class="info">
                     <h2><a href="/features/<%= feature.id %>"><%= feature.title %><%= " - #{feature.country}" unless feature.country.blank? %></a></h2>
-                    <p><span class="first"><%= feature.region %></span><% unless feature.country.blank? %><span><%= feature.country %></span><% end %></p>
+                    <p><%if !feature.country.blank? %><span class="first"><%else%><span><%end%><%= feature.region %></span><% unless feature.country.blank? %><span><%= feature.country %></span><% end %></p>
                   </div>
                 </div>
                 <p class="des"><%= truncate(strip_tags(feature.description),

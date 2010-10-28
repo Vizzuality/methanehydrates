@@ -10,7 +10,7 @@
       <div class="top"></div>
       <div class="middle">
         <h1><%=raw @feature.title %> <%= "- #{raw(@feature.country)}" unless @feature.country.blank? %></h1>
-        <p class="first"><%= @feature.region %></p><p><%= "#{raw(@feature.country)}" unless @feature.country.blank? %></p>
+        <%if !@feature.country.blank? %><p class="first"><%else%><p class="empty_country"><%end%><%= @feature.region %></p><p><%= "#{raw(@feature.country)}" unless @feature.country.blank? %></p>
         <span class="line"></span>
       </div>
     </div>
