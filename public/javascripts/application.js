@@ -135,6 +135,7 @@
          $('#supersized').supersized();
 	     });	        	        
 
+		
 		// To create partners list randomized
 		if ($('ul#partners_list')[0]) {			
 			// Deleting first class
@@ -142,6 +143,17 @@
 			$('ul#partners_list').shuffle();
 			// adding first class to the new element of list
 			$('ul#partners_list li').first().addClass('first');
+		}
+		
+		if($('div#about_right_column')[0]){
+			$(window).scroll(function () {
+				if ($(window.pageYOffset)[0] > 708) {
+					$('div.about_right').css('position','fixed');
+				}else {
+					$('div.about_right').css('position','absolute');
+				}
+			});
+			
 		}
     });
 

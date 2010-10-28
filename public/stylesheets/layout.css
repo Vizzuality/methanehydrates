@@ -709,7 +709,9 @@ div.member div.bottom {float:left; width:633px; height:85px; background:url(/ima
 div.member div.bottom a {float:right; margin:29px 40px 0 0; font:bold 15px Arial; color:#FF6600; padding:0 0 0 17px; background:url(/images/icons/orange_up_arrow.png) no-repeat 0 4px; text-decoration:none; }
 div.member div.bottom a:hover {color:#FF3300; background-position:0 -24px; cursor:pointer;}
 
-div.about_right {float:right; width:304px; margin:0;}
+
+div#about_right_column {float:right; width:304px; height:100%; overflow:visible; position:relative;}
+div.about_right {position:absolute; width:304px; height:100%; top:0;}
 div.about_right div.top {float:right; width:304px; height:15px; background:url(/images/round/top_white_short.png) no-repeat center 0;}
 div.about_right div.middle {float:right; width:234px; padding:0 35px 20px; height:auto; background:url(/images/round/middle_white_short.png) repeat-y center 0;}
 div.about_right div.middle div.head {position:relative; float:left; width:100%; padding:20px 0 22px 0;}
