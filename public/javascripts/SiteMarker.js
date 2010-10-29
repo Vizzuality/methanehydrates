@@ -54,7 +54,9 @@ SiteMarker = OpenLayers.Class({
 																					'<h1><a href="'+this.info.url+'">'+this.info.title+'</a></h1>'+
 																					'<p><span>'+this.info.region+'</span></p>'+
 																				'</div>');
-					
+						if (parseInt(this.info.region.length) > 26){
+							$(this.icon.imageDiv).find('div.infowindow').addClass('long');
+						}
 				}
 				else{
 					$(this.icon.imageDiv).append('<a href="#" class="open" style="background:url('+this.icon.url+') no-repeat center 0;">'+this.info.id+'</a>'+
@@ -64,19 +66,16 @@ SiteMarker = OpenLayers.Class({
 																					'<h1><a href="'+this.info.url+'">'+this.info.title+'</a></h1>'+
 																					'<p><span class="first">'+this.info.region+'</span><span>'+this.info.country+'</span></p>'+
 																				'</div>');
-					
+																				
+						if (parseInt(this.info.region.length)+parseInt(this.info.country.length) > 26){
+							$(this.icon.imageDiv).find('div.infowindow').addClass('long');
+						}
 				}
-				
+
 				if (this.info.image_url=="" || this.info.image_url==null) {
 					$(this.icon.imageDiv).find('div.infowindow').find('div').remove();
 					$(this.icon.imageDiv).find('div.infowindow').addClass('tiny');
 				}
-				
-				
-			
-				
-
-
 				
 				$(this.icon.imageDiv).find('a.open').click(function(ev){
 					ev.stopPropagation();

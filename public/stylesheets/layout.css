@@ -251,6 +251,7 @@ div.opaque_explore div.bottom {float:left; width:304px; height:15px; background:
 a.open {position:relative; float:left; width:32px; height:28px; font:bold 18px Arial; text-align:center; color:black; text-shadow:#FF8340 0 1px; text-decoration:none; padding:6px 0 0 0; z-index:100;}
 div.infowindow {position:absolute; display:none; bottom:33px; left:-115px; width:241px; height:209px; padding:10px 11px 14px; background:url(/images/explore/infowindow_bkg.png) no-repeat center 0; z-index:1000;}
 div.infowindow.tiny {height:55px;bottom:30px; background:url(/images/explore/infowindow_tiny_bkg.png) no-repeat center 2px;}
+div.infowindow.long {background:url(/images/explore/infowindow_long_bkg.png) no-repeat center 0; height:225px;}
 div.infowindow a.close {position:absolute; top:0px; right:0px; width:24px; height:24px; background:url(/images/explore/close_button.png) no-repeat 0 0; z-index:100;}
 div.infowindow a.close:hover {background-position:0 -24px;}
 div.infowindow div {position:relative; float:left; width:241px; height:161px; overflow:hidden; border-bottom:1px solid #1B2E4E;}
