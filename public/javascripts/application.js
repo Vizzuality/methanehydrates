@@ -60,7 +60,9 @@
         //If there is a map
         if ($('div#map')[0]) {
           map = new OpenLayers.Map("map",{ controls: [] });
-          map.addControl(new OpenLayers.Control.Navigation({zoomWheelEnabled : false}));
+		  if (!$('div#map').hasClass('feature_map')){
+			map.addControl(new OpenLayers.Control.Navigation({zoomWheelEnabled : false}));	
+		  }          
           var cloudmade = new OpenLayers.Layer.CloudMade("CloudMade", {key: 'b1d79c55fe5a4ea1ab2095a5a583d926',styleId: 1});
           map.addLayer(cloudmade);
           epsg4326 = new OpenLayers.Projection("EPSG:4326");
