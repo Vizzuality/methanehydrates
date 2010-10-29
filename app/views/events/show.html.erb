@@ -30,7 +30,7 @@
               <span class="line"></span>
             </div>
             <% unless @event.similar(:limit => 3).empty? %>
-            <div class="middle_white">
+            <div class="middle_white events">
               <h6>Events in similar dates</h6>
               <ul>
                 <% @event.similar(:limit => 3).each do |event| %>
@@ -55,7 +55,7 @@
       <% end %>
 
       <% content_for :body_content_right do %>
-        <div class="body_content_right">
+        <div class="body_content_right event_single">
           <%= @page[Page.default_parts.second.to_sym] %>
           <div class="opaque margin35top">
             <div class="top"></div>
@@ -100,3 +100,4 @@
 
       <%= render :partial => "/shared/content_page" %>
     </div>
+<%= raw javascript_include_merged :openlayer %>

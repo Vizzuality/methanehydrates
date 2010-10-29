@@ -298,6 +298,8 @@ div.body_content_left div.bottom_posts a.next:hover {color:#FF3300; background-p
 
 
 div.body_content_right {float:right; width:304px; padding:6px 0 50px 0;}
+div.body_content_right.events {min-height:817px;}
+div.body_content_right.event_single {min-height:1116px;}
 div.body_content_right.features {min-height:1063px;}
 div.body_content_right div.twitter {float:right; width:304px;}
 div.body_content_right div.twitter div.top {float:left; width:304px; height:15px; background:url(/images/round/top_grey_opaque_short.png) no-repeat center 0;}
@@ -540,6 +542,13 @@ div.head_event div.middle p {float:left; width:100%; padding:5px 0 0 0; font:nor
 div.head_event div.middle span.line {position:absolute; height:1px; width:615px; bottom:0; left:9px; background:#BF4C00;}
 div.middle_white {float:left; width:553px; padding:20px 40px 30px 40px; height:auto; background:url(/images/round/middle_white.png) repeat-y 0 0; font:normal 15px Arial; color:#666666;}
 div.middle_white.resume {position:relative;}
+div.middle_white.events {padding:0 40px 30px 40px;}
+div.middle_white.events ul {float:left; width:100%; margin:25px 0 0 0; padding:0;}
+
+div.middle_white.events ul li div.left p.day {float:left; width:100%; text-align:center; font:bold 37px Arial; color:white; text-shadow:0 1px #AF4418; letter-spacing:-2px; line-height:35px; margin:5px 0 0 0; padding:0;}
+div.middle_white.events ul li div.left p.month {float:left; width:100%; text-align:center; font:bold 13px Arial; color:white; text-shadow:0 1px #AF4418; line-height:10px; letter-spacing:0px; padding:0; margin:0;}
+
+
 div.middle_white.resume a.visit {float:left; width:144px; height:16px; margin:20px 0 0 0; padding:6px 0; text-align:center; font:bold 13px Arial; color:#666666; text-shadow:0 1px white; background:url(/images/events/visit_official.png) no-repeat 0 0; text-decoration:none;}
 div.middle_white.resume a.visit:hover {background-position:0 -28px;}
 div.middle_white.resume span.line {position:absolute; height:1px; width:615px; bottom:0; left:9px; background:#E5E5E5;}
