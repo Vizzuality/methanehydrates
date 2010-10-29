@@ -43,14 +43,29 @@ SiteMarker = OpenLayers.Class({
     draw: function(px) {
 				
 				var me = this;
+																			
 				$(this.icon.imageDiv).children().hide();
-				$(this.icon.imageDiv).append('<a href="#" class="open" style="background:url('+this.icon.url+') no-repeat center 0;">'+this.info.id+'</a>'+
-																			'<div class="infowindow">'+
-																				'<a href="#" class="close"></a>'+
-																				'<div class=""><img src="'+this.info.image_url+'" alt="'+this.info.title+'" title="'+this.info.title+'"/></div>'+
-																				'<h1><a href="'+this.info.url+'">'+this.info.title+'</a></h1>'+
-																				'<p><span class="first">'+this.info.region+'</span><span>'+this.info.country+'</span></p>'+
-																			'</div>');
+				
+				if (this.info.country == null) {
+					$(this.icon.imageDiv).append('<a href="#" class="open" style="background:url('+this.icon.url+') no-repeat center 0;">'+this.info.id+'</a>'+
+																				'<div class="infowindow">'+
+																					'<a href="#" class="close"></a>'+
+																					'<div class=""><img src="'+this.info.image_url+'" alt="'+this.info.title+'" title="'+this.info.title+'"/></div>'+
+																					'<h1><a href="'+this.info.url+'">'+this.info.title+'</a></h1>'+
+																					'<p><span>'+this.info.region+'</span></p>'+
+																				'</div>');
+					
+				}
+				else{
+					$(this.icon.imageDiv).append('<a href="#" class="open" style="background:url('+this.icon.url+') no-repeat center 0;">'+this.info.id+'</a>'+
+																				'<div class="infowindow">'+
+																					'<a href="#" class="close"></a>'+
+																					'<div class=""><img src="'+this.info.image_url+'" alt="'+this.info.title+'" title="'+this.info.title+'"/></div>'+
+																					'<h1><a href="'+this.info.url+'">'+this.info.title+'</a></h1>'+
+																					'<p><span class="first">'+this.info.region+'</span><span>'+this.info.country+'</span></p>'+
+																				'</div>');
+					
+				}
 				
 				if (this.info.image_url=="" || this.info.image_url==null) {
 					$(this.icon.imageDiv).find('div.infowindow').find('div').remove();
