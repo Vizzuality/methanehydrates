@@ -85,7 +85,6 @@ class FeaturesController < ApplicationController
         render :json => json.to_json and return
       end
     end
-
   end
 
   def show
