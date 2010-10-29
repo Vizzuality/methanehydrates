@@ -92,7 +92,11 @@
                 <h6><a href="<%= feature_url(feature) %>"><%= feature.title %></a></h6>
                 <span>
                   <% unless feature.region.blank? %>
-                  <p class="first"><%= feature.region %></p>
+				  	<% unless feature.country.blank? %>
+                  		<p class="first"><%= feature.region %></p>
+					<%else%>
+						<p><%= feature.region %></p>
+					<%end %>
                   <% end -%>
                   <% unless feature.country.blank? %>
                   <p><%= feature.country %></p>
