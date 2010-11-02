@@ -27,18 +27,18 @@ u.roles << r
 # Default image sizes
 puts "Loading default image sizes"
 RefinerySetting.set(:user_image_sizes, {
-  :small =>  '100x75>',
-  :medium => '235x150>',
-  :large =>  '550x370>',
-  :big =>    '615x400>',
-  :huge =>   '930x615>',
+  :small =>  '100x75#',
+  :medium => '235x150#',
+  :large =>  '550x370#',
+  :big =>    '615x400#',
+  :huge =>   '930x615#',
 })
 RefinerySetting.set(:image_thumbnails, {
-  :small =>  '100x75>',
-  :medium => '235x150>',
-  :large =>  '550x370>',
-  :big =>    '615x400>',
-  :huge =>   '930x615>',
+  :small =>  '100x75#',
+  :medium => '235x150#',
+  :large =>  '550x370#',
+  :big =>    '615x400#',
+  :huge =>   '930x615#',
 })
 
 puts "Setting site name"
