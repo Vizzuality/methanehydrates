@@ -76,6 +76,9 @@ namespace :methane do
       ['un outreach', ""],
       ['up close with hydrates', ""]
     ].each do |mapping|
+      fDisabled = GC.enable
+      GC.start
+      GC.disable if fDisabled
       if mapping[0].blank? || mapping[1].blank?
         puts "Skipping mapping for #{mapping[0]} - #{mapping[1]}"
         next
@@ -89,6 +92,9 @@ namespace :methane do
       puts "Importing #{directory}..."
       gallery.gallery_entries.clear
       Dir.entries(directory).each do |file|
+        fDisabled = GC.enable
+        GC.start
+        GC.disable if fDisabled
         next if file == '.' || file == '..'
         next if File.directory?(file)
         begin
