@@ -5,6 +5,7 @@
   <link rel="shortcut icon" href="/images/favicon.ico"/>
   <%= raw stylesheet_link_merged :base %>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <%= raw javascript_include_merged :base %>
 </head>
 
 <body>
@@ -37,8 +38,6 @@
     <%= render :partial => 'layouts/footer', :locals => {:extra_class => nil } %>
 
   </div><!-- .layout -->
-
-  <%= raw javascript_include_merged :base %>
 
 </body>
 </html>
