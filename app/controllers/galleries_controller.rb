@@ -12,6 +12,8 @@ class GalleriesController < ApplicationController
   end
 
   def show
+    load_default_galleries
+
     @gallery = Gallery.find(params[:id])
 
     # you can use meta fields from your model instead (e.g. browser_title)
