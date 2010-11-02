@@ -41,6 +41,7 @@ end
 
 task :symlinks, :roles => [:app] do
   run <<-CMD
+    ln -s #{shared_path}/tmp .
   CMD
 end
 
