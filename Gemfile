@@ -20,6 +20,7 @@ gem 'nokogiri'
 
 # REFINERY CMS ================================================================
 
+gem 'dragonfly',                '0.7.7'
 gem 'refinerycms',              '= 0.9.8.5'
 
 gem 'refinerycms-inquiries',    '= 0.9.8.4', :require => 'inquiries'

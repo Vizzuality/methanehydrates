@@ -77,7 +77,7 @@ GEM
     capistrano-ext (1.2.1)
       capistrano (>= 1.0.0)
     columnize (0.3.1)
-    dragonfly (0.7.6)
+    dragonfly (0.7.7)
       rack
     erubis (2.6.6)
       abstract (>= 1.0.0)
@@ -165,6 +165,7 @@ PLATFORMS
 DEPENDENCIES
   capistrano
   capistrano-ext
+  dragonfly (= 0.7.7)
   fastercsv
   nofxx-georuby
   nokogiri
