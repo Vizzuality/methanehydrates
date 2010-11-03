@@ -1,3 +1,5 @@
+<%= books_menu %>
+
 <%
   show_empty_sections ||= false
   remove_automatic_sections ||= false
@@ -32,9 +34,11 @@
     end
   end
 -%>
+
 <div id='body_content' class='<%= " #{css.join(' ')}" if css.any? %>'>
   <% sections.each do |s| %>
     <%= s[:html].to_s.html_safe %>
   <% end %>
 </div>
+
 <%= render :partial => '/shared/draft_page_message' unless @page.nil? or @page.live? -%>
