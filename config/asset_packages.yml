@@ -10,6 +10,7 @@ javascripts:
   - supersized.2.0
   - jquery.scrollTo-min
   - jquery.url
+  - galleria
   - application
 - openlayer:
   - OpenLayers
