@@ -80,9 +80,9 @@
 
         //Gallery NivoSlider
 
-        // $('.slider').nivoSlider({controlNav:true, effect:'fade',pauseTime:7000});
+        $('.slider').nivoSlider({controlNav:true, effect:'fade',pauseTime:7000});
 
-		 $('.slider').galleria({thumbnails:false, preload: 2});
+		 // $('.slider').galleria({thumbnails:false, preload: 2});
 
         //---- CALENDAR
         if ($('div.calendar')[0]) {
