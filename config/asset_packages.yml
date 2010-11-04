@@ -6,11 +6,11 @@ javascripts:
   - fonts/cufon-yui
   - fonts/Hand_Of_Sean_400.font
   - jquery-ui-1.8.5.custom.min
-  - jquery.nivo.slider
   - supersized.2.0
   - jquery.scrollTo-min
   - jquery.url
   - galleria
+  - galleria.classic
   - application
 - openlayer:
   - OpenLayers
@@ -24,5 +24,6 @@ javascripts:
 stylesheets:
 - base:
   - layout
+  - galleria.classic  
   - jquery-ui-1.8.5.custom
 

@@ -24,7 +24,7 @@
     <div class="middle">
       <div class="slider">
         <% @gallery.gallery_entries.each do |entry| %>
-          <%= image_fu entry.image, :huge, :alt => entry.name, :title => entry.name %>
+  		  <a href="<%= entry.image.thumbnail(:huge).url %>"><img src="" alt="<%=entry.name%>" title="<%=entry.name%>"/></a>          
         <% end -%>
       </div>
       <div class="bottom_content">

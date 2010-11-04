@@ -1146,7 +1146,7 @@ Galleria = function() {
             lightbox.initialized = true;
 
             // create some elements to work with
-            var elems = 'overlay box content shadow title info close prevholder prev nextholder next counter image',
+            var elems = 'overlay box content shadow title info prevholder prev nextholder next counter image',
                 el = {},
                 op = self._options,
                 css = '',
@@ -1156,7 +1156,7 @@ Galleria = function() {
                     shadow:     'position:absolute;background:#000;width:100%;height:100%;',
                     content:    'position:absolute;background-color:#fff;top:10px;left:10px;right:10px;bottom:10px;overflow:hidden',
                     info:       'position:absolute;bottom:10px;left:10px;right:10px;color:#444;font:11px/13px arial,sans-serif;height:13px',
-                    close:      'position:absolute;top:10px;right:10px;height:20px;width:20px;background:#fff;text-align:center;cursor:pointer;color:#444;font:16px/22px arial,sans-serif;z-index:99999',
+                    // close:      'position:absolute;top:10px;right:10px;height:20px;width:20px;background:#fff;text-align:center;cursor:pointer;color:#444;font:16px/22px arial,sans-serif;z-index:99999',
                     image:      'position:absolute;top:10px;left:10px;right:10px;bottom:30px;overflow:hidden',
                     prevholder: 'position:absolute;width:50%;height:100%;cursor:pointer',
                     nextholder: 'position:absolute;width:50%;height:100%;right:0;cursor:pointer',
@@ -1190,7 +1190,7 @@ Galleria = function() {
 
             // append the elements
             self.append({
-                'lightbox-box': ['lightbox-shadow','lightbox-content', 'lightbox-close','lightbox-prevholder','lightbox-nextholder'],
+                'lightbox-box': ['lightbox-shadow','lightbox-content', 'lightbox-prevholder','lightbox-nextholder'],
                 'lightbox-info': ['lightbox-title','lightbox-counter'],
                 'lightbox-content': ['lightbox-info', 'lightbox-image'],
                 'lightbox-prevholder': 'lightbox-prev',
@@ -1203,7 +1203,7 @@ Galleria = function() {
 
             // add the prev/next nav and bind some controls
 
-            hover( $( el.close ).bind( CLICK(), lightbox.hide ).html('&#215;') );
+            // hover( $( el.close ).bind( CLICK(), lightbox.hide ).html('&#215;') );
 
             $.each( ['Prev','Next'], function(i, dir) {
 
@@ -1982,7 +1982,7 @@ Galleria.prototype = {
                 title:       img.attr('title'),
                 thumb:       img.attr('src'),
                 image:       img.attr('src'),
-                description: img.attr('alt'),
+                // description: img.attr('alt'),
                 link:        img.attr('longdesc'),
                 original:    img.get(0) // saved as a reference
 
@@ -2192,10 +2192,10 @@ Galleria.prototype = {
         @returns {Galleria}
     */
 
-    closeLightbox: function() {
-        this._lightbox.hide.apply( this._lightbox, Utils.array( arguments ) );
-        return this;
-    },
+    // closeLightbox: function() {
+    //     this._lightbox.hide.apply( this._lightbox, Utils.array( arguments ) );
+    //     return this;
+    // },
 
     /**
         Get the currently active image element.
@@ -3180,7 +3180,7 @@ $.extend( Galleria, {
     IDLE_EXIT:        'g_idle_exit',
     RESCALE:          'g_rescale',
     LIGHTBOX_OPEN:    'g_lightbox_open',
-    LIGHTBOX_CLOSE:   'g_lightbox_close',
+    // LIGHTBOX_CLOSE:   'g_lightbox_close',
     LIGHTBOX_IMAGE:   'g_lightbox_image',
 
     // Browser helpers
@@ -3273,7 +3273,7 @@ Galleria.addTheme = function( theme ) {
 */
 
 Galleria.loadTheme = function( src, options ) {
-
+	
     var loaded = false,
         length = _galleries.length;
 
@@ -3297,7 +3297,7 @@ Galleria.loadTheme = function( src, options ) {
 
             // check for existing galleries and reload them with the new theme
             if ( length ) {
-
+				console.log('encuentra');
                 // temporary save the new galleries
                 var refreshed = [];
 

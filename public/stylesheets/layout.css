@@ -399,9 +399,9 @@ div.media div.head_post div.middle h1 a {font:bold 21px Arial; color:#333333; pa
 div.media div.head_post div.middle h1 a:hover {text-decoration:underline;}
 div.media div.head_post div.middle span.line {position:absolute; height:1px; width:930px; bottom:0; left:9px; background:#9EACB3;}
 div.media div.middle {float:left; width:930px; padding:0 9px; background:url(/images/round/middle_white_long.png) repeat-y 0 0; font:normal 15px Arial; color:#666666;}
-div.media div.middle .slider {position:relative; width:930px; height:615px; overflow:hidden; border-bottom:1px solid #1E2E4E;}
-div.media div.middle .slider img {position:absolute; top:0px; left:0px; height:100%; width:100%;}
-div.media div.middle .slider a.nivo-imageLink {position:absolute; top:0px; left:0px; width:100%; height:100%; border:0; padding:0; margin:0; z-index:60; display:none;}
+/*div.media div.middle #galleria {position:relative; width:930px; height:615px; overflow:hidden; border-bottom:1px solid #1E2E4E;}
+div.media div.middle #galleria img {position:absolute; top:0px; left:0px; height:100%; width:100%;}
+div.media div.middle #galleria a.nivo-imageLink {position:absolute; top:0px; left:0px; width:100%; height:100%; border:0; padding:0; margin:0; z-index:60; display:none;}
 div.media div.middle .nivo-slice {display:block; position:absolute; z-index:50;  height:100%;}
 div.media div.middle .nivo-video {position:absolute; left:50%; top:50%; margin:-45px 0 0 -45px; width:90px; height:90px; z-index:89;}
 div.media div.middle .nivo-video a {float:left; width:90px; height:90px; background:url(/images/common/play.png) no-repeat 0 0;}
@@ -420,7 +420,7 @@ div.media div.middle .nivo-controlNav span {float:left; height:21px; background:
 div.media div.middle .nivo-controlNav a {display:block; width:6px; height:6px; background:url(/images/icons/circle_nav.png) no-repeat; text-indent:-9999px; border:0; margin:8px 3px 0 2px; float:left;}
 div.media div.middle .nivo-controlNav a.active {background-position:0 -6px; color:white;}
 div.media div.middle .nivo-controlNav a:hover {background-position:0 -6px; color:white; cursor:pointer;}
-div.media div.middle div.bottom_content {float:left; width:868px; padding:31px 31px 20px;;}
+*/div.media div.middle div.bottom_content {float:left; width:868px; padding:31px 31px 20px;;}
 div.media div.middle div.bottom_content div.block.map {height:150px; background:blue;}
 div.media div.middle div.bottom_content div.block {float:left; width:266px; margin:0 30px 0 0;}
 div.media div.middle div.bottom_content div.block p {float:left; font:normal 15px Arial; color:#666666;}
@@ -769,5 +769,8 @@ div.about_right div.bottom {float:right; width:304px; height:15px; background:ur
 
 
 /*FOOTNOTES*/
-
 #footnotes_debug {float:left;}
+
+
+/* NEW GALLERY */
+/*#galleria{float:left; height:400px; width:400px;}*/
