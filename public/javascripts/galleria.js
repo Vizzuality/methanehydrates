@@ -1562,7 +1562,7 @@ Galleria.prototype = {
 
             // start autoplay
             if ( this._options.autoplay ) {
-
+				console.log('comienza');
                 this.pause();
 
                 if ( typeof this._options.autoplay == 'number' ) {

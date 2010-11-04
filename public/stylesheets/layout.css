@@ -462,9 +462,6 @@ div.main_media div.head_post div.middle span.line {position:absolute; height:1px
 div.main_media div.middle {float:left; width:930px; padding:0 9px; background:url(/images/round/middle_white_long.png) repeat-y 0 0; font:normal 15px Arial; color:#666666;}
 div.main_media div.middle a {color:#FF6600; text-decoration:none;}
 div.main_media div.middle a:hover {text-decoration:underline;}
-div.main_media div.middle .slider {position:relative; width:930px; height:615px; overflow:hidden; border-bottom:1px solid #1E2E4E;}
-div.main_media div.middle .slider img {position:absolute; top:0px; left:0px; width:930px;}
-div.main_media div.middle .slider a.nivo-imageLink {position:absolute; top:0px; left:0px; width:100%; height:100%; border:0; padding:0; margin:0; z-index:60; display:none;}
 div.main_media div.middle .nivo-slice {display:block; position:absolute; z-index:50;  height:100%;}
 div.main_media div.middle .nivo-video {position:absolute; left:50%; top:50%; margin:-45px 0 0 -45px; width:90px; height:90px; z-index:89;}
 div.main_media div.middle .nivo-video a {float:left; width:90px; height:90px; background:url(/images/common/play.png) no-repeat 0 0;}
@@ -493,8 +490,9 @@ div.main_media div.bottom {float:left; width:100%; height:71px; margin:0; paddin
 div.main_media div.bottom a {float:right; margin:16px 40px 0 0; width:122px; height:14px; font:bold 13px Arial; color:#666666; text-shadow:0 1px #FFFFFF; padding:7px 0; text-align:center; background:url(/images/media/view_button.png) no-repeat 0 0; text-decoration:none;}
 div.main_media div.bottom a:hover {background-position:0 -28px;}
 
-
-
+.galleryStyle {position:relative; width:930px; height:615px; overflow:hidden; border-bottom:1px solid #1E2E4E;}
+.galleryStyle img {position:absolute; top:0px; left:0px; width:930px;}
+.galleryStyle a.nivo-imageLink {position:absolute; top:0px; left:0px; width:100%; height:100%; border:0; padding:0; margin:0; z-index:60; display:none;}
 
 /* EVENTS */
 

@@ -33,7 +33,7 @@
     </div>
     <div class="middle">
       <% if @human_activities_gallery.gallery_entries.size!=0 %>
-        <div class="slider">
+        <div class="galleryStyle">
           <% @human_activities_gallery.gallery_entries.each do |entry| %>
 			<a href="<%= entry.image.thumbnail(:huge).url %>"><img src="" alt="<%=entry.name%>" title="<%=entry.name%>"></a>
           <% end -%>
@@ -64,7 +64,7 @@
     </div>
     <div class="middle">
       <% if @human_activities_gallery.gallery_entries.size!=0 %>
-        <div class="slider">
+        <div class="galleryStyle">
           <% @natural_system_gallery.gallery_entries.each do |entry| %>
 			<a href="<%= entry.image.thumbnail(:huge).url %>"><img src="" alt="<%=entry.name%>" title="<%=entry.name%>"/></a>
           <% end -%>

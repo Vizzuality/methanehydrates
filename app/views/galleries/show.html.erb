@@ -22,7 +22,7 @@
       </div>
     </div>
     <div class="middle">
-      <div class="slider">
+      <div class="galleryStyle">
         <% @gallery.gallery_entries.each do |entry| %>
   		  <a href="<%= entry.image.thumbnail(:huge).url %>"><img src="" alt="<%=entry.name%>" title="<%=entry.name%>"/></a>          
         <% end -%>

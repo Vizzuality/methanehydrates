@@ -77,7 +77,7 @@
 			
 	        Galleria.loadTheme('/javascripts/galleria.classic.js');
 		    // Initialize Galleria
-		    $('.slider').galleria({thumbnails:false, preload: 2,autoplay:5000,transition:'fade',});
+		    $('.galleryStyle').galleria({thumbnails:false, preload: 2,autoplay:5000,transition:'fade',});
 	
 	        //---- CALENDAR
 	        if ($('div.calendar')[0]) {

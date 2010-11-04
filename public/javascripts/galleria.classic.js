@@ -21,13 +21,7 @@ Galleria.addTheme({
         _toggle_info: false
     },
     init: function(options) {
-        
-        // add some elements
-        // this.addElement('info-link');
-        // this.append({
-        //     'info' : ['info-link']
-        // });
-        
+       
         // cache some stuff
         var toggle   = this.$('image-nav-left,image-nav-right,counter'),
             info     = this.$('info-text'),
@@ -71,7 +65,6 @@ Galleria.addTheme({
                 this.$('loader').show().fadeTo(200, .8);
 				this.$('counter').show().fadeTo(200, .0);
 				this.$('galleria-info').show().fadeTo(200, .0);
-
             }
             
             this.$('info').toggle( this.hasInfo() );
