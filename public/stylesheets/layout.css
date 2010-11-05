@@ -409,28 +409,7 @@ div.media div.head_post div.middle h1 a {font:bold 21px Arial; color:#333333; pa
 div.media div.head_post div.middle h1 a:hover {text-decoration:underline;}
 div.media div.head_post div.middle span.line {position:absolute; height:1px; width:930px; bottom:0; left:9px; background:#9EACB3;}
 div.media div.middle {float:left; width:930px; padding:0 9px; background:url(/images/round/middle_white_long.png) repeat-y 0 0; font:normal 15px Arial; color:#666666;}
-/*div.media div.middle #galleria {position:relative; width:930px; height:615px; overflow:hidden; border-bottom:1px solid #1E2E4E;}
-div.media div.middle #galleria img {position:absolute; top:0px; left:0px; height:100%; width:100%;}
-div.media div.middle #galleria a.nivo-imageLink {position:absolute; top:0px; left:0px; width:100%; height:100%; border:0; padding:0; margin:0; z-index:60; display:none;}
-div.media div.middle .nivo-slice {display:block; position:absolute; z-index:50;  height:100%;}
-div.media div.middle .nivo-video {position:absolute; left:50%; top:50%; margin:-45px 0 0 -45px; width:90px; height:90px; z-index:89;}
-div.media div.middle .nivo-video a {float:left; width:90px; height:90px; background:url(/images/common/play.png) no-repeat 0 0;}
-div.media div.middle .nivo-video a:hover {background-position:0 -90px;}
-div.media div.middle .nivo-caption {position:absolute; left:109px; bottom:19px; background:url(/images/common/gallery_caption.png) no-repeat 0 0; width:689px; height:64px; padding:17px 0 0 22px; z-index:89;}
-div.media div.middle .nivo-caption p {padding:5px; margin:0; font:normal 15px Arial; color:white;}
-div.media div.middle .nivo-caption a {display:inline !important;}
-div.media div.middle .nivo-html-caption {display:none;}
-div.media div.middle .nivo-directionNav a {position:absolute; bottom:30px; z-index:99; cursor:pointer;}
-div.media div.middle .nivo-prevNav {left:29px; text-indent:-9999px; width:69px; height:61px; background:url(/images/common/previous_image_bkg.png) no-repeat 0 0;}
-div.media div.middle .nivo-prevNav:hover {background-position:0 -61px;}
-div.media div.middle .nivo-nextNav {right:29px; text-indent:-9999px; width:69px; height:61px; background:url(/images/common/next_image_bkg.png) no-repeat 0 0;}
-div.media div.middle .nivo-nextNav:hover {background-position:0 -61px;}
-div.media div.middle .nivo-controlNav {position:absolute; top:29px; left:33px; height:21px; background:url(/images/common/left_nav_bkg.png) no-repeat 0 0; width:auto; padding:0 0 0 4px; z-index:1000000;}
-div.media div.middle .nivo-controlNav span {float:left; height:21px; background:url(/images/common/right_nav_bkg.png) no-repeat right 0; width:auto; padding:0 3px 0 0;}
-div.media div.middle .nivo-controlNav a {display:block; width:6px; height:6px; background:url(/images/icons/circle_nav.png) no-repeat; text-indent:-9999px; border:0; margin:8px 3px 0 2px; float:left;}
-div.media div.middle .nivo-controlNav a.active {background-position:0 -6px; color:white;}
-div.media div.middle .nivo-controlNav a:hover {background-position:0 -6px; color:white; cursor:pointer;}
-*/div.media div.middle div.bottom_content {float:left; width:868px; padding:31px 31px 20px;;}
+div.media div.middle div.bottom_content {float:left; width:868px; padding:31px 31px 20px;;}
 div.media div.middle div.bottom_content div.block.map {height:150px; background:blue;}
 div.media div.middle div.bottom_content div.block {float:left; width:266px; margin:0 30px 0 0;}
 div.media div.middle div.bottom_content div.block p {float:left; font:normal 15px Arial; color:#666666;}
@@ -502,7 +481,6 @@ div.main_media div.bottom a:hover {background-position:0 -28px;}
 
 .galleryStyle {position:relative; width:930px; height:615px; overflow:hidden; border-bottom:1px solid #1E2E4E;}
 .galleryStyle img {position:absolute; top:0px; left:0px; width:930px;}
-.galleryStyle a.nivo-imageLink {position:absolute; top:0px; left:0px; width:100%; height:100%; border:0; padding:0; margin:0; z-index:60; display:none;}
 
 /* EVENTS */
 

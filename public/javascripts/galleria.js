@@ -689,6 +689,7 @@ Galleria = function() {
                     carousel.set( carousel.current - self._options.carousel_steps );
                 }
             });
+
         },
 
         // calculate and set positions
@@ -823,7 +824,6 @@ Galleria = function() {
                 tooltip.define( elem, value );
 
                 $( elem ).hover(function() {
-
                     tooltip.active = elem;
                     Utils.clearTimer('switch_tooltip');
                     self.$('container').unbind( 'mousemove', tooltip.move ).bind( 'mousemove', tooltip.move ).trigger( 'mousemove' );
@@ -1781,7 +1781,7 @@ Galleria.prototype = {
 
                 // load the thumbnail
                 thumb.load( src, function( thumb ) {
-
+					
                     // scale when ready
                     thumb.scale({
                         width:    thumb.data.width,
@@ -1836,7 +1836,7 @@ Galleria.prototype = {
 
                 thumb = {
                     container:  Utils.create( 'galleria-image' ),
-                    image: Utils.create( 'img', 'span' ),
+                    image: Utils.create( 'img', 'a' ),
                     ready: true
                 };
 
@@ -1846,6 +1846,7 @@ Galleria.prototype = {
                 }
 
                 $( thumb.container ).append( thumb.image );
+
                 this.$( 'thumbnails' ).append( thumb.container );
 
                 self.trigger({
@@ -1988,6 +1989,7 @@ Galleria.prototype = {
             }, data, config( img ) ) );
 
         });
+
         // trigger the DATA event and return
         if ( this.getDataLength() ) {
             this.trigger( Galleria.DATA );
@@ -2389,7 +2391,7 @@ $(document).mousemove(function(e) {
     */
 
     addElement : function( id ) {
-
+		
         var dom = this._dom;
 
         $.each( Utils.array(arguments), function( i, blueprint ) {
@@ -2699,7 +2701,7 @@ this.prependChild( 'info', 'myElement' );
 
             // check if we are playing
             self._playCheck();
-
+			
             // trigger IMAGE event
             self.trigger({
                 type:        Galleria.IMAGE,
@@ -3296,7 +3298,6 @@ Galleria.loadTheme = function( src, options ) {
 
             // check for existing galleries and reload them with the new theme
             if ( length ) {
-				console.log('encuentra');
                 // temporary save the new galleries
                 var refreshed = [];
 
