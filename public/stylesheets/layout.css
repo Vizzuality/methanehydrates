@@ -11,11 +11,16 @@ div.space40 {float:left; width:100%; height:40px;}
 .margin20top {margin:20px 0 0;}
 .hidden {display:none;}
 
-#supersized {position:fixed; float:left;}
+/*#supersized {float:left; margin:0; width:948px; min-height:850px;}
 #supersized img {height:100%; width:100%; position:absolute; z-index: 1;}
-
+*/
 .layout {position:absolute; top:0; left:0; width:100%; background:transparent; z-index:10;}
 div#content {margin:0 auto; width:948px; min-height:850px;}
+div#content.partners,.faq,.about,.home,.features {background:url('../images/backgrounds/3.jpg') no-repeat 0 0;}
+div#content.posts {background:url('../images/backgrounds/2.jpg') no-repeat 0 0;}
+div#content.events {background:url('../images/backgrounds/4.jpg') no-repeat 0 0;}
+div#content.galleries {background:url('../images/backgrounds/1.jpg') no-repeat 0 0;}
+div#content.sitemap {background:url('../images/backgrounds/sitemap.jpg') no-repeat 0 0;}
 
 /*HEADER*/
 
@@ -36,7 +41,7 @@ div#content {margin:0 auto; width:948px; min-height:850px;}
 
 /* SITEMAP */
 #content_sitemap {float:left; width:100%; height:auto; margin:35px 0 0 0; padding:0 0 40px 0; min-height:1000px;}
-#content_sitemap div.inner {position:relative; width:930px; margin:0 auto;}
+#content_sitemap div.inner {position:relative; width:930px; margin:0 auto; background-color:red;}
 #content_sitemap div.inner h1{float:left; font:bold 29px Arial; color:white; width:100%; padding:0 0 10px 0; margin:15px 0 0 0;}
 #content_sitemap div.inner a.title {float:left; text-decoration:underline; font:bold 17px Arial; color:white; padding:0 0 0 0; margin:25px 0 0 0; width:100%;}
 #content_sitemap div.inner a.title:hover {}
@@ -60,11 +65,14 @@ div#content {margin:0 auto; width:948px; min-height:850px;}
 
 /* ERROR PAGES */
 
-div.error_content {min-height:1000px;}
-div.error_content_other {min-height:1000px;}
+div.error_content {min-height:700px;}
+div.error_content_other {min-height:700px;}
 div.error_title {float:left; width:100%;}
-div.error_title.other {min-height:860px;}
-div.error_title div.inner_title {width:870px; margin:0 auto; padding:50px 0 0 0;}
+div.error_title.other {min-height:700px;}
+
+div.error_title.other div.inner_title {width:913px; margin:0 auto; padding:50px 0 0 35px; background-color:red; height:700px; background:url('../images/backgrounds/500.jpg') no-repeat 0 0;}
+
+div.error_title div.inner_title {width:913px; margin:0 auto; padding:50px 0 0 35px; background-color:red; height:800px; background:url('../images/backgrounds/404.jpg') no-repeat 0 0;}
 div.error_title div.inner_title h1 {float:left; padding:90px 0 0 0; width:100%; font:bold 55px Arial; color:white; letter-spacing:-3px; text-shadow:2px 2px rgba(0, 11, 36, 0.3); line-height:54px;}
 div.error_title div.inner_title h3 {float:left; padding:15px 0 40px 0; width:100%; font:bold 25px Arial; color:white; letter-spacing:-1px; text-shadow:1px 1px rgba(0, 11, 36, 0.3);}
 div.error_title div.inner_title a.go_home_bttn {float:left; width:183px; height:42px; background:url('../images/error/go_home_bttn.png') no-repeat 0 0; font:bold 17px Arial; color:white; text-shadow:0px -1px #000000; text-decoration:none; text-align:center; padding:14px 0 0 0; line-height:20px;}
@@ -291,6 +299,8 @@ div.body_content_left div.middle_posts ul#blog_posts li div.clearfix p span {fon
 div.body_content_left div.middle_posts ul#blog_posts li div.clearfix a {font:normal 15px Arial; color:#FF6600;}
 div.body_content_left div.middle_posts ul#blog_posts li div.clearfix a:hover {color:#FF3300;}
 div.body_content_left div.bottom_posts {float:left; width:633px; height:85px; background:url(/images/round/bottom_grey.png) no-repeat 0 0;}
+div.body_content_left div.bottom_posts_no_info {float:left; width:633px; height:25px; background:url(/images/round/bottom_white.png) no-repeat 0 0;}
+
 div.body_content_left div.bottom_posts a {float:left; margin:29px 0 0 40px; font:bold 15px Arial; color:#FF6600; padding:0 0 0 17px; background:url(/images/icons/orange_left_arrow.png) no-repeat 0 3px; text-decoration:none;}
 div.body_content_left div.bottom_posts a.next {float:right; margin:29px 40px 0 0; padding:0 17px 0 0; background:url(/images/icons/orange_right_arrow.png) no-repeat right 4px;}
 div.body_content_left div.bottom_posts a:hover {color:#FF3300; background-position:0 -13px;}
@@ -498,7 +508,7 @@ div.main_media div.bottom a:hover {background-position:0 -28px;}
 
 div.body_content_left div ul#events {float:left; width:100%;}
 div.body_content_left div ul#events li {float:left; width:100%; padding:33px 0 33px 0; border-bottom:1px solid #E5E5E5;}
-div.body_content_left div ul#events li.last {border-bottom:1px solid #E5E5E5;}
+div.body_content_left div ul#events li.last {border-bottom:none;}
 div.body_content_left div ul#events li div.left {float:left; width:64px; height:51px; padding:5px 0 10px; background:url(/images/events/date_bkg.png) no-repeat 0 0; margin:0 11px 0 0;}
 div.body_content_left div ul#events li div.left p.day {float:left; width:100%; text-align:center; font:bold 37px Arial; color:white; text-shadow:0 1px #AF4418; letter-spacing:-2px; line-height:35px; margin:5px 0 0 0;}
 div.body_content_left div ul#events li div.left p.month {float:left; width:100%; text-align:center; font:bold 13px Arial; color:white; text-shadow:0 1px #AF4418; line-height:10px; letter-spacing:0px;}
@@ -566,8 +576,6 @@ div.bottom_white {float:left; width:633px; height:25px; background:url(/images/r
 
 div.body_content_right div.opaque div.middle div.head p a {font:normal 15px Arial; color:white;}
 div.body_content_right div.opaque div.middle div.head p a:hover {text-decoration:none;}
-
-
 
 /*SITE*/
 
@@ -725,7 +733,7 @@ div.member div.bottom a:hover {color:#FF3300; background-position:0 -24px; curso
 
 
 div#about_right_column {float:right; width:304px; height:100%; overflow:visible; position:relative;}
-div.about_right {position:absolute; width:304px; height:100%; top:0;}
+div.about_right {position:absolute; width:304px; height:auto; top:0;}
 div.about_right div.top {float:right; width:304px; height:15px; background:url(/images/round/top_white_short.png) no-repeat center 0;}
 div.about_right div.middle {float:right; width:234px; padding:0 35px 20px; height:auto; background:url(/images/round/middle_white_short.png) repeat-y center 0;}
 div.about_right div.middle div.head {position:relative; float:left; width:100%; padding:20px 0 22px 0;}
@@ -768,7 +776,3 @@ div.about_right div.bottom {float:right; width:304px; height:15px; background:ur
 
 /*FOOTNOTES*/
 #footnotes_debug {float:left;}
-
-
-/* NEW GALLERY */
-/*#galleria{float:left; height:400px; width:400px;}*/

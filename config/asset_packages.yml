@@ -6,7 +6,6 @@ javascripts:
   - fonts/cufon-yui
   - fonts/Hand_Of_Sean_400.font
   - jquery-ui-1.8.5.custom.min
-  - supersized.2.0
   - jquery.scrollTo-min
   - jquery.url
   - galleria

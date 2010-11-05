@@ -4,15 +4,10 @@
   <title>Has been an error</title>
   <link rel="shortcut icon" href="images/favicon.ico"/>
   <link href="stylesheets/layout.css" media="screen" rel="stylesheet" type="text/css" />
-  <link href="stylesheets/jquery-ui-1.8.5.custom.css" type="text/css" media="screen" rel="stylesheet" charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 
 <body>
-
-  <div id="supersize" style="border:none">
-    <img src="images/backgrounds/500.jpg" style="border:none"/>
-  </div>
 
   <div class="layout">
       <div id="header">
@@ -31,7 +26,7 @@
         </div>
       </div>
 
-    <div id='body_content' class=''>
+    <div id='body_content'>
     <div class="error_content">
   <div class="error_title other">
 
@@ -87,25 +82,5 @@
     </div>
   </div>
 </div>
-
-
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js" type="text/javascript" charset="utf-8"></script>
-  <script src="javascripts/supersized.2.0.js" type="text/javascript" charset="utf-8"></script>
-  <script>
-    $(document).ready(function() {
-      //Background resize image
-        $(function(){
-            $.fn.supersized.options = {
-              startwidth: 1021,
-              startheight: 712,
-              vertical_center: 1,
-              slideshow: 0
-            };
-            $('#supersized').supersized();
-        });
-    });
-  </script>
-
-
 </body>
 </html>

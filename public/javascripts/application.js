@@ -127,17 +127,6 @@
 	
 	        // ---- END CALENDAR
 			
-			$(function(){
-	         $.fn.supersized.options = {
-	           startwidth: 1021,
-	           startheight: 900,
-	           vertical_center: 1,
-	           slideshow: 0
-	         };
-	         $('#supersized').supersized();
-	     });	        	        
-	
-		
 		// To create partners list randomized
 		if ($('ul#partners_list')[0]) {			
 			// Deleting first class

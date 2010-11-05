@@ -13,11 +13,11 @@
   </div>
 </div>
 
-<div id="content">
+<div id="content" class="galleries">
 	
-  <div class="media" id="gallery-<%= @human_activities_gallery.id %>">
+  <div class="media">
     <div class="head_post">
-      <div class="top"></div>
+      <div class="top" id="gallery-<%= @human_activities_gallery.id %>"></div>
       <div class="middle">
         <div class="left">
           <h1><%= link_to(@human_activities_gallery.name, gallery_url(@human_activities_gallery)) %></h1>
@@ -46,9 +46,9 @@
     <div class="bottom"></div>
   </div>
 
-  <div class="media" id="gallery-<%= @natural_system_gallery.id %>">
+  <div class="media">
     <div class="head_post">
-      <div class="top"></div>
+      <div class="top" id="gallery-<%= @natural_system_gallery.id %>"></div>
       <div class="middle">
         <div class="left">
           <h1><%= link_to(@natural_system_gallery.name, gallery_url(@natural_system_gallery)) %></h1>
