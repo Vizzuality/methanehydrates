@@ -32,7 +32,7 @@ module ApplicationHelper
   end
 
   def books_menu
-    if @page && @page.url[:path] && @page.url[:path].include?('the-book')
+    if @page && ((@page.url[:path] && @page.url[:path].include?('the-book')) || @page.url == '/the-book')
       if book_page = Page.find_by_cached_slug('the-book')
         render :partial => "/shared/menu", :locals => { :dom_id => 'menu',  :css => 'menu', :collection => Page.where(:show_in_menu => true, :draft => false).order('lft ASC').includes(:parts).select{ |page| page.url[:path] && page.url[:path].include?('the-book')}, :roots => [book_page], :hide_children => false }
       end

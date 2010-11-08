@@ -101,7 +101,7 @@ html = <<-HTML
           <div class="bottom"></div>
         </div>
       </div>
-    </div>      
+    </div>
 <div id="body_content_left">
 
         <div class="member">
@@ -518,7 +518,7 @@ html = <<-HTML
         <img src="/images/partners/1.jpg" alt="Geological Survey of Canada" title="Geological Survey of Canada" />
       </div>
       <div class="right">
-        <h2>Geological Survey of Canada</h2> 
+        <h2>Geological Survey of Canada</h2>
         <p class="subtitle"><a href="http://gsc.nrcan.gc.ca/" target="_blank">http://gsc.nrcan.gc.ca/</a>
 </p>
         <p>The Geological Survey of Canada, a part of the Earth Science Sector of the Ministry of Natural Resources Canada (NRCan) is Canada’s premier agency for geoscientific information and research, with world-class expertise focusing on geoscience surveys, sustainable development of Canada’s resources, environmental protection, and technology innovation.The Gas Hydrates program of the NRCan is working with many national and international partners to quantify the distribution and properties of Canada’s marine and terrestrial gas hydrates. NRCan experts are also contributing to improving gas hydrate exploration techniques and to finding economically viable and environmentally responsible extraction and production methods. The program is also assessing the possible environmental issues posed by gas hydrates and associated geohazards.</p>
@@ -765,3 +765,50 @@ page = Page.find_by_title 'Page not found'
 part = page.parts.find_by_title 'Body'
 part.body = html
 part.save
+
+puts " - the book"
+the_book = Page.create(:title => "The Book",
+            :link_url => "/the-book",
+            :menu_match => "^/(the\-book).*$",
+            :deletable => false,
+            :position => -1)
+the_book.parts.create({
+              :title => "Body",
+              :body => "",
+              :position => 0
+})
+the_book.parts.create({
+              :title => "Side Body",
+              :body => "",
+              :position => 1
+})
+puts " - the book > Methane gas hydrates in the natural system"
+scope1 = Page.create(:title => "Methane gas hydrates in the natural system",
+            :deletable => false,
+            :parent_id => the_book.id,
+            :position => -1)
+scope1.parts.create({
+              :title => "Body",
+              :body => "",
+              :position => 0
+})
+scope1.parts.create({
+              :title => "Side Body",
+              :body => "",
+              :position => 1
+})
+puts " - the book > Methane gas hydrates and human impacts"
+scope2 = Page.create(:title => "Methane gas hydrates and human impacts",
+            :deletable => false,
+            :parent_id => the_book.id,
+            :position => -1)
+scope2.parts.create({
+              :title => "Body",
+              :body => "",
+              :position => 0
+})
+scope2.parts.create({
+              :title => "Side Body",
+              :body => "",
+              :position => 1
+})
