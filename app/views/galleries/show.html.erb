@@ -24,7 +24,11 @@
     <div class="middle">
       <div class="galleryStyle">
         <% @gallery.gallery_entries.each do |entry| %>
-  		  <a href="<%= entry.image.thumbnail(:huge).url %>"><img src="" alt="<%=entry.name%>" title="<%=entry.name%>"/></a>          
+        <% if entry.video? %>
+          <a href="<%= strip_tags(entry.body) %>"><img src="<%= entry.image.thumbnail(:huge).url %>" alt="<%=entry.name%>" title="<%=entry.name%>"></a>
+        <% else %>
+          <a href="<%= entry.image.thumbnail(:huge).url %>"><img src="<%= entry.image.thumbnail(:huge).url %>" alt="<%=entry.name%>" title="<%=entry.name%>"></a>
+        <% end -%>
         <% end -%>
       </div>
       <div class="bottom_content">

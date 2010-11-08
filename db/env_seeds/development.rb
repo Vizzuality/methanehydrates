@@ -16,6 +16,15 @@ images = []
 1.upto(9) do |i|
   images << Image.create(:image => File.open("#{Rails.root}/db/env_seeds/#{i}.jpg", 'rb'))
 end
+videos = []
+# Create 3 videos
+1.upto(3) do |i|
+  videos << Image.create(:image => File.open("#{Rails.root}/db/env_seeds/v#{i}.jpg", 'rb'))
+end
+video_desc = []
+video_desc[0] = "http://vimeo.com/16566024"
+video_desc[1] = "http://vimeo.com/15925400"
+video_desc[2] = "http://vimeo.com/14309120"
 
 data_directory = "#{Rails.root}/doc/"
 filename = "methane.csv"
@@ -45,7 +54,12 @@ FasterCSV.foreach(data_directory + '/' + filename) do |line|
 end
 
 Gallery.all.each do |gallery|
-  i = rand(images.size - 1)
-  gallery.gallery_entries.create :name => "Image for gallery #{gallery.name} #{i}", :image_id => images[i].id
+  i = rand(images.size - 4)
+  j = rand(videos.size - 1)
+  gallery.gallery_entries.create :name => "Image for gallery #{gallery.name} #{i}",   :image_id => images[i].id
+  gallery.gallery_entries.create :name => "Video for gallery #{gallery.name} #{j}",   :image_id => videos[j].id,   :entry_type => 1, :body => video_desc[j]
   gallery.gallery_entries.create :name => "Image for gallery #{gallery.name} #{i+1}", :image_id => images[i+1].id
+  gallery.gallery_entries.create :name => "Image for gallery #{gallery.name} #{i+2}", :image_id => images[i+2].id
+  gallery.gallery_entries.create :name => "Image for gallery #{gallery.name} #{i+3}", :image_id => images[i+3].id
+  gallery.gallery_entries.create :name => "Video for gallery #{gallery.name} #{j+1}", :image_id => videos[j+1].id, :entry_type => 1, :body => video_desc[j+1]
 end

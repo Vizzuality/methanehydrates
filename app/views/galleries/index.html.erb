@@ -14,7 +14,7 @@
 </div>
 
 <div id="content" class="galleries">
-	
+
   <div class="media">
     <div class="head_post">
       <div class="top" id="gallery-<%= @human_activities_gallery.id %>"></div>
@@ -32,10 +32,14 @@
       </div>
     </div>
     <div class="middle">
-      <% if @human_activities_gallery.gallery_entries.size!=0 %>
+      <% if @human_activities_gallery.gallery_entries.count!=0 %>
         <div class="galleryStyle">
           <% @human_activities_gallery.gallery_entries.each do |entry| %>
-			<a href="<%= entry.image.thumbnail(:huge).url %>"><img src="" alt="<%=entry.name%>" title="<%=entry.name%>"></a>
+            <% if entry.video? %>
+              <a href="<%= strip_tags(entry.body) %>"><img src="<%= entry.image.thumbnail(:huge).url %>" alt="<%=entry.name%>" title="<%=entry.name%>"></a>
+            <% else %>
+              <a href="<%= entry.image.thumbnail(:huge).url %>"><img src="<%= entry.image.thumbnail(:huge).url %>" alt="<%=entry.name%>" title="<%=entry.name%>"></a>
+            <% end -%>
           <% end -%>
         </div>
       <%-end%>
@@ -66,7 +70,7 @@
       <% if @human_activities_gallery.gallery_entries.size!=0 %>
         <div class="galleryStyle">
           <% @natural_system_gallery.gallery_entries.each do |entry| %>
-			<a href="<%= entry.image.thumbnail(:huge).url %>"><img src="" alt="<%=entry.name%>" title="<%=entry.name%>"/></a>
+      <a href="<%= entry.image.thumbnail(:huge).url %>"><img src="" alt="<%=entry.name%>" title="<%=entry.name%>"/></a>
           <% end -%>
         </div>
       <%-end%>
