@@ -75,10 +75,11 @@
 	          markers.addMarker(new OpenLayers.Marker(center,icon));
 	        }
 			
-	        Galleria.loadTheme('/javascripts/galleria.classic.js');
-		    // Initialize Galleria
-		    $('.galleryStyle').galleria({thumbnails:'empty', preload:2,autoplay:5000,transition:'fade',show_counter:'false'});
-	
+			if ($('.galleryStyle')[0]){		
+	        	Galleria.loadTheme('/javascripts/galleria.classic.js');
+			    // Initialize Galleria
+			    $('.galleryStyle').galleria({thumbnails:'empty', preload:2,autoplay:5000,transition:'fade',show_counter:'false'});
+			}
 	        //---- CALENDAR
 	        if ($('div.calendar')[0]) {
 		  var dayIndex;
