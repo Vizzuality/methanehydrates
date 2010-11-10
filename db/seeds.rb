@@ -58,6 +58,7 @@ hydrate_description:text
 data_provided_by_name:string
 data_provided_by_url:string
 references:text
+wiki_url:string
 ATTRIBUTES
 
 RefinerySetting.set(:feature_attributes, attributes)
