@@ -36,7 +36,7 @@
         <div class="galleryStyle">
           <% @human_activities_gallery.gallery_entries.each do |entry| %>
             <% if entry.video? %>
-              <a href="<%= strip_tags(entry.body) %>"><img src="<%= entry.image.thumbnail(:huge).url %>" alt="<%=entry.name%>" title="<%=entry.name%>"></a>
+              <a href="<%= strip_tags(entry.body) %>"><img type="video" src="<%= entry.image.thumbnail(:huge).url %>" alt="<%=entry.name%>" title="<%=entry.name%>"></a>
             <% else %>
               <a href="<%= entry.image.thumbnail(:huge).url %>"><img src="<%= entry.image.thumbnail(:huge).url %>" alt="<%=entry.name%>" title="<%=entry.name%>"></a>
             <% end -%>

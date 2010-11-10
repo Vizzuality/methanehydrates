@@ -5,7 +5,7 @@
 .galleria-stage {position: absolute;top: 0px;bottom: 0px;left: 0px;right: 0px;overflow:hidden;}
 .galleria-thumbnails-container {height: 21px; top:29px; position: absolute; left: 28px; right: 10px; z-index: 100000; background:url(/images/common/left_nav_bkg.png) no-repeat 0 0; width:auto; padding:0 0 0 4px; z-index:1000000; opacity:0;}
 .galleria-carousel .galleria-thumbnails-list {float:left; height:21px; background:url(/images/common/right_nav_bkg.png) no-repeat right 0; width:auto; padding:0 3px 0 0;}
-.galleria-thumbnails .galleria-image {display:block; width:6px; height:21px; background:url(/images/icons/circle_nav.png) no-repeat; border:0; margin:8px 3px 0 2px; float:left;cursor:pointer; }
+.galleria-thumbnails .galleria-image {display:block; width:6px; height:21px; background:url(/images/icons/circle_nav.png) no-repeat; border:0; margin:8px 3px 0 2px; float:left;cursor:pointer; position:relative;}
 .galleria-thumbnails .galleria-image.active {background:url(/images/icons/circle_nav_act.png) no-repeat;}
 .galleria-counter {position: absolute; top:29px; left:33px; text-align: right;color: #fff;font: normal 11px/1 arial,sans-serif;z-index: 2;}
 
@@ -162,3 +162,8 @@ opacity:0.8;
 	background:url('/images/common/next_image_bkg.png') no-repeat 0 0;
     background-repeat: no-repeat;
 }
+
+/*VIDEO*/
+div.galleria_video {position:absolute; left:50%; top:50%; margin:-45px 0 0 -45px; width:90px; height:90px; z-index:89; display:none;}
+div.galleria_video a {float:left; width:90px; height:90px; background:url('/images/common/play.png') no-repeat 0 0;}
+div.galleria_video a:hover {background-position:0 -90px; cursor:pointer;}

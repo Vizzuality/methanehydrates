@@ -8,6 +8,7 @@
 
 (function($) {
 
+var htmlPlayVideo = '<div class="galleria_video"><a></a></div>';
 // some references
 var undef,
     window = this,
@@ -2678,19 +2679,29 @@ this.prependChild( 'info', 'myElement' );
 
             // make the image link
             if ( data.link ) {
+
+				if (!$(next.image).parent().parent().find('div.galleria_video')[0]){
+					$(next.image).parent().parent().append(htmlPlayVideo);
+				}
+				$(next.image).parent().parent().find('div.galleria_video').fadeIn();
+				$(next.image).parent().parent().find('div.galleria_video').children('a').attr('href', data.link);
+				
                 $( next.image ).css({
-                    cursor: 'pointer'
-                }).bind( CLICK(), function() {
-
-                    // popup link
-                    if ( self._options.popup_links ) {
-                        var win = window.open( data.link, '_blank' );
-                    } else {
-                        window.location.href = data.link;
-                    }
-                });
+                                    cursor: 'pointer'
+                                }).bind( CLICK(), function() {					
+                                    // popup link
+                                    if ( self._options.popup_links ) {
+                                        var win = window.open( data.link, '_blank' );
+                                    } else {
+                                        window.location.href = data.link;
+                                    }
+                                });
             }
-
+			else {
+				if($(next.image).parent().parent().find('div.galleria_video')[0]){
+					$(next.image).parent().parent().find('div.galleria_video').fadeOut('fast');
+				}
+			}
             // remove the queued image
             Array.prototype.shift.call( self._queue );
 
