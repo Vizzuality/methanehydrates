@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>FROZEN HEAT</title>
+  <title><%= controller_name %></title>
   <link rel="shortcut icon" href="/images/favicon.ico"/>
   <%= raw stylesheet_link_merged :base %>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <%= raw javascript_include_merged :base %>
 </head>
 
-<body>
-
-   <!--  <%= render :partial => 'layouts/supersize' %> -->
-
+<% if (action_name == 'home')||(controller_name=='features')||(@page && @page.cached_slug == 'about') %>
+	<body class="home"> 
+<%elsif (controller_name=='galleries') %>
+	<body class="galleries">
+<%elsif (controller_name=='events')%>
+	<body class="events">
+<%elsif (controller_name=='posts')%>
+	<body class="posts">
+<%elsif (controller_name=='pages')%>
+	<body class="pages">
+<%else%>
+	<body>
+<%end%>
+	
   <div class="layout">
     <% if (action_name != 'home') %>
       <div id="header">
@@ -30,12 +40,13 @@
         </div>
       </div>
     <%- end %>
-
+	
     <%= yield %>
 
     <%= render :partial => 'layouts/footer', :locals => {:extra_class => nil } %>
 
   </div><!-- .layout -->
-
 </body>
+
+
 </html>

@@ -22,7 +22,7 @@ html = <<-HTML
       </div>
     </div>
 
-    <div id="content" class="about">
+    <div id="content">
 
       <div class="about_opaque">
         <div class="top"></div>
@@ -243,7 +243,7 @@ html = <<-HTML
       </div>
     </div>
 
-    <div id="content" class="faq">
+    <div id="content">
 
       <div id="body_content_left">
 
@@ -509,7 +509,7 @@ html = <<-HTML
 
 
 
-<div id="content" class="partners">
+<div id="content">
   <ul id="partners_list" class="partners">
 <li class="first">
     <div class="top"></div>
