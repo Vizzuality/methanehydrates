@@ -247,7 +247,7 @@ html = <<-HTML
 
       <div id="body_content_left">
 
-        <div class="faq_block">
+        <div class="faq_block first">
           <div class="head_faq">
             <div class="top"></div>
             <div class="middle">
