@@ -3,7 +3,7 @@ body.home,.pages,.about,.featuresbkg {float:left; background:url('../images/back
 body.posts {background:url('../images/backgrounds/2.jpg') no-repeat center 0 #8CA1C0;}
 body.events {background:url('../images/backgrounds/4.jpg') no-repeat center 0 #131F26;}
 body.galleries {background:url('../images/backgrounds/1.jpg') no-repeat center 0 #202B38;}
-body.sitemap {background:url('../images/backgrounds/sitemap.jpg') no-repeat center 0 #202B38;}
+body.sitemap {background-color:#202B38;}
 body.error_notfound {background:url('../images/backgrounds/404.jpg') no-repeat center 0 #202B38;}
 body.error_server {background:url('../images/backgrounds/500.jpg') no-repeat center 0 #202B38;}
 img,fieldset{border:none; padding:0; margin:0;}
@@ -40,7 +40,7 @@ div#content {margin:0 auto; width:948px; min-height:850px;}
 
 /* SITEMAP */
 #content_sitemap {float:left; width:100%; height:auto; margin:35px 0 0 0; padding:0 0 40px 0; min-height:1000px;}
-#content_sitemap div.inner {position:relative; width:930px; margin:0 auto; background-color:red;}
+#content_sitemap div.inner {position:relative; width:930px; margin:0 auto;}
 #content_sitemap div.inner h1{float:left; font:bold 29px Arial; color:white; width:100%; padding:0 0 10px 0; margin:15px 0 0 0;}
 #content_sitemap div.inner a.title {float:left; text-decoration:underline; font:bold 17px Arial; color:white; padding:0 0 0 0; margin:25px 0 0 0; width:100%;}
 #content_sitemap div.inner a.title:hover {}

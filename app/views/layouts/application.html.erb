@@ -16,7 +16,9 @@
 	<body class="events">
 <%elsif (controller_name=='posts')%>
 	<body class="posts">
-<%elsif (controller_name=='pages')%>
+<%elsif (action_name == 'sitemap') %>		
+	<body class="sitemap">
+<%elsif ((controller_name=='pages')&&(action_name != 'sitemap'))%>
 	<body class="pages">
 <%else%>
 	<body>
