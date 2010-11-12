@@ -18,7 +18,7 @@
 	<body class="posts">
 <%elsif (action_name == 'sitemap') %>		
 	<body class="sitemap">
-<%elsif (controller_name=='pages')%>
+<%elsif ((controller_name=='pages')&&(action_name != 'sitemap'))%>
 	<body class="pages">
 <%else%>
 	<body>
