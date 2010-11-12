@@ -52,7 +52,7 @@ var wymeditor_boot_options = $.extend({
     //,{'name': 'Paste', 'title': 'Paste_From_Word', 'css': 'wym_tools_paste'}
   ]
 
-  ,toolsHtml: "<ul class='wym_tools wym_section wym_buttons'>" + WYMeditor.TOOLS_ITEMS + WYMeditor.CLASSES + "</ul>"
+  ,toolsHtml: "<ul class='wym_tools wym_section wym_buttons'>" + WYMeditor.TOOLS_ITEMS + "</ul>"
 
   ,toolsItemHtml:
     "<li class='" + WYMeditor.TOOL_CLASS + "'>"
