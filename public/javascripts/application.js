@@ -82,16 +82,19 @@
 			}
 	        //---- CALENDAR
 	        if ($('div.calendar')[0]) {
-		  var dayIndex;
-	          $('.calendar').datepicker({
+			
+		  		var dayIndex;
+	          	$('.calendar').datepicker({
 	            onChangeMonthYear: function(year, month,inst){
+
 	              showLoader();
 	              setTimeout(function(ev){
 	                $("td a").removeClass('ui-state-active');
 	                $("td a").removeClass('ui-state-highlight');
 	                $('td').removeAttr('onclick');
 	              },0);
-	
+				
+					
 	              $.getJSON('/events.json?year='+year+'&month='+month,function(result){
 	                for (var i=0; i<result.length; i++) {
 	  				  dayIndex = result[i].day - 1;
@@ -103,23 +106,25 @@
 	            }
 	          });
 	
+			 
 	          $('.calendar').append('<div class="bottom-navigator ui-corner-bottom"><a onclick="javascript:void $(\'a.ui-datepicker-prev\').trigger(\'click\');" class="prev"></a><a onclick="javascript:void $(\'a.ui-datepicker-next\').trigger(\'click\');" class="next"></a></div>');
 	          $("td a").removeClass('ui-state-active');
 	          $("td a").removeClass('ui-state-highlight');
 	          $('td').removeAttr('onclick');
+				
+			  // 
+	          // $('td a').livequery('click',function(ev){
+	          // 	            if ($(this).attr('href')=="#"){
+	          // 	              ev.stopPropagation();
+	          // 	              ev.preventDefault();
+	          // 	              return false;
+	          // 	            }
+	          // 	          });
 	
-	          $('td a').livequery('click',function(ev){
-	            if ($(this).attr('href')=="#"){
-	              ev.stopPropagation();
-	              ev.preventDefault();
-	              return false;
-	            }
-	          });
-	
-	          var date = new Date();
+	          var date = new Date();	
 	          $.getJSON('/events.json?year='+date.getFullYear()+'&month='+(date.getMonth()+1),function(result){
 	            for (var i=0; i<result.length; i++) {
-				dayIndex = result[i].day - 1;
+				  dayIndex = result[i].day - 1;
 	              $("td a:eq("+ dayIndex +")").addClass('ui-state-active');
 	              $("td a:eq("+ dayIndex +")").attr('href',result[i].url);
 	            }
@@ -140,8 +145,10 @@
 			$(window).scroll(function () {
 				if ($(window.pageYOffset)[0] > 708) {
 					$('div.about_right').css('position','fixed');
+					$('div.about_right').css('top','20px');
 				}else {
 					$('div.about_right').css('position','absolute');
+					$('div.about_right').css('top','0');
 				}
 			});
 		}
@@ -168,7 +175,7 @@
 	    function hideLoader() {
 	      $('div.calendar').css('opacity','1');
 	      $('div.loader').hide();
-	    }
+	    }		
 	
 	// Creating a new component randomized
 	(function($){

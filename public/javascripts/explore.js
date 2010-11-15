@@ -279,6 +279,8 @@
     reset = true;
     $('div.water').slider( "value" , 5478 );
     $('div.hydrate').slider( "value" , 404 );
+	$('input#name_country').val('');
+	// $('div.opaque_explore div.middle form ul.newList li').first().click();
   }
 
 

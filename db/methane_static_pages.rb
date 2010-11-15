@@ -3,10 +3,10 @@ html = <<-HTML
 <div class="title">
       <div class="inner_title">
         <div class="left">
-            <h1>More about the project</h1>
+            <h1 class="about_content">More about the project</h1>
             <p>An effort of The United Nations Environment<br />Program and UNEP/GRID-Arendal</p>
         </div>
-        <div class="right">
+        <div class="right about_content">
           <ul>
             <li class="selected"><a href="/about">ABOUT THE PROJECT</a>
 <span class="line"></span>

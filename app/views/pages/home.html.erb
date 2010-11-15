@@ -4,7 +4,7 @@
       <a href="/"><%= image_tag "home/frozen_heat_logo.png", :title => "Frozen Heat Logo", :alt => "Frozen Heat Logo"%></a>
     </div>
     <div class="right">
-      <a href="http://www.grida.no/" target="_blank"><%= image_tag "home/GA_logo.png", :title => "GA Logo", :alt => "GA Logo",  :class => "grid_arendal_logo" %></a>
+      <a href="http://www.grida.no/" target="_blank"><%= image_tag "home/GA_logo_little.png", :title => "GA Logo", :alt => "GA Logo",  :class => "grid_arendal_logo" %></a>
       <a href="http://www.unep-wcmc.org/" target="_blank"><%= image_tag "home/unep_logo.png", :title => "Unep Logo", :alt => "Unep Logo",  :class => "unep_logo" %></a>
     </div>
   </div>
@@ -38,9 +38,9 @@
         <form action="/explore" method="get">
           <h4>Search for your desired location</h4>
           <input type="text" value="Location, Country..." name="name_or_country"/>
-          <input type="submit" value="Search" />
+          <input type="submit" value="" />
         </form>
-        <% features = Feature.order("created_at DESC").limit(8) %>
+        <% features = Feature.order("created_at DESC").limit(7) %>
         <ul>
           <% features.each do |feature| %>
           <li><%= link_to(feature.title, feature_url(feature)) %></li>

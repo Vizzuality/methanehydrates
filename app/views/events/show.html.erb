@@ -11,10 +11,12 @@
               <div class="top"></div>
               <div class="middle">
                 <p class="back"><a href="<%= events_path %>">View events list</a></p>
-                <div class="left">
-                  <p class="day"><%=@event.from.strftime("%d")%></p>
-                  <p class="month"><%=@event.from.strftime("%b").upcase %></p>
-                </div>
+
+	                <div class="left">
+	                  <p class="day"><%=@event.from.strftime("%d")%></p>
+	                  <p class="month"><%=@event.from.strftime("%b").upcase %></p>
+	                </div>
+
                 <div class="right">
                   <h1><%= @event.title %></h1>
                   <p class="location"><%= @event.location %> | <%=@event.from.strftime("#{to_ordinal(@event.from.day)} %b")%> <%= raw("&#8594; #{@event.to.strftime("#{to_ordinal(@event.to.day)} %b")}") unless @event.one_day_event? %></p>
@@ -35,10 +37,12 @@
               <ul>
                 <% @event.similar(:limit => 3).each do |event| %>
                   <li>
-                    <div class="left">
-                      <p class="day"><%=event.from.strftime("%d")%></p>
-                      <p class="month"><%=event.from.strftime("%b").upcase%></p>
-                    </div>
+					<a href="<%=event_url(event)%>">
+	                    <div class="left">
+	                      <p class="day"><%=event.from.strftime("%d")%></p>
+	                      <p class="month"><%=event.from.strftime("%b").upcase%></p>
+	                    </div>
+					</a>
                     <div class="right">
                       <h6><%= link_to event.title, event_url(event) %></h6>
                       <p class="location"><%= event.location %></p>
@@ -87,6 +91,7 @@
                 <p>Browse events by month</p>
                 <span class="line"></span>
               </div>
+
               <div class="calendar"></div>
               <div class="loader">
                 <img src="/images/common/activity indicator.gif" />

@@ -11,7 +11,8 @@
                 <%= link_to(image_fu(entry.image, :small, :title => entry.name), gallery_url(gallery)) %>
               </div>
               <div class="text">
-                <%= simple_format(truncate(strip_tags(gallery.body), :length => 80)) %>
+                
+                <a href="<%= gallery_url(gallery) %>"><%= simple_format(truncate(strip_tags(gallery.body), :length => 80)) %></a>
               </div>
             </li>
           <% end -%>

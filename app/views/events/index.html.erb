@@ -16,8 +16,7 @@
             <div class="middle_posts">
                 <div class="head_posts">
                   <div class="left">
-                    <h1>Upcoming events
-                    </h1>
+                    <h1>Upcoming events</h1>
                     <% if @events.respond_to?(:total_entries) %>
                       <p><%= pluralize(@events.total_entries, "event","events") %>
                       <% if params[:date] %>
@@ -41,10 +40,12 @@
 					<%else%>
 						<li>
 					<%end%>
+					<a href="<%=event_url(event)%>">
                       <div class="left">
                         <p class="day"><%=event.from.strftime("%d")%></p>
                         <p class="month"><%=event.from.strftime("%b").upcase%></p>
                       </div>
+					</a>
                       <div class="right">
                         <h2><%= link_to event.title, event_url(event) %></h2>
                         <p class="location"><%= event.location %> | <%=event.from.strftime("#{to_ordinal(event.from.day)} %b")%><%=raw "&#8594; #{event.to.strftime("#{to_ordinal(event.to.day)} %b")}" unless event.one_day_event? %></p>

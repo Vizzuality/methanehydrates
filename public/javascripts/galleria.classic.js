@@ -44,13 +44,13 @@ Galleria.addTheme({
             this.addIdleState( this.get('image-nav-left'), { left:-69 });
             this.addIdleState( this.get('image-nav-right'), { right:-69 });
         }
+
         // bind some stuff
         this.bind(Galleria.THUMBNAIL, function(e) {
             $(e.thumbTarget).parent(':not(.active)').children().css('opacity',.6)
         });
 
         this.bind(Galleria.LOADSTART, function(e) {
-
             if (!e.cached) {
                 this.$('loader').show().fadeTo(200, .8);
         		this.$('galleria-info').show().fadeTo(200, .0);
@@ -61,6 +61,7 @@ Galleria.addTheme({
 
         this.bind(Galleria.LOADFINISH, function(e) {
       	this.$('thumbnails-container').animate({opacity:1},1000);
+      	// this.$('thumbnails-container').find('galleria-thumb-nav-left').remove();
 	    this.$('loader').fadeOut('fast');
 	    this.$('galleria-info').show().css('opacity',.8);
 	    info.show().fadeTo(200, .8);

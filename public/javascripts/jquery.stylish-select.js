@@ -224,12 +224,11 @@ Dual licensed under the MIT and GPL licenses.
 
             });
 
-            $newLi.bind('click.sSelect',function(e){
+            $newLi.bind('click.sSelect',function(e){	
+				
                 var $clickedLi = $(e.target);
-
                 //update counter
                 currentIndex = $newLi.index($clickedLi);
-
                 //remove all hilites, then add hilite to selected item
                 prevented = true;
                 navigateList(currentIndex);
