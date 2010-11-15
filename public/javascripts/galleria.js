@@ -1632,7 +1632,7 @@ Galleria.prototype = {
             'thumbnails-list' :
                 ['thumbnails'],
             'thumbnails-container' :
-                ['thumb-nav-left', 'thumbnails-list', 'thumb-nav-right'],
+                ['thumbnails-list'],
             'container' :
                 ['stage', 'thumbnails-container', 'info', 'tooltip']
         });

@@ -31,7 +31,6 @@ Galleria.addTheme({
         this.$('loader').show().css('opacity',.8)
     	this.$('counter').css('display','none');
     	this.$('galleria-info').css('display','none');
-
         // some stuff for non-touch browsers
         if (! Galleria.TOUCH ) {
             // fade thumbnails
@@ -59,9 +58,11 @@ Galleria.addTheme({
             $(e.thumbTarget).css('opacity',1).parent().siblings().children().css('opacity',.6);
         });
 
+		
+		console.log(this.get('thumb-nav-right'));
+		
         this.bind(Galleria.LOADFINISH, function(e) {
-      	this.$('thumbnails-container').animate({opacity:1},1000);
-      	// this.$('thumbnails-container').find('galleria-thumb-nav-left').remove();
+      	this.$('thumbnails-container').animate({opacity:1},1000);		
 	    this.$('loader').fadeOut('fast');
 	    this.$('galleria-info').show().css('opacity',.8);
 	    info.show().fadeTo(200, .8);
