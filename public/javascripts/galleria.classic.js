@@ -56,11 +56,7 @@ Galleria.addTheme({
             }
             this.$('info').toggle( this.hasInfo() );
             $(e.thumbTarget).css('opacity',1).parent().siblings().children().css('opacity',.6);
-        });
-
-		
-		console.log(this.get('thumb-nav-right'));
-		
+        });		
         this.bind(Galleria.LOADFINISH, function(e) {
       	this.$('thumbnails-container').animate({opacity:1},1000);		
 	    this.$('loader').fadeOut('fast');
