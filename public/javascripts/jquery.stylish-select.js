@@ -200,6 +200,7 @@ Dual licensed under the MIT and GPL licenses.
             }
 
             $containerDivText.bind('click.sSelect',function(event){
+
                 event.stopPropagation();
 
 				//added by Justin Beasley
@@ -227,6 +228,7 @@ Dual licensed under the MIT and GPL licenses.
             $newLi.bind('click.sSelect',function(e){	
 				
                 var $clickedLi = $(e.target);
+
                 //update counter
                 currentIndex = $newLi.index($clickedLi);
                 //remove all hilites, then add hilite to selected item

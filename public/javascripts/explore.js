@@ -10,7 +10,7 @@
   var slider_hydrate = 404;
 
   $(document).ready(function() {
-
+	
     //Cover ul space with blue opaque background (header)
     var li_size = 0;
     $('div.inner_header ul li').each(function(index,element){
@@ -279,8 +279,9 @@
     reset = true;
     $('div.water').slider( "value" , 5478 );
     $('div.hydrate').slider( "value" , 404 );
-	$('input#name_country').val('');
-	// $('div.opaque_explore div.middle form ul.newList li').first().click();
+	
+	$('input#name_country').val('');	
+	$('div.opaque_explore div.middle form ul.newList li').first().children('a').trigger('click.sSelect');
   }
 
 
