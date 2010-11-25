@@ -71,6 +71,12 @@ SiteMarker = OpenLayers.Class({
 							$(this.icon.imageDiv).find('div.infowindow').addClass('long');
 						}
 				}
+				
+				
+				$(this.icon.imageDiv).find('a.open').hover(function(ev){
+				  $(this).css('z-index',global_index++);
+				});
+				
 
 				if (this.info.image_url=="" || this.info.image_url==null) {
 					$(this.icon.imageDiv).find('div.infowindow').find('div').remove();
@@ -88,8 +94,8 @@ SiteMarker = OpenLayers.Class({
 						var move_y = 0;
 						var move_x = 0;
 						
-						if (position.y<280) {
-							move_y = -280+ position.y - 65;
+						if (position.y<330) {
+							move_y = -280 + position.y - 65;
 						}
 						
 						if (position.x<125) {

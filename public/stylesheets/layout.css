@@ -197,7 +197,7 @@ div.middle_explore ul#site_list li div.head div.image p {float:left; width:100%;
 div.middle_explore ul#site_list li div.head div.info {float:left; width:515px;}
 div.middle_explore ul#site_list li div.head div.info h2 {float:left; width:100%;}
 div.middle_explore ul#site_list li div.head div.info h2 a {font:bold 21px Arial; color:#FF6600; text-decoration:none; letter-spacing:-1px;}
-div.middle_explore ul#site_list li div.head div.info h2 a:hover {color:#FF3300; text-decoration:underline;}
+div.middle_explore ul#site_list li div.head div.info h2 a:hover {color:#FF3300; text-decoration:underline;} 
 div.middle_explore ul#site_list li div.head div.info p {float:left; width:100%; margin:1px 0 0; text-transform:uppercase; }
 div.middle_explore ul#site_list li div.head div.info p span {float:left; width:auto; font:bold 11px Arial; color:#999999;}
 div.middle_explore ul#site_list li div.head div.info p span.first {background:url(/images/icons/tiny_grey_arrow.jpg) no-repeat right 4px; padding:0 10px 0 0; margin:0 7px 0 0;}
@@ -369,7 +369,7 @@ div.body_content_right div.sites div.middle ul li h6 {float:left; width:100%;}
 div.body_content_right div.sites div.middle ul li h6 a {font:normal 15px Arial; color:#FF6600; text-decoration:none;}
 div.body_content_right div.sites div.middle ul li h6 a:hover {text-decoration:underline;}
 div.body_content_right div.sites div.middle ul li span {float:left; width:100%;}
-div.body_content_right div.sites div.middle ul li p {float:left; width:auto; font:bold 11px Arial; color:#7F7F7F; padding:3px 0 0 7px;}
+div.body_content_right div.sites div.middle ul li p {float:left; width:auto; font:bold 11px Arial; color:#7F7F7F; padding:3px 0 0 7px; text-transform:uppercase;}
 div.body_content_right div.sites div.middle ul li p.first {background:url(/images/icons/tiny_grey_arrow.jpg) no-repeat right 7px; padding:3px 13px 0 0;}
 div.body_content_right div.sites div.bottom {float:left; width:304px; height:25px; background:url(/images/round/bottom_white_short.png) no-repeat center 0;}
 
