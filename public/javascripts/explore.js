@@ -250,7 +250,7 @@
 
   function placeBlueBackground() {
     var map_height = $('div#explore_map').height();
-    $('#blue_bkg').css('top',map_height-210+'px');
+    $('#blue_bkg').css('top',map_height-500+'px');
   }
 
 

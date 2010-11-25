@@ -175,8 +175,8 @@ a#zoomIn:hover {background-position:0 -26px; cursor:pointer;}
 a#zoomOut {position:absolute; top:80px; left:32px; width:26px; height:26px; background:url(/images/explore/zoom_out.png) no-repeat 0 0;}
 a#zoomOut:hover {background-position:0 -26px; cursor:pointer;}
 div#explore_content {position:absolute; top:415px; left:50%; margin:0 0 0 -474px; width:948px; z-index:10;}
-div#explore_map {position:absolute; z-index:1; width:100%; height:100%; top:0; left:0; right:0;}
-div#blue_bkg {position:absolute; z-index:5; left:0; width:100%; height:210px; background:url(/images/explore/blue_bkg.png) repeat-x 0 0;}
+div#explore_map {position:absolute; z-index:1; width:100%; height:930px; top:0; left:0; right:0;}
+div#blue_bkg {position:absolute; z-index:5; left:0; width:100%; height:500px; background:url(/images/explore/blue_bkg.png) repeat-x 0 0; top:0;}
 div.top_explore {float:left; width:100%; height:15px; background:url(/images/round/top_white.png) no-repeat 0 0;}
 div.middle_explore {float:left; width:553px; padding:15px 40px; height:auto; background:url(/images/round/middle_white.png) repeat-y 0 0;}
 div.middle_explore div.head_explore {position:relative; float:left; height:72px; padding:0 0 5px; width:100%}
