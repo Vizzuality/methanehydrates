@@ -58,8 +58,8 @@ div#content {margin:0 auto; width:948px; min-height:850px;}
 #header_home div.inner_header div.left {float:left;}
 #header_home div.inner_header div.left img {width:140px; height:16px; float:left; margin:20px 0 0 29px;}
 #header_home div.inner_header div.right {float:right;}
-#header_home div.inner_header div.right img.grid_arendal_logo {float:left; width:121px; height:43px; margin:0 25px 0 0;}
-#header_home div.inner_header div.right img.unep_logo {float:left; width:44px; height:50px; margin:0 32px 0 0;}
+#header_home div.inner_header div.right img.grid_arendal_logo {float:left; width:121px; height:43px; margin:5px 137px 0 0;}
+/*#header_home div.inner_header div.right img.unep_logo {float:left; width:44px; height:50px; margin:0 32px 0 0;}*/
 
 
 /* ERROR PAGES */
@@ -743,7 +743,7 @@ div.about_right div.bottom {float:right; width:304px; height:15px; background:ur
 #footer div.inner_footer div.left p.list {float:left; font:normal 11px Arial; color:#73787C; padding:27px 0 0 0;}
 #footer div.inner_footer div.left p.list a {color:#73787C;}
 #footer div.inner_footer div.left p.list a:hover {color:#CCCCCC;}
-#footer div.inner_footer div.right {float:right; width:820px;}
+#footer div.inner_footer div.right {float:right; width:820px; }
 #footer div.inner_footer div.right ul {float:right; width:100%;}
 #footer div.inner_footer div.right ul li {float:right; width:auto; padding:0 25px;}
 #footer div.inner_footer div.right ul li.fixed {width:115px;}
@@ -754,7 +754,9 @@ div.about_right div.bottom {float:right; width:304px; height:15px; background:ur
 #footer div.inner_footer div.right ul li div {float:left; width:100%;}
 #footer div.inner_footer div.right ul li div p {float:left; width:100%;}
 #footer div.inner_footer div.right ul li div p a {float:left; width:100%; color:#AE4D0E; text-decoration:none; padding:2px 0; font-weight:normal;}
-
+#footer div.inner_footer div.right div#vizz_sponsor {float:right; width:199px; height:65px; margin:23px 0 0;}
+#footer div.inner_footer div.right div#vizz_sponsor p.developed_by {float:left; font:normal 11px Arial; color:#595D61; width:127px; height:10px; margin:23px 0 0;}
+#footer div.inner_footer div.right div#vizz_sponsor a.vizz_logo {float:left; background:url(/images/common/vizz_logo.png) no-repeat 0 0; width:70px; height:37px;}
 
 
 /*FOOTNOTES*/
