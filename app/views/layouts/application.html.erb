@@ -3,18 +3,28 @@
 <head>
   <title>FROZEN HEAT</title>
   <link rel="shortcut icon" href="/images/favicon.ico"/>
-  <link href="/stylesheets/layout.css" media="screen" rel="stylesheet" type="text/css" />
-  <link href="/stylesheets/jquery-ui-1.8.5.custom.css" type="text/css" media="screen" rel="stylesheet" charset="utf-8">
+  <%= raw stylesheet_link_merged :base %>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <%= raw javascript_include_merged :base %>
 </head>
 
-<body>
-
-  <%= render :partial => 'layouts/supersize' %>
-
-
+<% if (action_name == 'home')||(controller_name=='features')||(@page && @page.cached_slug == 'about') %>
+	<body class="home"> 
+<%elsif (controller_name=='galleries') %>
+	<body class="galleries">
+<%elsif (controller_name=='events')%>
+	<body class="events">
+<%elsif (controller_name=='posts')%>
+	<body class="posts">
+<%elsif (action_name == 'sitemap') %>		
+	<body class="sitemap">
+<%elsif ((controller_name=='pages')&&(action_name != 'sitemap'))%>
+	<body class="pages">
+<%else%>
+	<body>
+<%end%>
+	
   <div class="layout">
-
     <% if (action_name != 'home') %>
       <div id="header">
         <div class="inner_header">
@@ -32,25 +42,13 @@
         </div>
       </div>
     <%- end %>
-
+	
     <%= yield %>
 
     <%= render :partial => 'layouts/footer', :locals => {:extra_class => nil } %>
 
   </div><!-- .layout -->
-
-  <script src="/javascripts/OpenLayers.js" type="text/javascript" charset="utf-8"></script>
-  <script type="text/javascript" src="/javascripts/cloudmade.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js" type="text/javascript" charset="utf-8"></script>
-  <script src="/javascripts/jquery.livequery.js" type="text/javascript" charset="utf-8"></script>
-  <script src="/javascripts/fonts/cufon-yui.js" type="text/javascript" charset="utf-8"></script>
-  <script src="/javascripts/fonts/Hand_Of_Sean_400.font.js" type="text/javascript" charset="utf-8"></script>
-  <script src="/javascripts/jquery-ui-1.8.5.custom.min.js" type="text/javascript" charset="utf-8"></script>
-  <script src="/javascripts/jquery.nivo.slider.js" type="text/javascript" charset="utf-8"></script>
-  <script src="/javascripts/supersized.2.0.js" type="text/javascript" charset="utf-8"></script>
-  <script src="/javascripts/jquery.scrollTo-min.js" type="text/javascript" charset="utf-8"></script>
-  <script src="/javascripts/jquery.url.js" type="text/javascript" charset="utf-8"></script>
-  <script src="/javascripts/application.js" type="text/javascript" charset="utf-8"></script>
-
 </body>
+
+
 </html>

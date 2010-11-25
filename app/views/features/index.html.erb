@@ -3,8 +3,7 @@
 <head>
   <title>FROZEN HEAT</title>
   <link rel="shortcut icon" href="/images/favicon.ico"/>
-  <link href="/stylesheets/layout.css" media="screen" rel="stylesheet" type="text/css" />
-  <link href="/stylesheets/jquery-ui-1.8.5.custom.css" type="text/css" media="screen" rel="stylesheet" charset="utf-8">
+  <%= raw stylesheet_link_merged :base %>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 
@@ -39,7 +38,11 @@
           <div class="middle_explore">
             <div class="head_explore">
               <div class="left">
-                <h1>Viewing <%= pluralize(@features.total_entries, "Site","Sites") %></h1>
+                <% if @features.total_pages > 1 %>
+					<h1>Viewing from <%= @features.size %> of <%= @features.total_entries %> sites</h1>
+				<% else %>
+					<h1>Viewing <%= pluralize(@features.total_entries, "site","sites") %></h1>
+				<% end %>
                 <p>Geographical points with methane gas hydrates explotations</p>
               </div>
               <% if @features.total_pages > 1 %>
@@ -58,14 +61,16 @@
                     <p><%= feature.id %></p>
                   </div>
                   <div class="info">
-                    <h2><a href="/features/<%= feature.id %>"><%= feature.title %> - <%= feature.country %></a></h2>
-                    <p><span class="first"><%= feature.region %></span><span><%= feature.country %></span></p>
+                    <h2><a href="/features/<%= feature.id %>"><%= feature.title %><%= " - #{feature.country}" unless feature.country.blank?  %></a></h2>
+                    <p><%if !feature.country.blank? %><span class="first"><%else%><span><%end%><%= feature.region %></span><% unless feature.country.blank? %><span><%= feature.country %></span><% end %></p>
                   </div>
                 </div>
+				<% unless feature.description.blank? %>
                 <p class="des"><%= truncate(strip_tags(feature.description),
                                   :omission => raw("... <a href=\"#{feature_url(feature)}\">Read more</a>"),
                                   :length => 250,
                                   :preserve_html_tags => true) %></p>
+				<%end%>
                 <div class="grey">
                   <div class="block">
                     <h4>PRIMARY INSTITUTION</h4>
@@ -76,7 +81,7 @@
                     <p><%= feature.water_depth %></p>
                   </div>
                   <div class="block">
-                    <h4>HYDRATE DEPTH(mbsf)</h4>
+                    <h4>HYDRATE DEPTH (mbsf)</h4>
                     <p><%= feature.hydrate_depth %></p>
                   </div>
                 </div>
@@ -106,28 +111,29 @@
       <div class="opaque_explore">
         <div class="top"></div>
         <div class="middle">
+  	      <img id="loading" src="/images/explore/loading.gif" title="loading" alt="loading"/>
           <h3>Filter sites</h3>
           <form action="javascript:void getSites()">
             <label>SEARCH BY NAME / COUNTRY</label>
             <div class="first_value">
-              <input type="text" value="<%= params[:name_or_country] %>"/>
+              <input id="name_country" type="text" value="<%= params[:name_or_country] %>"/>
               <input type="submit" value=""/>
             </div>
             <label>PRIMARY INSTITUTION</label>
             <select>
               <option selected="yes">All</option>
-              <% Feature.select("id, meta").map{ |f| f.primary_institution_name }.each do |name| %>
+              <% Feature.select("id, meta").map{ |f| f.primary_institution_name }.uniq.each do |name| %>
               <option value="<%= name %>"><%= truncate(name, :length => 33) %></option>
               <% end %>
             </select>
-            <div class="long">
+            <div class="long first">
               <label>WATER DEPTH</label>
-              <p class="water">< 1500</p>
+              <p class="water">< 5478</p>
             </div>
             <div class="water"></div>
             <div class="long">
               <label>HYDRATE DEPTH</label>
-              <p class="hydrate">< 1500</p>
+              <p class="hydrate">< 404</p>
             </div>
             <div class="hydrate"></div>
           </form>
@@ -139,13 +145,7 @@
 
   <%= render :partial => 'layouts/footer', :locals => {:extra_class => 'explore' } %>
 
-  <script type="text/javascript" src="/javascripts/OpenLayers.js"></script>
-  <script type="text/javascript" src="/javascripts/cloudmade.js"></script>
-  <script type="text/javascript" src="/javascripts/SiteMarker.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js" type="text/javascript" charset="utf-8"></script>
-  <script src="/javascripts/jquery.stylish-select.js" type="text/javascript" charset="utf-8"></script>
-  <script src="/javascripts/jquery-ui-1.8.5.custom.min.js" type="text/javascript" charset="utf-8"></script>
-  <script src="/javascripts/explore.js" type="text/javascript" charset="utf-8"></script>
-
+  <%= raw javascript_include_merged :openlayer %>
+  <%= raw javascript_include_merged :explore %>
 </body>
 </html>

@@ -8,7 +8,6 @@ tmp/**/*
 # Documentation
 doc/api
 doc/app
-doc/*
 .yardoc
 .yardopts
 
@@ -60,4 +59,5 @@ nbproject
 # Capybara Bug
 capybara-*html
 
-
+# Galleries
+tmp/galleries

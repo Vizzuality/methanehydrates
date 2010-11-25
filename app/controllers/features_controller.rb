@@ -18,11 +18,11 @@ class FeaturesController < ApplicationController
         elsif params[:name_or_country]
           all_features = Feature.all.select{ |f| f.title == params[:name_or_country] || f.country == params[:name_or_country]}
           page = params[:page] && params[:page].to_i > 0 ? params[:page].to_i : 1
-          WillPaginate::Collection.create(page, 4, all_features.size) do |pager|
+          WillPaginate::Collection.create(page, 10, all_features.size) do |pager|
             pager.replace(all_features.slice(pager.per_page * (pager.current_page-1), pager.per_page) || [])
           end
         else
-          Feature.paginate :page => params[:page], :per_page => 4, :order => 'created_at ASC'
+          Feature.paginate :page => params[:page], :per_page => 10, :order => 'created_at ASC'
         end
       end
 
@@ -41,7 +41,7 @@ class FeaturesController < ApplicationController
                             :preserve_html_tags => true)) }).to_json and return
         end
 
-        pagination_attributes = {:page => params[:page], :per_page => 4, :order => 'created_at ASC'}
+        pagination_attributes = {:page => params[:page], :per_page => 10, :order => 'created_at ASC'}
         all_features = Feature.all
         if params[:institution] && params[:institution] != 'All'
           all_features = all_features.select{ |f| f.primary_institution_name == params[:institution] }
@@ -64,7 +64,7 @@ class FeaturesController < ApplicationController
         end
 
         page = params[:page] && params[:page].to_i > 0 ? params[:page].to_i : 1
-        all_features = WillPaginate::Collection.create(page, 4, all_features.size) do |pager|
+        all_features = WillPaginate::Collection.create(page, 10, all_features.size) do |pager|
           pager.replace(all_features.slice(pager.per_page * (pager.current_page-1), pager.per_page) || [])
         end
         if all_features.empty?
@@ -85,7 +85,6 @@ class FeaturesController < ApplicationController
         render :json => json.to_json and return
       end
     end
-
   end
 
   def show

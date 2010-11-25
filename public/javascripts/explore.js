@@ -6,11 +6,11 @@
   var reset = false;
 	var global_index = 100;
 
-  var slider_water = 1500;
-  var slider_hydrate = 1500;
+  var slider_water = 5478;
+  var slider_hydrate = 404;
 
   $(document).ready(function() {
-
+	
     //Cover ul space with blue opaque background (header)
     var li_size = 0;
     $('div.inner_header ul li').each(function(index,element){
@@ -18,8 +18,8 @@
     });
     $('div.inner_header ul').css('background-position',(704-li_size-667) + 'px 0px');
 
-
-    $('select').sSelect();
+	$('select').sSelect();
+	
     $('body').css('background-color','#99B3CC');
 
     //Text Input effects
@@ -36,13 +36,13 @@
 
 
 		//Select bind change
-		$('select').change(function(ev){
+	$('select').change(function(ev){
       getSites();
     });
 		
 
 
-    $("div.water").slider({range: "min",value: 1500,min: 1,max: 1500,
+    $("div.water").slider({range: "min",value: 5478,min: 670,max: 5478,
 			slide: function(event,ui) {
 				slider_water = ui.value;
 				$('p.water').text('< '+slider_water);
@@ -51,18 +51,20 @@
         if (reset) {
           reset = false;
         } else {
+			// alert('cambia water depth');
           getSites();
         }
       }
     });
 
-    $("div.hydrate").slider({range: "min", value: 1500, min: 1, max: 1500,
+    $("div.hydrate").slider({range: "min", value: 404, min: 1, max: 404,
 			slide: function(event,ui) {
         slider_hydrate = ui.value;
         $('p.hydrate').text('< '+slider_hydrate);
 			},      
 			change: function(event, ui) {
-        getSites();
+					// alert('cambia hydrate depth');
+        			getSites();
       }
     });
 
@@ -158,13 +160,24 @@
             '<div class="image">'+
               '<p>'+result[i].id+'</p>'+
             '</div>'+
-            '<div class="info">'+
-              '<h2><a href="'+result[i].url+'">'+result[i].title+' - '+result[i].country+'</a></h2>'+
-              '<p><span class="first">'+result[i].region+'</span><span>'+result[i].country+'</span></p>'+
-            '</div>'+
-          '</div>'+
-          '<p class="des">'+result[i].description+'... <a href="'+result[i].url+'">Read more</a></p>'+
-          '<div class="grey">'+
+            '<div class="info">';
+			
+			
+			if (result[i].country == null){
+				li_+='<h2><a href="'+result[i].url+'">'+result[i].title+'</a></h2><p><span>'+result[i].region+'</span></p>';
+			}else {
+				li_+='<h2><a href="'+result[i].url+'">'+result[i].title+' - '+result[i].country+'</a></h2>'+
+	              '<p><span class="first">'+result[i].region+'</span><span>'+result[i].country+'</span></p>';				
+			}
+
+			li_+='</div>'+
+          '</div>';
+			
+			if (result[i].description != null) {
+				li_+= '<p class="des">'+result[i].description+'... <a href="'+result[i].url+'">Read more</a></p>';
+			}
+			
+            li_+='<div class="grey">'+
             '<div class="block">'+
               '<h4>PRIMARY INSTITUTION</h4>'+
               '<p>'+result[i].primary_institution_name+'</p>'+
@@ -174,7 +187,7 @@
               '<p>'+result[i].water_depth+'</p>'+
             '</div>'+
             '<div class="block">'+
-              '<h4>HYDRATE DEPTH(mbsf)</h4>'+
+              '<h4>HYDRATE DEPTH (mbsf)</h4>'+
               '<p>'+result[i].hydrate_depth+'</p>'+
             '</div>'+
           '</div>'+
@@ -229,7 +242,10 @@
 
 
   function placeFooter() {
-    $('#footer').css('top',$.getDocHeight()+'px');
+	
+	// 481 is the min distance necessary
+	var footerPos = parseInt($('div.body_content_left').height()) + 481;
+	$('#footer').css('top',footerPos+'px');
   }
 
   function placeBlueBackground() {
@@ -249,17 +265,23 @@
 
 
   function showLoader() {
-    $('img.loader').fadeIn();
+	$('div.opaque_explore div.middle h3').text('Filtering...')
+    $('img#loading').fadeIn();
   }
 
   function hideLoader() {
-    $('img.loader').fadeOut();
+    $('img#loading').fadeOut();
+	$('div.opaque_explore div.middle h3').text('Filter sites')	
+
   }
 
   function resetFilters() {
     reset = true;
-    $('div.water').slider( "value" , 1500 );
-    $('div.hydrate').slider( "value" , 1500 );
+    $('div.water').slider( "value" , 5478 );
+    $('div.hydrate').slider( "value" , 404 );
+	
+	$('input#name_country').val('');	
+	$('div.opaque_explore div.middle form ul.newList li').first().children('a').trigger('click.sSelect');
   }
 
 

@@ -73,6 +73,7 @@
 ----------------------------------*/
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default { border:none; background:url(/images/common/bkg_day_calendar.png) 0 0 repeat-x; font-weight: bold; color: #eeeeee; }
 .ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited { color: #eeeeee; text-decoration: none; }
+a.ui-state-default:hover {cursor:pointer;}
 .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus { border:none; background:url(/images/common/bkg_day_calendar.png) 0 -32px repeat-x; font-weight: bold; color: #ffffff; }
 .ui-state-hover a, .ui-state-hover a:hover { color: #ffffff; text-decoration: none; }
 .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active { background:url(/images/common/bkg_day_calendar.png) 0 -64px repeat-x; font-weight: bold; color: #ffffff; }
@@ -158,7 +159,7 @@
 .ui-datepicker select.ui-datepicker-month-year {width: 100%;}
 .ui-datepicker select.ui-datepicker-month, 
 .ui-datepicker select.ui-datepicker-year { width: 49%;}
-.ui-datepicker table {width: 100%; font-size: .9em; border-collapse: collapse; margin:0; }
+.ui-datepicker table {width: 100%; font-size: .9em; border-collapse: collapse; margin:1px 0 0 0; }
 .ui-datepicker th { padding: .7em .3em; text-align: center; font-weight: bold; border: 0;  }
 .ui-datepicker td { border: 0; padding:1px; }
 .ui-datepicker td span, .ui-datepicker td a { display: block; padding:.6em .2em; text-align: center; text-decoration: none; }
@@ -204,7 +205,7 @@
     height: 200px; /*must have*/
 }
 thead {display:none;}
-.bottom-navigator {margin:0 0 0 2px; float:left; position:relative; background:url(/images/common/bkg_day_calendar.png) repeat 0 0; width:224px; height:30px;}
+.bottom-navigator {margin:1px 0 0 2px; float:left; position:relative; background:url(/images/common/bkg_day_calendar.png) repeat 0 0; width:224px; height:30px;}
 .bottom-navigator a {position:absolute; bottom:0; width:31px; height:31px;}
 .bottom-navigator a.next:hover {background-position:0 -31px; cursor:pointer;}
 .bottom-navigator a.next {right:1px; background:url(/images/common/next_month.png) no-repeat 0px 0;}
@@ -218,7 +219,7 @@ thead {display:none;}
 .ui-slider-handle.ui-state-active.ui-corner-all {background-position:-1px -18px; cursor:pointer;}
 .ui-slider-handle.ui-state-hover.ui-corner-all {cursor:pointer;}
 .ui-slider.ui-widget {height:6px; margin:6px 0 0 0;}
-.ui-slider.ui-widget-content {border: 1px solid #333333; background:white; color: #333333; }
+.ui-slider.ui-widget-content {border: 1px solid #333333; background:url('../images/explore/bkg_bar.png') no-repeat 0 0; color: #333333; }
 .ui-slider.ui-corner-all {border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px;}
 .ui-slider-range.ui-widget-header { background: #f6a828 url(/images/explore/slider_bkg.png) repeat-x 0 0; color: #ffffff; font-weight: bold; height:6px; border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px;}
 .ui-slider-range.ui-widget-header a { color: #ffffff; }

@@ -1,0 +1,26 @@
+---
+javascripts:
+- base:
+  - jquery
+  - jquery.livequery
+  - fonts/cufon-yui
+  - fonts/Hand_Of_Sean_400.font
+  - jquery-ui-1.8.5.custom.min
+  - jquery.scrollTo-min
+  - jquery.url
+  - galleria
+  - galleria.classic
+  - application
+- openlayer:
+  - OpenLayers
+  - cloudmade
+  - SiteMarker
+  - jquery
+  - jquery.stylish-select
+  - jquery-ui-1.8.5.custom.min
+- explore:
+  - explore
+stylesheets:
+- base:
+  - layout
+  - jquery-ui-1.8.5.custom

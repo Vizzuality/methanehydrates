@@ -8,7 +8,7 @@
           <div class="head_post">
             <div class="top"></div>
             <div class="middle">
-              <p class="back"><a href="<%= blog_post_url(BlogPost.live.first) %>">View latest post</a></p>
+              <p class="back"><a href="<%= blog_root_url %>">View all posts</a></p>
               <h1><%= @blog_post.title %></h1>
               <p class='posted_at'><%= @blog_post.created_at.strftime("#{to_ordinal(@blog_post.created_at.day)} of %B, %Y") %></p>
               <span class="line"></span>

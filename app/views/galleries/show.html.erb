@@ -1,4 +1,4 @@
-<% if feature = Feature.where({:gallery_id => @gallery.id}).limit(1).first %>
+<% if feature = Feature.find_by_gallery_id %>
   <span id="latitude" class="hidden"><%= feature.the_geom.lat %></span>
   <span id="longitude" class="hidden"><%= feature.the_geom.lon %></span>
 <% end -%>
@@ -22,14 +22,20 @@
       </div>
     </div>
     <div class="middle">
-      <div class="slider">
+      <div class="galleryStyle">
         <% @gallery.gallery_entries.each do |entry| %>
-          <%= image_fu entry.image, :huge, :alt => entry.name, :title => entry.name %>
+        <% if entry.video? %>
+          <a href="<%= strip_tags(entry.body) %>"><img type="video" src="<%= entry.image.thumbnail(:huge).url %>" alt="<%=entry.name%>" title="<%=entry.name%>"></a>
+        <% else %>
+          <a href="<%= entry.image.thumbnail(:huge).url %>"><img src="<%= entry.image.thumbnail(:huge).url %>" alt="<%=entry.name%>" title="<%=entry.name%>"></a>
+        <% end -%>
         <% end -%>
       </div>
       <div class="bottom_content">
+        <% if feature = Feature.find_by_gallery_id(@gallery.id) %>
         <div class="block map" id="map">
         </div>
+        <% end -%>
         <div class="block">
           <%=raw @gallery.body %>
         </div>
@@ -43,25 +49,6 @@
     <% end -%>
   </div>
 
-  <div class="galleries_by_region">
-    <div class="top"></div>
-    <div class="middle">
-      <% galleries = Feature.limit(6).order('created_at DESC').map(&:gallery) %>
-      <h3>Other sites Galleries by Region</h3>
-      <ul>
-        <% galleries.each do |gallery| %>
-        <li <%=raw cycle('', '', 'class="last"') %>>
-          <div class="image">
-            <%= link_to(image_fu(gallery.gallery_entries.first.image, :small), gallery_url(gallery)) %>
-          </div>
-          <div class="text">
-            <%= simple_format(truncate(gallery.body, :length => 80)) %>
-          </div>
-        </li>
-        <% end -%>
-      </ul>
-    </div>
-    <div class="bottom"></div>
-  </div>
+  <%= render :partial => 'galleries/by_region' %>
 
 </div>

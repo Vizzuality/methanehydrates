@@ -27,18 +27,18 @@ u.roles << r
 # Default image sizes
 puts "Loading default image sizes"
 RefinerySetting.set(:user_image_sizes, {
-  :small =>  '100x75>',
-  :medium => '235x150>',
-  :large =>  '550x370>',
-  :big =>    '615x400>',
-  :huge =>   '930x615>',
+  :small =>  '100x75#',
+  :medium => '235x150#',
+  :large =>  '550x370#',
+  :big =>    '615x400#',
+  :huge =>   '930x615#',
 })
 RefinerySetting.set(:image_thumbnails, {
-  :small =>  '100x75>',
-  :medium => '235x150>',
-  :large =>  '550x370>',
-  :big =>    '615x400>',
-  :huge =>   '930x615>',
+  :small =>  '100x75#',
+  :medium => '235x150#',
+  :large =>  '550x370#',
+  :big =>    '615x400#',
+  :huge =>   '930x615#',
 })
 
 puts "Setting site name"
@@ -57,14 +57,15 @@ hydrate_depth:string
 hydrate_description:text
 data_provided_by_name:string
 data_provided_by_url:string
+references:text
+wiki_url:string
 ATTRIBUTES
 
 RefinerySetting.set(:feature_attributes, attributes)
 
 # Load default two galleries
-g1 = Gallery.create :name => 'Methane gas hydrates and human activities', :body => "Research on methane gas hydrates has been progressin for decades. Subjects of interest include global distribution, geohazards linked to human activities, ecosystems associated to near surface occurrences, technology issues linkted to possible production and future scenarios about methane gas hydrates in the global energy mix.\nThe following gallery places methane gas hydrates in the context of current human activities such as exploration and production research and scientific field and laboratory studies."
-g2 = Gallery.create :name => 'Methane gas hydrates in the natural system', :body => "Methane gas hydrates occur in a number of locations around the world.\nGeologically, methane gas hydrates are found both in oceanic/lacustrine and permafrost environments.\nThis gallery presents a glimpse of methane gas hydrates in their natural environment."
-g3 = Gallery.create :name => 'Methane gas hydrates research sites by region', :body => "Methane gas hydrates occur in many parts of the world including on land in the Arctic, in most of the world's oceans on the continental shelves and in large deep lakes like Lake Baikal in Russia. Come experiences some of these sites first hand."
+puts 'Loading content in default galleries'
+load(Rails.root.join('db', 'methane_galleries.rb').to_s)
 
 # Load sample data
 env_seed_file = File.join(Rails.root, 'db', 'env_seeds', "#{Rails.env}.rb")
@@ -76,3 +77,5 @@ end
 # Load methane hydrates pages
 puts 'Loading content in default pages'
 load(Rails.root.join('db', 'methane_static_pages.rb').to_s)
+
+

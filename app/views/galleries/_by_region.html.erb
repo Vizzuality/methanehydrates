@@ -1,0 +1,24 @@
+<div class="galleries_by_region">
+  <div class="top" id="gallery-by-region"></div>
+  <div class="middle">
+    <h3>Other sites Galleries by Region</h3>
+    <ul>
+      <% unless @sites_by_region_galleries.empty? %>
+        <% @sites_by_region_galleries.each do |gallery| %>
+          <% if entry = gallery.gallery_entries.first %>
+            <li <%=raw cycle('', '', 'class="last"') %>>
+              <div class="image">
+                <%= link_to(image_fu(entry.image, :small, :title => entry.name), gallery_url(gallery)) %>
+              </div>
+              <div class="text">
+                
+                <a href="<%= gallery_url(gallery) %>"><%= simple_format(truncate(strip_tags(gallery.body), :length => 80)) %></a>
+              </div>
+            </li>
+          <% end -%>
+        <% end -%>
+      <% end -%>
+    </ul>
+  </div>
+  <div class="bottom"></div>
+</div>

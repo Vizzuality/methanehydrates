@@ -9,8 +9,8 @@
     <div class="head_site">
       <div class="top"></div>
       <div class="middle">
-        <h1><%=raw @feature.title %> - <%=raw @feature.country %></h1>
-        <span><p class="first"><%= @feature.region %></p><p><%=raw @feature.country %></p></span>
+        <h1><%=raw @feature.title %> <%= "- #{raw(@feature.country)}" unless @feature.country.blank? %></h1>
+        <%if !@feature.country.blank? %><p class="first"><%else%><p class="empty_country"><%end%><%= @feature.region %></p><p><%= "#{raw(@feature.country)}" unless @feature.country.blank? %></p>
         <span class="line"></span>
       </div>
     </div>
@@ -22,10 +22,14 @@
           <% end -%>
         <% end -%>
       </div>
+     <div class="line"></div>
     </div>
-    <div class="middle_white site">
-      <%=raw @feature.description %>
-    </div>
+
+	<% unless @feature.description.blank? %>
+	    <div class="middle_white site">
+	      <%=raw @feature.description %>
+	    </div>
+	<% end %>
     <div class="bottom site">
       <p>This information was updated on <%= @feature.created_at.strftime("%d/%m/%G") %></p>
       <% if logged_in? %>
@@ -33,27 +37,33 @@
       <%- end %>
     </div>
   </div>
-  
-  <div class="body_content_right">
+
+  <div class="body_content_right features">
     <div class="opaque site">
       <div class="top"></div>
       <div class="middle">
         <div class="head">
-          <% unless @feature.recorded_datafields_text.blank? %>
           <h3>Recorded Datafields</h3>
-          <%= simple_format(@feature.recorded_datafields_text) %>
-          <% end -%>
         </div>
       </div>
+
       <div class="middle_map">
         <div class="outer_map">
-          <div id="map"></div>
+          <div id="map" class="feature_map"></div>
         </div>
       </div>
+
+
       <div class="middle_site">
-        <% unless @feature.primary_institution_name.blank? || @feature.primary_institution_url.blank? %>
+        <% unless @feature.primary_institution_name.blank? %>
         <h6>PRIMARY INSTITUTION</h6>
-        <p><a href="<%= @feature.primary_institution_url %>" rel="nofollow"><%= @feature.primary_institution_name %></a></p>
+        <p>
+          <% if @feature.primary_institution_url.blank? %>
+            <%= @feature.primary_institution_name %>
+          <% else %>
+            <a href="<%= @feature.primary_institution_url %>" rel="nofollow"><%= @feature.primary_institution_name %></a>
+          <% end -%>
+        </p>
         <% end -%>
         <% unless @feature.expedition.blank? %>
         <h6>EXPEDITION</h6>
@@ -64,7 +74,7 @@
         <p><%= @feature.water_depth %></p>
         <% end -%>
         <% unless @feature.hydrate_depth.blank? %>
-        <h6>HYDRATE DEPTH(mbsf)</h6>
+        <h6>HYDRATE DEPTH (mbsf)</h6>
         <p><%= @feature.hydrate_depth %></p>
         <% end -%>
         <% unless @feature.hydrate_description.blank? %>
@@ -72,10 +82,19 @@
         <p><%= @feature.hydrate_description %></p>
         <% end -%>
       </div>
-      <% unless @feature.data_provided_by_name.blank? || @feature.data_provided_by_url.blank?%>
+      <% unless @feature.data_provided_by_name.blank? %>
       <div class="bottom_site">
-        <p>Data provided by <a href="<%= @feature.data_provided_by_url %>" rel="nofollow"><%= @feature.data_provided_by_name %></a></p>
+        <p>Data provided by
+        <% if @feature.data_provided_by_url.blank? %>
+          <%= @feature.data_provided_by_name %>
+        <% else %>
+          <a href="<%= @feature.data_provided_by_url %>" rel="nofollow"><%= @feature.data_provided_by_name %></a>
+        <% end -%>
+        </p>
       </div>
+	  <%else%>
+		  <div class="bottom_site_empty">	
+		  </div>
       <% end -%>
     </div>
 
@@ -101,9 +120,8 @@
       </div>
       <div class="bottom"></div>
     </div>
-  </div>  
-
+  </div>
 </div>
-
+<%= raw javascript_include_merged :openlayer %>
 <span id="latitude" class="hidden"><%= @feature.the_geom.lat %></span>
 <span id="longitude" class="hidden"><%= @feature.the_geom.lon %></span>

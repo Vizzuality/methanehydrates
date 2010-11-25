@@ -1,13 +1,13 @@
 <div class="title">
   <div class="inner_title">
     <div class="left">
-        <h1>Media resources for scientifics and citizens</h1>
+        <h1 class="galleries_content">Media resources for scientifics and citizens</h1>
     </div>
-    <div class="right">
+    <div class="right galleries_content">
       <ul>
         <li><a onclick="javascript:void $.scrollTo('#gallery-<%= @human_activities_gallery.id %>',400)">HUMAN ACTIVITIES GALLERY</a><span class="line"></span></li>
         <li><a onclick="javascript:void $.scrollTo('#gallery-<%= @natural_system_gallery.id %>',400)">NATURAL SYSTEM GALLERY</a><span class="line"></span></li>
-        <li class="last"><a onclick="javascript:void $.scrollTo('#gallery-<%= @sites_by_region_gallery.id %>',400)">SITES BY REGION</a><span class="line"></span></li>
+        <li class="last"><a onclick="javascript:void $.scrollTo('#gallery-by-region',400)">SITES BY REGION</a><span class="line"></span></li>
       </ul>
     </div>
   </div>
@@ -15,9 +15,9 @@
 
 <div id="content">
 
-  <div class="media" id="gallery-<%= @human_activities_gallery.id %>">
+  <div class="media">
     <div class="head_post">
-      <div class="top"></div>
+      <div class="top" id="gallery-<%= @human_activities_gallery.id %>"></div>
       <div class="middle">
         <div class="left">
           <h1><%= link_to(@human_activities_gallery.name, gallery_url(@human_activities_gallery)) %></h1>
@@ -32,10 +32,14 @@
       </div>
     </div>
     <div class="middle">
-      <% if @human_activities_gallery.gallery_entries.size!=0 %>
-        <div class="slider">
+      <% if @human_activities_gallery.gallery_entries.count!=0 %>
+        <div class="galleryStyle">
           <% @human_activities_gallery.gallery_entries.each do |entry| %>
-            <%= image_fu entry.image, :huge, :alt => entry.name, :title => entry.name %>
+            <% if entry.video? %>
+              <a href="<%= strip_tags(entry.body) %>"><img type="video" src="<%= entry.image.thumbnail(:huge).url %>" alt="<%=entry.name%>" title="<%=entry.name%>"></a>
+            <% else %>
+              <a href="<%= entry.image.thumbnail(:huge).url %>"><img src="<%= entry.image.thumbnail(:huge).url %>" alt="<%=entry.name%>" title="<%=entry.name%>"></a>
+            <% end -%>
           <% end -%>
         </div>
       <%-end%>
@@ -46,9 +50,9 @@
     <div class="bottom"></div>
   </div>
 
-  <div class="media" id="gallery-<%= @natural_system_gallery.id %>">
+  <div class="media">
     <div class="head_post">
-      <div class="top"></div>
+      <div class="top" id="gallery-<%= @natural_system_gallery.id %>"></div>
       <div class="middle">
         <div class="left">
           <h1><%= link_to(@natural_system_gallery.name, gallery_url(@natural_system_gallery)) %></h1>
@@ -64,9 +68,9 @@
     </div>
     <div class="middle">
       <% if @human_activities_gallery.gallery_entries.size!=0 %>
-        <div class="slider">
+        <div class="galleryStyle">
           <% @natural_system_gallery.gallery_entries.each do |entry| %>
-            <%= image_fu entry.image, :huge, :alt => entry.name, :title => entry.name %>
+      <a href="<%= entry.image.thumbnail(:huge).url %>"><img src="" alt="<%=entry.name%>" title="<%=entry.name%>"/></a>
           <% end -%>
         </div>
       <%-end%>
@@ -77,27 +81,6 @@
     <div class="bottom"></div>
   </div>
 
-  <div class="galleries_by_region" id="gallery-<%= @sites_by_region_gallery.id %>">
-    <div class="top"></div>
-    <div class="middle">
-      <h3>Other sites Galleries by Region</h3>
-      <ul>
-        <% unless @sites_by_region_gallery.gallery_entries.empty? %>
-          <% @sites_by_region_gallery.gallery_entries.each do |entry| %>
-          <li <%=raw cycle('', '', 'class="last"') %>>
-            <div class="image">
-              <%= link_to(image_fu(entry.image, :small), gallery_gallery_entry_url(gallery, entry)) %>
-            </div>
-            <div class="text">
-              <%= simple_format(truncate(entry.body, :length => 80)) %>
-            </div>
-          </li>
-          <% end -%>
-        <% end -%>
-      </ul>
-    </div>
-    <div class="bottom"></div>
-  </div>
+  <%= render :partial => 'galleries/by_region' %>
 </div>
-
 <%= render :partial => "/shared/content_page" %>

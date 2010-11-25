@@ -40,3 +40,5 @@ module Refinery
     config.filter_parameters += [:password]
   end
 end
+
+require 'core_ext/rmagick_utils'

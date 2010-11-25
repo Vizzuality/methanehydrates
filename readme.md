@@ -12,6 +12,7 @@ A project based on [Geoportal](http://github.com/vizzuality/geoportal)
     cd methanehydrates
     bundle install
     rake db:setup
+    rake methane:import_data
     rails s
 
 Visit `http://localhost:3000/admin` in your browser (by default it creates an administrator user with login `admin` and password `admin`).

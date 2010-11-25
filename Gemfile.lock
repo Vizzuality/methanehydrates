@@ -26,7 +26,8 @@ GIT
 
 GIT
   remote: git://github.com/ferblape/postgis_adapter.git
-  revision: e85ca1be881e2df4396da5c4482337ab05f6a85d
+  revision: 6c41a9b5c1b9651e60d6e32441226dd7e452bbe0
+  branch: load_geometry_optimization
   specs:
     ppe-postgis-adapter (0.7.8)
 
@@ -76,20 +77,22 @@ GEM
     capistrano-ext (1.2.1)
       capistrano (>= 1.0.0)
     columnize (0.3.1)
-    dragonfly (0.7.6)
+    dragonfly (0.7.7)
       rack
     erubis (2.6.6)
       abstract (>= 1.0.0)
+    fastercsv (1.5.3)
     filters_spam (0.3)
     friendly_id (3.1.7)
       babosa (~> 0.2.0)
     highline (1.6.1)
-    i18n (0.4.1)
+    i18n (0.4.2)
     linecache (0.43)
-    mail (2.2.7)
+    mail (2.2.9)
       activesupport (>= 2.3.6)
-      mime-types
-      treetop (>= 1.4.5)
+      i18n (~> 0.4.1)
+      mime-types (~> 1.16)
+      treetop (~> 1.4.8)
     mime-types (1.16)
     moretea-awesome_nested_set (1.4.3.1)
       activerecord (~> 3.0.0)
@@ -101,6 +104,7 @@ GEM
     net-ssh-gateway (1.0.1)
       net-ssh (>= 1.99.1)
     nofxx-georuby (1.7.3)
+    nokogiri (1.4.3.1)
     pg (0.9.0)
     polyglot (0.3.1)
     rack (1.2.1)
@@ -161,7 +165,10 @@ PLATFORMS
 DEPENDENCIES
   capistrano
   capistrano-ext
+  dragonfly (= 0.7.7)
+  fastercsv
   nofxx-georuby
+  nokogiri
   pg (= 0.9.0)
   ppe-postgis-adapter!
   rails (= 3.0.0)
