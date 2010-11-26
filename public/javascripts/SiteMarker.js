@@ -50,7 +50,7 @@ SiteMarker = OpenLayers.Class({
 					$(this.icon.imageDiv).append('<a href="#" class="open" style="background:url('+this.icon.url+') no-repeat center 0;">'+this.info.id+'</a>'+
 																				'<div class="infowindow">'+
 																					'<a href="#" class="close"></a>'+
-																					'<div class=""><img src="'+this.info.image_url+'" alt="'+this.info.title+'" title="'+this.info.title+'"/></div>'+
+																					'<div class=""><a href="'+this.info.url+'"><img src="'+this.info.image_url+'" alt="'+this.info.title+'" title="'+this.info.title+'"/></a></div>'+
 																					'<h1><a href="'+this.info.url+'">'+this.info.title+'</a></h1>'+
 																					'<p><span>'+this.info.region+'</span></p>'+
 																				'</div>');
@@ -62,7 +62,7 @@ SiteMarker = OpenLayers.Class({
 					$(this.icon.imageDiv).append('<a href="#" class="open" style="background:url('+this.icon.url+') no-repeat center 0;">'+this.info.id+'</a>'+
 																				'<div class="infowindow">'+
 																					'<a href="#" class="close"></a>'+
-																					'<div class=""><img src="'+this.info.image_url+'" alt="'+this.info.title+'" title="'+this.info.title+'"/></div>'+
+																					'<div class=""><a href="'+this.info.url+'"><img src="'+this.info.image_url+'" alt="'+this.info.title+'" title="'+this.info.title+'"/></a></div>'+
 																					'<h1><a href="'+this.info.url+'">'+this.info.title+'</a></h1>'+
 																					'<p><span class="first">'+this.info.region+'</span><span>'+this.info.country+'</span></p>'+
 																				'</div>');
