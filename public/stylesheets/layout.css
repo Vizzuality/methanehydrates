@@ -433,6 +433,7 @@ div.galleries_by_region div.middle ul li.last {padding:10px 0;}
 div.galleries_by_region div.middle ul li div.image {float:left; width:100px; height:75px; padding:4px 2px 2px 3px; margin:0 9px 0 0; background:url(/images/media/image_shadow.png) no-repeat 0 0;}
 div.galleries_by_region div.middle ul li div.image img {float:left; width:100px; height:75px;}
 div.galleries_by_region div.middle ul li div.text {float:left; width:165px; padding:2px 0 0 0;}
+div.galleries_by_region div.middle ul li div.text a {text-decoration:none;}
 div.galleries_by_region div.middle ul li div.text a p{float:left; font:bold 15px Arial; color:white; line-height:19px; text-decoration:none;}
 div.galleries_by_region div.middle ul li div.text a p:hover {text-decoration:underline;}
 div.galleries_by_region div.bottom {float:left; width:100%; height:15px; background:url(/images/round/bottom_grey_opaque_long.png) no-repeat center 0; margin:0;}
