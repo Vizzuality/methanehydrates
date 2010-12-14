@@ -40,8 +40,8 @@ Galleria.addTheme({
                 $(this).not('.active').children().stop().fadeTo(400, .6);
             });
 
-            this.addIdleState( this.get('image-nav-left'), { left:-69 });
-            this.addIdleState( this.get('image-nav-right'), { right:-69 });
+            // this.addIdleState( this.get('image-nav-left'), { left:-69 });
+            // this.addIdleState( this.get('image-nav-right'), { right:-69 });
         }
 
         // bind some stuff
