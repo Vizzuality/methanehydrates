@@ -9,23 +9,23 @@
 </head>
 
 <% if (action_name == 'home')||(controller_name=='features')||(@page && @page.cached_slug == 'about') %>
-	<body class="home"> 
+  <body class="home">
 <%elsif (controller_name=='galleries') %>
-	<body class="galleries">
+  <body class="galleries">
 <%elsif (controller_name=='events')%>
-	<body class="events">
+  <body class="events">
 <%elsif (controller_name=='posts')%>
-	<body class="posts">
-<%elsif (action_name == 'sitemap') %>		
-	<body class="sitemap">
+  <body class="posts">
+<%elsif (action_name == 'sitemap') %>
+  <body class="sitemap">
 <%elsif ((controller_name=='pages')&&(action_name != 'sitemap'))%>
-	<body class="pages">
+  <body class="pages">
 <%else%>
-	<body>
+  <body>
 <%end%>
 
   <div class="layout">
-  	<div class="ret"></div>
+    <div class="ret"></div>
     <% if (action_name != 'home') %>
       <div id="header">
         <div class="inner_header">
@@ -35,7 +35,7 @@
           </div>
           <ul>
             <li <% if (controller_name=='posts')%> <%="class='last current'"%><%else%><%="class='last'"%><%-end%>><a href="/blog">BLOG</a></li>
-            <li <% if @page && @page.cached_slug == 'about' || @page.cached_slug == 'partners' || @page.cached_slug == 'faq' %> <%="class='current'"%><%-end%>><a href="/about">LEARN MORE</a></li>
+            <li <% if @page && (@page.cached_slug == 'about' || @page.cached_slug == 'partners' || @page.cached_slug == 'faq') %> <%="class='current'"%><%-end%>><a href="/about">LEARN MORE</a></li>
             <li <% if (controller_name=='events')%> <%="class='current'"%><%-end%>><a href="/events">UPCOMING EVENTS</a></li>
             <li <% if (controller_name=='galleries')%> <%="class='current'"%><%-end%>><a href="/galleries">MEDIA RESOURCES</a></li>
             <li <% if (controller_name=='features')%> <%="class='current'"%><%-end%>><a href="/explore">EXPLORE THE SITES</a></li>
@@ -43,7 +43,7 @@
         </div>
       </div>
     <%- end %>
-	
+
     <%= yield %>
 
     <%= render :partial => 'layouts/footer', :locals => {:extra_class => nil } %>

@@ -1,4 +1,3 @@
-<% controller.load_default_galleries %>
 <div id="content_sitemap">
   <div class="inner">
     <h1>Sitemap</h1>
@@ -10,9 +9,12 @@
     </ul>
     <a href="/galleries" class="title">Media resources</a>
     <ul>
-      <li class="first"><a href="/galleries#gallery-<%= @human_activities_gallery.id %>">Human activities gallery</a></li>
-      <li><a href="/galleries#gallery-<%= @natural_system_gallery.id %>">Natural system gallery</a></li>
-      <li><a href="/galleries#gallery-by-region">Sites by region</a></li>
+      <% @named_galleries.each do |gallery| %>
+        <li class="<%= 'first' if gallery == @named_galleries.first %>">
+          <a href="/galleries#gallery-<%= gallery.id %>"><%= gallery.name %></a>
+        </li>
+      <% end %>
+      <li><a href="/galleries#gallery-other-albumns">Other albumns</a></li>
     </ul>
     <a href="/events" class="title">Upcoming events</a>
     <a href="/about" class="title">Learn more</a>

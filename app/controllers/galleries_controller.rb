@@ -6,14 +6,6 @@ class GalleriesController < ApplicationController
   def index
     load_default_galleries
 
-    gallery_names = [
-      'Methane gas hydrate sites by region',
-      'Methane gas hydrates and human activities',
-      'Methane gas hydrates in the natural system',
-      'Video resources'
-    ]
-
-    @galleries_without_features = Gallery.where(:name => gallery_names).order('name ASC')
 
     # you can use meta fields from your model instead (e.g. browser_title)
     # by swapping @page for @gallery_entry in the line below:

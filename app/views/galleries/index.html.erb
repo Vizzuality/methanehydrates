@@ -5,7 +5,7 @@
     </div>
     <div class="right galleries_content">
       <ul>
-        <% @galleries_without_features.each do |gallery| %>
+        <% @named_galleries.each do |gallery| %>
           <li><a onclick="javascript:void $.scrollTo('#gallery-<%= gallery.id %>',400)"><%= gallery.name %></a><span class="line"></span></li>
         <% end %>
         <li class="last"><a onclick="javascript:void $.scrollTo('#gallery-by-region',400)">SITES BY REGION</a><span class="line"></span></li>
@@ -16,7 +16,7 @@
 
 <div id="content">
 
-  <% @galleries_without_features.each do |gallery| %>
+  <% @named_galleries.each do |gallery| %>
     <div class="media">
       <div class="head_post">
         <div class="top" id="gallery-<%= gallery.id %>"></div>
@@ -53,6 +53,6 @@
     </div>
   <% end %>
 
-  <%= render :partial => 'galleries/by_region' %>
+  <%= render :partial => 'galleries/other_albumns' %>
 </div>
 <%= render :partial => "/shared/content_page" %>
