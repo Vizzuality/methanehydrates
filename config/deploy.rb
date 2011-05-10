@@ -11,18 +11,14 @@ set :application, 'methane'
 
 set :scm, :git
 set :git_shallow_clone, 1
-set :scm_user, 'ubuntu'
 set :repository, "git://github.com/Vizzuality/methanehydrates.git"
 ssh_options[:forward_agent] = true
 set :keep_releases, 5
 
 set :linode_staging, '178.79.131.104'
-set :linode_production, '178.79.142.149'
-set :user,  'ubuntu'
+set :linode_production, '82.116.78.184'
 
-set :deploy_to, "/home/ubuntu/www/#{application}"
-
-after "deploy:update_code", :run_migrations, :symlinks, :asset_packages
+after "deploy:update_code", :symlinks, :asset_packages
 after "deploy", "deploy:cleanup"
 
 desc "Restart Application"
