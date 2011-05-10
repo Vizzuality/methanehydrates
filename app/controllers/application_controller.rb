@@ -6,7 +6,6 @@ class ApplicationController < ActionController::Base
 
   def load_default_galleries
     galleries_names = [
-      'Methane gas hydrate sites by region',
       'Methane gas hydrates and human activities',
       'Methane gas hydrates in the natural system',
       'Video resources'
