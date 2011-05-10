@@ -1,6 +1,22 @@
-  
-  <span id="latitude" class="hidden">40</span>
-  <span id="longitude" class="hidden">-3</span>
+  <script type="text/javascript" charset="utf-8">
+    $(function(){
+        $.ajax({'url': 'http://maps.google.com/maps/geo?q='+encodeURIComponent('<%= @event.location %>')+'&sensor=false&output=json&key='+google_api_key,
+                'dataType': 'jsonp',
+                'success': function(result){
+
+                  var center = new OpenLayers.LonLat(result.Placemark[0].Point.coordinates[0], result.Placemark[0].Point.coordinates[1]).transform(epsg4326, map.getProjectionObject());
+                  map.setCenter(center, 5);
+                  markers = new OpenLayers.Layer.Markers( "Markers" );
+                  map.addLayer(markers);
+
+                  var size = new OpenLayers.Size(28,32);
+                  var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
+                  var icon = new OpenLayers.Icon('/images/common/marker.png', size, offset);
+                  markers.addMarker(new OpenLayers.Marker(center,icon));
+
+                }});
+    });
+  </script>
 
 
     <div id="content">
@@ -12,10 +28,10 @@
               <div class="middle">
                 <p class="back"><a href="<%= events_path %>">View events list</a></p>
 
-	                <div class="left">
-	                  <p class="day"><%=@event.from.strftime("%d")%></p>
-	                  <p class="month"><%=@event.from.strftime("%b").upcase %></p>
-	                </div>
+                  <div class="left">
+                    <p class="day"><%=@event.from.strftime("%d")%></p>
+                    <p class="month"><%=@event.from.strftime("%b").upcase %></p>
+                  </div>
 
                 <div class="right">
                   <h1><%= @event.title %></h1>
@@ -37,12 +53,12 @@
               <ul>
                 <% @event.similar(:limit => 3).each do |event| %>
                   <li>
-					<a href="<%=event_url(event)%>">
-	                    <div class="left">
-	                      <p class="day"><%=event.from.strftime("%d")%></p>
-	                      <p class="month"><%=event.from.strftime("%b").upcase%></p>
-	                    </div>
-					</a>
+          <a href="<%=event_url(event)%>">
+                      <div class="left">
+                        <p class="day"><%=event.from.strftime("%d")%></p>
+                        <p class="month"><%=event.from.strftime("%b").upcase%></p>
+                      </div>
+          </a>
                     <div class="right">
                       <h6><%= link_to event.title, event_url(event) %></h6>
                       <p class="location"><%= event.location %></p>
@@ -101,7 +117,7 @@
           </div>
         </div>
       <% end %>
-      
+
 
       <%= render :partial => "/shared/content_page" %>
     </div>
