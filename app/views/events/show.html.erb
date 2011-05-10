@@ -3,6 +3,9 @@
         $.ajax({'url': 'http://maps.google.com/maps/geo?q='+encodeURIComponent('<%= @event.location %>')+'&sensor=false&output=json&key='+google_api_key,
                 'dataType': 'jsonp',
                 'success': function(result){
+                  if (!result.Placemark) {
+                    return;
+                  };
 
                   var center = new OpenLayers.LonLat(result.Placemark[0].Point.coordinates[0], result.Placemark[0].Point.coordinates[1]).transform(epsg4326, map.getProjectionObject());
                   map.setCenter(center, 5);
