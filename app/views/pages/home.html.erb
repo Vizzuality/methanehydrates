@@ -11,9 +11,8 @@
 <div class="title">
   <div class="inner_title">
    <div class="left">
-        <h1>A global outlook on <br/>
-        methane gas hydrates</h1>
-        <p class="subtitle">Undertaking an assessment of the state of the knowledge of methane gas hydrates</p>
+        <h1>A UNEP global outlook on methane gas hydrates</h1>
+        <p class="subtitle">Assessing the state of the knowledge</p>
     </div>
     <div class="right">
       <ul>
@@ -33,7 +32,7 @@
     <div class="top"></div>
     <div class="middle">
       <div class="left">
-        <h2>Methane gas hydrates sediments around the world</h2>
+        <h2>Methane gas hydrate occurrences around the world</h2>
         <form action="/explore" method="get">
           <h4>Search for your desired location</h4>
           <input type="text" value="Location, Country..." name="name_or_country"/>
@@ -51,8 +50,7 @@
       </div>
       <div class="right">
         <h2>Explore the world</h2>
-        <p>Explore the whole world in<br/>
-        the Methane gas hydrates places map</p>
+        <p>Explore the whole world using the methane gas hydrates spatial explorer</p>
         <a href="/explore" class="explore"></a>
         <p class="random">or <a href="/features/random">go to a random place</a></p>
       </div>
@@ -64,17 +62,14 @@
     <div class="top"></div>
     <div class="middle">
       <div class="left">
-        <h3>What does methane gas hydrates mean?</h3>
-        <p class="hand cufon_handofsean"><span class="quotes open">"</span>Basically is Frozen Heat. Is Ice that can be burned. A very interesting source of energy<span class="quotes close">"</span></p>
-        <p>Frozen Heat or Methane Hydrates are a solid clathrate compound (more specifically, a clathrate hydrate) in which a large amount of methane is trapped within a crystal structure of water, forming a solid similar to ice.
-          <br/><br/>
-          Originally thought to occur only in the outer regions of the Solar System where temperatures are low and water ice is common, significant deposits of methane clathrate have been found under sediments on the ocean floors of Earth.
-        </p>
+        <h3>What are methane gas hydrates?</h3>
+        <p class="hand cufon_handofsean"><span class="quotes open">"</span>Frozen heat: energy locked in ice!<span class="quotes close">"</span></p>
+        <p>Gas hydrates are natural, ice-like substances that form when methane gas and water are brought together in sufficient quantities under certain conditions of pressure and temperature.  Gas hydrates are important because they represent a major share of the Earth’s mobile organic carbon and participate in natural processes including long-term carbon cycling and shorter-term responses to environmental (climate) change.<br/><br/>In addition, gas hydrates house large quantities of methane, a form of natural gas, which could possibly ease the transition between today’s carbon intensive energy sources and the sustainable energy supplies of the future.    </p>
         <ul>
-          <li><a href="/about">Learn more about Frozen heat</a></li>
-          <li><a href="/blog">Read more in our blog</a></li>
-          <li><a href="http://en.wikipedia.org/wiki/Methane_hydrate" rel="nofollow">Read more at wikipedia</a></li>
-          <li><a href="/events">Meet us in an upcoming event</a></li>
+          <li><a href="/about">Learn more about Frozen Heat</a></li>
+          <li><a href="/blog">Read the latest news in our blog</a></li>
+          <li><a href="http://en.wikipedia.org/wiki/Methane_hydrate" rel="nofollow">Explore a world of hydrate occurrences</a></li>
+          <li><a href="/events">Join us at an upcoming event</a></li>
         </ul>
       </div>
       <div class="right">
@@ -97,7 +92,7 @@
     <div class="middle">
       <p class="feed"><a href="<%= blog_rss_feed_url %>">Subscribe to our blog</a></p>
       <% posts = BlogPost.live.limit(3) %>
-      <h3>Last in the blog</h3>
+      <h3>Latest update from the blog</h3>
       <% unless posts.empty? %>
       <ul>
         <% posts.each do |post| %>

@@ -139,7 +139,7 @@ div.meaning div.middle div.left p {float:left; width:100%; font:normal 15px Aria
 div.meaning div.middle div.left p.hand {margin:25px 0 20px 38px; font:normal 21px Arial; color:white; position:relative; width:500px;}
 div.meaning div.middle div.left span.quotes {font:normal 45px 'Geneva'; color:white; position:absolute; top:0; left:0;}
 div.meaning div.middle div.left span.quotes.open {top:-16px; left:-20px;}
-div.meaning div.middle div.left span.quotes.close {top:42px; left:338px;}
+div.meaning div.middle div.left span.quotes.close {top:11px; left:309px;}
 div.meaning div.middle div.left ul {float:left; width:100%; margin:20px 0 0 0; padding:0;}
 div.meaning div.middle div.left ul li {float:left; width:267px; padding:5px 0 5px 13px; background:url(/images/icons/circle.png) no-repeat 2px 10px; color:white;}
 div.meaning div.middle div.left ul li a {font:normal 15px Arial; color:white;}
@@ -201,7 +201,7 @@ div.middle_explore ul#site_list li div.head div.image p {float:left; width:100%;
 div.middle_explore ul#site_list li div.head div.info {float:left; width:515px;}
 div.middle_explore ul#site_list li div.head div.info h2 {float:left; width:100%;}
 div.middle_explore ul#site_list li div.head div.info h2 a {font:bold 21px Arial; color:#FF6600; text-decoration:none; letter-spacing:-1px;}
-div.middle_explore ul#site_list li div.head div.info h2 a:hover {color:#FF3300; text-decoration:underline;} 
+div.middle_explore ul#site_list li div.head div.info h2 a:hover {color:#FF3300; text-decoration:underline;}
 div.middle_explore ul#site_list li div.head div.info p {float:left; width:100%; margin:1px 0 0; text-transform:uppercase; }
 div.middle_explore ul#site_list li div.head div.info p span {float:left; width:auto; font:bold 11px Arial; color:#999999;}
 div.middle_explore ul#site_list li div.head div.info p span.first {background:url(/images/icons/tiny_grey_arrow.jpg) no-repeat right 4px; padding:0 10px 0 0; margin:0 7px 0 0;}
