@@ -4,7 +4,7 @@
       <h4>A PROJECT BY</h4>
       <a href="http://www.grida.no/" class="logo"><%= image_tag 'common/footer_logo.jpg' %></a>
       <p>UNEP/GRID-Arendal.<br/>All rights reserved.</p>
-      <p class="list"><a href="/sitemap">Sitemap</a> / <a href="/about">Contact</a></p>
+      <p class="list"><a href="/sitemap">Sitemap</a> / <%= mail_to 'yannick.beaudoin@grida.no', 'Contact' %></p>
     </div>
     <div class="right">
       <ul>
@@ -34,8 +34,8 @@
         <li class="fixed">
           <a href="/explore">EXPLORE THE SITES</a>
           <div>
-            <p><a href="#">View list</a></p>
-            <p><a href="#">View world map</a></p>
+            <p><a href="/explore#explore_content">View list</a></p>
+            <p><a href="/explore">View world map</a></p>
           </div>
         </li>
       </ul>
