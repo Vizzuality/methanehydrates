@@ -2,8 +2,8 @@
 
   <div class="title">
     <div class="inner_title">
-      <h1>Upcoming related events</h1>
-      <p>Aggregating events related with methane gas. If you know another event, please contact us</p>
+      <h1>Upcoming events</h1>
+      <p>Please submit your events by <%= mail_to 'yannick.beaudoin@grida.no', 'contacting us' %></p>
     </div>
   </div>
 
@@ -35,17 +35,17 @@
                 </div>
                 <ul id="events">
                   <% @events.each_with_index do |event,index| %>
-					<% if index == (@events.size - 1) %>
-						<li class="last">
-					<%else%>
-						<li>
-					<%end%>
-					<a href="<%=event_url(event)%>">
+          <% if index == (@events.size - 1) %>
+            <li class="last">
+          <%else%>
+            <li>
+          <%end%>
+          <a href="<%=event_url(event)%>">
                       <div class="left">
                         <p class="day"><%=event.from.strftime("%d")%></p>
                         <p class="month"><%=event.from.strftime("%b").upcase%></p>
                       </div>
-					</a>
+          </a>
                       <div class="right">
                         <h2><%= link_to event.title, event_url(event) %></h2>
                         <p class="location"><%= event.location %> | <%=event.from.strftime("#{to_ordinal(event.from.day)} %b")%><%=raw "&#8594; #{event.to.strftime("#{to_ordinal(event.to.day)} %b")}" unless event.one_day_event? %></p>
@@ -67,8 +67,8 @@
                 <% end -%>
               <% end -%>
             </div>
-			<% else %>
-				<div class="bottom_posts_no_info">
+      <% else %>
+        <div class="bottom_posts_no_info">
             <% end -%>
 
         </div>

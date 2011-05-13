@@ -90,6 +90,7 @@ div.title div.inner_title h1 {float:left; padding:55px 0 0 0; width:100%; font:b
 div.title div.inner_title h1.galleries_content {padding:91px 0 0 0;}
 div.title div.inner_title h1.about_content {padding:92px 0 0 0;}
 div.title div.inner_title p {float:left; padding:15px 0 80px 0; width:100%; font:bold 25px Arial; color:white; letter-spacing:-1px; text-shadow:1px 1px rgba(0, 11, 36, 0.6);}
+div.title div.inner_title p a{color: white;}
 div.title div.inner_title div.left {float:left; width:600px;}
 div.title div.inner_title div.right {float:right; width:231px; margin:63px 0 0 0;}
 div.title div.inner_title div.right.about_content {float:right; width:231px; margin:100px 0 0 0;}
