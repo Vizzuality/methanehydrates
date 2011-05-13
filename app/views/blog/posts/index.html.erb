@@ -3,7 +3,7 @@
   <div class="title">
     <div class="inner_title">
         <h1>Frozen Heat news and articles</h1>
-        <p>Aggregating events related with methane gas. If you know another event, please contact us</p>
+        <p></p>
     </div>
   </div>
 
@@ -92,11 +92,11 @@
                 <h6><a href="<%= feature_url(feature) %>"><%= feature.title %></a></h6>
                 <span>
                   <% unless feature.region.blank? %>
-				  	<% unless feature.country.blank? %>
-                  		<p class="first"><%= feature.region %></p>
-					<%else%>
-						<p><%= feature.region %></p>
-					<%end %>
+            <% unless feature.country.blank? %>
+                      <p class="first"><%= feature.region %></p>
+          <%else%>
+            <p><%= feature.region %></p>
+          <%end %>
                   <% end -%>
                   <% unless feature.country.blank? %>
                   <p><%= feature.country %></p>
