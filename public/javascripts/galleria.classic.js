@@ -21,7 +21,6 @@ Galleria.addTheme({
         _toggle_info: false
     },
     init: function(options) {
-
         // cache some stuff
         var toggle   = this.$('image-nav-left,image-nav-right'),
             info     = this.$('info-text'),
@@ -29,8 +28,8 @@ Galleria.addTheme({
 
         // show loader & counter with opacity
         this.$('loader').show().css('opacity',.8)
-    	this.$('counter').css('display','none');
-    	this.$('galleria-info').css('display','none');
+      this.$('counter').css('display','none');
+      this.$('galleria-info').css('display','none');
         // some stuff for non-touch browsers
         if (! Galleria.TOUCH ) {
             // fade thumbnails
@@ -52,16 +51,16 @@ Galleria.addTheme({
         this.bind(Galleria.LOADSTART, function(e) {
             if (!e.cached) {
                 this.$('loader').show().fadeTo(200, .8);
-        		this.$('galleria-info').show().fadeTo(200, .0);
+            this.$('galleria-info').show().fadeTo(200, .0);
             }
             this.$('info').toggle( this.hasInfo() );
             $(e.thumbTarget).css('opacity',1).parent().siblings().children().css('opacity',.6);
-        });		
+        });
         this.bind(Galleria.LOADFINISH, function(e) {
-      	this.$('thumbnails-container').animate({opacity:1},1000);		
-	    this.$('loader').fadeOut('fast');
-	    this.$('galleria-info').show().css('opacity',.8);
-	    info.show().fadeTo(200, .8);
+          this.$('thumbnails-container').animate({opacity:1},1000);
+          this.$('loader').fadeOut('fast');
+          this.$('galleria-info').show().css('opacity',.8);
+          info.show().fadeTo(200, .8);
         });
     }
 });
