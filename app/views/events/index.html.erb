@@ -20,13 +20,13 @@
                     <% if @events.respond_to?(:total_entries) %>
                       <p><%= pluralize(@events.total_entries, "event","events") %>
                       <% if params[:date] %>
-                      <strong>on <%= Date.parse(params[:date]).strftime("%dth %B, %Y") %></strong>
+                      <strong>on <%= Date.parse(params[:date]).strftime("#{Date.parse(params[:date]).day.ordinalize} %B, %Y") %></strong>
                       <% end -%>
                       </p>
                     <% else %>
                       <p><%= pluralize(@events.size, "event","events") %>
                         <% if params[:date] %>
-                        <strong>on <%= Date.parse(params[:date]).strftime("%dth %B, %Y") %></strong>
+                        <strong>on <%= Date.parse(params[:date]).strftime("#{Date.parse(params[:date]).day.ordinalize} %B, %Y") %></strong>
                         <% end -%>
                         </p>
                     <% end -%>
