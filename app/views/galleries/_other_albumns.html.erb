@@ -12,7 +12,7 @@
               </div>
               <div class="text">
 
-                <a href="<%= gallery_url(gallery) %>"><%= simple_format(truncate(strip_tags(gallery.body), :length => 80)) %></a>
+                <a href="<%= gallery_url(gallery) %>"><%= simple_format(truncate(strip_tags(gallery.name), :length => 80)) %></a>
               </div>
             </li>
           <% end -%>
