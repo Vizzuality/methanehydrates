@@ -29,7 +29,7 @@
 
           //If there is twitter block
           if ($('div.twitter')[0]) {
-            var url = "http://search.twitter.com/search.json?q=vizzuality&rpp=5&callback=?";
+            var url = "http://search.twitter.com/search.json?q=UNEPGRID&rpp=5&callback=?";
             $.getJSON(url,function(data){
       var dataSize = parseInt(data.results.length) - 1;
               $.each(data.results, function(i, item) {
