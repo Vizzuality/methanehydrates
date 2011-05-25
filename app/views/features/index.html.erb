@@ -39,11 +39,11 @@
             <div class="head_explore">
               <div class="left">
                 <% if @features.total_pages > 1 %>
-					<h1>Viewing from <%= @features.size %> of <%= @features.total_entries %> sites</h1>
-				<% else %>
-					<h1>Viewing <%= pluralize(@features.total_entries, "site","sites") %></h1>
-				<% end %>
-                <p>Geographical points with methane gas hydrates explotations</p>
+          <h1>Viewing from <%= @features.size %> of <%= @features.total_entries %> sites</h1>
+        <% else %>
+          <h1>Viewing <%= pluralize(@features.total_entries, "site","sites") %></h1>
+        <% end %>
+                <p>Global methane gas hydrate occurrences</p>
               </div>
               <% if @features.total_pages > 1 %>
               <div class="right">
@@ -65,12 +65,12 @@
                     <p><%if !feature.country.blank? %><span class="first"><%else%><span><%end%><%= feature.region %></span><% unless feature.country.blank? %><span><%= feature.country %></span><% end %></p>
                   </div>
                 </div>
-				<% unless feature.description.blank? %>
+        <% unless feature.description.blank? %>
                 <p class="des"><%= truncate(strip_tags(feature.description),
                                   :omission => raw("... <a href=\"#{feature_url(feature)}\">Read more</a>"),
                                   :length => 250,
                                   :preserve_html_tags => true) %></p>
-				<%end%>
+        <%end%>
                 <div class="grey">
                   <div class="block">
                     <h4>PRIMARY INSTITUTION</h4>
@@ -111,7 +111,7 @@
       <div class="opaque_explore">
         <div class="top"></div>
         <div class="middle">
-  	      <img id="loading" src="/images/explore/loading.gif" title="loading" alt="loading"/>
+          <img id="loading" src="/images/explore/loading.gif" title="loading" alt="loading"/>
           <h3>Filter sites</h3>
           <form action="javascript:void getSites()">
             <label>SEARCH BY NAME / COUNTRY</label>
