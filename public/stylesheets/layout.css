@@ -1,8 +1,8 @@
 body,div,ul,li,ol,h1,h2,h3,h4,h5,h6,form,fieldset,p{margin:0; padding:0; font-weight:normal;}
 body.home,.pages,.about,.featuresbkg {float:left; background:url('../images/backgrounds/3.jpg') no-repeat center 0 #202B38; }
-body.posts {background:url('../images/backgrounds/2.jpg') no-repeat center 0 #8CA1C0;}
-body.events {background:url('../images/backgrounds/4.jpg') no-repeat center 0 #131F26;}
-body.galleries {background:url('../images/backgrounds/1.jpg') no-repeat center 0 #202B38;}
+body.posts {background:url('../images/backgrounds/2.jpg') no-repeat center 0 #1f2b37;}
+body.events {background:url('../images/backgrounds/4.jpg') no-repeat center 0 #112734;}
+body.galleries {background:url('../images/backgrounds/1.jpg') no-repeat center 0 #112734;}
 body.sitemap {background-color:#202B38;}
 body.error_notfound {background:url('../images/backgrounds/404.jpg') no-repeat center 0 #202B38;}
 body.error_server {background:url('../images/backgrounds/500.jpg') no-repeat center 0 #202B38;}
