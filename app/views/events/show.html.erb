@@ -38,7 +38,7 @@
 
                 <div class="right">
                   <h1><%= @event.title %></h1>
-                  <p class="location"><%= @event.location %> | <%=@event.from.strftime("#{to_ordinal(@event.from.day)} %b")%> <%= raw("&#8594; #{@event.to.strftime("#{to_ordinal(@event.to.day)} %b")}") unless @event.one_day_event? %></p>
+                  <p class="location"><%= @event.location %> | <%=@event.from.strftime("#{@event.from.day.ordinalize} %b")%> <%= raw("&#8594; #{@event.to.strftime("#{@event.to.day.ordinalize} %b")}") unless @event.one_day_event? %></p>
                 </div>
                 <span class="line"></span>
               </div>
@@ -97,7 +97,7 @@
               <h6>LOCATION</h6>
               <p><%= @event.location %></p>
               <h6>DATE</h6>
-              <p><%=@event.from.strftime("%B")%>, <%=@event.from.strftime("#{to_ordinal(@event.from.day)}")%> <%= raw("to #{@event.to.strftime("#{to_ordinal(@event.to.day)}")}") unless @event.one_day_event? %></p>
+              <p><%=@event.from.strftime("%B")%>, <%=@event.from.strftime("#{@event.from.day.ordinalize}")%> <%= raw("to #{@event.to.strftime("#{@event.to.day.ordinalize}")}") unless @event.one_day_event? %></p>
             </div>
             <div class="bottom"></div>
           </div>
