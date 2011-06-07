@@ -8,7 +8,7 @@
 
 (function($) {
 
-var htmlPlayVideo = '<div class="galleria_video"><a></a></div>';
+var htmlPlayVideo = '<div class="galleria_video"></div>';
 // some references
 var undef,
     window = this,
@@ -1515,7 +1515,7 @@ Galleria.prototype = {
 
                     // remove the testElem
                     $( testElem ).remove();
-                    
+
                     // apply the new meassures
                     $container.width( num.width );
                     $container.height( num.height );
@@ -1782,7 +1782,7 @@ Galleria.prototype = {
 
                 // load the thumbnail
                 thumb.load( src, function( thumb ) {
-					
+
                     // scale when ready
                     thumb.scale({
                         width:    thumb.data.width,
@@ -2392,7 +2392,7 @@ $(document).mousemove(function(e) {
     */
 
     addElement : function( id ) {
-		
+
         var dom = this._dom;
 
         $.each( Utils.array(arguments), function( i, blueprint ) {
@@ -2584,14 +2584,14 @@ this.prependChild( 'info', 'myElement' );
 
         return this;
     },
-    
+
     /**
         Refreshes the gallery.
         Useful if you change image options at runtime and want to apply the changes to the active image.
 
         @returns {Galleria}
     */
-    
+
     refreshImage : function() {
         this._scaleImage();
         if ( this._options.image_pan ) {
@@ -2679,29 +2679,32 @@ this.prependChild( 'info', 'myElement' );
 
             // make the image link
             if ( data.link ) {
+              if (!$(next.image).parent().parent().find('div.galleria_video')[0]){
+                $(next.image).parent().parent().append(htmlPlayVideo);
+              };
 
-				if (!$(next.image).parent().parent().find('div.galleria_video')[0]){
-					$(next.image).parent().parent().append(htmlPlayVideo);
-				}
-				$(next.image).parent().parent().find('div.galleria_video').fadeIn();
-				$(next.image).parent().parent().find('div.galleria_video').children('a').attr('href', data.link);
-				
-                $( next.image ).css({
-                                    cursor: 'pointer'
-                                }).bind( CLICK(), function() {					
-                                    // popup link
-                                    if ( self._options.popup_links ) {
-                                        var win = window.open( data.link, '_blank' );
-                                    } else {
-                                        window.location.href = data.link;
-                                    }
-                                });
+              $(next.image).parent().next('div.galleria_video').hide().append(data.link);
+              var iframe = $(next.image).parent().next('div.galleria_video').find('iframe');
+              iframe.css({'marginTop': -(parseInt(iframe.attr('height'))/2), 'marginLeft': -(parseInt(iframe.attr('width'))/2)});
+              $(next.image).parent().next('div.galleria_video').fadeIn();
+              $(next.image).fadeOut('fast');
+
+              $( next.image ).css({
+                cursor: 'pointer'
+              }).bind( CLICK(), function() {
+                // popup link
+                if ( self._options.popup_links ) {
+                    var win = window.open( data.link, '_blank' );
+                } else {
+                    window.location.href = data.link;
+                };
+              });
             }
-			else {
-				if($(next.image).parent().parent().find('div.galleria_video')[0]){
-					$(next.image).parent().parent().find('div.galleria_video').fadeOut('fast');
-				}
-			}
+            else {
+              if($(next.image).parent().next('div.galleria_video')[0]){
+                $(next.image).parent().next('div.galleria_video').fadeOut('fast');
+              }
+            }
             // remove the queued image
             Array.prototype.shift.call( self._queue );
 
@@ -2712,7 +2715,7 @@ this.prependChild( 'info', 'myElement' );
 
             // check if we are playing
             self._playCheck();
-			
+
             // trigger IMAGE event
             self.trigger({
                 type:        Galleria.IMAGE,
@@ -3285,7 +3288,7 @@ Galleria.addTheme = function( theme ) {
 */
 
 Galleria.loadTheme = function( src, options ) {
-	
+
     var loaded = false,
         length = _galleries.length;
 

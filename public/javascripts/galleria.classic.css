@@ -21,8 +21,8 @@
     background: url('../images/common/loading.gif') no-repeat 2px 2px;
 }
 .galleria-info {
-	width:689px;
-	left:109px; bottom:36px; height:64px; z-index:89;
+  width:689px;
+  left:109px; bottom:36px; height:64px; z-index:89;
     z-index: 2;
     position: absolute;
 }
@@ -40,8 +40,8 @@ opacity:0.8;
 .galleria-info-title {
     font:normal 15px Arial; color:white;
     margin: 0;
-	text-decoration:none;
-  
+  text-decoration:none;
+
 }
 
 .galleria-info-description {
@@ -111,7 +111,7 @@ opacity:0.8;
 .galleria-image-nav-right:hover {
     opacity: 1;
     filter: alpha(opacity=100);
-	background-position:0 -61px;
+  background-position:0 -61px;
 }
 .galleria-thumb-nav-left,
 .galleria-thumb-nav-right {
@@ -158,14 +158,13 @@ opacity:0.8;
 .galleria-info-link,
 .galleria-info-close,
 .galleria-image-nav-left{
-	background:url('/images/common/previous_image_bkg.png') no-repeat 0 0;
+  background:url('/images/common/previous_image_bkg.png') no-repeat 0 0;
 }
 .galleria-image-nav-right {
-	background:url('/images/common/next_image_bkg.png') no-repeat 0 0;
+  background:url('/images/common/next_image_bkg.png') no-repeat 0 0;
     background-repeat: no-repeat;
 }
 
 /*VIDEO*/
-div.galleria_video {position:absolute; left:50%; top:50%; margin:-45px 0 0 -45px; width:90px; height:90px; z-index:89; display:none;}
-div.galleria_video a {float:left; width:90px; height:90px; background:url('/images/common/play.png') no-repeat 0 0;}
-div.galleria_video a:hover {background-position:0 -90px; cursor:pointer;}
+div.galleria_video {position: relative; width: 930px; height: 615px; margin: 0; display:none; background-color: black;}
+div.galleria_video iframe { position: absolute; top: 50%; left: 50%; z-index: 1;}
