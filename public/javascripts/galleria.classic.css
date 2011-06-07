@@ -166,5 +166,7 @@ opacity:0.8;
 }
 
 /*VIDEO*/
-div.galleria_video {position: relative; width: 930px; height: 615px; margin: 0; display:none; background-color: black;}
-div.galleria_video iframe { position: absolute; top: 50%; left: 50%; z-index: 1;}
+div.galleria_video {position: relative; width: 930px; height: 615px; margin: 0; display:none; background-color: black; color: transparent;}
+div.galleria_video > * {display: none;}
+div.galleria_video iframe { display: block; position: absolute; top: 50%; left: 50%; z-index: 1;}
+

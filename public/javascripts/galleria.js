@@ -2683,11 +2683,14 @@ this.prependChild( 'info', 'myElement' );
                 $(next.image).parent().parent().append(htmlPlayVideo);
               };
 
-              $(next.image).parent().next('div.galleria_video').hide().append(data.link);
-              var iframe = $(next.image).parent().next('div.galleria_video').find('iframe');
+              $(next.image).parent().parent().find('div.galleria_video').empty().append(data.link);
+
+              var iframe = $(next.image).parent().parent().find('div.galleria_video').find('iframe');
+              iframe = $(next.image).parent().parent().find('div.galleria_video').find('iframe');
               iframe.css({'marginTop': -(parseInt(iframe.attr('height'))/2), 'marginLeft': -(parseInt(iframe.attr('width'))/2)});
-              $(next.image).parent().next('div.galleria_video').fadeIn();
-              $(next.image).fadeOut('fast');
+
+              $(next.image).parent().parent().find('div.galleria_video').fadeIn('fast');
+              $(next.image).remove();
 
               $( next.image ).css({
                 cursor: 'pointer'
@@ -2701,8 +2704,8 @@ this.prependChild( 'info', 'myElement' );
               });
             }
             else {
-              if($(next.image).parent().next('div.galleria_video')[0]){
-                $(next.image).parent().next('div.galleria_video').fadeOut('fast');
+              if($(next.image).parent().parent().find('div.galleria_video')[0]){
+                $(next.image).parent().parent().find('div.galleria_video').fadeOut('fast');
               }
             }
             // remove the queued image
