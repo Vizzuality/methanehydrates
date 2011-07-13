@@ -58,7 +58,7 @@
               <li <%= raw('class="last"') if feature == @features.last %>>
                 <div class="head">
                   <div class="image">
-                    <p><%= feature.id %></p>
+                    <p><%= i + 1 %></p>
                   </div>
                   <div class="info">
                     <h2><a href="/features/<%= feature.id %>"><%= feature.title %><%= " - #{feature.country}" unless feature.country.blank?  %></a></h2>

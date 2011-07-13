@@ -106,7 +106,7 @@
         var marker_lonlat = new OpenLayers.LonLat(result[i].lon,result[i].lat).transform(epsg4326, map.getProjectionObject());
         bounds.extend(marker_lonlat);
         var site_marker_image = new OpenLayers.Icon("/images/explore/marker.png",size,offset);
-        var site_marker = new SiteMarker(marker_lonlat,site_marker_image, result[i]);
+        var site_marker = new SiteMarker(marker_lonlat,site_marker_image, result[i], i + 1);
         markers.addMarker(site_marker);
       }
 
@@ -158,7 +158,7 @@
         var li_ = '<li class="'+ ((i==result.length-1)?'last':'') +'">'+
           '<div class="head">'+
             '<div class="image">'+
-              '<p>'+result[i].id+'</p>'+
+              '<p>'+(i + 1)+'</p>'+
             '</div>'+
             '<div class="info">';
 

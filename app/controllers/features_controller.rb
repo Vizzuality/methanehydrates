@@ -35,14 +35,14 @@ class FeaturesController < ApplicationController
         }
 
         if params[:all]
-          render :json => base_json.merge(:features => Feature.all.map{ |f| f.to_json_attributes.merge(:url => feature_url(f), :id => f.id, :description => truncate(strip_tags(f.description),
+          render :json => base_json.merge(:features => Feature.order('created_at ASC').all.map{ |f| f.to_json_attributes.merge(:url => feature_url(f), :id => f.id, :description => truncate(strip_tags(f.description),
                             :omission => raw("... <a href=\"#{feature_url(f)}\">Read more</a>"),
                             :length => 250,
                             :preserve_html_tags => true)) }).to_json and return
         end
 
         pagination_attributes = {:page => params[:page], :per_page => 10, :order => 'created_at ASC'}
-        all_features = Feature.all
+        all_features = Feature.order('created_at ASC').all
         if params[:institution] && params[:institution] != 'All'
           all_features = all_features.select{ |f| f.primary_institution_name == params[:institution] }
         end
