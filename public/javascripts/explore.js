@@ -4,13 +4,13 @@
   var markers;
   var epsg4326;
   var reset = false;
-	var global_index = 100;
+  var global_index = 100;
 
   var slider_water = 5478;
   var slider_hydrate = 404;
 
   $(document).ready(function() {
-	
+
     //Cover ul space with blue opaque background (header)
     var li_size = 0;
     $('div.inner_header ul li').each(function(index,element){
@@ -18,8 +18,8 @@
     });
     $('div.inner_header ul').css('background-position',(704-li_size-667) + 'px 0px');
 
-	$('select').sSelect();
-	
+  $('select').sSelect();
+
     $('body').css('background-color','#99B3CC');
 
     //Text Input effects
@@ -35,36 +35,36 @@
     });
 
 
-		//Select bind change
-	$('select').change(function(ev){
+    //Select bind change
+  $('select').change(function(ev){
       getSites();
     });
-		
 
 
-    $("div.water").slider({range: "min",value: 5478,min: 670,max: 5478,
-			slide: function(event,ui) {
-				slider_water = ui.value;
-				$('p.water').text('< '+slider_water);
-			},
+
+    $("div.water").slider({range: "min",value: 5478,min: 0,max: 5478,
+      slide: function(event,ui) {
+        slider_water = ui.value;
+        $('p.water').text('< '+slider_water);
+      },
       change: function(event, ui) {
         if (reset) {
           reset = false;
         } else {
-			// alert('cambia water depth');
+      // alert('cambia water depth');
           getSites();
         }
       }
     });
 
-    $("div.hydrate").slider({range: "min", value: 404, min: 1, max: 404,
-			slide: function(event,ui) {
+    $("div.hydrate").slider({range: "min", value: 2000, min: 1, max: 2000,
+      slide: function(event,ui) {
         slider_hydrate = ui.value;
         $('p.hydrate').text('< '+slider_hydrate);
-			},      
-			change: function(event, ui) {
-					// alert('cambia hydrate depth');
-        			getSites();
+      },
+      change: function(event, ui) {
+          // alert('cambia hydrate depth');
+              getSites();
       }
     });
 
@@ -73,10 +73,10 @@
       placeBlueBackground();
     }
 
-		var post_params = getUrlVars();
-		var url = "/features.json" + ((post_params.page!=undefined && post_params.page!='')?('?page='+post_params.page):'') + 
-							((post_params.all!=undefined && post_params.all!='')?('?all='+post_params.all):'')+
-							((post_params.name_or_country!=undefined && post_params.name_or_country!='')?('?name_or_country='+post_params.name_or_country):'');
+    var post_params = getUrlVars();
+    var url = "/features.json" + ((post_params.page!=undefined && post_params.page!='')?('?page='+post_params.page):'') +
+              ((post_params.all!=undefined && post_params.all!='')?('?all='+post_params.all):'')+
+              ((post_params.name_or_country!=undefined && post_params.name_or_country!='')?('?name_or_country='+post_params.name_or_country):'');
     $.getJSON(url,function(result){
       map = new OpenLayers.Map("explore_map",{ controls: [], panDuration:0, panMethod:null });
       map.addControl(new OpenLayers.Control.Navigation({zoomWheelEnabled : false}));
@@ -88,7 +88,7 @@
       markers = new OpenLayers.Layer.Markers( "Markers" );
       map.addLayer(markers);
       showMarkers(result.features);
-			showPaginators(result);
+      showPaginators(result);
     });
     placeBlueBackground();
   });
@@ -114,8 +114,8 @@
       if (map.getZoom()>9) {
         map.zoomTo(8);
       } else {
-				map.zoomOut();
-			}
+        map.zoomOut();
+      }
       panToCenter();
     }
   }
@@ -132,7 +132,7 @@
     url += (search_value!="All institutions" && search_value!='')?'&name_or_country='+search_value:'';
     $.getJSON(url,function(result){
       markers.clearMarkers();
-			showPaginators(result);
+      showPaginators(result);
       showMarkers(result.features);
       createSiteList(result.features);
       hideLoader();
@@ -161,22 +161,22 @@
               '<p>'+result[i].id+'</p>'+
             '</div>'+
             '<div class="info">';
-			
-			
-			if (result[i].country == null){
-				li_+='<h2><a href="'+result[i].url+'">'+result[i].title+'</a></h2><p><span>'+result[i].region+'</span></p>';
-			}else {
-				li_+='<h2><a href="'+result[i].url+'">'+result[i].title+' - '+result[i].country+'</a></h2>'+
-	              '<p><span class="first">'+result[i].region+'</span><span>'+result[i].country+'</span></p>';				
-			}
 
-			li_+='</div>'+
+
+      if (result[i].country == null){
+        li_+='<h2><a href="'+result[i].url+'">'+result[i].title+'</a></h2><p><span>'+result[i].region+'</span></p>';
+      }else {
+        li_+='<h2><a href="'+result[i].url+'">'+result[i].title+' - '+result[i].country+'</a></h2>'+
+                '<p><span class="first">'+result[i].region+'</span><span>'+result[i].country+'</span></p>';
+      }
+
+      li_+='</div>'+
           '</div>';
-			
-			if (result[i].description != null) {
-				li_+= '<p class="des">'+result[i].description+'... <a href="'+result[i].url+'">Read more</a></p>';
-			}
-			
+
+      if (result[i].description != null) {
+        li_+= '<p class="des">'+result[i].description+'... <a href="'+result[i].url+'">Read more</a></p>';
+      }
+
             li_+='<div class="grey">'+
             '<div class="block">'+
               '<h4>PRIMARY INSTITUTION</h4>'+
@@ -198,31 +198,31 @@
       var li_ = '<li class="no_results last"><p class="no_results">There are no results with this filters criterias. <a onclick="resetFilters()">Reset filters</a></p></li>';
       $('#site_list').append(li_);
     }
-		placeFooter();
+    placeFooter();
   }
 
 
-	function showPaginators(result) {
-		if (result.prev_page_url!=null || result.next_page_url!=null) {
-			$('div.bottom_white').addClass('bottom_explore');
-			$('div.bottom_explore').removeClass('bottom_white');
-		}
-		
-		if (result.prev_page_url!=null) {
-			$('#prev_button').show();
-			$('#prev_button').attr('href',result.prev_page_url);
-		} else {
-			$('#prev_button').hide();
-		}
-		
-		if (result.next_page_url!=null) {
-			$('#next_button').show();
-			$('#next_button').attr('href',result.next_page_url);
-		} else {
-			$('#next_button').hide();
-		}
-		
-	}
+  function showPaginators(result) {
+    if (result.prev_page_url!=null || result.next_page_url!=null) {
+      $('div.bottom_white').addClass('bottom_explore');
+      $('div.bottom_explore').removeClass('bottom_white');
+    }
+
+    if (result.prev_page_url!=null) {
+      $('#prev_button').show();
+      $('#prev_button').attr('href',result.prev_page_url);
+    } else {
+      $('#prev_button').hide();
+    }
+
+    if (result.next_page_url!=null) {
+      $('#next_button').show();
+      $('#next_button').attr('href',result.next_page_url);
+    } else {
+      $('#next_button').hide();
+    }
+
+  }
 
 
 
@@ -242,10 +242,10 @@
 
 
   function placeFooter() {
-	
-	// 481 is the min distance necessary
-	var footerPos = parseInt($('div.body_content_left').height()) + 481;
-	$('#footer').css('top',footerPos+'px');
+
+  // 481 is the min distance necessary
+  var footerPos = parseInt($('div.body_content_left').height()) + 481;
+  $('#footer').css('top',footerPos+'px');
   }
 
   function placeBlueBackground() {
@@ -265,13 +265,13 @@
 
 
   function showLoader() {
-	$('div.opaque_explore div.middle h3').text('Filtering...')
+  $('div.opaque_explore div.middle h3').text('Filtering...')
     $('img#loading').fadeIn();
   }
 
   function hideLoader() {
     $('img#loading').fadeOut();
-	$('div.opaque_explore div.middle h3').text('Filter sites')	
+  $('div.opaque_explore div.middle h3').text('Filter sites')
 
   }
 
@@ -279,22 +279,22 @@
     reset = true;
     $('div.water').slider( "value" , 5478 );
     $('div.hydrate').slider( "value" , 404 );
-	
-	$('input#name_country').val('');	
-	$('div.opaque_explore div.middle form ul.newList li').first().children('a').trigger('click.sSelect');
+
+  $('input#name_country').val('');
+  $('div.opaque_explore div.middle form ul.newList li').first().children('a').trigger('click.sSelect');
   }
 
 
 
-	function getUrlVars() {
-		var vars = [], hash;
-		var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-		for(var i = 0; i < hashes.length; i++)
-		{
-		    hash = hashes[i].split('=');
-		    vars.push(hash[0]);
-		    vars[hash[0]] = hash[1];
-		}
-		return vars;
-	}
+  function getUrlVars() {
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++)
+    {
+        hash = hashes[i].split('=');
+        vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
+    }
+    return vars;
+  }
 
