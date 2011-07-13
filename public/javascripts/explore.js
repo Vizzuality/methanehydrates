@@ -7,7 +7,7 @@
   var global_index = 100;
 
   var slider_water = 5478;
-  var slider_hydrate = 404;
+  var slider_hydrate = 2000;
 
   $(document).ready(function() {
 
@@ -278,7 +278,7 @@
   function resetFilters() {
     reset = true;
     $('div.water').slider( "value" , 5478 );
-    $('div.hydrate').slider( "value" , 404 );
+    $('div.hydrate').slider( "value" , 2000 );
 
   $('input#name_country').val('');
   $('div.opaque_explore div.middle form ul.newList li').first().children('a').trigger('click.sSelect');
