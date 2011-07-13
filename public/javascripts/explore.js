@@ -6,7 +6,7 @@
   var reset = false;
   var global_index = 100;
 
-  var slider_water = 5478;
+  var slider_water = 2000;
   var slider_hydrate = 2000;
 
   $(document).ready(function() {
@@ -42,7 +42,7 @@
 
 
 
-    $("div.water").slider({range: "min",value: 5478,min: 0,max: 5478,
+    $("div.water").slider({range: "min",value: 2000,min: 0,max: 2000,
       slide: function(event,ui) {
         slider_water = ui.value;
         $('p.water').text('< '+slider_water);
@@ -277,7 +277,7 @@
 
   function resetFilters() {
     reset = true;
-    $('div.water').slider( "value" , 5478 );
+    $('div.water').slider( "value" , 2000 );
     $('div.hydrate').slider( "value" , 2000 );
 
   $('input#name_country').val('');
