@@ -14,16 +14,16 @@
         <span class="line"></span>
       </div>
     </div>
+    <% if @feature.gallery %>
     <div class="middle image">
       <div class="slider">
-        <% if @feature.gallery %>
           <% @feature.gallery.gallery_entries.each do |entry| %>
             <%= image_fu entry.image, :huge %>
           <% end -%>
-        <% end -%>
       </div>
      <div class="line"></div>
     </div>
+    <% end -%>
 
 	<% unless @feature.description.blank? %>
 	    <div class="middle_white site">
