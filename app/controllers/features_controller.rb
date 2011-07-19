@@ -46,16 +46,18 @@ class FeaturesController < ApplicationController
         if params[:institution] && params[:institution] != 'All'
           all_features = all_features.select{ |f| f.primary_institution_name == params[:institution] }
         end
-        if params[:water_depth]
+        if params[:water_depth] and params[:hydrate_depth]!="2000"
           all_features = all_features.select{ |f| f.water_depth.to_f <= params[:water_depth].to_f }
         end
-        if params[:hydrate_depth]
+        if params[:hydrate_depth] and params[:hydrate_depth]!="2000"
           all_features = all_features.select do |f|
-            if f.hydrate_depth.split(',').size == 1
-              f.hydrate_depth.to_f <= params[:hydrate_depth].to_f
-            else
-              min_depth = f.hydrate_depth.split(',').map{ |h| h.to_f }.min
-              min_depth <= params[:hydrate_depth].to_f
+            if f.respond_to?(:hydrate_depth) and f.hydrate_depth!=""
+              if f.hydrate_depth.split(',').size == 1
+                f.hydrate_depth.to_f <= params[:hydrate_depth].to_f
+              else
+                min_depth = f.hydrate_depth.split(',').map{ |h| h.to_f }.min
+                min_depth <= params[:hydrate_depth].to_f
+              end
             end
           end.compact
         end
