@@ -59,6 +59,8 @@ data_provided_by_name:string
 data_provided_by_url:string
 references:text
 wiki_url:string
+latitude:string
+longitude:string
 ATTRIBUTES
 
 RefinerySetting.set(:feature_attributes, attributes)

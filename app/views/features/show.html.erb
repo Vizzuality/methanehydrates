@@ -81,6 +81,10 @@
         <h6>DESCRIPTION</h6>
         <p><%= @feature.hydrate_description %></p>
         <% end -%>
+        <% unless @feature.latitude.blank? || @feature.longitude.blank? %>
+        <h6>LATITUDE - LONGITUDE</h6>
+        <p><%= @feature.latitude %> - <%= @feature.longitude %></p>
+        <% end -%>
       </div>
       <% unless @feature.data_provided_by_name.blank? %>
       <div class="bottom_site">
