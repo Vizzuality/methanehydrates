@@ -18,6 +18,8 @@ end
 gem 'fastercsv'
 gem 'nokogiri'
 
+gem 'truncate_html'
+
 # REFINERY CMS ================================================================
 
 gem 'dragonfly',                '0.7.7'

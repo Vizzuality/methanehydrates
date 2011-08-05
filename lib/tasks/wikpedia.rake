@@ -7,7 +7,9 @@ namespace :methane do
 
       doc = Nokogiri::HTML(open(URI.encode(feature.wiki_url), 'User-Agent' => 'Methanegashydrates.org'), nil, 'UTF-8')
 
-      feature.description = doc.css('#bodyContent p')
+      article = doc.css('#bodyContent p')
+      article.css('sup').each{|sup| sup.remove}
+      feature.description = article
       feature.save
       feature.reload
       feature.description = feature.description.gsub(/href=\"\//,'rel="nofollow" href="http://en.wikipedia.org/')

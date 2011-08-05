@@ -25,11 +25,11 @@
     </div>
     <% end -%>
 
-	<% unless @feature.description.blank? %>
-	    <div class="middle_white site">
-	      <%=raw @feature.description %>
-	    </div>
-	<% end %>
+  <% unless @feature.description.blank? %>
+      <div class="middle_white site">
+        <%= raw(truncate_html @feature.description, :length => 1250, :omission => "... #{link_to('read more', @feature.wiki_url)}") %>
+      </div>
+  <% end %>
     <div class="bottom site">
       <p>This information was updated on <%= @feature.created_at.strftime("%d/%m/%G") %></p>
       <% if logged_in? %>
@@ -92,9 +92,9 @@
         <% end -%>
         </p>
       </div>
-	  <%else%>
-		  <div class="bottom_site_empty">	
-		  </div>
+    <%else%>
+      <div class="bottom_site_empty">
+      </div>
       <% end -%>
     </div>
 

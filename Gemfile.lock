@@ -183,3 +183,4 @@ DEPENDENCIES
   refinerycms-inquiries (= 0.9.8.4)
   rmagick (~> 2.12.0)
   ruby-debug
+  truncate_html
