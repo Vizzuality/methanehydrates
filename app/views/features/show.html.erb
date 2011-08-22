@@ -27,7 +27,7 @@
 
   <% unless @feature.description.blank? %>
       <div class="middle_white site">
-        <%= raw(truncate_html @feature.description, :length => 1250, :omission => "... #{link_to('read more', @feature.wiki_url)}") %>
+        <%= raw(truncate_html @feature.description, :length => 1250, :omission => "... #{link_to('read more on Wikipedia', @feature.wiki_url)}") %>
       </div>
   <% end %>
     <div class="bottom site">
@@ -107,7 +107,7 @@
       <div class="middle">
         <div class="head">
           <h5>Browse our sites</h5>
-          <p><a href="/explore">Explore</a> methane gas sites around</p>
+          <p><a href="/explore">Explore</a> global methane gas hydrate sites</p>
           <span class="line"></span>
         </div>
         <% features = Feature.limit(2).where("id != #{@feature.id}") %>
