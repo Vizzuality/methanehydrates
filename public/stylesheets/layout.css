@@ -607,9 +607,9 @@ div.middle_white.site h3 {float:left; width:100%; font:bold 21px Arial; color:#3
 div.middle_white.site p {float:left; width:100%; font:normal 13px Arial; color:#666666; line-height:17px;}
 div.middle_white.site p a {font:normal 13px Arial; color:#FF6600; text-decoration:none;}
 div.middle_white.site p a:hover {text-decoration:underline;}
-div.middle_white.site.no_description { position: relative; padding: 155px 0; width: 100%; text-align: center;}
+div.middle_white.site.no_description { position: relative; padding: 101px 0 119px; width: 100%; text-align: center;}
 div.middle_white.site.no_description .icon{ position: absolute; left: 107px; top: 50%; margin-top: -63px; z-index: 0;}
-div.middle_white.site.no_description h3, div.middle_white.site.no_description p { position: relative;}
+div.middle_white.site.no_description h3, div.middle_white.site.no_description p { position: relative; padding: 3px;}
 div.middle_white p {float:left; width:100%; font:normal 15px Arial; color:#666666; line-height:19px;}
 div.middle_white p a {font:normal 13px Arial; color:#FF6600; text-decoration:none;}
 div.bottom.site {float:left; width:633px; height:85px; background:url(/images/round/bottom_grey.png) no-repeat 0 0;}
