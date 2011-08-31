@@ -36,7 +36,7 @@ class FeaturesController < ApplicationController
 
         if params[:all]
           render :json => base_json.merge(:features => Feature.order('created_at ASC').all.map{ |f| f.to_json_attributes.merge(:url => feature_url(f), :id => f.id, :description => truncate(strip_tags(f.description),
-                            :omission => raw("... <a href=\"#{feature_url(f)}\">Read more</a>"),
+                            :omission => raw("<a href=\"#{feature_url(f)}\">Read more</a>"),
                             :length => 250,
                             :preserve_html_tags => true)) }).to_json and return
         end
@@ -73,7 +73,7 @@ class FeaturesController < ApplicationController
           json = base_json
         else
           json = base_json.merge(:features => all_features.map{ |f| f.to_json_attributes.merge(:url => feature_url(f), :id => f.id, :description => truncate(strip_tags(f.description),
-                            :omission => raw("... <a href=\"#{feature_url(f)}\">Read more</a>"),
+                            :omission => raw("<a href=\"#{feature_url(f)}\">Read more</a>"),
                             :length => 250,
                             :preserve_html_tags => true)) })
           filter_params = {:institution => params[:institution], :hydrate_depth => params[:hydrate_depth], :name_or_country => params[:name_or_country], :water_depth => params[:water_depth]}
