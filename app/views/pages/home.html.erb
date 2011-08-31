@@ -108,8 +108,11 @@
           <p class="date"><%= post.published_at.strftime("%d/%m/%Y") %></p>
           <h4><%= link_to post.title, blog_post_url(post) %></h4>
           <p><%= raw truncate(strip_tags(post.body),
-                            :omission => raw("... <a href=\"#{blog_post_url(post)}\">Read more</a>"),
-                            :length => 100) %></p>
+                          :omission => %Q{&hellip; <a href="#{blog_post_url(post)}">Read more</a>},
+                          :length => 225,
+                          :separator => ' ')
+             %>
+          </p>
         </li>
         <% end -%>
       </ul>
