@@ -345,6 +345,7 @@ div.body_content_right div.news div.middle {float:right; width:234px; padding:0 
 div.body_content_right div.news div.middle div.head {position:relative; float:left; width:100%; padding:15px 0 22px 0;}
 div.body_content_right div.news div.middle div.head h4 {font:bold 23px Arial; color:#333333; letter-spacing:-1px; width:100%;}
 div.body_content_right div.news div.middle div.head p {font:normal 15px Arial; color:#9B9FA7;}
+div.body_content_right div.news div.middle div.head p a {font:bold 15px Arial; color:#666666; text-decoration:none;}
 div.body_content_right div.news div.middle div.head span.line {position:absolute; height:1px; width:286px; bottom:0; left:-26px; background:#E5E5E5;}
 div.body_content_right div.news div.middle ul {float:left; width:100%;}
 div.body_content_right div.news div.middle ul li {float:left; width:100%; padding:20px 0; border-bottom:1px solid #E5E5E5;}
@@ -606,6 +607,7 @@ div.middle_white.site p {float:left; width:100%; font:normal 13px Arial; color:#
 div.middle_white.site p a {font:normal 13px Arial; color:#FF6600; text-decoration:none;}
 div.middle_white.site p a:hover {text-decoration:underline;}
 div.middle_white p {float:left; width:100%; font:normal 15px Arial; color:#666666; line-height:19px;}
+div.middle_white p a {font:normal 13px Arial; color:#FF6600; text-decoration:none;}
 div.bottom.site {float:left; width:633px; height:85px; background:url(/images/round/bottom_grey.png) no-repeat 0 0;}
 div.bottom.site p {float:left; width:auto; font:normal 13px Arial; color:#666666; text-shadow:0 1px white; margin:28px 0 0 30px;}
 div.bottom.site a {float:right; margin:20px 30px 0 0; font:bold 15px Arial; color:#666666; text-shadow:0 1px white; padding:9px 0 8px 45px; width:152px; height:17px; text-align:left; background:url(/images/site/edit_button.png) no-repeat 0 0; text-decoration:none;}
