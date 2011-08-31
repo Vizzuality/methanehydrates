@@ -6,6 +6,7 @@
   <%= raw stylesheet_link_merged :base %>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <%= raw javascript_include_merged :base %>
+  <%= render 'shared/google_analytics' if Rails.env.production? %>
 </head>
 
 <% if (action_name == 'home')||(controller_name=='features')||(@page && @page.cached_slug == 'about') %>
