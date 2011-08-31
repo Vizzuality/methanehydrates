@@ -25,9 +25,19 @@
     </div>
     <% end -%>
 
-  <% unless @feature.description.blank? %>
+  <% if @feature.description.present? %>
       <div class="middle_white site">
         <%= raw(truncate_html @feature.description, :length => 1250, :omission => "... #{link_to('read more on Wikipedia', @feature.wiki_url)}") %>
+      </div>
+  <% else %>
+      <div class="middle_white site no_description">
+        <%= image_tag 'site/blocknote_paper.png', :class => :icon %>
+        <h3>
+          There is no description for this site yet.
+        </h3>
+        <p>
+          We are continuously improving our data so come back soon
+        </p>
       </div>
   <% end %>
     <div class="bottom site">
