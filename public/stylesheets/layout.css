@@ -298,7 +298,7 @@ div.body_content_left div.middle_posts div.head_posts div.right p a:hover {text-
 div.body_content_left div.middle_posts div.head_posts span.line {position:absolute; height:1px; width:615px; bottom:0; left:-31px; background:#E5E5E5;}
 div.body_content_left div.middle_posts ul#blog_posts {float:left; width:100%; padding:0; margin:0;}
 div.body_content_left div.middle_posts ul#blog_posts li {float:left; width:100%; padding:33px 0 33px 0; border-bottom:1px solid #E5E5E5;}
-div.body_content_left div.middle_posts ul#blog_posts li.last {border-bottom:none;}
+div.body_content_left div.middle_posts ul#blog_posts li:last-child {border-bottom:none;}
 div.body_content_left div.middle_posts ul#blog_posts li h2 {float:left; width:100%;}
 div.body_content_left div.middle_posts ul#blog_posts li h2 a {font:bold 21px Arial; color:#FF6600; text-decoration:none; letter-spacing:-1px; word-spacing:2px;}
 div.body_content_left div.middle_posts ul#blog_posts li h2 a:hover {text-decoration:underline;}
@@ -350,7 +350,7 @@ div.body_content_right div.news div.middle div.head p a {font:bold 15px Arial; c
 div.body_content_right div.news div.middle div.head span.line {position:absolute; height:1px; width:286px; bottom:0; left:-26px; background:#E5E5E5;}
 div.body_content_right div.news div.middle ul {float:left; width:100%;}
 div.body_content_right div.news div.middle ul li {float:left; width:100%; padding:20px 0; border-bottom:1px solid #E5E5E5;}
-div.body_content_right div.news div.middle ul li.last {border-bottom:none}
+div.body_content_right div.news div.middle ul li:last-child {border-bottom:none}
 div.body_content_right div.news div.middle ul li h5 {float:left; width:100%;}
 div.body_content_right div.news div.middle ul li h5 a {font:bold 15px Arial; color:#666666; text-decoration:none;}
 div.body_content_right div.news div.middle ul li h5 a:hover {text-decoration:underline;}
