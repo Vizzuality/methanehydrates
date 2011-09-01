@@ -39,4 +39,10 @@ module ApplicationHelper
     end
   end
 
+  def truncate_and_clean_blog_post(post)
+    truncated_text = raw truncate(strip_tags(post.body), :length => RefinerySetting.find_or_set(:blog_post_teaser_length, 20), :omission=> "... #{raw(link_to "Read more", blog_post_url(post))}")
+
+    simple_format(truncated_text.gsub("\n", "\n\n"))
+  end
+
 end
