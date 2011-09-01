@@ -49,7 +49,7 @@
                       <div class="right">
                         <h2><%= link_to event.title, event_url(event) %></h2>
                         <p class="location"><%= event.location %> | <%=event.from.strftime("#{event.from.day.ordinalize} %b")%><%=raw "&#8594; #{event.to.strftime("#{event.to.day.ordinalize} %b")}" unless event.one_day_event? %></p>
-                        <%= raw event.description %>
+                        <%= simple_format event.description %>
                       </div>
                     </li>
                   <% end %>

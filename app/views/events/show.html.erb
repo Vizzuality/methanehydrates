@@ -46,6 +46,7 @@
             <div class="middle_white resume">
               <%= raw @event.description %>
               <% if @event.url? %>
+              <br />
               <a class="visit" href="<%= @event.url %>" rel="nofollow">Visit official website</a>
               <% end -%>
               <span class="line"></span>
