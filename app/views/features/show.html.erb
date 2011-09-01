@@ -25,7 +25,7 @@
     </div>
     <% end -%>
 
-  <% if @feature.description.present? %>
+  <% if strip_tags(@feature.description).present? %>
       <div class="middle_white site">
         <%= raw(truncate_html @feature.description, :length => 1250, :omission => "... #{link_to('read more on Wikipedia', @feature.wiki_url)}") %>
       </div>
