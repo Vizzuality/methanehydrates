@@ -34,13 +34,10 @@
       }
     });
 
-
     //Select bind change
   $('select').change(function(ev){
       getSites();
     });
-
-
 
     $("div.water").slider({range: "min",value: 2000,min: 0,max: 2000,
       slide: function(event,ui) {
@@ -93,9 +90,6 @@
     placeBlueBackground();
   });
 
-
-
-
   function showMarkers(result) {
     if (result.length!=0) {
       bounds = new OpenLayers.Bounds();
@@ -116,12 +110,10 @@
       } else {
         map.zoomOut();
       }
-      panToCenter();
+      // panToCenter();
+      map.zoomToExtent(new OpenLayers.Bounds(-21541668.963059, -20998494.658631, 22720873.872166, 15397760.723119));
     }
   }
-
-
-
 
   function getSites() {
     showLoader();

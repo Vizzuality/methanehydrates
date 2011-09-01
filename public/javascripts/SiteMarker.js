@@ -45,44 +45,45 @@ SiteMarker = OpenLayers.Class({
 
         var me = this;
 
+        var image_link = '';
+        if (this.info.image_url && this.info.image_url != '') {
+          image_link = '<div class=""><a href="'+this.info.url+'"><img src="'+this.info.image_url+'" alt="'+this.info.title+'" title="'+this.info.title+'"/></a></div>'
+        };
+
         $(this.icon.imageDiv).children().hide();
 
         if (this.info.country == null) {
           $(this.icon.imageDiv).append('<a href="#" class="open" style="background:url('+this.icon.url+') no-repeat center 0;">'+this.marker_number+'</a>'+
                                         '<div class="infowindow">'+
-                                          '<a href="#" class="close"></a>'+
-                                          '<div class=""><a href="'+this.info.url+'"><img src="'+this.info.image_url+'" alt="'+this.info.title+'" title="'+this.info.title+'"/></a></div>'+
-                                          '<h1><a href="'+this.info.url+'">'+this.info.title+'</a></h1>'+
-                                          '<p><span>'+this.info.region+'</span></p>'+
+                                          '<div class="top"></div>'+
+                                          '<div class="mid">'+
+                                            '<a href="#" class="close"></a>'+
+                                            image_link +
+                                            '<h1><a href="'+this.info.url+'">'+this.info.title+'</a></h1>'+
+                                            '<p><span>'+this.info.region+'</span></p>'+
+                                          '</div>'+
+                                          '<div class="bottom"></div>'+
                                         '</div>');
-            if (parseInt(this.info.region.length) > 26){
-              $(this.icon.imageDiv).find('div.infowindow').addClass('long');
-            }
         }
         else{
           $(this.icon.imageDiv).append('<a href="#" class="open" style="background:url('+this.icon.url+') no-repeat center 0;">'+this.marker_number+'</a>'+
                                         '<div class="infowindow">'+
-                                          '<a href="#" class="close"></a>'+
-                                          '<div class=""><a href="'+this.info.url+'"><img src="'+this.info.image_url+'" alt="'+this.info.title+'" title="'+this.info.title+'"/></a></div>'+
-                                          '<h1><a href="'+this.info.url+'">'+this.info.title+'</a></h1>'+
-                                          '<p><span class="first">'+this.info.region+'</span><span>'+this.info.country+'</span></p>'+
+                                          '<div class="top"></div>'+
+                                          '<div class="mid">'+
+                                            '<a href="#" class="close"></a>'+
+                                            image_link +
+                                            '<h1><a href="'+this.info.url+'">'+this.info.title+'</a></h1>'+
+                                            '<p><span class="first">'+this.info.region+'</span><span>'+this.info.country+'</span></p>'+
+                                          '</div>'+
+                                          '<div class="bottom"></div>'+
                                         '</div>');
 
-            if (parseInt(this.info.region.length)+parseInt(this.info.country.length) > 26){
-              $(this.icon.imageDiv).find('div.infowindow').addClass('long');
-            }
         }
 
 
         $(this.icon.imageDiv).find('a.open').hover(function(ev){
           $(this).css('z-index',global_index++);
         });
-
-
-        if (this.info.image_url=="" || this.info.image_url==null) {
-          $(this.icon.imageDiv).find('div.infowindow').find('div').remove();
-          $(this.icon.imageDiv).find('div.infowindow').addClass('tiny');
-        }
 
         $(this.icon.imageDiv).find('a.open').click(function(ev){
           ev.stopPropagation();
