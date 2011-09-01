@@ -4,6 +4,6 @@
     <%= post.created_at.strftime("#{to_ordinal(post.created_at.day)} of %B, %Y") %>
   </p>
   <div class='clearfix'>
-    <%= raw truncate(strip_tags(post.body), :length => RefinerySetting.find_or_set(:blog_post_teaser_length, 20), :omission=> "... #{raw(link_to "Read more", blog_post_url(post))}").split("\n").map{|p| "<p>#{p}</p>"} %>
+    <%= simple_format(raw truncate(strip_tags(post.body), :length => RefinerySetting.find_or_set(:blog_post_teaser_length, 20), :omission=> "... #{raw(link_to "Read more", blog_post_url(post))}").gsub!("\n", "\n\n")) %>
   </div>
 </li>
