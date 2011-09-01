@@ -67,7 +67,7 @@
                 </div>
         <% unless feature.description.blank? %>
                 <p class="des"><%= truncate(strip_tags(feature.description),
-                                  :omission => raw("<a href=\"#{feature_url(feature)}\">Read more</a>"),
+                                  :omission => raw("&hellip; <a href=\"#{feature_url(feature)}\">Read more</a>"),
                                   :length => 250,
                                   :preserve_html_tags => true) %></p>
         <%end%>
