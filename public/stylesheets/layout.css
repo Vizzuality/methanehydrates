@@ -304,6 +304,7 @@ div.body_content_left div.middle_posts ul#blog_posts li h2 a {font:bold 21px Ari
 div.body_content_left div.middle_posts ul#blog_posts li h2 a:hover {text-decoration:underline;}
 div.body_content_left div.middle_posts ul#blog_posts li p.posted_at {float:left; width:100%; font:normal 13px Arial; color:#999999; margin:5px 0 0 0;}
 div.body_content_left div.middle_posts ul#blog_posts li div.clearfix {float:left; width:100%; padding:20px 0 0 0;}
+div.body_content_left div.middle_posts ul#blog_posts li div.clearfix p {padding: 10px 0;}
 div.body_content_left div.middle_posts ul#blog_posts li div.clearfix p, div.body_content_left div.middle_posts ul#blog_posts li div.clearfix p span {font:normal 15px Arial; color:#666666; line-height:19px;}
 div.body_content_left div.middle_posts ul#blog_posts li div.clearfix a {font:normal 15px Arial; color:#FF6600;}
 div.body_content_left div.middle_posts ul#blog_posts li div.clearfix a:hover {color:#FF3300;}
