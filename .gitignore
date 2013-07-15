@@ -63,3 +63,5 @@ capybara-*html
 tmp/galleries
 
 bin/
+
+config/app_config.yml

@@ -14,4 +14,6 @@ Refinery::Application.routes.draw do
     root :to => 'dashboard#index'
   end
 
+  resource :twitter, :only => :show
+
 end
